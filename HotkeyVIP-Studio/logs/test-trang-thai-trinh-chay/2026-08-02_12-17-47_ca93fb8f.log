@@ -1,0 +1,19 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\Dang_bai\BUOC_1_GHEP_URL_WORD_SOTU_V1.py
+Bắt đầu: 2026-08-02 12:17:47
+========================================================================
+[12:17:48] Traceback (most recent call last):
+[12:17:48]   File "D:\Dang_bai\BUOC_1_GHEP_URL_WORD_SOTU_V1.py", line 195, in <module>
+[12:17:48]     raise SystemExit(main())
+[12:17:48]                      ^^^^^^
+[12:17:48]   File "D:\Dang_bai\BUOC_1_GHEP_URL_WORD_SOTU_V1.py", line 138, in main
+[12:17:48]     url_col = column(post_headers, "url da dang")
+[12:17:48]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[12:17:48]   File "D:\Dang_bai\BUOC_1_GHEP_URL_WORD_SOTU_V1.py", line 61, in column
+[12:17:48]     raise RuntimeError(f'Column not found: {label}')
+[12:17:48] RuntimeError: Column not found: url da dang
+
+========================================================================
+Kết thúc: 2026-08-02 12:17:48
+Mã thoát: 1
+Thời gian: 0.67 giây

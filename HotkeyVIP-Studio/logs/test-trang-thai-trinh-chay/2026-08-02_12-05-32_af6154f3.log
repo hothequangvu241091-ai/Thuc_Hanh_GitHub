@@ -1,0 +1,19 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py
+Bắt đầu: 2026-08-02 12:05:32
+========================================================================
+[12:05:34] Traceback (most recent call last):
+[12:05:34]   File "D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py", line 250, in <module>
+[12:05:34]     raise SystemExit(main())
+[12:05:34]                      ^^^^^^
+[12:05:34]   File "D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py", line 225, in main
+[12:05:34]     tasks = load_tasks(args.excel.resolve(), args.limit)
+[12:05:34]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[12:05:34]   File "D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py", line 170, in load_tasks
+[12:05:34]     raise RuntimeError("Không tìm thấy cột URL đã đăng hoặc dn_file_word/File Word trong sheet dangbai.")
+[12:05:34] RuntimeError: Không tìm thấy cột URL đã đăng hoặc dn_file_word/File Word trong sheet dangbai.
+
+========================================================================
+Kết thúc: 2026-08-02 12:05:34
+Mã thoát: 1
+Thời gian: 1.63 giây

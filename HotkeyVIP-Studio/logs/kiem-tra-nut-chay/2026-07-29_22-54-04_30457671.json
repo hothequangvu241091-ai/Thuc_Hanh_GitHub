@@ -1,0 +1,11 @@
+{
+  "state": "stopped",
+  "target": "D:\\CodexProjects\\HotkeyVIP-Studio\\kiem_tra_nut_chay.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\kiem-tra-nut-chay\\2026-07-29_22-54-04_30457671.log",
+  "startedAt": 1785340444.3839614,
+  "endedAt": 1785340445.1088665,
+  "duration": 0.72,
+  "exitCode": null,
+  "truncated": false,
+  "error": "Người dùng dừng từ Studio"
+}

@@ -1,0 +1,11 @@
+{
+  "state": "stopped",
+  "target": "D:\\CodexProjects\\HotkeyVIP-Studio\\test_trang_thai_trinh_chay.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\kiem-tra-nut-chay\\2026-07-29_22-59-09_a1e57c92.log",
+  "startedAt": 1785340749.5440137,
+  "endedAt": 1785340758.1112823,
+  "duration": 8.57,
+  "exitCode": null,
+  "truncated": false,
+  "error": "Người dùng dừng từ Studio"
+}

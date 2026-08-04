@@ -1,0 +1,11 @@
+{
+  "state": "success",
+  "target": "D:\\GEMINI\\v1.1_gpt_vietbai_tudong_1luong.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\viet-bai-nhanh-2-3-luong\\2026-08-01_11-25-14_7bf87ca5.log",
+  "startedAt": 1785558314.8848894,
+  "endedAt": 1785561264.6305544,
+  "duration": 2949.75,
+  "exitCode": 0,
+  "truncated": false,
+  "error": ""
+}

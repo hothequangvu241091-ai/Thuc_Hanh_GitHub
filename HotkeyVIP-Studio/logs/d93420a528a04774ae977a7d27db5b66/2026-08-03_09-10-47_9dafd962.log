@@ -1,0 +1,30 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet.py
+Bắt đầu: 2026-08-03 09:10:47
+========================================================================
+[09:10:47] File log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260803_091047.log
+
+[09:10:51] [1/3] Đang xử lý congdongkinhdoanh.com.xlsx
+[09:10:53]     ĐÃ CHUYỂN: 5 | ĐÃ VIẾT CHƯA ĐĂNG: 20
+
+[09:10:53] [2/3] Đang xử lý doanhnhanduongthoi.com.xlsx
+[09:11:09]     ĐÃ CHUYỂN: 7 | ĐÃ VIẾT CHƯA ĐĂNG: 567
+
+[09:11:09] [3/3] Đang xử lý kythuatmarketing.com.xlsx
+[09:11:32]     ĐÃ CHUYỂN: 10 | ĐÃ VIẾT CHƯA ĐĂNG: 847
+
+[09:11:32] ========================================================================
+[09:11:32] HOÀN TẤT
+[09:11:32] Backup: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\backup_cap_nhat_url_cong_ty\20260803_091050
+[09:11:32] - CỘT ĐÃ CHUYỂN CÓ NỘI DUNG: 506
+[09:11:32] - URL NGUỒN TRỐNG: 48
+[09:11:32] - ĐÃ CHUYỂN: 22
+[09:11:32] - ĐÃ VIẾT CHƯA ĐĂNG: 1434
+[09:11:32] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260803_091047.log
+
+[09:11:38] Nhấn Enter để đóng chương trình...
+
+========================================================================
+Kết thúc: 2026-08-03 09:11:38
+Mã thoát: 0
+Thời gian: 50.85 giây

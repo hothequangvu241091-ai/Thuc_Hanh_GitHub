@@ -1,0 +1,455 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py
+Bắt đầu: 2026-08-03 07:25:38
+========================================================================
+[07:25:39] Thời gian bắt đầu: 03/08/2026 07:25:39
+[07:26:10] ========================================================================
+[07:26:10] PHIEN BAN: V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung
+[07:26:10] ĐĂNG BÀI ĐA LUỒNG | 3 WORKER | 5 BÀI
+[07:26:10] Không dùng current_row.ini; chỉ tiến trình chính ghi Excel.
+[07:26:10] ========================================================================
+[07:26:12]     Edge đã được ẩn trong lúc chạy.
+[07:26:12]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[07:26:12] Worker 3: sẵn sàng.
+[07:26:12] [GIAO] Worker 3 <- dòng 1112 | kythuatmarketing.com | giao ngay cho worker rảnh
+
+[07:26:12] [WORKER 3] BẮT ĐẦU DÒNG 1112
+[07:26:12]     Edge đã được ẩn trong lúc chạy.
+[07:26:12]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[07:26:12] Worker 1: sẵn sàng.
+[07:26:12] [GIAO] Worker 1 <- dòng 1113 | kythuatmarketing.com | giao ngay cho worker rảnh
+
+[07:26:12] [WORKER 1] BẮT ĐẦU DÒNG 1113
+[07:26:12]     Edge đã được ẩn trong lúc chạy.
+[07:26:12]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[07:26:12] Worker 2: sẵn sàng.
+[07:26:12] [GIAO] Worker 2 <- dòng 1114 | kythuatmarketing.com | giao ngay cho worker rảnh
+
+[07:26:12] [WORKER 2] BẮT ĐẦU DÒNG 1114
+[07:26:13]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:26:13]     Phát hiện trang đăng nhập → chờ khóa Login ngắn...
+[07:26:13]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:26:13]     Phát hiện trang đăng nhập → tự nhập ID và mật khẩu...
+[07:26:13]     Đã nhập đủ ID/mật khẩu → click ĐĂNG NHẬP một lần.
+[07:26:15] [1] Đã chọn dòng 1112: kỹ năng quản trị marketing
+[07:26:15]     Word chạy nền, không hiện cửa sổ.
+[07:26:15]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\kỹ năng quản trị marketing.docx
+[07:26:15]     Dòng Excel được truyền trực tiếp: 1112
+
+[07:26:15] Đối chiếu tài nguyên đăng bài:
+[07:26:15] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\kỹ năng quản trị marketing.docx
+[07:26:15] - Tên gốc Word : kỹ năng quản trị marketing
+[07:26:15] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\kỹ năng quản trị marketing 1.png
+[07:26:15] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\kỹ năng quản trị marketing 2.png
+[07:26:15]     Đăng nhập thành công, đã vào đúng trang đăng bài.
+[07:26:17] [1] Đã chọn dòng 1113: cơ cấu phòng marketing
+[07:26:17]     Word chạy nền, không hiện cửa sổ.
+[07:26:17]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\cơ cấu phòng marketing.docx
+[07:26:17]     Dòng Excel được truyền trực tiếp: 1113
+
+[07:26:17] Đối chiếu tài nguyên đăng bài:
+[07:26:17] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\cơ cấu phòng marketing.docx
+[07:26:17] - Tên gốc Word : cơ cấu phòng marketing
+[07:26:17] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\cơ cấu phòng marketing 1.png
+[07:26:17] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\cơ cấu phòng marketing 2.png
+[07:26:19] [1] Đã chọn dòng 1114: quản trị marketing và quản trị kinh doanh
+[07:26:19]     Word chạy nền, không hiện cửa sổ.
+[07:26:19]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing và quản trị kinh doanh.docx
+[07:26:19]     Dòng Excel được truyền trực tiếp: 1114
+
+[07:26:19] Đối chiếu tài nguyên đăng bài:
+[07:26:19] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing và quản trị kinh doanh.docx
+[07:26:19] - Tên gốc Word : quản trị marketing và quản trị kinh doanh
+[07:26:19] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing và quản trị kinh doanh 1.png
+[07:26:19] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing và quản trị kinh doanh 2.png
+[07:26:21] Không thấy tiêu đề FAQ → lấy nội dung đến cuối Word.
+[07:26:21]     Waiting for Word Clipboard transfer...
+[07:26:21] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 70299 ký tự.
+[07:26:22] Không có FAQ trong 50 đoạn cuối Word → bỏ qua bước FAQ.
+[07:26:23] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:26:23]     Waiting for Word Clipboard transfer...
+[07:26:23] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 77446 ký tự.
+[07:26:24] Đã đọc được 5 cặp FAQ hợp lệ từ Word.
+[07:26:26] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:26:26]     Waiting for Word Clipboard transfer...
+[07:26:26] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 200285 ký tự.
+[07:26:28] Đã đọc được 8 cặp FAQ hợp lệ từ Word.
+[07:26:35] [PIPELINE] Word ready in RAM: row 1113 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\cơ cấu phòng marketing.docx
+
+[07:26:36] ========================================================================
+[07:26:36] BẮT ĐẦU BÀI 2/5
+[07:26:36] ========================================================================
+[07:26:36] [PIPELINE] Using Word data already prepared in RAM.
+[07:26:36]     Excel row : 1113
+[07:26:36]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\cơ cấu phòng marketing.docx
+[07:26:36]     CMS URL   : https://kythuatmarketing.com/admin/news_tb/field/root_id=999
+[07:26:36]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:26:36] [3] Điền 5 ô đầu...
+[07:26:36] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:26:37] Đã mở Select2 Danh mục.
+[07:26:37] Đã chọn Danh mục: Doanh nghiệp
+[07:26:38] Đã tải xong ô Select2 Tác giả.
+[07:26:38] [PIPELINE] Word ready in RAM: row 1114 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing và quản trị kinh doanh.docx
+
+[07:26:38] ========================================================================
+[07:26:38] BẮT ĐẦU BÀI 3/5
+[07:26:38] ========================================================================
+[07:26:38] [PIPELINE] Using Word data already prepared in RAM.
+[07:26:38]     Excel row : 1114
+[07:26:38]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing và quản trị kinh doanh.docx
+[07:26:38]     CMS URL   : https://kythuatmarketing.com/admin/news_tb/field/root_id=999
+[07:26:38]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:26:38] [3] Điền 5 ô đầu...
+[07:26:38] Đã random Tác giả từ CMS: Đinh Trần Công Phúc
+
+[07:26:38] Kết quả Danh mục/Tác giả:
+[07:26:38] - Trạng thái: OK
+[07:26:38] - Danh mục  : Doanh nghiệp
+[07:26:38] - Tác giả   : Đinh Trần Công Phúc
+[07:26:38] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:26:39] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:26:39] Đã mở Select2 Danh mục.
+[07:26:39] [5] Đưa HTML Word vào CKEditor detail...
+[07:26:39] Đã chọn Danh mục: Doanh nghiệp
+[07:26:40] Đã nạp CKEditor, độ dài HTML: 34868
+[07:26:40] Đã tải xong ô Select2 Tác giả.
+[07:26:41] [7] Tạo đủ block và dán FAQ một lượt...
+
+[07:26:41] Kết quả FAQ:
+[07:26:41] - Trạng thái: SKIP
+[07:26:41] - Số cặp    : 0
+[07:26:41] [3] Upload ảnh đại diện...
+[07:26:41]     OK: đã gửi ảnh đại diện
+[07:26:41] [4] Mở popup ảnh CKEditor...
+[07:26:41] Đã random Tác giả từ CMS: Cao Minh Hải Đăng
+
+[07:26:41] Kết quả Danh mục/Tác giả:
+[07:26:41] - Trạng thái: OK
+[07:26:41] - Danh mục  : Doanh nghiệp
+[07:26:41] - Tác giả   : Cao Minh Hải Đăng
+[07:26:41] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:26:41] [5] Click tab Tải lên...
+[07:26:41] [6] Chọn ảnh bài viết...
+[07:26:41]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\cơ cấu phòng marketing 2.png
+[07:26:42]     OK: đã chọn file trong popup
+[07:26:42] [7] Click Tải lên máy chủ...
+[07:26:42] [8] Chờ server trả URL ảnh...
+[07:26:42] [5] Đưa HTML Word vào CKEditor detail...
+[07:26:42] Đã nạp CKEditor, độ dài HTML: 43173
+[07:26:42]     URL: /uploads/images/editor/co-cau-phong-marketing-2.png
+[07:26:42] [9] Click Đồng ý...
+[07:26:43]     OK: ảnh đã được chèn vào CKEditor
+[07:26:43] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:26:43]     OK: đã gom HTML bằng Python
+[07:26:43]     HTML trước : 35037 ký tự
+[07:26:43]     HTML sau   : 21466 ký tự
+[07:26:43]     Số ảnh     : 1
+[07:26:43]     Số H2/H3   : 8/23
+[07:26:43] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:26:43] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:26:43]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:26:43]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:26:43]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:26:43] [14] Click nút lưu bài...
+[07:26:43] [7] Tạo đủ block và dán FAQ một lượt...
+[07:26:43] Đã tạo đủ 5 block FAQ.
+[07:26:44] Đã dán một lượt 5 cặp FAQ.
+
+[07:26:44] Kết quả FAQ:
+[07:26:44] - Trạng thái: OK
+[07:26:44] - Số cặp    : 5
+[07:26:44] [3] Upload ảnh đại diện...
+[07:26:44]     OK: đã gửi ảnh đại diện
+[07:26:44] [4] Mở popup ảnh CKEditor...
+[07:26:44] [5] Click tab Tải lên...
+[07:26:45] [6] Chọn ảnh bài viết...
+[07:26:45]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing và quản trị kinh doanh 2.png
+[07:26:45]     OK: đã chọn file trong popup
+[07:26:45] [7] Click Tải lên máy chủ...
+[07:26:45] [8] Chờ server trả URL ảnh...
+[07:26:45]     URL: /uploads/images/editor/quan-tri-marketing-va-quan-tri-kinh-doanh-2.png
+[07:26:45] [9] Click Đồng ý...
+[07:26:46]     OK: đã chuyển sang URL sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:26:46]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:26:46]     ID CMS vừa đăng: 3234
+
+[07:26:46] ========================================================================
+[07:26:46] ĐÃ LƯU XONG BÀI 2/5
+[07:26:46] - Dòng Excel: 1113
+[07:26:46] - HTML trước/sau: 35037/21466 ký tự
+[07:26:46] - URL CMS sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:26:46] ========================================================================
+[07:26:46] [OK] Worker 1 xong dòng 1113 | 1/5
+[07:26:46] [GIAO] Worker 1 <- dòng 1115 | kythuatmarketing.com | giao ngay cho worker rảnh
+
+[07:26:46] [WORKER 1] BẮT ĐẦU DÒNG 1115
+[07:26:46]     OK: ảnh đã được chèn vào CKEditor
+[07:26:46] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:26:46]     OK: đã gom HTML bằng Python
+[07:26:46]     HTML trước : 43364 ký tự
+[07:26:46]     HTML sau   : 28490 ký tự
+[07:26:46]     Số ảnh     : 1
+[07:26:46]     Số H2/H3   : 10/10
+[07:26:46] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:26:46] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:26:46]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:26:46]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:26:46]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:26:46] [14] Click nút lưu bài...
+[07:26:46]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:26:47]     DANH_MUC_ID đã có: kythuatmarketing.com | Doanh nghiệp | ID 6
+[07:26:48] [1] Đã chọn dòng 1115: quản lý ngân sách marketing
+[07:26:48]     Word chạy nền, không hiện cửa sổ.
+[07:26:48]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản lý ngân sách marketing.docx
+[07:26:48]     Dòng Excel được truyền trực tiếp: 1115
+
+[07:26:48] Đối chiếu tài nguyên đăng bài:
+[07:26:48] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản lý ngân sách marketing.docx
+[07:26:48] - Tên gốc Word : quản lý ngân sách marketing
+[07:26:48] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản lý ngân sách marketing 1.png
+[07:26:48] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản lý ngân sách marketing 2.png
+[07:26:49]     OK: đã chuyển sang URL sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:26:49]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:26:49]     ID CMS vừa đăng: 3235
+
+[07:26:49] ========================================================================
+[07:26:49] ĐÃ LƯU XONG BÀI 3/5
+[07:26:49] - Dòng Excel: 1114
+[07:26:49] - HTML trước/sau: 43364/28490 ký tự
+[07:26:49] - URL CMS sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:26:49] ========================================================================
+[07:26:49] [OK] Worker 2 xong dòng 1114 | 2/5
+[07:26:49] [GIAO] Worker 2 <- dòng 1116 | kythuatmarketing.com | giao ngay cho worker rảnh
+
+[07:26:49] [WORKER 2] BẮT ĐẦU DÒNG 1116
+[07:26:49]     Đã gắn Note kiểm tra vào ô URL đã đăng, dòng 1113.
+[07:26:49]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:26:50]     DANH_MUC_ID đã có: kythuatmarketing.com | Doanh nghiệp | ID 6
+[07:26:51] [1] Đã chọn dòng 1116: phân bổ ngân sách marketing
+[07:26:51]     Word chạy nền, không hiện cửa sổ.
+[07:26:51]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\phân bổ ngân sách marketing.docx
+[07:26:51]     Dòng Excel được truyền trực tiếp: 1116
+
+[07:26:51] Đối chiếu tài nguyên đăng bài:
+[07:26:51] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\phân bổ ngân sách marketing.docx
+[07:26:51] - Tên gốc Word : phân bổ ngân sách marketing
+[07:26:51] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\phân bổ ngân sách marketing 1.png
+[07:26:51] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\phân bổ ngân sách marketing 2.png
+[07:26:53] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:26:53]     Waiting for Word Clipboard transfer...
+[07:26:53] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:26:53]     Waiting for Word Clipboard transfer...
+[07:26:53] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 86283 ký tự.
+[07:26:54] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 36844 ký tự.
+[07:26:54] Đã đọc được 5 cặp FAQ hợp lệ từ Word.
+[07:26:54] Đã đọc được 4 cặp FAQ hợp lệ từ Word.
+[07:27:02] [PIPELINE] Word ready in RAM: row 1116 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\phân bổ ngân sách marketing.docx
+
+[07:27:04] ========================================================================
+[07:27:04] BẮT ĐẦU BÀI 5/5
+[07:27:04] ========================================================================
+[07:27:04] [PIPELINE] Using Word data already prepared in RAM.
+[07:27:04]     Excel row : 1116
+[07:27:04]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\phân bổ ngân sách marketing.docx
+[07:27:04]     CMS URL   : https://kythuatmarketing.com/admin/news_tb/field/root_id=999
+[07:27:04]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:27:04] [3] Điền 5 ô đầu...
+[07:27:04] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:27:05] Đã mở Select2 Danh mục.
+[07:27:05] Đã chọn Danh mục: Doanh nghiệp
+[07:27:06] Đã tải xong ô Select2 Tác giả.
+[07:27:06] Đã random Tác giả từ CMS: Cao Minh Hải Đăng
+
+[07:27:06] Kết quả Danh mục/Tác giả:
+[07:27:06] - Trạng thái: OK
+[07:27:06] - Danh mục  : Doanh nghiệp
+[07:27:06] - Tác giả   : Cao Minh Hải Đăng
+[07:27:06] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:27:07] [5] Đưa HTML Word vào CKEditor detail...
+[07:27:07] Đã nạp CKEditor, độ dài HTML: 21316
+[07:27:08] [PIPELINE] Word ready in RAM: row 1112 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\kỹ năng quản trị marketing.docx
+
+[07:27:08] ========================================================================
+[07:27:08] BẮT ĐẦU BÀI 1/5
+[07:27:08] ========================================================================
+[07:27:08] [PIPELINE] Using Word data already prepared in RAM.
+[07:27:08]     Excel row : 1112
+[07:27:08]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\kỹ năng quản trị marketing.docx
+[07:27:08]     CMS URL   : https://kythuatmarketing.com/admin/news_tb/field/root_id=999
+[07:27:08]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:27:08] [3] Điền 5 ô đầu...
+[07:27:08] [7] Tạo đủ block và dán FAQ một lượt...
+[07:27:08] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:27:09] Đã mở Select2 Danh mục.
+[07:27:09] Đã chọn Danh mục: Doanh nghiệp
+[07:27:09] Đã tạo đủ 4 block FAQ.
+[07:27:09] Đã dán một lượt 4 cặp FAQ.
+
+[07:27:09] Kết quả FAQ:
+[07:27:09] - Trạng thái: OK
+[07:27:09] - Số cặp    : 4
+[07:27:09] [3] Upload ảnh đại diện...
+[07:27:09]     OK: đã gửi ảnh đại diện
+[07:27:09] [4] Mở popup ảnh CKEditor...
+[07:27:10] Đã tải xong ô Select2 Tác giả.
+[07:27:10] [5] Click tab Tải lên...
+[07:27:10] [6] Chọn ảnh bài viết...
+[07:27:10]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\phân bổ ngân sách marketing 2.png
+[07:27:10]     OK: đã chọn file trong popup
+[07:27:10] [7] Click Tải lên máy chủ...
+[07:27:10] Đã random Tác giả từ CMS: Châu Khánh Ngọc Lan
+
+[07:27:10] Kết quả Danh mục/Tác giả:
+[07:27:10] - Trạng thái: OK
+[07:27:10] - Danh mục  : Doanh nghiệp
+[07:27:10] - Tác giả   : Châu Khánh Ngọc Lan
+[07:27:10] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:27:11] [8] Chờ server trả URL ảnh...
+[07:27:11]     URL: /uploads/images/editor/phan-bo-ngan-sach-marketing-2.png
+[07:27:11] [9] Click Đồng ý...
+[07:27:11] [5] Đưa HTML Word vào CKEditor detail...
+[07:27:11]     OK: ảnh đã được chèn vào CKEditor
+[07:27:11] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:27:12]     OK: đã gom HTML bằng Python
+[07:27:12]     HTML trước : 21491 ký tự
+[07:27:12]     HTML sau   : 13526 ký tự
+[07:27:12]     Số ảnh     : 1
+[07:27:12]     Số H2/H3   : 5/11
+[07:27:12] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:27:12] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:27:12]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:27:12]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:27:12]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:27:12] [14] Click nút lưu bài...
+[07:27:12] Đã nạp CKEditor, độ dài HTML: 115594
+[07:27:12] [PIPELINE] Word ready in RAM: row 1115 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản lý ngân sách marketing.docx
+[07:27:13] [7] Tạo đủ block và dán FAQ một lượt...
+
+[07:27:13] ========================================================================
+[07:27:13] BẮT ĐẦU BÀI 4/5
+[07:27:13] ========================================================================
+[07:27:13] [PIPELINE] Using Word data already prepared in RAM.
+[07:27:13]     Excel row : 1115
+[07:27:13]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản lý ngân sách marketing.docx
+[07:27:13]     CMS URL   : https://kythuatmarketing.com/admin/news_tb/field/root_id=999
+[07:27:13]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:27:13] [3] Điền 5 ô đầu...
+[07:27:14] Đã tạo đủ 8 block FAQ.
+[07:27:14] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:27:14] Đã dán một lượt 8 cặp FAQ.
+
+[07:27:14] Kết quả FAQ:
+[07:27:14] - Trạng thái: OK
+[07:27:14] - Số cặp    : 8
+[07:27:14] [3] Upload ảnh đại diện...
+[07:27:14]     OK: đã gửi ảnh đại diện
+[07:27:14] [4] Mở popup ảnh CKEditor...
+[07:27:14]     OK: đã chuyển sang URL sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:27:14]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:27:14]     ID CMS vừa đăng: 3236
+
+[07:27:14] ========================================================================
+[07:27:14] ĐÃ LƯU XONG BÀI 5/5
+[07:27:14] - Dòng Excel: 1116
+[07:27:14] - HTML trước/sau: 21491/13526 ký tự
+[07:27:14] - URL CMS sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:27:14] ========================================================================
+[07:27:14] [OK] Worker 2 xong dòng 1116 | 3/5
+[07:27:14] Đã mở Select2 Danh mục.
+[07:27:14] Đã chọn Danh mục: Doanh nghiệp
+[07:27:14] [5] Click tab Tải lên...
+[07:27:15] [6] Chọn ảnh bài viết...
+[07:27:15]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\kỹ năng quản trị marketing 2.png
+[07:27:15]     OK: đã chọn file trong popup
+[07:27:15] [7] Click Tải lên máy chủ...
+[07:27:15] [8] Chờ server trả URL ảnh...
+[07:27:15]     DANH_MUC_ID đã có: kythuatmarketing.com | Doanh nghiệp | ID 6
+[07:27:15] Đã tải xong ô Select2 Tác giả.
+[07:27:15]     URL: /uploads/images/editor/ky-nang-quan-tri-marketing-2.png
+[07:27:15] [9] Click Đồng ý...
+[07:27:16] Đã random Tác giả từ CMS: Đinh Trần Công Phúc
+
+[07:27:16] Kết quả Danh mục/Tác giả:
+[07:27:16] - Trạng thái: OK
+[07:27:16] - Danh mục  : Doanh nghiệp
+[07:27:16] - Tác giả   : Đinh Trần Công Phúc
+[07:27:16] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:27:16]     OK: ảnh đã được chèn vào CKEditor
+[07:27:16] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:27:16]     OK: đã gom HTML bằng Python
+[07:27:16]     HTML trước : 115768 ký tự
+[07:27:16]     HTML sau   : 72515 ký tự
+[07:27:16]     Số ảnh     : 1
+[07:27:16]     Số H2/H3   : 13/43
+[07:27:16] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:27:16] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:27:16]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:27:16]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:27:16]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:27:16] [14] Click nút lưu bài...
+[07:27:17] [5] Đưa HTML Word vào CKEditor detail...
+[07:27:17] Đã nạp CKEditor, độ dài HTML: 52377
+[07:27:18] [7] Tạo đủ block và dán FAQ một lượt...
+[07:27:18] Đã tạo đủ 5 block FAQ.
+[07:27:18] Đã dán một lượt 5 cặp FAQ.
+
+[07:27:18] Kết quả FAQ:
+[07:27:18] - Trạng thái: OK
+[07:27:18] - Số cặp    : 5
+[07:27:18] [3] Upload ảnh đại diện...
+[07:27:19]     OK: đã gửi ảnh đại diện
+[07:27:19] [4] Mở popup ảnh CKEditor...
+[07:27:19]     OK: đã chuyển sang URL sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:27:19]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:27:19]     ID CMS vừa đăng: 3237
+
+[07:27:19] ========================================================================
+[07:27:19] ĐÃ LƯU XONG BÀI 1/5
+[07:27:19] - Dòng Excel: 1112
+[07:27:19] - HTML trước/sau: 115768/72515 ký tự
+[07:27:19] - URL CMS sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:27:19] ========================================================================
+[07:27:19] [OK] Worker 3 xong dòng 1112 | 4/5
+[07:27:19] [5] Click tab Tải lên...
+[07:27:19] [6] Chọn ảnh bài viết...
+[07:27:19]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản lý ngân sách marketing 2.png
+[07:27:19]     OK: đã chọn file trong popup
+[07:27:19] [7] Click Tải lên máy chủ...
+[07:27:20]     DANH_MUC_ID đã có: kythuatmarketing.com | Doanh nghiệp | ID 6
+[07:27:20] [8] Chờ server trả URL ảnh...
+[07:27:20]     URL: /uploads/images/editor/quan-ly-ngan-sach-marketing-2.png
+[07:27:20] [9] Click Đồng ý...
+[07:27:21]     OK: ảnh đã được chèn vào CKEditor
+[07:27:21] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:27:21]     OK: đã gom HTML bằng Python
+[07:27:21]     HTML trước : 52553 ký tự
+[07:27:21]     HTML sau   : 33288 ký tự
+[07:27:21]     Số ảnh     : 1
+[07:27:21]     Số H2/H3   : 12/9
+[07:27:21] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:27:21] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:27:21]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:27:21]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:27:21]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:27:21] [14] Click nút lưu bài...
+[07:27:23]     OK: đã chuyển sang URL sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:27:23]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:27:23]     ID CMS vừa đăng: 3238
+
+[07:27:23] ========================================================================
+[07:27:23] ĐÃ LƯU XONG BÀI 4/5
+[07:27:23] - Dòng Excel: 1115
+[07:27:23] - HTML trước/sau: 52553/33288 ký tự
+[07:27:23] - URL CMS sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:27:23] ========================================================================
+[07:27:23] [OK] Worker 1 xong dòng 1115 | 5/5
+[07:27:24]     DANH_MUC_ID đã có: kythuatmarketing.com | Doanh nghiệp | ID 6
+[07:27:28] ========================================================================
+[07:27:28] KẾT THÚC: hoàn thành 5/5 bài
+[07:27:28] ========================================================================
+[07:27:28] Thời gian kết thúc: 03/08/2026 07:27:28
+
+========================================================================
+Kết thúc: 2026-08-03 07:27:28
+Mã thoát: 0
+Thời gian: 109.26 giây

@@ -1,0 +1,1309 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\02_viet_bai\CLAUDE_CHAY_RIENG_1_LUONG.py
+Bắt đầu: 2026-08-01 07:00:59
+========================================================================
+[07:01:00] FILE TỔNG đang chạy. Hãy mở sẵn file Excel dữ liệu trước.
+[07:01:00] Đã thấy mốc thủ công OK OK ở cột AA, dòng 1455.
+[07:01:00] Sẽ bắt đầu xử lý từ dòng 1456.
+[07:01:03] -> Đã đưa Edge Selenium ra ngoài phạm vi màn hình.
+
+[07:01:03] ======================================================================
+[07:01:03] KIỂM TRA DÒNG 1456: performance marketing và brand marketing
+[07:01:03] Dòng 1456: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:01:03] [DÒNG 1456] Bắt đầu tạo ảnh 1 Gemini...
+[07:01:06] -> Gemini đã sẵn sàng sau 2.2s.
+
+[07:01:06] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:01:06] Tổng số img trên trang: 5
+[07:01:08] -> Đã gửi prompt sang Gemini bằng JS.
+[07:01:11] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:01:40] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/1dd1eef8-dbf0-4209-9641-58c3b33b600c
+
+[07:01:40] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:01:40] Tổng số img trên trang: 6
+[07:01:40] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 413, 'y': 280} src=blob:https://gemini.google.com/1dd1eef8-dbf0-4209-9641-58c3b33b600c
+[07:01:40] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:01:41] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:01:41] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:01:42] [DÒNG 1456] Bắt đầu tạo ảnh 2 Gemini...
+[07:01:43] -> Gemini đã sẵn sàng sau 1.1s.
+
+[07:01:43] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:01:43] Tổng số img trên trang: 5
+[07:01:45] -> Đã gửi prompt sang Gemini bằng JS.
+[07:01:48] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:02:12] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/92413024-db78-4fb5-bf0e-c737eb641796
+
+[07:02:12] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:02:12] Tổng số img trên trang: 6
+[07:02:12] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 413, 'y': 280} src=blob:https://gemini.google.com/92413024-db78-4fb5-bf0e-c737eb641796
+[07:02:12] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:02:13] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:02:13] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:02:14] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1456 <=====
+
+[07:02:17] ======================================================================
+[07:02:17] KIỂM TRA DÒNG 1457: vai trò performance marketing
+[07:02:17] Dòng 1457: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:02:17] [DÒNG 1457] Bắt đầu tạo ảnh 1 Gemini...
+[07:02:19] -> Gemini đã sẵn sàng sau 1.1s.
+
+[07:02:19] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:02:19] Tổng số img trên trang: 3
+[07:02:21] -> Đã gửi prompt sang Gemini bằng JS.
+[07:02:24] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:02:45] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/75226663-3a85-4123-864f-45da49beb2b9
+
+[07:02:45] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:02:45] Tổng số img trên trang: 6
+[07:02:45] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/75226663-3a85-4123-864f-45da49beb2b9
+[07:02:45] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:02:46] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:02:46] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:02:47] [DÒNG 1457] Bắt đầu tạo ảnh 2 Gemini...
+[07:02:48] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:02:48] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:02:49] Tổng số img trên trang: 5
+[07:02:50] -> Đã gửi prompt sang Gemini bằng JS.
+[07:02:53] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:03:02] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/996c9633-cc22-4eee-93b6-865558dccf8b
+
+[07:03:02] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:03:02] Tổng số img trên trang: 6
+[07:03:03] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 413, 'y': 280} src=blob:https://gemini.google.com/996c9633-cc22-4eee-93b6-865558dccf8b
+[07:03:03] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:03:04] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:03:04] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:03:05] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1457 <=====
+
+[07:03:08] ======================================================================
+[07:03:08] KIỂM TRA DÒNG 1458: kênh performance marketing
+[07:03:08] Dòng 1458: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:03:08] [DÒNG 1458] Bắt đầu tạo ảnh 1 Gemini...
+[07:03:10] -> Gemini đã sẵn sàng sau 1.4s.
+
+[07:03:10] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:03:10] Tổng số img trên trang: 3
+[07:03:12] -> Đã gửi prompt sang Gemini bằng JS.
+[07:03:15] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:03:25] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/4cd83ce4-60f4-453a-b6f5-1dc8b7615c1f
+
+[07:03:25] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:03:25] Tổng số img trên trang: 6
+[07:03:25] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 413, 'y': 280} src=blob:https://gemini.google.com/4cd83ce4-60f4-453a-b6f5-1dc8b7615c1f
+[07:03:25] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:03:26] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:03:26] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:03:27] [DÒNG 1458] Bắt đầu tạo ảnh 2 Gemini...
+[07:03:28] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:03:28] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:03:29] Tổng số img trên trang: 5
+[07:03:30] -> Đã gửi prompt sang Gemini bằng JS.
+[07:03:33] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:03:43] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/4d284e47-11ed-491e-beb0-a05148cefa39
+
+[07:03:43] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:03:43] Tổng số img trên trang: 6
+[07:03:43] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/4d284e47-11ed-491e-beb0-a05148cefa39
+[07:03:43] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:03:44] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:03:44] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:03:46] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1458 <=====
+
+[07:03:49] ======================================================================
+[07:03:49] KIỂM TRA DÒNG 1459: chiến dịch performance marketing
+[07:03:49] Dòng 1459: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:03:49] [DÒNG 1459] Bắt đầu tạo ảnh 1 Gemini...
+[07:03:50] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:03:51] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:03:51] Tổng số img trên trang: 5
+[07:03:53] -> Đã gửi prompt sang Gemini bằng JS.
+[07:03:56] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:04:05] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/c39285e4-5873-427e-bcdd-fc0d3debb13f
+
+[07:04:05] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:04:05] Tổng số img trên trang: 6
+[07:04:06] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/c39285e4-5873-427e-bcdd-fc0d3debb13f
+[07:04:06] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:04:07] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:04:07] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:04:07] [DÒNG 1459] Bắt đầu tạo ảnh 2 Gemini...
+[07:04:09] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:04:09] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:04:09] Tổng số img trên trang: 5
+[07:04:11] -> Đã gửi prompt sang Gemini bằng JS.
+[07:04:14] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:04:24] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/6b4f8557-f0a2-4828-b1b2-5e975f8e9b5f
+
+[07:04:24] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:04:24] Tổng số img trên trang: 6
+[07:04:24] [IMG 4] size=1024x765 rect={'height': 535, 'width': 716, 'x': 291, 'y': 277} src=blob:https://gemini.google.com/6b4f8557-f0a2-4828-b1b2-5e975f8e9b5f
+[07:04:24] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:04:25] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:04:25] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:04:26] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1459 <=====
+
+[07:04:29] ======================================================================
+[07:04:29] KIỂM TRA DÒNG 1460: KPI performance marketing
+[07:04:29] Dòng 1460: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:04:29] [DÒNG 1460] Bắt đầu tạo ảnh 1 Gemini...
+[07:04:31] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:04:31] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:04:31] Tổng số img trên trang: 5
+[07:04:33] -> Đã gửi prompt sang Gemini bằng JS.
+[07:04:36] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:04:46] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/dfca6091-3883-49f8-90b9-1835338727ee
+
+[07:04:46] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:04:46] Tổng số img trên trang: 6
+[07:04:46] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/dfca6091-3883-49f8-90b9-1835338727ee
+[07:04:47] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:04:47] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:04:47] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:04:48] [DÒNG 1460] Bắt đầu tạo ảnh 2 Gemini...
+[07:04:50] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:04:50] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:04:50] Tổng số img trên trang: 5
+[07:04:52] -> Đã gửi prompt sang Gemini bằng JS.
+[07:04:55] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:05:04] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/39030b4a-e7a9-410e-b4ca-f08f883565eb
+
+[07:05:04] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:05:04] Tổng số img trên trang: 6
+[07:05:04] -> Đã ép tải ảnh Gemini thành công bằng load_event: 1024x765
+[07:05:05] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:05:05] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:05:07] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1460 <=====
+
+[07:05:10] ======================================================================
+[07:05:10] KIỂM TRA DÒNG 1461: chỉ số performance marketing
+[07:05:10] Dòng 1461: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:05:10] [DÒNG 1461] Bắt đầu tạo ảnh 1 Gemini...
+[07:05:12] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:05:12] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:05:12] Tổng số img trên trang: 5
+[07:05:13] -> Đã gửi prompt sang Gemini bằng JS.
+[07:05:16] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:05:27] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/73db6470-59c0-435c-9582-ab73f7abe2dd
+
+[07:05:27] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:05:27] Tổng số img trên trang: 6
+[07:05:27] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/73db6470-59c0-435c-9582-ab73f7abe2dd
+[07:05:28] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:05:28] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:05:28] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:05:29] [DÒNG 1461] Bắt đầu tạo ảnh 2 Gemini...
+[07:05:31] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:05:31] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:05:31] Tổng số img trên trang: 5
+[07:05:33] -> Đã gửi prompt sang Gemini bằng JS.
+[07:05:36] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:05:44] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/6e4afc94-4521-409e-b24a-4455803324e0
+
+[07:05:44] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:05:44] Tổng số img trên trang: 6
+[07:05:44] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/6e4afc94-4521-409e-b24a-4455803324e0
+[07:05:44] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:05:45] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:05:45] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:05:47] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1461 <=====
+
+[07:05:50] ======================================================================
+[07:05:50] KIỂM TRA DÒNG 1462: CPA marketing
+[07:05:50] Dòng 1462: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:05:50] [DÒNG 1462] Bắt đầu tạo ảnh 1 Gemini...
+[07:05:51] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:05:52] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:05:52] Tổng số img trên trang: 5
+[07:05:53] -> Đã gửi prompt sang Gemini bằng JS.
+[07:05:56] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:06:05] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/4457a76d-1700-4190-b970-eadeca7c3b7c
+
+[07:06:05] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:06:05] Tổng số img trên trang: 6
+[07:06:05] [IMG 4] size=1024x765 rect={'height': 533, 'width': 713, 'x': 292, 'y': 278} src=blob:https://gemini.google.com/4457a76d-1700-4190-b970-eadeca7c3b7c
+[07:06:05] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:06:06] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:06:06] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:06:07] [DÒNG 1462] Bắt đầu tạo ảnh 2 Gemini...
+[07:06:08] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:06:08] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:06:08] Tổng số img trên trang: 5
+[07:06:10] -> Đã gửi prompt sang Gemini bằng JS.
+[07:06:13] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:06:22] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/4b187c7b-2ec2-477f-a8f2-e91824dda27b
+
+[07:06:22] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:06:22] Tổng số img trên trang: 6
+[07:06:23] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/4b187c7b-2ec2-477f-a8f2-e91824dda27b
+[07:06:23] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:06:23] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:06:23] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:06:25] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1462 <=====
+
+[07:06:28] ======================================================================
+[07:06:28] KIỂM TRA DÒNG 1463: CPL marketing
+[07:06:28] Dòng 1463: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:06:28] [DÒNG 1463] Bắt đầu tạo ảnh 1 Gemini...
+[07:06:29] -> Gemini đã sẵn sàng sau 1.0s.
+
+[07:06:30] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:06:30] Tổng số img trên trang: 3
+[07:06:31] -> Đã gửi prompt sang Gemini bằng JS.
+[07:06:34] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:06:44] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/3bcd8f52-3eda-4995-a7c7-2187776bfa72
+
+[07:06:44] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:06:44] Tổng số img trên trang: 6
+[07:06:44] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/3bcd8f52-3eda-4995-a7c7-2187776bfa72
+[07:06:45] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:06:45] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:06:45] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:06:46] [DÒNG 1463] Bắt đầu tạo ảnh 2 Gemini...
+[07:06:48] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:06:48] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:06:48] Tổng số img trên trang: 5
+[07:06:50] -> Đã gửi prompt sang Gemini bằng JS.
+[07:06:53] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:07:03] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/6ccc4357-8ecb-4993-a6f3-121afaa8a944
+
+[07:07:03] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:07:03] Tổng số img trên trang: 6
+[07:07:03] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/6ccc4357-8ecb-4993-a6f3-121afaa8a944
+[07:07:03] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:07:04] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:07:04] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:07:06] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1463 <=====
+
+[07:07:08] ======================================================================
+[07:07:08] KIỂM TRA DÒNG 1464: CPC marketing
+[07:07:08] Dòng 1464: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:07:09] [DÒNG 1464] Bắt đầu tạo ảnh 1 Gemini...
+[07:07:10] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:07:10] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:07:10] Tổng số img trên trang: 5
+[07:07:12] -> Đã gửi prompt sang Gemini bằng JS.
+[07:07:15] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:07:24] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/65753959-74e2-4e9d-b600-ac8cb182d087
+
+[07:07:24] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:07:24] Tổng số img trên trang: 6
+[07:07:25] [IMG 4] size=1024x765 rect={'height': 576, 'width': 771, 'x': 263, 'y': 256} src=blob:https://gemini.google.com/65753959-74e2-4e9d-b600-ac8cb182d087
+[07:07:25] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:07:25] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:07:25] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:07:26] [DÒNG 1464] Bắt đầu tạo ảnh 2 Gemini...
+[07:07:28] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:07:28] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:07:28] Tổng số img trên trang: 5
+[07:07:30] -> Đã gửi prompt sang Gemini bằng JS.
+[07:07:33] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:07:42] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/4eb0890a-d67c-4225-9b0a-dc29ae3c1e26
+
+[07:07:42] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:07:42] Tổng số img trên trang: 6
+[07:07:42] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/4eb0890a-d67c-4225-9b0a-dc29ae3c1e26
+[07:07:42] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:07:43] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:07:43] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:07:45] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1464 <=====
+
+[07:07:47] ======================================================================
+[07:07:47] KIỂM TRA DÒNG 1465: CPM marketing
+[07:07:48] Dòng 1465: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:07:48] [DÒNG 1465] Bắt đầu tạo ảnh 1 Gemini...
+[07:07:49] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:07:49] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:07:49] Tổng số img trên trang: 5
+[07:07:51] -> Đã gửi prompt sang Gemini bằng JS.
+[07:07:54] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:08:05] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/e0eafa26-993c-466f-bb6a-a3aa39092713
+
+[07:08:05] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:08:05] Tổng số img trên trang: 6
+[07:08:05] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/e0eafa26-993c-466f-bb6a-a3aa39092713
+[07:08:05] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:08:06] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:08:06] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:08:07] [DÒNG 1465] Bắt đầu tạo ảnh 2 Gemini...
+[07:08:08] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:08:09] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:08:09] Tổng số img trên trang: 5
+[07:08:10] -> Đã gửi prompt sang Gemini bằng JS.
+[07:08:13] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:08:24] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/962b90f7-73da-43bb-9c7a-9f73449933fe
+
+[07:08:24] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:08:24] Tổng số img trên trang: 6
+[07:08:24] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/962b90f7-73da-43bb-9c7a-9f73449933fe
+[07:08:24] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:08:25] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:08:25] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:08:26] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1465 <=====
+
+[07:08:29] ======================================================================
+[07:08:29] KIỂM TRA DÒNG 1466: CTR marketing
+[07:08:29] Dòng 1466: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:08:29] [DÒNG 1466] Bắt đầu tạo ảnh 1 Gemini...
+[07:08:31] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:08:31] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:08:31] Tổng số img trên trang: 5
+[07:08:32] -> Đã gửi prompt sang Gemini bằng JS.
+[07:08:35] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:08:49] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/1e15d1c9-de43-436e-b1ea-d8afd1d0d67b
+
+[07:08:49] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:08:49] Tổng số img trên trang: 6
+[07:08:49] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/1e15d1c9-de43-436e-b1ea-d8afd1d0d67b
+[07:08:49] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:08:50] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:08:50] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:08:51] [DÒNG 1466] Bắt đầu tạo ảnh 2 Gemini...
+[07:08:52] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:08:52] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:08:53] Tổng số img trên trang: 5
+[07:08:54] -> Đã gửi prompt sang Gemini bằng JS.
+[07:08:57] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:09:07] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/ae4e8776-be88-459a-a865-f41f307a7f69
+
+[07:09:07] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:09:07] Tổng số img trên trang: 6
+[07:09:07] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/ae4e8776-be88-459a-a865-f41f307a7f69
+[07:09:07] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:09:08] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:09:08] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:09:09] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1466 <=====
+
+[07:09:12] ======================================================================
+[07:09:12] KIỂM TRA DÒNG 1467: conversion rate marketing
+[07:09:12] Dòng 1467: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:09:12] [DÒNG 1467] Bắt đầu tạo ảnh 1 Gemini...
+[07:09:14] -> Gemini đã sẵn sàng sau 1.4s.
+
+[07:09:14] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:09:14] Tổng số img trên trang: 5
+[07:09:16] -> Đã gửi prompt sang Gemini bằng JS.
+[07:09:19] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:09:30] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/7b16ada1-34b6-459b-b276-e7b4e2d5c43e
+
+[07:09:30] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:09:30] Tổng số img trên trang: 6
+[07:09:30] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/7b16ada1-34b6-459b-b276-e7b4e2d5c43e
+[07:09:30] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:09:31] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:09:31] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:09:32] [DÒNG 1467] Bắt đầu tạo ảnh 2 Gemini...
+[07:09:33] -> Gemini đã sẵn sàng sau 1.4s.
+
+[07:09:33] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:09:33] Tổng số img trên trang: 5
+[07:09:35] -> Đã gửi prompt sang Gemini bằng JS.
+[07:09:38] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:09:48] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/40eb778c-cee3-4b2c-a987-50128ed41d8a
+
+[07:09:48] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:09:48] Tổng số img trên trang: 6
+[07:09:48] [IMG 4] size=1024x765 rect={'height': 533, 'width': 713, 'x': 292, 'y': 278} src=blob:https://gemini.google.com/40eb778c-cee3-4b2c-a987-50128ed41d8a
+[07:09:48] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:09:49] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:09:49] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:09:51] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1467 <=====
+
+[07:09:54] ======================================================================
+[07:09:54] KIỂM TRA DÒNG 1468: tối ưu ROAS
+[07:09:54] Dòng 1468: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:09:54] [DÒNG 1468] Bắt đầu tạo ảnh 1 Gemini...
+[07:09:55] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:09:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:09:55] Tổng số img trên trang: 5
+[07:09:57] -> Đã gửi prompt sang Gemini bằng JS.
+[07:10:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:10:09] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/565a2ce4-ba9c-4802-a68c-0d85cc8e89c9
+
+[07:10:09] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:10:09] Tổng số img trên trang: 6
+[07:10:09] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:10:10] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:10:10] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:10:11] [DÒNG 1468] Bắt đầu tạo ảnh 2 Gemini...
+[07:10:13] -> Gemini đã sẵn sàng sau 1.4s.
+
+[07:10:13] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:10:13] Tổng số img trên trang: 5
+[07:10:14] -> Đã gửi prompt sang Gemini bằng JS.
+[07:10:17] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:10:27] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/8f1a43ea-184d-43ad-8b7b-118d80778f6c
+
+[07:10:27] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:10:27] Tổng số img trên trang: 6
+[07:10:27] [IMG 4] size=1024x765 rect={'height': 543, 'width': 727, 'x': 285, 'y': 273} src=blob:https://gemini.google.com/8f1a43ea-184d-43ad-8b7b-118d80778f6c
+[07:10:27] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:10:28] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:10:28] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:10:29] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1468 <=====
+
+[07:10:32] ======================================================================
+[07:10:32] KIỂM TRA DÒNG 1469: attribution trong performance marketing
+[07:10:32] Dòng 1469: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:10:32] [DÒNG 1469] Bắt đầu tạo ảnh 1 Gemini...
+[07:10:34] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:10:34] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:10:34] Tổng số img trên trang: 5
+[07:10:36] -> Đã gửi prompt sang Gemini bằng JS.
+[07:10:39] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:10:49] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/689e5525-f873-433a-998c-6088d0b36200
+
+[07:10:49] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:10:49] Tổng số img trên trang: 6
+[07:10:49] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:10:49] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:10:49] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:10:50] [DÒNG 1469] Bắt đầu tạo ảnh 2 Gemini...
+[07:10:52] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:10:52] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:10:52] Tổng số img trên trang: 5
+[07:10:54] -> Đã gửi prompt sang Gemini bằng JS.
+[07:10:57] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:11:05] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/21729254-c97c-4273-8152-dcd9316cad69
+
+[07:11:05] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:11:05] Tổng số img trên trang: 6
+[07:11:05] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/21729254-c97c-4273-8152-dcd9316cad69
+[07:11:05] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:11:06] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:11:06] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:11:07] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1469 <=====
+
+[07:11:10] ======================================================================
+[07:11:10] KIỂM TRA DÒNG 1470: công cụ performance marketing
+[07:11:10] Dòng 1470: Đã có Brief. Bỏ qua Word, tạo ảnh.
+
+[07:11:11] [DÒNG 1470] Bắt đầu tạo ảnh 1 Gemini...
+[07:11:12] -> Gemini đã sẵn sàng sau 1.0s.
+
+[07:11:12] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:11:12] Tổng số img trên trang: 5
+[07:11:14] -> Đã gửi prompt sang Gemini bằng JS.
+[07:11:17] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:12:19] ⚠️ Lần tạo ảnh đầu tiên thất bại. Sẽ thử lại đúng 1 lần bằng chat Gemini mới.
+[07:12:20] -> Gemini đã sẵn sàng sau 1.4s.
+
+[07:12:20] ===== DEBUG TRƯỚC KHI GỬI PROMPT (LẦN BẢO HIỂM) =====
+
+[07:12:20] Tổng số img trên trang: 2
+[07:12:22] -> Đã gửi prompt sang Gemini bằng JS.
+[07:12:25] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:12:34] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/2e62f341-8b54-40db-b994-446a75f163d2
+
+[07:12:34] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:12:34] Tổng số img trên trang: 6
+[07:12:34] [IMG 4] size=1024x765 rect={'height': 576, 'width': 771, 'x': 263, 'y': 256} src=blob:https://gemini.google.com/2e62f341-8b54-40db-b994-446a75f163d2
+[07:12:34] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:12:35] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:12:35] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:12:36] [DÒNG 1470] Bắt đầu tạo ảnh 2 Gemini...
+[07:12:37] -> Gemini đã sẵn sàng sau 1.4s.
+
+[07:12:37] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:12:37] Tổng số img trên trang: 5
+[07:12:39] -> Đã gửi prompt sang Gemini bằng JS.
+[07:12:42] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:12:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/00685692-d71c-4c84-b598-a99dea9fa4a0
+
+[07:12:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:12:52] Tổng số img trên trang: 6
+[07:12:52] [IMG 4] size=1024x765 rect={'height': 530, 'width': 709, 'x': 294, 'y': 280} src=blob:https://gemini.google.com/00685692-d71c-4c84-b598-a99dea9fa4a0
+[07:12:52] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:12:53] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:12:53] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:12:54] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1470 <=====
+[07:12:57] Dòng 1471: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:57] Dòng 1472: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:57] Dòng 1473: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:57] Dòng 1474: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1475: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1476: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1477: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1478: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1479: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1480: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1481: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1482: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:58] Dòng 1483: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1484: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1485: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1486: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1487: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1488: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1489: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1490: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:12:59] Dòng 1491: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1492: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1493: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1494: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1495: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1496: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1497: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1498: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1499: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:00] Dòng 1500: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1501: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1502: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1503: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1504: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1505: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1506: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1507: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:01] Dòng 1508: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:02] Dòng 1509: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:02] Dòng 1510: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:02] Dòng 1511: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:02] Dòng 1512: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:02] Dòng 1513: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:02] Dòng 1514: Trạng thái hoàn tất đã OK. Bỏ qua.
+[07:13:02] Dòng 1515: Trạng thái hoàn tất đã OK. Bỏ qua.
+
+[07:13:02] ======================================================================
+[07:13:02] KIỂM TRA DÒNG 1516: vai trò SEO marketing
+[07:13:02] BẮT ĐẦU DÒNG 1516: vai trò SEO marketing
+
+[07:13:02] [DÒNG 1516] Bắt đầu xử lý tạo Word...
+[07:13:03] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[07:13:11] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[07:23:16] ⚠️ Viết bài lần 1 chờ GPT quá lâu hoặc lỗi: ChatGPT phản hồi quá lâu hoặc bị treo (> 600s).
+[07:24:01] ⚠️ Viết bài lần 1 không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[07:24:02] -> Load lại URL hiện tại ChatGPT bài viết: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet/c/6a6d3a16-f844-83ec-80f5-97ef083694cd
+[07:24:29] -> Nội dung assistant đã ổn định 3s (30 từ).
+[07:24:29] -> Số từ ước tính bài viết: 30
+[07:24:29] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[07:24:30] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[07:24:31] -> Đã bấm gửi prompt.
+[07:29:02] -> Nội dung assistant đã ổn định 3s (3302 từ).
+[07:29:02] -> Số từ sau kéo dài: 3381
+[07:29:02] -> Đang lưu Word giữ định dạng...
+[07:29:15] -> Dòng 1516: Đã lưu Word OK từ URL mới.
+
+[07:29:16] [DÒNG 1516] Bắt đầu xin Brief ảnh...
+[07:29:17] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[07:29:19] -> Đã bấm gửi prompt.
+[07:30:03] -> Nội dung assistant đã ổn định 3s (312 từ).
+[07:30:04] -> Dòng 1516: Đã lưu Brief vào O/P.
+
+[07:30:05] [DÒNG 1516] Bắt đầu tạo ảnh 1 Gemini...
+[07:30:08] -> Gemini đã sẵn sàng sau 2.6s.
+
+[07:30:08] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:30:08] Tổng số img trên trang: 5
+[07:30:10] -> Đã gửi prompt sang Gemini bằng JS.
+[07:30:13] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:30:24] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/b8379eeb-4f95-451a-90f2-08f9b9b00815
+
+[07:30:24] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:30:24] Tổng số img trên trang: 6
+[07:30:25] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/b8379eeb-4f95-451a-90f2-08f9b9b00815
+[07:30:25] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:30:25] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:30:25] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:30:26] [DÒNG 1516] Bắt đầu tạo ảnh 2 Gemini...
+[07:30:27] -> Gemini đã sẵn sàng sau 1.2s.
+
+[07:30:28] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:30:28] Tổng số img trên trang: 2
+[07:30:29] -> Đã gửi prompt sang Gemini bằng JS.
+[07:30:32] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:30:43] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/4fd74d01-d979-46fe-899d-7ac6b92cdf2d
+
+[07:30:43] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:30:43] Tổng số img trên trang: 6
+[07:30:43] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/4fd74d01-d979-46fe-899d-7ac6b92cdf2d
+[07:30:43] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:30:44] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:30:44] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:30:46] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1516 <=====
+
+[07:30:49] ======================================================================
+[07:30:49] KIỂM TRA DÒNG 1517: SEO và Google Ads
+[07:30:49] BẮT ĐẦU DÒNG 1517: SEO và Google Ads
+
+[07:30:49] [DÒNG 1517] Bắt đầu xử lý tạo Word...
+[07:30:49] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[07:30:57] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[07:36:36] -> Nội dung assistant đã ổn định 3s (3226 từ).
+[07:36:36] -> Số từ ước tính bài viết: 3401
+[07:36:36] -> Đang lưu Word giữ định dạng...
+[07:36:52] -> Dòng 1517: Đã lưu Word OK từ URL mới.
+
+[07:36:53] [DÒNG 1517] Bắt đầu xin Brief ảnh...
+[07:36:55] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[07:36:56] -> Đã bấm gửi prompt.
+[07:37:28] -> Nội dung assistant đã ổn định 3s (287 từ).
+[07:37:29] -> Dòng 1517: Đã lưu Brief vào O/P.
+
+[07:37:30] [DÒNG 1517] Bắt đầu tạo ảnh 1 Gemini...
+[07:37:32] -> Gemini đã sẵn sàng sau 1.7s.
+
+[07:37:32] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:37:32] Tổng số img trên trang: 5
+[07:37:34] -> Đã gửi prompt sang Gemini bằng JS.
+[07:37:37] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:37:47] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/470118a4-0cc2-42e2-97c7-5c843e03a909
+
+[07:37:47] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:37:47] Tổng số img trên trang: 6
+[07:37:47] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/470118a4-0cc2-42e2-97c7-5c843e03a909
+[07:37:47] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:37:48] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:37:48] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:37:49] [DÒNG 1517] Bắt đầu tạo ảnh 2 Gemini...
+[07:37:50] -> Gemini đã sẵn sàng sau 1.1s.
+
+[07:37:50] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:37:50] Tổng số img trên trang: 3
+[07:37:52] -> Đã gửi prompt sang Gemini bằng JS.
+[07:37:55] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:38:06] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/6e847ac0-cc7b-4342-801c-911cd34b514f
+
+[07:38:06] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:38:06] Tổng số img trên trang: 6
+[07:38:06] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/6e847ac0-cc7b-4342-801c-911cd34b514f
+[07:38:06] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:38:07] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:38:07] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:38:09] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1517 <=====
+
+[07:38:12] ======================================================================
+[07:38:12] KIỂM TRA DÒNG 1518: thành phần SEO marketing
+[07:38:12] BẮT ĐẦU DÒNG 1518: thành phần SEO marketing
+
+[07:38:12] [DÒNG 1518] Bắt đầu xử lý tạo Word...
+[07:38:12] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[07:38:20] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[07:38:52] -> Nội dung assistant đã ổn định 3s (1843 từ).
+[07:38:52] -> Số từ ước tính bài viết: 1843
+[07:38:52] -> Đang lưu Word giữ định dạng...
+[07:39:06] -> Dòng 1518: Đã lưu Word OK từ URL mới.
+
+[07:39:07] [DÒNG 1518] Bắt đầu xin Brief ảnh...
+[07:39:08] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[07:39:09] -> Đã bấm gửi prompt.
+[07:39:39] -> Nội dung assistant đã ổn định 3s (289 từ).
+[07:39:41] -> Dòng 1518: Đã lưu Brief vào O/P.
+
+[07:39:41] [DÒNG 1518] Bắt đầu tạo ảnh 1 Gemini...
+[07:39:42] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:39:43] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:39:43] Tổng số img trên trang: 5
+[07:39:44] -> Đã gửi prompt sang Gemini bằng JS.
+[07:39:47] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:39:57] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/f1301398-cca1-4634-a98e-49cd5262fda2
+
+[07:39:57] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:39:57] Tổng số img trên trang: 6
+[07:39:57] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/f1301398-cca1-4634-a98e-49cd5262fda2
+[07:39:57] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:39:58] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:39:58] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:39:59] [DÒNG 1518] Bắt đầu tạo ảnh 2 Gemini...
+[07:40:00] -> Gemini đã sẵn sàng sau 1.0s.
+
+[07:40:00] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:40:00] Tổng số img trên trang: 3
+[07:40:02] -> Đã gửi prompt sang Gemini bằng JS.
+[07:40:05] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:40:14] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/4e0d37e1-1c9d-4405-a005-3a458569b194
+
+[07:40:14] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:40:14] Tổng số img trên trang: 6
+[07:40:14] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/4e0d37e1-1c9d-4405-a005-3a458569b194
+[07:40:14] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:40:15] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:40:15] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:40:17] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1518 <=====
+
+[07:40:20] ======================================================================
+[07:40:20] KIỂM TRA DÒNG 1519: quy trình SEO marketing
+[07:40:20] BẮT ĐẦU DÒNG 1519: quy trình SEO marketing
+
+[07:40:20] [DÒNG 1519] Bắt đầu xử lý tạo Word...
+[07:40:20] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[07:40:28] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[07:49:22] -> Nội dung assistant đã ổn định 3s (3939 từ).
+[07:49:22] -> Số từ ước tính bài viết: 4121
+[07:49:22] -> Đang lưu Word giữ định dạng...
+[07:49:40] -> Dòng 1519: Đã lưu Word OK từ URL mới.
+
+[07:49:41] [DÒNG 1519] Bắt đầu xin Brief ảnh...
+[07:49:42] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[07:49:44] -> Đã bấm gửi prompt.
+[07:50:10] -> Nội dung assistant đã ổn định 3s (316 từ).
+[07:50:11] -> Dòng 1519: Đã lưu Brief vào O/P.
+
+[07:50:12] [DÒNG 1519] Bắt đầu tạo ảnh 1 Gemini...
+[07:50:13] -> Gemini đã sẵn sàng sau 1.3s.
+
+[07:50:14] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:50:14] Tổng số img trên trang: 5
+[07:50:16] -> Đã gửi prompt sang Gemini bằng JS.
+[07:50:19] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:50:26] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/91fd56d3-5c26-4a77-a767-b1abd79ce5de
+
+[07:50:26] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:50:26] Tổng số img trên trang: 6
+[07:50:26] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/91fd56d3-5c26-4a77-a767-b1abd79ce5de
+[07:50:26] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:50:26] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:50:26] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:50:27] [DÒNG 1519] Bắt đầu tạo ảnh 2 Gemini...
+[07:50:29] -> Gemini đã sẵn sàng sau 1.1s.
+
+[07:50:29] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:50:29] Tổng số img trên trang: 3
+[07:50:31] -> Đã gửi prompt sang Gemini bằng JS.
+[07:50:34] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:50:45] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/1bbe4823-8311-46b4-ba27-81c7ea943c05
+
+[07:50:45] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:50:45] Tổng số img trên trang: 6
+[07:50:45] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/1bbe4823-8311-46b4-ba27-81c7ea943c05
+[07:50:45] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:50:45] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:50:45] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:50:47] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1519 <=====
+
+[07:50:51] ======================================================================
+[07:50:51] KIỂM TRA DÒNG 1520: nghiên cứu từ khóa SEO
+[07:50:51] BẮT ĐẦU DÒNG 1520: nghiên cứu từ khóa SEO
+
+[07:50:51] [DÒNG 1520] Bắt đầu xử lý tạo Word...
+[07:50:51] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[07:51:01] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[07:55:01] -> Nội dung assistant đã ổn định 3s (4205 từ).
+[07:55:01] -> Số từ ước tính bài viết: 4440
+[07:55:01] -> Đang lưu Word giữ định dạng...
+[07:55:20] -> Dòng 1520: Đã lưu Word OK từ URL mới.
+
+[07:55:21] [DÒNG 1520] Bắt đầu xin Brief ảnh...
+[07:55:23] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[07:55:25] -> Đã bấm gửi prompt.
+[07:55:51] -> Nội dung assistant đã ổn định 3s (276 từ).
+[07:55:52] -> Dòng 1520: Đã lưu Brief vào O/P.
+
+[07:55:53] [DÒNG 1520] Bắt đầu tạo ảnh 1 Gemini...
+[07:55:55] -> Gemini đã sẵn sàng sau 1.6s.
+
+[07:55:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:55:55] Tổng số img trên trang: 5
+[07:55:57] -> Đã gửi prompt sang Gemini bằng JS.
+[07:56:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:56:11] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/db3a9cb1-7e9c-4059-a898-60e3d3a71495
+
+[07:56:11] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:56:11] Tổng số img trên trang: 6
+[07:56:11] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/db3a9cb1-7e9c-4059-a898-60e3d3a71495
+[07:56:11] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:56:12] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:56:12] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[07:56:13] [DÒNG 1520] Bắt đầu tạo ảnh 2 Gemini...
+[07:56:14] -> Gemini đã sẵn sàng sau 1.1s.
+
+[07:56:15] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[07:56:15] Tổng số img trên trang: 5
+[07:56:16] -> Đã gửi prompt sang Gemini bằng JS.
+[07:56:19] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[07:56:30] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/d2862090-4fe5-41f8-bf5c-86d7605a4364
+
+[07:56:30] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[07:56:30] Tổng số img trên trang: 6
+[07:56:30] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/d2862090-4fe5-41f8-bf5c-86d7605a4364
+[07:56:30] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[07:56:31] -> Đã resize ảnh về tối đa 800px: 800x597
+[07:56:31] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[07:56:33] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1520 <=====
+
+[07:56:36] ======================================================================
+[07:56:36] KIỂM TRA DÒNG 1521: search intent
+[07:56:37] BẮT ĐẦU DÒNG 1521: search intent
+
+[07:56:37] [DÒNG 1521] Bắt đầu xử lý tạo Word...
+[07:56:37] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[07:56:45] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:06:42] -> Nội dung assistant đã ổn định 3s (3451 từ).
+[08:06:42] -> Số từ ước tính bài viết: 3531
+[08:06:42] -> Đang lưu Word giữ định dạng...
+[08:06:59] -> Dòng 1521: Đã lưu Word OK từ URL mới.
+
+[08:07:00] [DÒNG 1521] Bắt đầu xin Brief ảnh...
+[08:07:01] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[08:07:03] -> Đã bấm gửi prompt.
+[08:07:35] -> Nội dung assistant đã ổn định 3s (326 từ).
+[08:07:36] -> Dòng 1521: Đã lưu Brief vào O/P.
+
+[08:07:37] [DÒNG 1521] Bắt đầu tạo ảnh 1 Gemini...
+[08:07:38] -> Gemini đã sẵn sàng sau 1.3s.
+
+[08:07:39] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:07:39] Tổng số img trên trang: 3
+[08:07:40] -> Đã gửi prompt sang Gemini bằng JS.
+[08:07:43] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:07:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/ab995b39-c8c0-4ba7-9d02-f2b1d871d596
+
+[08:07:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:07:52] Tổng số img trên trang: 6
+[08:07:52] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/ab995b39-c8c0-4ba7-9d02-f2b1d871d596
+[08:07:52] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:07:52] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:07:52] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[08:07:53] [DÒNG 1521] Bắt đầu tạo ảnh 2 Gemini...
+[08:07:55] -> Gemini đã sẵn sàng sau 1.2s.
+
+[08:07:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:07:55] Tổng số img trên trang: 3
+[08:07:57] -> Đã gửi prompt sang Gemini bằng JS.
+[08:08:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:08:10] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/7972b1a8-e7e4-4a19-a704-56607844deb2
+
+[08:08:10] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:08:10] Tổng số img trên trang: 6
+[08:08:10] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:08:11] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:08:11] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[08:08:13] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1521 <=====
+
+[08:08:16] ======================================================================
+[08:08:16] KIỂM TRA DÒNG 1522: topic cluster SEO
+[08:08:16] BẮT ĐẦU DÒNG 1522: topic cluster SEO
+
+[08:08:16] [DÒNG 1522] Bắt đầu xử lý tạo Word...
+[08:08:16] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:08:24] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:11:55] -> Nội dung assistant đã ổn định 3s (3793 từ).
+[08:11:55] -> Số từ ước tính bài viết: 3962
+[08:11:55] -> Đang lưu Word giữ định dạng...
+[08:12:12] -> Dòng 1522: Đã lưu Word OK từ URL mới.
+
+[08:12:13] [DÒNG 1522] Bắt đầu xin Brief ảnh...
+[08:12:15] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[08:12:17] -> Đã bấm gửi prompt.
+[08:12:51] -> Nội dung assistant đã ổn định 3s (271 từ).
+[08:12:52] -> Dòng 1522: Đã lưu Brief vào O/P.
+
+[08:12:53] [DÒNG 1522] Bắt đầu tạo ảnh 1 Gemini...
+[08:12:55] -> Gemini đã sẵn sàng sau 1.7s.
+
+[08:12:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:12:55] Tổng số img trên trang: 5
+[08:12:57] -> Đã gửi prompt sang Gemini bằng JS.
+[08:13:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:13:11] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/78c48b48-7b50-41ed-ad92-0da6e4958730
+
+[08:13:11] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:13:11] Tổng số img trên trang: 6
+[08:13:12] [IMG 4] size=1024x765 rect={'height': 539, 'width': 721, 'x': 288, 'y': 275} src=blob:https://gemini.google.com/78c48b48-7b50-41ed-ad92-0da6e4958730
+[08:13:12] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:13:13] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:13:13] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[08:13:14] [DÒNG 1522] Bắt đầu tạo ảnh 2 Gemini...
+[08:13:15] -> Gemini đã sẵn sàng sau 1.0s.
+
+[08:13:15] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:13:15] Tổng số img trên trang: 2
+[08:13:17] -> Đã gửi prompt sang Gemini bằng JS.
+[08:13:20] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:13:30] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/02806916-f4ca-4cdb-870d-02cdf623d4e8
+
+[08:13:30] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:13:30] Tổng số img trên trang: 6
+[08:13:30] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/02806916-f4ca-4cdb-870d-02cdf623d4e8
+[08:13:30] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:13:31] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:13:31] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[08:13:33] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1522 <=====
+
+[08:13:36] ======================================================================
+[08:13:36] KIỂM TRA DÒNG 1523: on page SEO
+[08:13:36] BẮT ĐẦU DÒNG 1523: on page SEO
+
+[08:13:36] [DÒNG 1523] Bắt đầu xử lý tạo Word...
+[08:13:37] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:13:45] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:17:50] -> Nội dung assistant đã ổn định 3s (3337 từ).
+[08:17:50] -> Số từ ước tính bài viết: 3437
+[08:17:50] -> Đang lưu Word giữ định dạng...
+[08:18:04] -> Dòng 1523: Đã lưu Word OK từ URL mới.
+
+[08:18:05] [DÒNG 1523] Bắt đầu xin Brief ảnh...
+[08:18:06] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[08:18:08] -> Đã bấm gửi prompt.
+[08:18:34] -> Nội dung assistant đã ổn định 3s (292 từ).
+[08:18:35] -> Dòng 1523: Đã lưu Brief vào O/P.
+
+[08:18:36] [DÒNG 1523] Bắt đầu tạo ảnh 1 Gemini...
+[08:18:37] -> Gemini đã sẵn sàng sau 1.3s.
+
+[08:18:37] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:18:37] Tổng số img trên trang: 3
+[08:18:39] -> Đã gửi prompt sang Gemini bằng JS.
+[08:18:42] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:18:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/df2ac675-da86-4e01-9a00-937579970b4d
+
+[08:18:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:18:52] Tổng số img trên trang: 6
+[08:18:52] [IMG 4] size=1024x765 rect={'height': 530, 'width': 709, 'x': 294, 'y': 280} src=blob:https://gemini.google.com/df2ac675-da86-4e01-9a00-937579970b4d
+[08:18:52] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:18:53] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:18:53] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[08:18:54] [DÒNG 1523] Bắt đầu tạo ảnh 2 Gemini...
+[08:18:55] -> Gemini đã sẵn sàng sau 1.1s.
+
+[08:18:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:18:55] Tổng số img trên trang: 3
+[08:18:57] -> Đã gửi prompt sang Gemini bằng JS.
+[08:19:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:19:08] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/b045a97d-082b-4990-9ee0-d6080bf696d2
+
+[08:19:08] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:19:08] Tổng số img trên trang: 6
+[08:19:09] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/b045a97d-082b-4990-9ee0-d6080bf696d2
+[08:19:09] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:19:09] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:19:09] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[08:19:11] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1523 <=====
+
+[08:19:14] ======================================================================
+[08:19:14] KIỂM TRA DÒNG 1524: off page SEO
+[08:19:14] BẮT ĐẦU DÒNG 1524: off page SEO
+
+[08:19:14] [DÒNG 1524] Bắt đầu xử lý tạo Word...
+[08:19:15] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:19:23] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:23:45] -> Nội dung assistant đã ổn định 3s (3967 từ).
+[08:23:45] -> Số từ ước tính bài viết: 4115
+[08:23:45] -> Đang lưu Word giữ định dạng...
+[08:24:00] -> Dòng 1524: Đã lưu Word OK từ URL mới.
+
+[08:24:01] [DÒNG 1524] Bắt đầu xin Brief ảnh...
+[08:24:03] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[08:24:05] -> Đã bấm gửi prompt.
+[08:24:33] -> Nội dung assistant đã ổn định 3s (291 từ).
+[08:24:34] -> Dòng 1524: Đã lưu Brief vào O/P.
+
+[08:24:35] [DÒNG 1524] Bắt đầu tạo ảnh 1 Gemini...
+[08:24:36] -> Gemini đã sẵn sàng sau 1.4s.
+
+[08:24:36] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:24:36] Tổng số img trên trang: 5
+[08:24:38] -> Đã gửi prompt sang Gemini bằng JS.
+[08:24:41] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:24:49] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/cbd7de21-53ea-46b2-bdfa-437a757fa620
+
+[08:24:49] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:24:49] Tổng số img trên trang: 6
+[08:24:49] [IMG 4] size=1024x765 rect={'height': 530, 'width': 709, 'x': 294, 'y': 280} src=blob:https://gemini.google.com/cbd7de21-53ea-46b2-bdfa-437a757fa620
+[08:24:50] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:24:50] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:24:50] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[08:24:51] [DÒNG 1524] Bắt đầu tạo ảnh 2 Gemini...
+[08:24:52] -> Gemini đã sẵn sàng sau 1.1s.
+
+[08:24:53] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:24:53] Tổng số img trên trang: 3
+[08:24:55] -> Đã gửi prompt sang Gemini bằng JS.
+[08:24:58] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:25:08] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/8b8affb6-5b13-4117-98f7-a4e0792fcb78
+
+[08:25:08] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:25:08] Tổng số img trên trang: 6
+[08:25:08] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/8b8affb6-5b13-4117-98f7-a4e0792fcb78
+[08:25:08] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:25:09] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:25:09] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[08:25:11] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1524 <=====
+
+[08:25:14] ======================================================================
+[08:25:14] KIỂM TRA DÒNG 1525: technical SEO
+[08:25:14] BẮT ĐẦU DÒNG 1525: technical SEO
+
+[08:25:14] [DÒNG 1525] Bắt đầu xử lý tạo Word...
+[08:25:15] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:25:23] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:31:50] -> Nội dung assistant đã ổn định 3s (3196 từ).
+[08:31:50] -> Số từ ước tính bài viết: 3295
+[08:31:50] -> Đang lưu Word giữ định dạng...
+[08:32:04] -> Dòng 1525: Đã lưu Word OK từ URL mới.
+
+[08:32:05] [DÒNG 1525] Bắt đầu xin Brief ảnh...
+[08:32:06] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[08:32:08] -> Đã bấm gửi prompt.
+[08:32:34] -> Nội dung assistant đã ổn định 3s (290 từ).
+[08:32:35] -> Dòng 1525: Đã lưu Brief vào O/P.
+
+[08:32:36] [DÒNG 1525] Bắt đầu tạo ảnh 1 Gemini...
+[08:32:38] -> Gemini đã sẵn sàng sau 1.7s.
+
+[08:32:38] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:32:38] Tổng số img trên trang: 5
+[08:32:40] -> Đã gửi prompt sang Gemini bằng JS.
+[08:32:43] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:32:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/1612f7e4-61f1-4730-b78f-27e5c3c268c0
+
+[08:32:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:32:52] Tổng số img trên trang: 6
+[08:32:52] [IMG 4] size=1024x765 rect={'height': 530, 'width': 709, 'x': 294, 'y': 280} src=blob:https://gemini.google.com/1612f7e4-61f1-4730-b78f-27e5c3c268c0
+[08:32:52] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:32:52] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:32:52] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[08:32:53] [DÒNG 1525] Bắt đầu tạo ảnh 2 Gemini...
+[08:32:55] -> Gemini đã sẵn sàng sau 1.0s.
+
+[08:32:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[08:32:55] Tổng số img trên trang: 3
+[08:32:57] -> Đã gửi prompt sang Gemini bằng JS.
+[08:33:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[08:33:09] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/bb558f4b-3674-4f1a-b45a-816f726dd752
+
+[08:33:09] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[08:33:09] Tổng số img trên trang: 6
+[08:33:10] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[08:33:10] -> Đã resize ảnh về tối đa 800px: 800x597
+[08:33:10] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[08:33:12] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1525 <=====
+
+[08:33:15] ======================================================================
+[08:33:15] KIỂM TRA DÒNG 1526: entity SEO
+[08:33:15] BẮT ĐẦU DÒNG 1526: entity SEO
+
+[08:33:15] [DÒNG 1526] Bắt đầu xử lý tạo Word...
+[08:33:16] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:33:24] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:41:24] -> Nội dung assistant đã ổn định 3s (3907 từ).
+[08:41:24] -> Số từ ước tính bài viết: 4054
+[08:41:24] -> Đang lưu Word giữ định dạng...
+[08:41:40] -> Dòng 1526: Đã lưu Word OK từ URL mới.
+
+[08:41:41] [DÒNG 1526] Bắt đầu xin Brief ảnh...
+[08:41:46] ❌ Dòng 1526: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[08:41:49] ======================================================================
+[08:41:49] KIỂM TRA DÒNG 1527: E-E-A-T SEO
+[08:41:49] BẮT ĐẦU DÒNG 1527: E-E-A-T SEO
+
+[08:41:49] [DÒNG 1527] Bắt đầu xử lý tạo Word...
+[08:41:50] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:41:59] ❌ Dòng 1527: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[08:42:02] ======================================================================
+[08:42:02] KIỂM TRA DÒNG 1528: SEO content
+[08:42:02] BẮT ĐẦU DÒNG 1528: SEO content
+
+[08:42:02] [DÒNG 1528] Bắt đầu xử lý tạo Word...
+[08:42:03] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:42:11] ❌ Dòng 1528: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[08:42:14] ======================================================================
+[08:42:14] KIỂM TRA DÒNG 1529: SEO audit
+[08:42:14] BẮT ĐẦU DÒNG 1529: SEO audit
+
+[08:42:14] [DÒNG 1529] Bắt đầu xử lý tạo Word...
+[08:42:15] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:42:24] ❌ Dòng 1529: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[08:42:26] ======================================================================
+[08:42:26] KIỂM TRA DÒNG 1530: KPI SEO
+[08:42:26] BẮT ĐẦU DÒNG 1530: KPI SEO
+
+[08:42:26] [DÒNG 1530] Bắt đầu xử lý tạo Word...
+[08:42:27] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:42:34] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:46:57] -> Nội dung assistant đã ổn định 3s (4604 từ).
+[08:46:57] -> Số từ ước tính bài viết: 4834
+[08:46:57] -> Đang lưu Word giữ định dạng...
+[08:47:15] -> Dòng 1530: Đã lưu Word OK từ URL mới.
+
+[08:47:16] [DÒNG 1530] Bắt đầu xin Brief ảnh...
+[08:47:21] ❌ Dòng 1530: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[08:47:24] ======================================================================
+[08:47:24] KIỂM TRA DÒNG 1531: đo lường SEO
+[08:47:24] BẮT ĐẦU DÒNG 1531: đo lường SEO
+
+[08:47:24] [DÒNG 1531] Bắt đầu xử lý tạo Word...
+[08:47:25] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[08:47:32] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[08:49:23] -> Đã hiện lại Edge Selenium.
+[08:55:16] -> Đã hiện lại Edge Selenium.
+[08:56:29] -> Nội dung assistant đã ổn định 3s (4094 từ).
+[08:56:29] -> Số từ ước tính bài viết: 4312
+[08:56:29] -> Đang lưu Word giữ định dạng...
+[08:56:48] -> Dòng 1531: Đã lưu Word OK từ URL mới.
+
+[08:56:49] [DÒNG 1531] Bắt đầu xin Brief ảnh...
+[08:56:53] ❌ Dòng 1531: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[08:56:56] [ĐÃ DỪNG] Hoàn thành dòng 1531, không chạy dòng kế tiếp.
+
+[08:56:56] [DỪNG AN TOÀN] Đã xử lý 31 dòng.
+
+========================================================================
+Kết thúc: 2026-08-01 08:56:59
+Mã thoát: 0
+Thời gian: 6960.25 giây

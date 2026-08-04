@@ -1,0 +1,11 @@
+{
+  "state": "stopped",
+  "target": "D:\\CodexProjects\\Hotkeyvip\\02_viet_bai\\V2.16_CODEX_chatgpt_cho_san_sang.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\viet-bai-3-luong\\2026-08-04_22-20-33_e4018c2e.log",
+  "startedAt": 1785856833.7865307,
+  "endedAt": 1785857796.6307242,
+  "duration": 962.84,
+  "exitCode": null,
+  "truncated": false,
+  "error": "Người dùng dừng từ Studio"
+}

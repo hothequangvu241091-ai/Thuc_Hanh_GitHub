@@ -1,0 +1,19 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py
+Bắt đầu: 2026-08-02 12:09:00
+========================================================================
+[12:09:01] Traceback (most recent call last):
+[12:09:01]   File "D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py", line 289, in <module>
+[12:09:01]     raise SystemExit(main())
+[12:09:01]                      ^^^^^^
+[12:09:01]   File "D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py", line 263, in main
+[12:09:01]     tasks = load_tasks(args.excel.resolve(), args.limit)
+[12:09:01]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[12:09:01]   File "D:\Dang_bai\RA_SOAT_NOI_DUNG_DA_DANG_V1.0.py", line 191, in load_tasks
+[12:09:01]     raise RuntimeError("Không tìm thấy sheet DANG_BAI/dangbai trong Excel.")
+[12:09:01] RuntimeError: Không tìm thấy sheet DANG_BAI/dangbai trong Excel.
+
+========================================================================
+Kết thúc: 2026-08-02 12:09:01
+Mã thoát: 1
+Thời gian: 1.62 giây

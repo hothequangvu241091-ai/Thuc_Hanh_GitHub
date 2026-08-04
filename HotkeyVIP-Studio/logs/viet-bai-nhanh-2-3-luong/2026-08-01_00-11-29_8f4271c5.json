@@ -1,0 +1,11 @@
+{
+  "state": "error",
+  "target": "D:\\CodexProjects\\Hotkeyvip\\02_viet_bai\\CLAUDE_CHAY_RIENG_1_LUONG.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\viet-bai-nhanh-2-3-luong\\2026-08-01_00-11-29_8f4271c5.log",
+  "startedAt": 1785517889.4744875,
+  "endedAt": 1785517939.1409159,
+  "duration": 49.67,
+  "exitCode": 3221225786,
+  "truncated": false,
+  "error": ""
+}

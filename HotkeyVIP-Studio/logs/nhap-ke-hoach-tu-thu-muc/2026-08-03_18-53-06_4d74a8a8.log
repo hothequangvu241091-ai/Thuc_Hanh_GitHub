@@ -1,0 +1,97 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\04_excel\V2.2_nhap_du_lieu_ke_hoach_danh_so_trung_nhanh.py
+Bắt đầu: 2026-08-03 18:53:06
+========================================================================
+[18:53:06] ========================================================================
+[18:53:06] NHẬP DỮ LIỆU KE_HOACH V2.2 - PHÂN LOẠI BÀI TRÙNG
+[18:53:06] ========================================================================
+[18:53:06] Workbook đích: hotkeyvip_test.xlsm
+[18:53:14] Phạm vi: chỉ file nằm trực tiếp trong thư mục đã chọn.
+[18:53:15] Đang đọc nguồn: bantindoanhnhan.com.xlsx / Article
+[18:53:15] Đang đọc nguồn: bantinkhoahoc.com.xlsx / Article
+[18:53:15] Đang đọc nguồn: bantinkinhdoanh.com.xlsx / Article
+[18:53:15] Đang đọc nguồn: baogiadinhxahoi.com.xlsx / Article
+[18:53:15] Đang đọc nguồn: baokinhtethitruong.com.xlsx / Article
+[18:53:16] Đang đọc nguồn: baothuonggia.com.xlsx / Article
+[18:53:16] Đang đọc nguồn: cachnaumonngon.com.xlsx / Article
+[18:53:16] Đang đọc nguồn: congdongkinhdoanh.com.xlsx / Article
+[18:53:16] Đang đọc nguồn: doanhnhanduongthoi.com.xlsx / Article
+[18:53:17] Đang đọc nguồn: doanhthuong.net.xlsx / Article
+[18:53:17] Đang đọc nguồn: giadinhvaxahoi.com.xlsx / Article
+[18:53:17] Đang đọc nguồn: gioinghesy.com.xlsx / Article
+[18:53:17] Đang đọc nguồn: hoikhoahoc.com.xlsx / Article
+[18:53:17] Đang đọc nguồn: khoahockythuat.com.xlsx / Article
+[18:53:17] Đang đọc nguồn: khoahocvacongnghe.com.xlsx / Article
+[18:53:17] Đang đọc nguồn: khoahocvadoisong.com.xlsx / Article
+[18:53:18] Đang đọc nguồn: kinhtephattrien.com.xlsx / Article
+[18:53:18] Đang đọc nguồn: kythuatmarketing.com.xlsx / Article
+[18:53:18] Đang đọc nguồn: lamdepvasuckhoe.com.xlsx / Article
+[18:53:18] Đang đọc nguồn: lamvan.net.xlsx / Article
+[18:53:18] Đang đọc nguồn: mangphongthuy.com.xlsx / Article
+[18:53:19] Đang đọc nguồn: nongthonngaynay.com.xlsx / Article
+[18:53:19] Đang đọc nguồn: phapluatvacuocsong.com.xlsx / Article
+[18:53:19] Đang đọc nguồn: sangtaovui.com.xlsx / Article
+[18:53:19] Đang đọc nguồn: sinhlydanong.com.xlsx / Article
+[18:53:19] Đang đọc nguồn: suckhoevagiadinh.com.xlsx / Article
+[18:53:19] Đang đọc nguồn: suckhoevamoitruong.com.xlsx / Article
+[18:53:19] Đang đọc nguồn: taichinhvakinhdoanh.com.xlsx / Article
+[18:53:20] Đang đọc nguồn: tapchidangdep.com.xlsx / Article
+[18:53:20] Đang đọc nguồn: tapchidulichvietnam.com.xlsx / Article
+[18:53:20] Đang đọc nguồn: tapchikhoedep.com.xlsx / Article
+[18:53:20] Đang đọc nguồn: tapchixedep.com.xlsx / Article
+[18:53:20] Đang đọc nguồn: thegioihinhanh.com.xlsx / Article
+[18:53:20] Đang đọc nguồn: thoibaokinhtesaigon.com.xlsx / Article
+[18:53:21] Đang đọc nguồn: tiepthisaigon.com.vn.xlsx / Article
+[18:53:21] Đang đọc nguồn: tuvangiadinh.net.xlsx / Article
+[18:53:21] Đang đọc nguồn: vanhoavadulich.com.xlsx / Article
+[18:53:21] Đang đọc nguồn: vanhoavagiaoduc.com.xlsx / Article
+[18:53:21] Đang đọc nguồn: vinabrand.vn.xlsx / Article
+[18:53:22] Đang đọc nguồn: xuctiendoanhnghiep.com.xlsx / Article
+[18:53:24] Đã quét: 41 file Excel.
+[18:53:24] Đã thêm heading còn thiếu: 0.
+[18:53:24] Đã thêm dòng mới: 1933.
+[18:53:24] Title [SEO] đã có trong KE_HOACH: 2057.
+[18:53:24] Đã bổ sung URL Page vào dòng cũ còn trống: 0.
+[18:53:24] Đã xử lý các trường hợp trùng/nghi trùng: 69.
+[18:53:24] Đã ghi 'Bài viết trùng' vào URL nguồn: 0.
+[18:53:24] Ô URL nguồn đã có dữ liệu nên giữ nguyên: 6.
+[18:53:24] Tổng số ô được cập nhật: 17446.
+[18:53:24] Dòng nguồn bỏ qua vì thiếu bộ ba Title [SEO] + Article Name [H1] + Main Keyword: 1946.
+[18:53:24] File không có sheet chứa Title [SEO], đã bỏ qua: 1.QL_New-Content_Kênh SEO.xlsx
+[18:53:24] Chi tiết xử lý bài trùng và nghi trùng:
+[18:53:24] - ĐÁNH SỐ: 'Xác định phạm vi kế hoạch Marketing theo mục tiêu và nguồn lực' tại kythuatmarketing.com.xlsx / Article - dòng 141 thành 'Xác định phạm vi kế hoạch Marketing theo mục tiêu và nguồn lực - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Cách xây dựng quy trình đo lường hiệu quả marketing toàn diện' tại kythuatmarketing.com.xlsx / Article - dòng 153 thành 'Cách xây dựng quy trình đo lường hiệu quả marketing toàn diện - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu nền tảng thương hiệu từ bản chất đến cách xây dựng' tại kythuatmarketing.com.xlsx / Article - dòng 224 thành 'Hiểu nền tảng thương hiệu từ bản chất đến cách xây dựng - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu định vị thương hiệu từ bản chất đến cách xây dựng khác biệt' tại kythuatmarketing.com.xlsx / Article - dòng 245 thành 'Hiểu định vị thương hiệu từ bản chất đến cách xây dựng khác biệt - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu nhận diện thương hiệu từ bản chất đến cách xây dựng' tại kythuatmarketing.com.xlsx / Article - dòng 266 thành 'Hiểu nhận diện thương hiệu từ bản chất đến cách xây dựng - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu chiến lược thương hiệu từ nền tảng đến định hướng phát triển' tại kythuatmarketing.com.xlsx / Article - dòng 287 thành 'Hiểu chiến lược thương hiệu từ nền tảng đến định hướng phát triển - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu quản trị thương hiệu từ bản chất đến nguyên tắc vận hành' tại kythuatmarketing.com.xlsx / Article - dòng 308 thành 'Hiểu quản trị thương hiệu từ bản chất đến nguyên tắc vận hành - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Cách đo lường thương hiệu bằng hệ thống chỉ số và dữ liệu phù hợp' tại kythuatmarketing.com.xlsx / Article - dòng 329 thành 'Cách đo lường thương hiệu bằng hệ thống chỉ số và dữ liệu phù hợp - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu marketing và cách kết nối nhu cầu với giá trị khách hàng' tại kythuatmarketing.com.xlsx / Article - dòng 396 thành 'Hiểu marketing và cách kết nối nhu cầu với giá trị khách hàng - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu Digital Marketing và cách doanh nghiệp tiếp cận khách hàng trực tuyến' tại kythuatmarketing.com.xlsx / Article - dòng 427 thành 'Hiểu Digital Marketing và cách doanh nghiệp tiếp cận khách hàng trực tuyến - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Hiểu Content Marketing và cách nội dung hỗ trợ tăng trưởng doanh nghiệp' tại kythuatmarketing.com.xlsx / Article - dòng 450 thành 'Hiểu Content Marketing và cách nội dung hỗ trợ tăng trưởng doanh nghiệp - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Xây dựng thông điệp Marketing rõ giá trị và phù hợp khách hàng' tại kythuatmarketing.com.xlsx / Article - dòng 471 thành 'Xây dựng thông điệp Marketing rõ giá trị và phù hợp khách hàng - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Content Angle giúp nội dung khác biệt và đúng mối quan tâm khách hàng' tại kythuatmarketing.com.xlsx / Article - dòng 472 thành 'Content Angle giúp nội dung khác biệt và đúng mối quan tâm khách hàng - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Performance Marketing và Brand Marketing khác nhau về mục tiêu và đo lường' tại kythuatmarketing.com.xlsx / Article - dòng 487 thành 'Performance Marketing và Brand Marketing khác nhau về mục tiêu và đo lường - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Social Media Marketing và Social Media Management khác nhau về mục tiêu' tại kythuatmarketing.com.xlsx / Article - dòng 508 thành 'Social Media Marketing và Social Media Management khác nhau về mục tiêu - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Email Marketing hoạt động từ danh sách, phân nhóm đến đo lường phản hồi' tại kythuatmarketing.com.xlsx / Article - dòng 529 thành 'Email Marketing hoạt động từ danh sách, phân nhóm đến đo lường phản hồi - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Vì sao SEO Marketing tạo lưu lượng bền vững và giảm phụ thuộc quảng cáo' tại kythuatmarketing.com.xlsx / Article - dòng 550 thành 'Vì sao SEO Marketing tạo lưu lượng bền vững và giảm phụ thuộc quảng cáo - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Marketing Analytics và Business Analytics khác nhau về phạm vi và mục tiêu' tại kythuatmarketing.com.xlsx / Article - dòng 571 thành 'Marketing Analytics và Business Analytics khác nhau về phạm vi và mục tiêu - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Marketing Automation hoạt động qua trigger, workflow và phản hồi khách hàng' tại kythuatmarketing.com.xlsx / Article - dòng 596 thành 'Marketing Automation hoạt động qua trigger, workflow và phản hồi khách hàng - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Vì sao Marketing Automation giúp tăng hiệu suất và khả năng chuyển đổi' tại kythuatmarketing.com.xlsx / Article - dòng 597 thành 'Vì sao Marketing Automation giúp tăng hiệu suất và khả năng chuyển đổi - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Vì sao AI trong Marketing giúp tăng tốc độ và hiệu quả' tại kythuatmarketing.com.xlsx / Article - dòng 618 thành 'Vì sao AI trong Marketing giúp tăng tốc độ và hiệu quả - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Vì sao CRM giúp doanh nghiệp giữ khách và nâng cao hiệu quả' tại kythuatmarketing.com.xlsx / Article - dòng 639 thành 'Vì sao CRM giúp doanh nghiệp giữ khách và nâng cao hiệu quả - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Vì sao CDP giúp doanh nghiệp khai thác dữ liệu khách hàng hiệu quả' tại kythuatmarketing.com.xlsx / Article - dòng 660 thành 'Vì sao CDP giúp doanh nghiệp khai thác dữ liệu khách hàng hiệu quả - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Thành phần MarTech Stack và chức năng của từng lớp công nghệ' tại kythuatmarketing.com.xlsx / Article - dòng 681 thành 'Thành phần MarTech Stack và chức năng của từng lớp công nghệ - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Vì sao doanh nghiệp cần tracking và attribution để tối ưu hiệu quả' tại kythuatmarketing.com.xlsx / Article - dòng 702 thành 'Vì sao doanh nghiệp cần tracking và attribution để tối ưu hiệu quả - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Cách xây dựng Marketing theo ngành từ khách hàng đến kênh tiếp cận' tại kythuatmarketing.com.xlsx / Article - dòng 767 thành 'Cách xây dựng Marketing theo ngành từ khách hàng đến kênh tiếp cận - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Chiến lược Marketing theo ngành giúp doanh nghiệp cạnh tranh hiệu quả' tại kythuatmarketing.com.xlsx / Article - dòng 768 thành 'Chiến lược Marketing theo ngành giúp doanh nghiệp cạnh tranh hiệu quả - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Marketing ngành bán lẻ từ thu hút khách đến tăng mua lại' tại kythuatmarketing.com.xlsx / Article - dòng 769 thành 'Marketing ngành bán lẻ từ thu hút khách đến tăng mua lại - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Marketing cho doanh nghiệp SME tập trung nguồn lực vào đúng ưu tiên' tại kythuatmarketing.com.xlsx / Article - dòng 790 thành 'Marketing cho doanh nghiệp SME tập trung nguồn lực vào đúng ưu tiên - trùng 2'.
+[18:53:24] - ĐÁNH SỐ: 'Cấu trúc Case Study Marketing từ bối cảnh đến bài học thực tiễn' tại kythuatmarketing.com.xlsx / Article - dòng 811 thành 'Cấu trúc Case Study Marketing từ bối cảnh đến bài học thực tiễn - trùng 2'.
+[18:53:24] Hoàn tất. Dữ liệu và các dòng cũ không có trong nguồn được giữ nguyên.
+
+========================================================================
+Kết thúc: 2026-08-03 18:53:25
+Mã thoát: 0
+Thời gian: 18.74 giây

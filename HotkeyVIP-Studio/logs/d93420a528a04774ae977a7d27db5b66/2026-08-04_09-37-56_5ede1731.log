@@ -1,0 +1,42 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet_V1.0.py
+Bắt đầu: 2026-08-04 09:37:56
+========================================================================
+[09:37:56] File log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260804_093756.log
+
+[09:38:11] [1/5] Đang xử lý congdongkinhdoanh.com.xlsx
+[09:38:13]     ĐÃ CHUYỂN: 6 | ĐÃ VIẾT CHƯA ĐĂNG: 14
+
+[09:38:13] [2/5] Đang xử lý doanhnhanduongthoi.com.xlsx
+[09:38:19]     ĐÃ CHUYỂN: 6 | ĐÃ VIẾT CHƯA ĐĂNG: 561
+
+[09:38:19] [3/5] Đang xử lý kythuatmarketing.com.xlsx
+[09:38:25]     ĐÃ CHUYỂN: 8 | ĐÃ VIẾT CHƯA ĐĂNG: 887
+
+[09:38:25] [4/5] Đang xử lý tiepthisaigon.com.vn.xlsx
+[09:38:32]     ĐÃ CHUYỂN: 108 | ĐÃ VIẾT CHƯA ĐĂNG: 100
+
+[09:38:32] [5/5] Đang xử lý vinabrand.vn.xlsx
+[09:38:33]     KHÔNG TÌM THẤY dòng 2943: Các bước trong quy trình khởi nghiệp và mục tiêu từng giai đoạn - trùng Title và H1 file khác
+[09:38:33]     KHÔNG TÌM THẤY dòng 3075: Mô hình kinh doanh B2C kết nối doanh nghiệp với người tiêu dùng - trùng Title khác H1 file khác
+[09:38:33]     KHÔNG TÌM THẤY dòng 3158: Đa dạng hóa kinh doanh giúp mở rộng nguồn thu và phân tán rủi ro - trùng Title khác H1 file khác
+[09:38:33]     KHÔNG TÌM THẤY dòng 3179: Phân loại đổi mới sáng tạo theo sản phẩm, quy trình và mô hình - trùng Title khác H1 file khác
+[09:38:33]     KHÔNG TÌM THẤY dòng 3201: Lãnh đạo đổi mới sáng tạo định hướng, trao quyền và phân bổ nguồn lực - trùng Title và H1 file khác
+[09:38:55]     KHÔNG TÌM THẤY: 5 | ĐÃ CHUYỂN: 557 | ĐÃ VIẾT CHƯA ĐĂNG: 549
+
+[09:38:55] ========================================================================
+[09:38:55] HOÀN TẤT
+[09:38:55] Backup: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\backup_cap_nhat_url_cong_ty\20260804_093809
+[09:38:55] - CỘT ĐÃ CHUYỂN CÓ NỘI DUNG: 528
+[09:38:55] - KHÔNG TÌM THẤY: 5
+[09:38:55] - URL NGUỒN TRỐNG: 1214
+[09:38:55] - ĐÃ CHUYỂN: 685
+[09:38:55] - ĐÃ VIẾT CHƯA ĐĂNG: 2111
+[09:38:55] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260804_093756.log
+
+[09:39:25] Nhấn Enter để đóng chương trình...
+
+========================================================================
+Kết thúc: 2026-08-04 09:39:25
+Mã thoát: 0
+Thời gian: 89.10 giây

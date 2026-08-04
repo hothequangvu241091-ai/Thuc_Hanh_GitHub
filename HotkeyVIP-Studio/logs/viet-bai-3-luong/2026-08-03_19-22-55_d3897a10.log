@@ -1,0 +1,24 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\02_viet_bai\V2.15_CODEX_chon_worker_profile_khi_chay.py
+Bắt đầu: 2026-08-03 19:22:55
+========================================================================
+[19:23:00] V2.15_CODEX_chon_worker_profile_khi_chay: nạp Excel một lần, khởi chạy 2 Worker Edge (profile: 1, 3) và 1 Worker Word + VBA chuyên dụng.
+[19:23:01] Traceback (most recent call last):
+[19:23:01]   File "D:\CodexProjects\Hotkeyvip\02_viet_bai\V2.15_CODEX_chon_worker_profile_khi_chay.py", line 4337, in <module>
+[19:23:01]     main()
+[19:23:01]   File "D:\CodexProjects\Hotkeyvip\02_viet_bai\V2.15_CODEX_chon_worker_profile_khi_chay.py", line 4290, in main
+[19:23:01]     rows, task_rows = load_excel_tasks_once()
+[19:23:01]                       ^^^^^^^^^^^^^^^^^^^^^^^
+[19:23:01]   File "D:\CodexProjects\Hotkeyvip\02_viet_bai\V2.15_CODEX_chon_worker_profile_khi_chay.py", line 3806, in load_excel_tasks_once
+[19:23:01]     wb, sh = get_real_sheet()
+[19:23:01]              ^^^^^^^^^^^^^^^^
+[19:23:01]   File "D:\CodexProjects\Hotkeyvip\02_viet_bai\V2.15_CODEX_chon_worker_profile_khi_chay.py", line 375, in get_real_sheet
+[19:23:01]     resolve_columns_by_header(sh)
+[19:23:01]   File "D:\CodexProjects\Hotkeyvip\02_viet_bai\V2.15_CODEX_chon_worker_profile_khi_chay.py", line 448, in resolve_columns_by_header
+[19:23:01]     raise Exception(
+[19:23:01] Exception: Sheet VIET_BAI thiếu tiêu đề: Lỗi viết
+
+========================================================================
+Kết thúc: 2026-08-03 19:23:01
+Mã thoát: 1
+Thời gian: 6.38 giây

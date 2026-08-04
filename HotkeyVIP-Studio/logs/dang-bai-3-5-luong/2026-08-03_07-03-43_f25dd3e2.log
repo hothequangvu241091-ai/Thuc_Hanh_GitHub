@@ -1,0 +1,460 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py
+Bắt đầu: 2026-08-03 07:03:43
+========================================================================
+[07:03:44] Thời gian bắt đầu: 03/08/2026 07:03:44
+[07:04:02] ========================================================================
+[07:04:02] PHIEN BAN: V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung
+[07:04:02] ĐĂNG BÀI ĐA LUỒNG | 5 WORKER | 22 BÀI
+[07:04:02] Không dùng current_row.ini; chỉ tiến trình chính ghi Excel.
+[07:04:02] ========================================================================
+[07:04:05]     Edge đã được ẩn trong lúc chạy.
+[07:04:05]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[07:04:05] Worker 5: sẵn sàng.
+[07:04:05] [GIAO] Worker 5 <- dòng 199 | congdongkinhdoanh.com | giao ngay cho worker rảnh
+
+[07:04:05] [WORKER 5] BẮT ĐẦU DÒNG 199
+[07:04:05]     Edge đã được ẩn trong lúc chạy.
+[07:04:05] Worker 3: sẵn sàng.
+[07:04:05] [GIAO] Worker 3 <- dòng 328 | doanhnhanduongthoi.com | giao ngay cho worker rảnh
+[07:04:05]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+
+[07:04:05] [WORKER 3] BẮT ĐẦU DÒNG 328
+[07:04:05]     Edge đã được ẩn trong lúc chạy.
+[07:04:05] Worker 4: sẵn sàng.
+[07:04:05] [GIAO] Worker 4 <- dòng 1108 | kythuatmarketing.com | giao ngay cho worker rảnh
+
+[07:04:05] [WORKER 4] BẮT ĐẦU DÒNG 1108
+[07:04:05]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[07:04:05]     Edge đã được ẩn trong lúc chạy.
+[07:04:05]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[07:04:05] Worker 2: sẵn sàng.
+[07:04:05] [GIAO] Worker 2 <- dòng 200 | congdongkinhdoanh.com | giao ngay cho worker rảnh
+
+[07:04:05] [WORKER 2] BẮT ĐẦU DÒNG 200
+[07:04:06]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:07]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:09] [1] Đã chọn dòng 199: đổi nhận diện thương hiệu
+[07:04:09]     Word chạy nền, không hiện cửa sổ.
+[07:04:09]     File: D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi nhận diện thương hiệu.docx
+[07:04:09]     Dòng Excel được truyền trực tiếp: 199
+
+[07:04:09] Đối chiếu tài nguyên đăng bài:
+[07:04:09] - File Word     : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi nhận diện thương hiệu.docx
+[07:04:09] - Tên gốc Word : đổi nhận diện thương hiệu
+[07:04:09] - Ảnh đại diện : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi nhận diện thương hiệu 1.png
+[07:04:09] - Ảnh bài viết : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi nhận diện thương hiệu 2.png
+[07:04:10]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:10]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:10] [1] Đã chọn dòng 328: vòng quay vốn kinh doanh
+[07:04:10]     Word chạy nền, không hiện cửa sổ.
+[07:04:10]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\vòng quay vốn kinh doanh.docx
+[07:04:10]     Dòng Excel được truyền trực tiếp: 328
+
+[07:04:10] Đối chiếu tài nguyên đăng bài:
+[07:04:10] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\vòng quay vốn kinh doanh.docx
+[07:04:10] - Tên gốc Word : vòng quay vốn kinh doanh
+[07:04:10] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\vòng quay vốn kinh doanh 1.png
+[07:04:10] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\vòng quay vốn kinh doanh 2.png
+[07:04:11] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:04:11]     Waiting for Word Clipboard transfer...
+[07:04:11] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 24744 ký tự.
+[07:04:12]     Edge đã được ẩn trong lúc chạy.
+[07:04:12] Worker 1: sẵn sàng.
+[07:04:12]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[07:04:12] [GIAO] Worker 1 <- dòng 329 | doanhnhanduongthoi.com | giao ngay cho worker rảnh
+
+[07:04:12] [WORKER 1] BẮT ĐẦU DÒNG 329
+[07:04:12] Đã đọc được 3 cặp FAQ hợp lệ từ Word.
+[07:04:13] [1] Đã chọn dòng 1108: vai trò quản trị marketing
+[07:04:13]     Word chạy nền, không hiện cửa sổ.
+[07:04:13]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\vai trò quản trị marketing.docx
+[07:04:13]     Dòng Excel được truyền trực tiếp: 1108
+
+[07:04:13] Đối chiếu tài nguyên đăng bài:
+[07:04:13] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\vai trò quản trị marketing.docx
+[07:04:13] - Tên gốc Word : vai trò quản trị marketing
+[07:04:13] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\vai trò quản trị marketing 1.png
+[07:04:13] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\vai trò quản trị marketing 2.png
+[07:04:13]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:14] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:04:14]     Waiting for Word Clipboard transfer...
+[07:04:14] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 50111 ký tự.
+[07:04:15] [1] Đã chọn dòng 200: mở rộng thương hiệu
+[07:04:15]     Word chạy nền, không hiện cửa sổ.
+[07:04:15]     File: D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\mở rộng thương hiệu.docx
+[07:04:15]     Dòng Excel được truyền trực tiếp: 200
+
+[07:04:15] Đối chiếu tài nguyên đăng bài:
+[07:04:15] - File Word     : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\mở rộng thương hiệu.docx
+[07:04:15] - Tên gốc Word : mở rộng thương hiệu
+[07:04:15] - Ảnh đại diện : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\mở rộng thương hiệu 1.png
+[07:04:15] - Ảnh bài viết : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\mở rộng thương hiệu 2.png
+[07:04:15] Đã đọc được 5 cặp FAQ hợp lệ từ Word.
+[07:04:17] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:04:17]     Waiting for Word Clipboard transfer...
+[07:04:18] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 26636 ký tự.
+[07:04:18] [1] Đã chọn dòng 329: ROIC là gì
+[07:04:18]     Word chạy nền, không hiện cửa sổ.
+[07:04:18]     File: D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\ROIC là gì.docx
+[07:04:18]     Dòng Excel được truyền trực tiếp: 329
+
+[07:04:18] Đối chiếu tài nguyên đăng bài:
+[07:04:18] - File Word     : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\ROIC là gì.docx
+[07:04:18] - Tên gốc Word : ROIC là gì
+[07:04:18] - Ảnh đại diện : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\ROIC là gì 1.png
+[07:04:18] - Ảnh bài viết : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\ROIC là gì 2.png
+[07:04:18] Đã đọc được 3 cặp FAQ hợp lệ từ Word.
+[07:04:18] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:04:18]     Waiting for Word Clipboard transfer...
+[07:04:19] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 79820 ký tự.
+[07:04:19] [PIPELINE] Word ready in RAM: row 199 | D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi nhận diện thương hiệu.docx
+
+[07:04:19] ========================================================================
+[07:04:19] BẮT ĐẦU BÀI 1/22
+[07:04:19] ========================================================================
+[07:04:19] [PIPELINE] Using Word data already prepared in RAM.
+[07:04:19]     Excel row : 199
+[07:04:19]     Word file : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi nhận diện thương hiệu.docx
+[07:04:19]     CMS URL   : https://congdongkinhdoanh.com/admin/news_tb/field/root_id=999
+[07:04:19]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:19] [3] Điền 5 ô đầu...
+[07:04:20] Đã đọc được 5 cặp FAQ hợp lệ từ Word.
+[07:04:20] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:04:20] Đã mở Select2 Danh mục.
+[07:04:21] Đã chọn Danh mục: Thương hiệu
+[07:04:21] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[07:04:21]     Waiting for Word Clipboard transfer...
+[07:04:21] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 51771 ký tự.
+[07:04:22] Đã tải xong ô Select2 Tác giả.
+[07:04:22] Đã random Tác giả từ CMS: Lý Hải Nam
+
+[07:04:22] Kết quả Danh mục/Tác giả:
+[07:04:22] - Trạng thái: OK
+[07:04:22] - Danh mục  : Thương hiệu
+[07:04:22] - Tác giả   : Lý Hải Nam
+[07:04:22] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:04:22] Đã đọc được 4 cặp FAQ hợp lệ từ Word.
+[07:04:23] [5] Đưa HTML Word vào CKEditor detail...
+[07:04:23] Đã nạp CKEditor, độ dài HTML: 11727
+[07:04:23] [DỪNG AN TOÀN] Đã khóa giao bài mới.
+[07:04:24] [7] Tạo đủ block và dán FAQ một lượt...
+[07:04:25] Đã tạo đủ 3 block FAQ.
+[07:04:25] Đã dán một lượt 3 cặp FAQ.
+
+[07:04:25] Kết quả FAQ:
+[07:04:25] - Trạng thái: OK
+[07:04:25] - Số cặp    : 3
+[07:04:25] [3] Upload ảnh đại diện...
+[07:04:25] [PIPELINE] Word ready in RAM: row 200 | D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\mở rộng thương hiệu.docx
+[07:04:25]     OK: đã gửi ảnh đại diện
+[07:04:25] [4] Mở popup ảnh CKEditor...
+
+[07:04:25] ========================================================================
+[07:04:25] BẮT ĐẦU BÀI 2/22
+[07:04:25] ========================================================================
+[07:04:25] [PIPELINE] Using Word data already prepared in RAM.
+[07:04:25]     Excel row : 200
+[07:04:25]     Word file : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\mở rộng thương hiệu.docx
+[07:04:25]     CMS URL   : https://congdongkinhdoanh.com/admin/news_tb/field/root_id=999
+[07:04:25]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:25] [3] Điền 5 ô đầu...
+[07:04:26] [5] Click tab Tải lên...
+[07:04:26] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:04:26] [6] Chọn ảnh bài viết...
+[07:04:26]     D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi nhận diện thương hiệu 2.png
+[07:04:26]     OK: đã chọn file trong popup
+[07:04:26] [7] Click Tải lên máy chủ...
+[07:04:26] Đã mở Select2 Danh mục.
+[07:04:26] [8] Chờ server trả URL ảnh...
+[07:04:27] Đã chọn Danh mục: Thương hiệu
+[07:04:27]     URL: /uploads/images/editor/doi-nhan-dien-thuong-hieu-2.png
+[07:04:27] [9] Click Đồng ý...
+[07:04:27]     OK: ảnh đã được chèn vào CKEditor
+[07:04:27] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:04:27]     OK: đã gom HTML bằng Python
+[07:04:27]     HTML trước : 11895 ký tự
+[07:04:27]     HTML sau   : 7350 ký tự
+[07:04:27]     Số ảnh     : 1
+[07:04:27]     Số H2/H3   : 5/9
+[07:04:27] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:04:27] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:04:27]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:04:27]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:04:27]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:04:27] [14] Click nút lưu bài...
+[07:04:28] Đã tải xong ô Select2 Tác giả.
+[07:04:28] [PIPELINE] Word ready in RAM: row 328 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\vòng quay vốn kinh doanh.docx
+
+[07:04:28] ========================================================================
+[07:04:28] BẮT ĐẦU BÀI 3/22
+[07:04:28] ========================================================================
+[07:04:28] [PIPELINE] Using Word data already prepared in RAM.
+[07:04:28]     Excel row : 328
+[07:04:28]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\vòng quay vốn kinh doanh.docx
+[07:04:28]     CMS URL   : https://doanhnhanduongthoi.com/admin/news_tb/field/root_id=999
+[07:04:28]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:28] [3] Điền 5 ô đầu...
+[07:04:28] Đã random Tác giả từ CMS: Hồ Chí Dũng
+
+[07:04:28] Kết quả Danh mục/Tác giả:
+[07:04:28] - Trạng thái: OK
+[07:04:28] - Danh mục  : Thương hiệu
+[07:04:28] - Tác giả   : Hồ Chí Dũng
+[07:04:28] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:04:28] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:04:29] Đã mở Select2 Danh mục.
+[07:04:29] [5] Đưa HTML Word vào CKEditor detail...
+[07:04:29] Đã nạp CKEditor, độ dài HTML: 12768
+[07:04:29] Đã chọn Danh mục: Đầu tư
+[07:04:30] [7] Tạo đủ block và dán FAQ một lượt...
+[07:04:30] Đã tải xong ô Select2 Tác giả.
+[07:04:30]     OK: đã chuyển sang URL sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[07:04:30]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:04:30]     ID CMS vừa đăng: 4127
+
+[07:04:30] ========================================================================
+[07:04:30] ĐÃ LƯU XONG BÀI 1/22
+[07:04:30] - Dòng Excel: 199
+[07:04:30] - HTML trước/sau: 11895/7350 ký tự
+[07:04:30] - URL CMS sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[07:04:30] ========================================================================
+[07:04:30] [OK] Worker 5 xong dòng 199 | 1/22
+[07:04:30] Đã random Tác giả từ CMS: Hồ Đức Tâm
+
+[07:04:30] Kết quả Danh mục/Tác giả:
+[07:04:30] - Trạng thái: OK
+[07:04:30] - Danh mục  : Đầu tư
+[07:04:30] - Tác giả   : Hồ Đức Tâm
+[07:04:30] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:04:31]     DANH_MUC_ID đã có: congdongkinhdoanh.com | Thương hiệu | ID 5
+[07:04:31] Đã tạo đủ 3 block FAQ.
+[07:04:31] Đã dán một lượt 3 cặp FAQ.
+
+[07:04:31] Kết quả FAQ:
+[07:04:31] - Trạng thái: OK
+[07:04:31] - Số cặp    : 3
+[07:04:31] [3] Upload ảnh đại diện...
+[07:04:31]     OK: đã gửi ảnh đại diện
+[07:04:31] [4] Mở popup ảnh CKEditor...
+[07:04:31] [5] Đưa HTML Word vào CKEditor detail...
+[07:04:32] Đã nạp CKEditor, độ dài HTML: 34396
+[07:04:32] [5] Click tab Tải lên...
+[07:04:32] [6] Chọn ảnh bài viết...
+[07:04:32]     D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\mở rộng thương hiệu 2.png
+[07:04:32]     OK: đã chọn file trong popup
+[07:04:32] [7] Click Tải lên máy chủ...
+[07:04:32] [8] Chờ server trả URL ảnh...
+[07:04:33] [7] Tạo đủ block và dán FAQ một lượt...
+[07:04:33]     URL: /uploads/images/editor/mo-rong-thuong-hieu-2.png
+[07:04:33] [9] Click Đồng ý...
+[07:04:33] Đã tạo đủ 5 block FAQ.
+[07:04:33] Đã dán một lượt 5 cặp FAQ.
+
+[07:04:33] Kết quả FAQ:
+[07:04:33] - Trạng thái: OK
+[07:04:33] - Số cặp    : 5
+[07:04:33] [3] Upload ảnh đại diện...
+[07:04:33]     OK: ảnh đã được chèn vào CKEditor
+[07:04:33] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:04:33]     OK: đã gửi ảnh đại diện
+[07:04:33] [4] Mở popup ảnh CKEditor...
+[07:04:33]     OK: đã gom HTML bằng Python
+[07:04:33]     HTML trước : 12922 ký tự
+[07:04:33]     HTML sau   : 7870 ký tự
+[07:04:33]     Số ảnh     : 1
+[07:04:33]     Số H2/H3   : 4/12
+[07:04:33] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:04:33] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:04:33]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:04:33]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:04:33]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:04:33] [14] Click nút lưu bài...
+[07:04:33] [PIPELINE] Word ready in RAM: row 329 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\ROIC là gì.docx
+[07:04:34] [5] Click tab Tải lên...
+[07:04:34] [6] Chọn ảnh bài viết...
+[07:04:34]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\vòng quay vốn kinh doanh 2.png
+[07:04:34]     OK: đã chọn file trong popup
+[07:04:34] [7] Click Tải lên máy chủ...
+[07:04:34] [8] Chờ server trả URL ảnh...
+
+[07:04:34] ========================================================================
+[07:04:34] BẮT ĐẦU BÀI 4/22
+[07:04:34] ========================================================================
+[07:04:34] [PIPELINE] Using Word data already prepared in RAM.
+[07:04:34]     Excel row : 329
+[07:04:34]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\ROIC là gì.docx
+[07:04:34]     CMS URL   : https://doanhnhanduongthoi.com/admin/news_tb/field/root_id=999
+[07:04:34]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:34] [3] Điền 5 ô đầu...
+[07:04:35]     URL: /uploads/images/editor/vong-quay-von-kinh-doanh-2.png
+[07:04:35] [9] Click Đồng ý...
+[07:04:35] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:04:35]     OK: ảnh đã được chèn vào CKEditor
+[07:04:35] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:04:35]     OK: đã gom HTML bằng Python
+[07:04:35]     HTML trước : 34548 ký tự
+[07:04:35]     HTML sau   : 24001 ký tự
+[07:04:35]     Số ảnh     : 1
+[07:04:35]     Số H2/H3   : 12/11
+[07:04:35] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:04:35] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:04:35]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:04:35]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:04:35]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:04:35] [14] Click nút lưu bài...
+[07:04:36] Đã mở Select2 Danh mục.
+[07:04:36] Đã chọn Danh mục: Đầu tư
+[07:04:36] [PIPELINE] Word ready in RAM: row 1108 | D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\vai trò quản trị marketing.docx
+[07:04:36]     OK: đã chuyển sang URL sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[07:04:36]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:04:36]     ID CMS vừa đăng: 4128
+
+[07:04:36] ========================================================================
+[07:04:36] ĐÃ LƯU XONG BÀI 2/22
+[07:04:36] - Dòng Excel: 200
+[07:04:36] - HTML trước/sau: 12922/7870 ký tự
+[07:04:36] - URL CMS sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[07:04:36] ========================================================================
+[07:04:36] [OK] Worker 2 xong dòng 200 | 2/22
+
+[07:04:36] ========================================================================
+[07:04:36] BẮT ĐẦU BÀI 9/22
+[07:04:36] ========================================================================
+[07:04:36] [PIPELINE] Using Word data already prepared in RAM.
+[07:04:36]     Excel row : 1108
+[07:04:36]     Word file : D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\vai trò quản trị marketing.docx
+[07:04:36]     CMS URL   : https://kythuatmarketing.com/admin/news_tb/field/root_id=999
+[07:04:36]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[07:04:36] [3] Điền 5 ô đầu...
+[07:04:36]     DANH_MUC_ID đã có: congdongkinhdoanh.com | Thương hiệu | ID 5
+[07:04:37] [6] Chọn Danh mục / Tác giả từ dữ liệu đã chốt...
+[07:04:37] Đã tải xong ô Select2 Tác giả.
+[07:04:37] Đã random Tác giả từ CMS: Lý Hữu Minh
+
+[07:04:37] Kết quả Danh mục/Tác giả:
+[07:04:37] - Trạng thái: OK
+[07:04:37] - Danh mục  : Đầu tư
+[07:04:37] - Tác giả   : Lý Hữu Minh
+[07:04:37] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:04:37] Đã mở Select2 Danh mục.
+[07:04:37] Đã chọn Danh mục: Doanh nghiệp
+[07:04:38]     OK: đã chuyển sang URL sau khi lưu: https://doanhnhanduongthoi.com/admin/news_tb/list/root_id=999
+[07:04:38]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:04:38]     ID CMS vừa đăng: 5139
+
+[07:04:38] ========================================================================
+[07:04:38] ĐÃ LƯU XONG BÀI 3/22
+[07:04:38] - Dòng Excel: 328
+[07:04:38] - HTML trước/sau: 34548/24001 ký tự
+[07:04:38] - URL CMS sau khi lưu: https://doanhnhanduongthoi.com/admin/news_tb/list/root_id=999
+[07:04:38] ========================================================================
+[07:04:38] [OK] Worker 3 xong dòng 328 | 3/22
+[07:04:38] [5] Đưa HTML Word vào CKEditor detail...
+[07:04:38] Đã nạp CKEditor, độ dài HTML: 32273
+[07:04:38] Đã tải xong ô Select2 Tác giả.
+[07:04:39]     DANH_MUC_ID đã có: doanhnhanduongthoi.com | Đầu tư | ID 146
+[07:04:39] Đã random Tác giả từ CMS: Cao Minh Hải Đăng
+
+[07:04:39] Kết quả Danh mục/Tác giả:
+[07:04:39] - Trạng thái: OK
+[07:04:39] - Danh mục  : Doanh nghiệp
+[07:04:39] - Tác giả   : Cao Minh Hải Đăng
+[07:04:39] [4] Đưa Edge lên trước và focus CKEditor detail...
+[07:04:39] [7] Tạo đủ block và dán FAQ một lượt...
+[07:04:40] [5] Đưa HTML Word vào CKEditor detail...
+[07:04:40] Đã nạp CKEditor, độ dài HTML: 50316
+[07:04:40] Đã tạo đủ 4 block FAQ.
+[07:04:40] Đã dán một lượt 4 cặp FAQ.
+
+[07:04:40] Kết quả FAQ:
+[07:04:40] - Trạng thái: OK
+[07:04:40] - Số cặp    : 4
+[07:04:40] [3] Upload ảnh đại diện...
+[07:04:40]     OK: đã gửi ảnh đại diện
+[07:04:40] [4] Mở popup ảnh CKEditor...
+[07:04:41] [7] Tạo đủ block và dán FAQ một lượt...
+[07:04:41] [5] Click tab Tải lên...
+[07:04:41] [6] Chọn ảnh bài viết...
+[07:04:41]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\ROIC là gì 2.png
+[07:04:41]     OK: đã chọn file trong popup
+[07:04:41] [7] Click Tải lên máy chủ...
+[07:04:42] Đã tạo đủ 5 block FAQ.
+[07:04:42] Đã dán một lượt 5 cặp FAQ.
+
+[07:04:42] Kết quả FAQ:
+[07:04:42] - Trạng thái: OK
+[07:04:42] - Số cặp    : 5
+[07:04:42] [3] Upload ảnh đại diện...
+[07:04:42]     OK: đã gửi ảnh đại diện
+[07:04:42] [4] Mở popup ảnh CKEditor...
+[07:04:42] [8] Chờ server trả URL ảnh...
+[07:04:42]     URL: /uploads/images/editor/roic-la-gi-2.png
+[07:04:42] [9] Click Đồng ý...
+[07:04:42] [5] Click tab Tải lên...
+[07:04:43] [6] Chọn ảnh bài viết...
+[07:04:43]     D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\vai trò quản trị marketing 2.png
+[07:04:43]     OK: đã chọn file trong popup
+[07:04:43] [7] Click Tải lên máy chủ...
+[07:04:43]     OK: ảnh đã được chèn vào CKEditor
+[07:04:43] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:04:43]     OK: đã gom HTML bằng Python
+[07:04:43]     HTML trước : 32417 ký tự
+[07:04:43]     HTML sau   : 20796 ký tự
+[07:04:43]     Số ảnh     : 1
+[07:04:43]     Số H2/H3   : 7/8
+[07:04:43] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:04:43] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:04:43]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:04:43]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:04:43]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:04:43] [14] Click nút lưu bài...
+[07:04:43] [8] Chờ server trả URL ảnh...
+[07:04:43]     URL: /uploads/images/editor/vai-tro-quan-tri-marketing-2.png
+[07:04:43] [9] Click Đồng ý...
+[07:04:44]     OK: ảnh đã được chèn vào CKEditor
+[07:04:44] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[07:04:44]     OK: đã gom HTML bằng Python
+[07:04:44]     HTML trước : 50494 ký tự
+[07:04:44]     HTML sau   : 33975 ký tự
+[07:04:44]     Số ảnh     : 1
+[07:04:44]     Số H2/H3   : 15/14
+[07:04:44] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[07:04:44] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[07:04:44]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[07:04:44]     Đang chờ khóa Save/Xác nhận ID của đúng tên miền...
+[07:04:44]     Đã đến lượt Save/Xác nhận ID của tên miền này.
+[07:04:44] [14] Click nút lưu bài...
+[07:04:46]     OK: đã chuyển sang URL sau khi lưu: https://doanhnhanduongthoi.com/admin/news_tb/list/root_id=999
+[07:04:46]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:04:46]     ID CMS vừa đăng: 5140
+
+[07:04:46] ========================================================================
+[07:04:46] ĐÃ LƯU XONG BÀI 4/22
+[07:04:46] - Dòng Excel: 329
+[07:04:46] - HTML trước/sau: 32417/20796 ký tự
+[07:04:46] - URL CMS sau khi lưu: https://doanhnhanduongthoi.com/admin/news_tb/list/root_id=999
+[07:04:46] ========================================================================
+[07:04:46] [OK] Worker 1 xong dòng 329 | 4/22
+[07:04:46]     DANH_MUC_ID đã có: doanhnhanduongthoi.com | Đầu tư | ID 146
+[07:04:47]     OK: đã chuyển sang URL sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:04:47]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[07:04:47]     ID CMS vừa đăng: 3228
+
+[07:04:47] ========================================================================
+[07:04:47] ĐÃ LƯU XONG BÀI 9/22
+[07:04:47] - Dòng Excel: 1108
+[07:04:47] - HTML trước/sau: 50494/33975 ký tự
+[07:04:47] - URL CMS sau khi lưu: https://kythuatmarketing.com/admin/news_tb/list/root_id=999
+[07:04:47] ========================================================================
+[07:04:47] [OK] Worker 4 xong dòng 1108 | 5/22
+[07:04:48]     DANH_MUC_ID đã có: kythuatmarketing.com | Doanh nghiệp | ID 6
+[07:04:51] ========================================================================
+[07:04:51] KẾT THÚC: hoàn thành 5/22 bài
+[07:04:51] ========================================================================
+[07:04:51] Thời gian kết thúc: 03/08/2026 07:04:51
+
+========================================================================
+Kết thúc: 2026-08-03 07:04:51
+Mã thoát: 0
+Thời gian: 67.85 giây

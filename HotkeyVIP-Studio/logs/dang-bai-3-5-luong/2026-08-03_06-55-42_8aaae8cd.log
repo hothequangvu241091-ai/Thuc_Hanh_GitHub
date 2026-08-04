@@ -1,0 +1,241 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py
+Bắt đầu: 2026-08-03 06:55:42
+========================================================================
+[06:55:43] Thời gian bắt đầu: 03/08/2026 06:55:43
+[06:56:09] ========================================================================
+[06:56:09] PHIEN BAN: V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung
+[06:56:09] ĐĂNG BÀI ĐA LUỒNG | 5 WORKER | 22 BÀI
+[06:56:09] Không dùng current_row.ini; chỉ tiến trình chính ghi Excel.
+[06:56:09] ========================================================================
+[06:56:24]     Edge đã được ẩn trong lúc chạy.
+[06:56:25]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[06:56:25] Worker 3: sẵn sàng.
+[06:56:25] [GIAO] Worker 3 <- dòng 196 | congdongkinhdoanh.com | giao ngay cho worker rảnh
+
+[06:56:25] [WORKER 3] BẮT ĐẦU DÒNG 196
+[06:56:34]     Edge đã được ẩn trong lúc chạy.
+[06:56:34] Worker 5: sẵn sàng.
+[06:56:34]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[06:56:34] [GIAO] Worker 5 <- dòng 327 | doanhnhanduongthoi.com | giao ngay cho worker rảnh
+
+[06:56:34] [WORKER 5] BẮT ĐẦU DÒNG 327
+[06:56:34]     Edge đã được ẩn trong lúc chạy.
+[06:56:34] Worker 4: sẵn sàng.
+[06:56:34]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[06:56:34] [GIAO] Worker 4 <- dòng 1107 | kythuatmarketing.com | giao ngay cho worker rảnh
+
+[06:56:34] [WORKER 4] BẮT ĐẦU DÒNG 1107
+[06:56:34]     Edge đã được ẩn trong lúc chạy.
+[06:56:34] Worker 1: sẵn sàng.
+[06:56:34] [GIAO] Worker 1 <- dòng 197 | congdongkinhdoanh.com | giao ngay cho worker rảnh
+
+[06:56:34] [WORKER 1] BẮT ĐẦU DÒNG 197
+[06:56:34]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[06:56:35]     Edge đã được ẩn trong lúc chạy.
+[06:56:35] Worker 2: sẵn sàng.
+[06:56:35]     Edge đã được ẩn theo lựa chọn trên bảng tiến độ.
+[06:56:35] [GIAO] Worker 2 <- dòng 198 | congdongkinhdoanh.com | giao ngay cho worker rảnh
+
+[06:56:35] [WORKER 2] BẮT ĐẦU DÒNG 198
+[06:56:38]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[06:56:38] Traceback (most recent call last):
+[06:56:38]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 469, in open_hidden_word_document
+[06:56:38]     word = win32.DispatchEx("Word.Application")
+[06:56:38]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:38]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32com\client\__init__.py", line 142, in DispatchEx
+[06:56:38]     dispatch = pythoncom.CoCreateInstanceEx(
+[06:56:38]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:38] pywintypes.com_error: (-2147221008, 'CoInitialize has not been called.', None, None)
+
+[06:56:38] The above exception was the direct cause of the following exception:
+
+[06:56:38] Traceback (most recent call last):
+[06:56:38]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 5988, in worker_main
+[06:56:38]     prepared = prepared_future.result()
+[06:56:38]                ^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:38]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+[06:56:38]     return self.__get_result()
+[06:56:38]            ^^^^^^^^^^^^^^^^^^^
+[06:56:38]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+[06:56:38]     raise self._exception
+[06:56:38]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+[06:56:38]     result = self.fn(*self.args, **self.kwargs)
+[06:56:38]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:38]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 4769, in prepare_article_from_word
+[06:56:38]     current_row, title, word_path = open_hidden_word_document()
+[06:56:38]                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:38]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 489, in open_hidden_word_document
+[06:56:38]     raise RuntimeError(
+[06:56:38] RuntimeError: Không mở được file Word:
+[06:56:38] D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đầu tư thương hiệu.docx
+
+[06:56:38] Lỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)
+[06:56:38] [LỖI BÀI — DỪNG AN TOÀN] Worker 3, dòng 196: RuntimeError("Không mở được file Word:\nD:\\baivietlamviec\\dangbai\\congdongkinhdoanh.com\\[06] 10.08.2026\\đầu tư thương hiệu.docx\n\nLỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)")
+[06:56:38] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_dang_bai\dang_bai_worker3_row196_20260803_065638.log
+[06:56:38] Đã khóa giao bài mới; Edge lỗi được giữ nguyên. Các bài đang chạy sẽ hoàn tất.
+[06:56:38]     Edge đã được hiện theo lựa chọn trên bảng tiến độ.
+[06:56:38]     Phát hiện trang đăng nhập → chờ khóa Login ngắn...
+[06:56:38]     Phát hiện trang đăng nhập → tự nhập ID và mật khẩu...
+[06:56:39]     Đã nhập đủ ID/mật khẩu → click ĐĂNG NHẬP một lần.
+[06:56:40]     Phát hiện trang đăng nhập → chờ khóa Login ngắn...
+[06:56:41]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[06:56:42] Traceback (most recent call last):
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 469, in open_hidden_word_document
+[06:56:42]     word = win32.DispatchEx("Word.Application")
+[06:56:42]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32com\client\__init__.py", line 142, in DispatchEx
+[06:56:42]     dispatch = pythoncom.CoCreateInstanceEx(
+[06:56:42]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42] pywintypes.com_error: (-2147221008, 'CoInitialize has not been called.', None, None)
+
+[06:56:42] The above exception was the direct cause of the following exception:
+
+[06:56:42] Traceback (most recent call last):
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 5988, in worker_main
+[06:56:42]     prepared = prepared_future.result()
+[06:56:42]                ^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+[06:56:42]     return self.__get_result()
+[06:56:42]            ^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+[06:56:42]     raise self._exception
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+[06:56:42]     result = self.fn(*self.args, **self.kwargs)
+[06:56:42]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 4769, in prepare_article_from_word
+[06:56:42]     current_row, title, word_path = open_hidden_word_document()
+[06:56:42]                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 489, in open_hidden_word_document
+[06:56:42]     raise RuntimeError(
+[06:56:42] RuntimeError: Không mở được file Word:
+[06:56:42] D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\[02] 30.07.2026\hiệu quả sử dụng vốn.docx
+
+[06:56:42] Lỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)
+[06:56:42] [LỖI BÀI — DỪNG AN TOÀN] Worker 5, dòng 327: RuntimeError("Không mở được file Word:\nD:\\CodexProjects\\Hotkeyvip\\07_ket_qua\\bai_viet\\[02] 30.07.2026\\hiệu quả sử dụng vốn.docx\n\nLỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)")
+[06:56:42] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_dang_bai\dang_bai_worker5_row327_20260803_065642.log
+[06:56:42] Đã khóa giao bài mới; Edge lỗi được giữ nguyên. Các bài đang chạy sẽ hoàn tất.
+[06:56:42]     Edge đã được hiện theo lựa chọn trên bảng tiến độ.
+[06:56:42]     Đã ở đúng trang đăng bài, không cần đăng nhập.
+[06:56:42] Traceback (most recent call last):
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 469, in open_hidden_word_document
+[06:56:42]     word = win32.DispatchEx("Word.Application")
+[06:56:42]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32com\client\__init__.py", line 142, in DispatchEx
+[06:56:42]     dispatch = pythoncom.CoCreateInstanceEx(
+[06:56:42]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42] pywintypes.com_error: (-2147221008, 'CoInitialize has not been called.', None, None)
+
+[06:56:42] The above exception was the direct cause of the following exception:
+
+[06:56:42] Traceback (most recent call last):
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 5988, in worker_main
+[06:56:42]     prepared = prepared_future.result()
+[06:56:42]                ^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+[06:56:42]     return self.__get_result()
+[06:56:42]            ^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+[06:56:42]     raise self._exception
+[06:56:42]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+[06:56:42]     result = self.fn(*self.args, **self.kwargs)
+[06:56:42]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 4769, in prepare_article_from_word
+[06:56:42]     current_row, title, word_path = open_hidden_word_document()
+[06:56:42]                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:42]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 489, in open_hidden_word_document
+[06:56:42]     raise RuntimeError(
+[06:56:42] RuntimeError: Không mở được file Word:
+[06:56:42] D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\đổi logo doanh nghiệp.docx
+
+[06:56:42] Lỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)
+[06:56:42] [LỖI BÀI — DỪNG AN TOÀN] Worker 2, dòng 198: RuntimeError("Không mở được file Word:\nD:\\baivietlamviec\\dangbai\\congdongkinhdoanh.com\\[06] 10.08.2026\\đổi logo doanh nghiệp.docx\n\nLỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)")
+[06:56:42] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_dang_bai\dang_bai_worker2_row198_20260803_065642.log
+[06:56:42] Đã khóa giao bài mới; Edge lỗi được giữ nguyên. Các bài đang chạy sẽ hoàn tất.
+[06:56:42]     Edge đã được hiện theo lựa chọn trên bảng tiến độ.
+[06:56:43]     CẢNH BÁO: Không tự giãn được khung Note lỗi: AttributeError("'<win32com.gen_py.Microsoft Excel 16.0 Object Library.TextFrame instance at 0x2210259755152>' object has no attribute 'WordWrap'")
+[06:56:43]     Đăng nhập thành công, đã vào đúng trang đăng bài.
+[06:56:43] Traceback (most recent call last):
+[06:56:43]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 469, in open_hidden_word_document
+[06:56:43]     word = win32.DispatchEx("Word.Application")
+[06:56:43]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:43]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32com\client\__init__.py", line 142, in DispatchEx
+[06:56:43]     dispatch = pythoncom.CoCreateInstanceEx(
+[06:56:43]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:43] pywintypes.com_error: (-2147221008, 'CoInitialize has not been called.', None, None)
+
+[06:56:43] The above exception was the direct cause of the following exception:
+
+[06:56:43] Traceback (most recent call last):
+[06:56:43]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 5988, in worker_main
+[06:56:43]     prepared = prepared_future.result()
+[06:56:43]                ^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:43]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+[06:56:43]     return self.__get_result()
+[06:56:43]            ^^^^^^^^^^^^^^^^^^^
+[06:56:43]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+[06:56:43]     raise self._exception
+[06:56:43]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+[06:56:43]     result = self.fn(*self.args, **self.kwargs)
+[06:56:43]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:43]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 4769, in prepare_article_from_word
+[06:56:43]     current_row, title, word_path = open_hidden_word_document()
+[06:56:43]                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:43]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 489, in open_hidden_word_document
+[06:56:43]     raise RuntimeError(
+[06:56:43] RuntimeError: Không mở được file Word:
+[06:56:43] D:\CodexProjects\Hotkeyvip\07_ket_qua\bai_viet\kythuatmarketing.com\quản trị marketing.docx
+
+[06:56:43] Lỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)
+[06:56:43] [LỖI BÀI — DỪNG AN TOÀN] Worker 4, dòng 1107: RuntimeError("Không mở được file Word:\nD:\\CodexProjects\\Hotkeyvip\\07_ket_qua\\bai_viet\\kythuatmarketing.com\\quản trị marketing.docx\n\nLỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)")
+[06:56:43] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_dang_bai\dang_bai_worker4_row1107_20260803_065643.log
+[06:56:43] Đã khóa giao bài mới; Edge lỗi được giữ nguyên. Các bài đang chạy sẽ hoàn tất.
+[06:56:43]     Edge đã được hiện theo lựa chọn trên bảng tiến độ.
+[06:56:43]     Phát hiện trang đăng nhập → tự nhập ID và mật khẩu...
+[06:56:43]     Đã nhập đủ ID/mật khẩu → click ĐĂNG NHẬP một lần.
+[06:56:45]     CẢNH BÁO: Không tự giãn được khung Note lỗi: AttributeError("'<win32com.gen_py.Microsoft Excel 16.0 Object Library.TextFrame instance at 0x2210247769024>' object has no attribute 'WordWrap'")
+[06:56:46]     Đăng nhập thành công, đã vào đúng trang đăng bài.
+[06:56:46] Traceback (most recent call last):
+[06:56:46]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 469, in open_hidden_word_document
+[06:56:46]     word = win32.DispatchEx("Word.Application")
+[06:56:46]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:46]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32com\client\__init__.py", line 142, in DispatchEx
+[06:56:46]     dispatch = pythoncom.CoCreateInstanceEx(
+[06:56:46]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:46] pywintypes.com_error: (-2147221008, 'CoInitialize has not been called.', None, None)
+
+[06:56:46] The above exception was the direct cause of the following exception:
+
+[06:56:46] Traceback (most recent call last):
+[06:56:46]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 5988, in worker_main
+[06:56:46]     prepared = prepared_future.result()
+[06:56:46]                ^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:46]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+[06:56:46]     return self.__get_result()
+[06:56:46]            ^^^^^^^^^^^^^^^^^^^
+[06:56:46]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+[06:56:46]     raise self._exception
+[06:56:46]   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+[06:56:46]     result = self.fn(*self.args, **self.kwargs)
+[06:56:46]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:46]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 4769, in prepare_article_from_word
+[06:56:46]     current_row, title, word_path = open_hidden_word_document()
+[06:56:46]                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[06:56:46]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py", line 489, in open_hidden_word_document
+[06:56:46]     raise RuntimeError(
+[06:56:46] RuntimeError: Không mở được file Word:
+[06:56:46] D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu mạnh.docx
+
+[06:56:46] Lỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)
+[06:56:46] [LỖI BÀI — DỪNG AN TOÀN] Worker 1, dòng 197: RuntimeError("Không mở được file Word:\nD:\\baivietlamviec\\dangbai\\congdongkinhdoanh.com\\[06] 10.08.2026\\thương hiệu mạnh.docx\n\nLỗi thật: com_error(-2147221008, 'CoInitialize has not been called.', None, None)")
+[06:56:46] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_dang_bai\dang_bai_worker1_row197_20260803_065646.log
+[06:56:46] Đã khóa giao bài mới; Edge lỗi được giữ nguyên. Các bài đang chạy sẽ hoàn tất.
+[06:56:46]     Edge đã được hiện theo lựa chọn trên bảng tiến độ.
+[06:56:46]     CẢNH BÁO: Không tự giãn được khung Note lỗi: AttributeError("'<win32com.gen_py.Microsoft Excel 16.0 Object Library.TextFrame instance at 0x2210259753856>' object has no attribute 'WordWrap'")
+[06:56:48]     CẢNH BÁO: Không tự giãn được khung Note lỗi: AttributeError("'<win32com.gen_py.Microsoft Excel 16.0 Object Library.TextFrame instance at 0x2210259753856>' object has no attribute 'WordWrap'")
+[06:56:49]     CẢNH BÁO: Không tự giãn được khung Note lỗi: AttributeError("'<win32com.gen_py.Microsoft Excel 16.0 Object Library.TextFrame instance at 0x2210259752320>' object has no attribute 'WordWrap'")
+[06:56:50] ========================================================================
+[06:56:50] KẾT THÚC: hoàn thành 0/22 bài
+[06:56:50] ========================================================================
+[06:56:50] Thời gian kết thúc: 03/08/2026 06:56:50
+[06:56:50] Đã lưu log lỗi điều phối tại: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_dang_bai\dang_bai_dieu_phoi_20260803_065543.log

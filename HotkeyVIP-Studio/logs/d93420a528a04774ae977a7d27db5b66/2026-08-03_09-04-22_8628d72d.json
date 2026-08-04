@@ -1,0 +1,11 @@
+{
+  "state": "stopped",
+  "target": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\cap_nhat_url_cong_ty_thuc_te_da_viet.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\d93420a528a04774ae977a7d27db5b66\\2026-08-03_09-04-22_8628d72d.log",
+  "startedAt": 1785722662.5296514,
+  "endedAt": 1785722716.6894827,
+  "duration": 54.16,
+  "exitCode": null,
+  "truncated": false,
+  "error": "Người dùng dừng từ Studio"
+}

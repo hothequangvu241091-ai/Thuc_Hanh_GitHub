@@ -1,0 +1,110 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\V1.7_VIP_tudongdangbai_pipeline_kiemtra_noidung.py
+Bắt đầu: 2026-08-04 09:18:28
+========================================================================
+[09:18:29] Thời gian bắt đầu : 04/08/2026 09:18:29
+[09:18:29] ========================================================================
+[09:18:29] ĐĂNG BÀI TỰ ĐỘNG - DÙNG MỘT EDGE CHO TOÀN BỘ CÁC BÀI
+[09:18:29] TỰ ĐĂNG NHẬP TỪ FILE INI, KHÔNG TẮT EDGE CÁ NHÂN
+[09:18:29] ========================================================================
+[09:18:30] Số bài cần chạy: 1
+[09:18:30] [2] Mở Edge automation riêng, không tắt trình duyệt đang có...
+[09:18:31]     URL hiện tại: about:blank
+[09:18:31]     Edge đã được ẩn trong lúc chạy.
+[09:18:31]     Edge sẽ chạy ẩn; tích 'Hiện trình duyệt khi chạy' để kiểm tra.
+[09:18:50]     Edge đã được hiện theo lựa chọn trên bảng tiến độ.
+[09:18:53]     Ưu tiên mở Word từ cột "Đường dẫn Word" của sheet DANG_BAI.
+[09:18:57] [1] Đã chọn dòng 206: rủi ro tài chính doanh nghiệp
+[09:18:57]     Word chạy nền, không hiện cửa sổ.
+[09:18:57]     File: D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp.docx
+[09:18:57]     Dòng Excel được truyền trực tiếp: 206
+[09:18:57]     Ưu tiên file từ DANG_BAI, cột "Đường dẫn ảnh 1": D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp 1.png
+[09:18:57]     Ưu tiên file từ DANG_BAI, cột "Đường dẫn ảnh 2": D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp 2.png
+
+[09:18:57] Đối chiếu tài nguyên đăng bài:
+[09:18:57] - File Word     : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp.docx
+[09:18:57] - Tên gốc Word : rủi ro tài chính doanh nghiệp
+[09:18:57] - Ảnh đại diện : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp 1.png
+[09:18:57] - Ảnh bài viết : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp 2.png
+[09:19:00] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[09:19:00] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 38618 ký tự.
+[09:19:01] Đã đọc được 4 cặp FAQ hợp lệ từ Word.
+[09:19:10] [PIPELINE] Word ready in RAM: row 206 | D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp.docx
+
+[09:19:11] ========================================================================
+[09:19:11] BẮT ĐẦU BÀI 1/1
+[09:19:11] ========================================================================
+[09:19:11] [PIPELINE] Using Word data already prepared in RAM.
+[09:19:11]     Excel row : 206
+[09:19:11]     Word file : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp.docx
+[09:19:11]     CMS URL   : https://congdongkinhdoanh.com/admin/news_tb/field/root_id=999
+[09:19:12]     Phát hiện trang đăng nhập → tự nhập ID và mật khẩu...
+[09:19:12]     Đã nhập đủ ID/mật khẩu → click ĐĂNG NHẬP một lần.
+[09:19:14]     Đăng nhập thành công, đã vào đúng trang đăng bài.
+[09:19:14] [3] Điền 5 ô đầu...
+[09:19:14] [6] Đọc Excel và chọn Danh mục / Tác giả...
+[09:19:15] Đã mở Select2 Danh mục.
+[09:19:15] Đã chọn Danh mục: Tài chính
+[09:19:15] ID Danh mục từ CMS: 6
+[09:19:16] Đã tải xong ô Select2 Tác giả.
+[09:19:17] Đã random Tác giả từ CMS: Hồ Chí Dũng
+
+[09:19:17] Kết quả Danh mục/Tác giả:
+[09:19:17] - Trạng thái: OK
+[09:19:17] - Danh mục  : Tài chính
+[09:19:17] - Tác giả   : Hồ Chí Dũng
+[09:19:17] [4] Đưa Edge lên trước và focus CKEditor detail...
+[09:19:18] [5] Đưa HTML Word vào CKEditor detail...
+[09:19:18] Đã nạp CKEditor, độ dài HTML: 16736
+[09:19:19] [7] Tạo đủ block và dán FAQ một lượt...
+[09:19:20] Đã tạo đủ 4 block FAQ.
+[09:19:20] Đã dán một lượt 4 cặp FAQ.
+
+[09:19:20] Kết quả FAQ:
+[09:19:20] - Trạng thái: OK
+[09:19:20] - Số cặp    : 4
+[09:19:20] [3] Upload ảnh đại diện...
+[09:19:21]     OK: đã gửi ảnh đại diện
+[09:19:21] [4] Mở popup ảnh CKEditor...
+[09:19:21] [5] Click tab Tải lên...
+[09:19:21] [6] Chọn ảnh bài viết...
+[09:19:21]     D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\rủi ro tài chính doanh nghiệp 2.png
+[09:19:22]     OK: đã chọn file trong popup
+[09:19:22] [7] Click Tải lên máy chủ...
+[09:19:22] [8] Chờ server trả URL ảnh...
+[09:19:22]     URL: /uploads/images/editor/rui-ro-tai-chinh-doanh-nghiep-2.png
+[09:19:22] [9] Click Đồng ý...
+[09:19:23]     OK: ảnh đã được chèn vào CKEditor
+[09:19:23] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[09:19:23]     OK: đã gom HTML bằng Python
+[09:19:23]     HTML trước : 16897 ký tự
+[09:19:23]     HTML sau   : 9217 ký tự
+[09:19:23]     Số ảnh     : 1
+[09:19:23]     Số H2/H3   : 5/13
+[09:19:23] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[09:19:23] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[09:19:23]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[09:19:23] [14] Click nút lưu bài...
+[09:19:26]     OK: đã chuyển sang URL sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[09:19:26]     DANH_MUC_ID đã có: congdongkinhdoanh.com | Tài chính | ID 6
+[09:19:26]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[09:19:26]     ID CMS vừa đăng: 4136
+
+[09:19:28] ========================================================================
+[09:19:28] ĐÃ LƯU XONG BÀI 1/1
+[09:19:28] - Dòng Excel: 206
+[09:19:28] - HTML trước/sau: 16897/9217 ký tự
+[09:19:28] - URL CMS sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[09:19:28] ========================================================================
+
+[09:19:28] ========================================================================
+[09:19:28] ĐÃ XỬ LÝ XONG 1/1 BÀI
+[09:19:28] - Bài 1: dòng 206 | https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[09:19:28] - Toàn bộ quá trình đã hoàn tất, không phát hiện lỗi.
+[09:19:28] ========================================================================
+[09:19:31] Thời gian kết thúc: 04/08/2026 09:19:31
+
+========================================================================
+Kết thúc: 2026-08-04 09:19:32
+Mã thoát: 0
+Thời gian: 63.55 giây

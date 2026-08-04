@@ -1,0 +1,269 @@
+[
+  {
+    "id": "nhap-ke-hoach-tu-thu-muc",
+    "name": "Nhập dữ liệu kế hoạch từ thư mục",
+    "path": "D:/CodexProjects/Hotkeyvip/04_excel/01_nhap_du_lieu_ke_hoach_phan_loai_trung.V2.1.py",
+    "description": "Đưa dữ liệu đầu vào từ thư mục vào kế hoạch Excel.",
+    "showConsole": true,
+    "group": "Chuẩn bị kế hoạch",
+    "order": 10,
+    "favorite": true
+  },
+  {
+    "id": "chuan-bi-viet-bai",
+    "name": "Chuẩn bị dữ liệu viết bài",
+    "path": "D:/CodexProjects/Hotkeyvip/02_viet_bai/chuan_bi_du_lieu_viet_bai_ten_mien.V1.1.py",
+    "description": "Chuẩn bị và thiết lập Excel trước khi chạy viết bài.",
+    "showConsole": true,
+    "group": "02 · Viết bài",
+    "order": 10,
+    "favorite": true
+  },
+  {
+    "id": "viet-bai-3-luong",
+    "name": "Viết bài tự động 3 luồng",
+    "path": "D:/CodexProjects/Hotkeyvip/02_viet_bai/V2.17_CODEX_skip_loi_chay_lai.py",
+    "description": "Flow chính viết Word, tạo brief và ảnh.",
+    "showConsole": true,
+    "group": "02 · Viết bài",
+    "order": 30,
+    "favorite": true
+  },
+  {
+    "id": "viet-bai-nhanh-2-3-luong",
+    "name": "Viết bài nhanh 1 luồn",
+    "path": "D:/CodexProjects/Hotkeyvip/02_viet_bai/V1.11_vietbai_3cap_baohiem_anh_khong_ghi_de.py",
+    "description": "Bộ chạy nhanh 2 hoặc 3 luồng của flow viết bài.",
+    "showConsole": true,
+    "group": "02 · Viết bài",
+    "order": 40,
+    "favorite": false
+  },
+  {
+    "id": "viet-lai-lan-2",
+    "name": "Viết lại Word lần 2",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\02_viet_bai\\viet_lai_word_dot_2.py",
+    "description": "Chạy lại lần hai khi còn bài Word cần xử lý.",
+    "showConsole": true,
+    "group": "02 · Viết bài",
+    "order": 50,
+    "favorite": false
+  },
+  {
+    "id": "chuan-bi-dang-bai",
+    "name": "Chuẩn bị dữ liệu đăng bài",
+    "path": "D:/CodexProjects/Hotkeyvip/04_excel/02_chuan_bi_DANG_BAI_tu_KE_HOACH_va_VIET_BAI.py",
+    "description": "Chuẩn bị category và dữ liệu trước khi đăng.",
+    "showConsole": true,
+    "group": "03 · Đăng bài",
+    "order": 10,
+    "favorite": true
+  },
+  {
+    "id": "dang-bai-1-luong",
+    "name": "Đăng bài tự động 1 luồng",
+    "path": "D:/CodexProjects/Hotkeyvip/03_dang_bai/V1.7_VIP_tudongdangbai_pipeline_kiemtra_noidung.py",
+    "description": "Flow đăng bài tự động một luồng để chạy và kiểm tra.",
+    "showConsole": true,
+    "group": "03 · Đăng bài",
+    "order": 20,
+    "favorite": true
+  },
+  {
+    "id": "dang-bai-3-5-luong",
+    "name": "Đăng bài tự động 3–5 luồng",
+    "path": "D:/CodexProjects/Hotkeyvip/03_dang_bai/V2.9_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py",
+    "description": "Flow đăng bài tự động nhiều luồng.",
+    "showConsole": true,
+    "group": "03 · Đăng bài",
+    "order": 30,
+    "favorite": true
+  },
+  {
+    "id": "mo-word-tu-excel",
+    "name": "Mở Word từ Excel",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\mo_word_tu_excel.py",
+    "description": "Mở đúng file Word theo dòng Excel đang chọn.",
+    "showConsole": false,
+    "group": "04 · Phụ trợ đăng bài",
+    "order": 10,
+    "favorite": false,
+    "favoriteOrder": 10
+  },
+  {
+    "id": "mo-url-dang-bai",
+    "name": "Mở URL đăng bài",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\mo_url_dang_bai.py",
+    "description": "Mở trang CMS theo dữ liệu hiện tại.",
+    "showConsole": false,
+    "group": "04 · Phụ trợ đăng bài",
+    "order": 20,
+    "favorite": false,
+    "favoriteOrder": 20
+  },
+  {
+    "id": "xu-ly-anh",
+    "name": "Tổng hợp và xử lý ảnh",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\tong_hop_va_xu_ly_anh.py",
+    "description": "Gom và chuẩn hóa ảnh trước khi đăng.",
+    "showConsole": true,
+    "group": "04 · Phụ trợ đăng bài",
+    "order": 30,
+    "favorite": false,
+    "favoriteOrder": 40
+  },
+  {
+    "id": "xu-ly-word",
+    "name": "Xử lý toàn bộ file Word",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\xu_ly_toan_bo_file_word.py",
+    "description": "Chuẩn hóa toàn bộ file Word phục vụ đăng bài.",
+    "showConsole": true,
+    "group": "04 · Phụ trợ đăng bài",
+    "order": 40,
+    "favorite": false
+  },
+  {
+    "id": "bai-viet-lien-quan",
+    "name": "Bài viết liên quan",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\bai_viet_lien_quan.py",
+    "description": "Thêm bài viết liên quan sau khi đăng.",
+    "showConsole": true,
+    "group": "05 · Sau khi đăng",
+    "order": 10,
+    "favorite": false
+  },
+  {
+    "id": "bai-viet-lien-quan-3-luong",
+    "name": "Bài viết liên quan 3 luồng",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\Vip_baivietlienquan_3_luong.py",
+    "description": "Xử lý bài viết liên quan theo ba luồng.",
+    "showConsole": true,
+    "group": "05 · Sau khi đăng",
+    "order": 20,
+    "favorite": false
+  },
+  {
+    "id": "xuat-url-cms",
+    "name": "Xuất URL từ ID CMS",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\xuat_url_tu_id_cms.py",
+    "description": "Lấy URL thật từ ID bài đăng.",
+    "showConsole": true,
+    "group": "05 · Sau khi đăng",
+    "order": 30,
+    "favorite": false,
+    "favoriteOrder": 50
+  },
+  {
+    "id": "cu-chon-danh-muc-tac-gia",
+    "name": "Cũ · Chọn danh mục và tác giả",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\chua can sai\\chon_danh_muc_tac_gia.py",
+    "description": "File cũ trong thư mục chưa cần dùng.",
+    "showConsole": true,
+    "group": "06 · Chưa cần dùng",
+    "order": 10,
+    "favorite": false
+  },
+  {
+    "id": "cu-chuan-bi-dang-bai",
+    "name": "Cũ · Chuẩn bị dữ liệu đăng bài",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\chua can sai\\chuan_bi_du_lieu_dang_bai.py",
+    "description": "File cũ trong thư mục chưa cần dùng.",
+    "showConsole": true,
+    "group": "06 · Chưa cần dùng",
+    "order": 20,
+    "favorite": false
+  },
+  {
+    "id": "cu-dang-bai-bo-qua-faq",
+    "name": "Cũ · Đăng bài bỏ qua FAQ/Bullet",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\chua can sai\\VIP_tudongdangbai_BAN_CU_TRUOC_BO_QUA_FAQ_BULLET_20260719.py",
+    "description": "Bản cũ trước khi bỏ qua FAQ và Bullet.",
+    "showConsole": true,
+    "group": "06 · Chưa cần dùng",
+    "order": 30,
+    "favorite": false
+  },
+  {
+    "id": "cu-test-phu-tro",
+    "name": "code py test",
+    "path": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\phu_tro\\chua can sai\\test.py",
+    "description": "File test trong thư mục chưa cần dùng.",
+    "showConsole": true,
+    "group": "06 · Chưa cần dùng",
+    "order": 40,
+    "favorite": false
+  },
+  {
+    "id": "kiem-tra-nut-chay",
+    "name": "Kiểm tra nút chạy",
+    "path": "D:/CodexProjects/HotkeyVIP-Studio/test_trang_thai_trinh_chay.py",
+    "description": "Hiện thông báo TEST THÀNH CÔNG, không đụng Excel.",
+    "showConsole": true,
+    "group": "Kiểm tra",
+    "order": 10,
+    "favorite": false,
+    "favoriteOrder": 100
+  },
+  {
+    "id": "0b2533385035446d91340a39599840f3",
+    "name": "Xuất ID all",
+    "path": "D:/CodexProjects/Hotkeyvip/03_dang_bai/phu_tro/xuat_url_tu_id_cms.py",
+    "description": "từ ID lấy được URL để nạp lên file quản lý",
+    "showConsole": true,
+    "group": "03 · Đăng bài",
+    "order": 9999,
+    "favorite": true,
+    "favoriteOrder": 60
+  },
+  {
+    "id": "48bb2d298169441cbea1f71c1a8c85d6",
+    "name": "Bài viết liên quan",
+    "path": "D:/CodexProjects/Hotkeyvip/03_dang_bai/phu_tro/V1.0_bai_viet_lien_quan.py",
+    "description": "",
+    "showConsole": true,
+    "group": "03 · Đăng bài",
+    "order": 9999,
+    "favorite": true
+  },
+  {
+    "id": "d828aa0dc3ca4911a615e7f603f59e2c",
+    "name": "Bài viết liên quan 3 luồn",
+    "path": "D:/CodexProjects/Hotkeyvip/03_dang_bai/phu_tro/V2.2_dieu_phoi_bai_viet_lien_quan.py",
+    "description": "chạy bài viết liên quan 3 luồn",
+    "showConsole": true,
+    "group": "03 · Đăng bài",
+    "order": 9999,
+    "favorite": false
+  },
+  {
+    "id": "29a1825e3bdb422dbb8441dd0b86c382",
+    "name": "FIle excel làm việc hotkeyvip_test.xlsm",
+    "path": "D:/CodexProjects/Hotkeyvip/04_excel/hotkeyvip_test.xlsm",
+    "description": "Mở file excel gốc làm việc",
+    "showConsole": true,
+    "group": "Mở file excel",
+    "order": 9999,
+    "favorite": true,
+    "favoriteOrder": 10
+  },
+  {
+    "id": "test-trang-thai-trinh-chay",
+    "name": "Test trạng thái 20 giây",
+    "path": "D:/Dang_bai/BUOC_3_DOI_CHIEU_CAU_TRUC_V1.py",
+    "description": "Chạy an toàn 20 giây để thử Đang chạy, Dừng, Thành công và Lịch sử.",
+    "showConsole": false,
+    "group": "Kiểm tra",
+    "order": 20,
+    "favorite": false
+  },
+  {
+    "id": "d93420a528a04774ae977a7d27db5b66",
+    "name": "Cập nhập URL vào file báo cáo",
+    "path": "D:/CodexProjects/Hotkeyvip/04_excel/03_dong_bo_URL_bai_da_viet_sang_file_cong_ty_V1.0.py",
+    "description": "xuất URL file làm viec -> chỗ file sếp để báo cáo tình hình",
+    "showConsole": true,
+    "group": "03 · Đăng bài",
+    "order": 9999,
+    "favorite": true
+  }
+]

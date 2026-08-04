@@ -1,0 +1,109 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\V1.7_VIP_tudongdangbai_pipeline_kiemtra_noidung.py
+Bắt đầu: 2026-08-04 09:20:54
+========================================================================
+[09:20:55] Thời gian bắt đầu : 04/08/2026 09:20:55
+[09:20:55] ========================================================================
+[09:20:55] ĐĂNG BÀI TỰ ĐỘNG - DÙNG MỘT EDGE CHO TOÀN BỘ CÁC BÀI
+[09:20:55] TỰ ĐĂNG NHẬP TỪ FILE INI, KHÔNG TẮT EDGE CÁ NHÂN
+[09:20:55] ========================================================================
+[09:20:56] Số bài cần chạy: 1
+[09:20:56] [2] Mở Edge automation riêng, không tắt trình duyệt đang có...
+[09:20:57]     URL hiện tại: about:blank
+[09:20:58]     Edge đã được ẩn trong lúc chạy.
+[09:20:58]     Edge sẽ chạy ẩn; tích 'Hiện trình duyệt khi chạy' để kiểm tra.
+[09:20:59]     Ưu tiên mở Word từ cột "Đường dẫn Word" của sheet DANG_BAI.
+[09:21:02] [1] Đã chọn dòng 203: thương hiệu doanh nghiệp
+[09:21:02]     Word chạy nền, không hiện cửa sổ.
+[09:21:02]     File: D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp.docx
+[09:21:02]     Dòng Excel được truyền trực tiếp: 203
+[09:21:02]     Ưu tiên file từ DANG_BAI, cột "Đường dẫn ảnh 1": D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp 1.png
+[09:21:02]     Ưu tiên file từ DANG_BAI, cột "Đường dẫn ảnh 2": D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp 2.png
+
+[09:21:02] Đối chiếu tài nguyên đăng bài:
+[09:21:02] - File Word     : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp.docx
+[09:21:02] - Tên gốc Word : thương hiệu doanh nghiệp
+[09:21:02] - Ảnh đại diện : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp 1.png
+[09:21:02] - Ảnh bài viết : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp 2.png
+[09:21:04] Đã tìm thấy phần FAQ → chỉ lấy nội dung chính trước FAQ.
+[09:21:04] Đã lấy HTML trực tiếp từ Clipboard Word, độ dài: 20895 ký tự.
+[09:21:04] Đã đọc được 3 cặp FAQ hợp lệ từ Word.
+[09:21:09] [PIPELINE] Word ready in RAM: row 203 | D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp.docx
+
+[09:21:10] ========================================================================
+[09:21:10] BẮT ĐẦU BÀI 1/1
+[09:21:10] ========================================================================
+[09:21:10] [PIPELINE] Using Word data already prepared in RAM.
+[09:21:10]     Excel row : 203
+[09:21:10]     Word file : D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp.docx
+[09:21:10]     CMS URL   : https://congdongkinhdoanh.com/admin/news_tb/field/root_id=999
+[09:21:11]     Phát hiện trang đăng nhập → tự nhập ID và mật khẩu...
+[09:21:11]     Đã nhập đủ ID/mật khẩu → click ĐĂNG NHẬP một lần.
+[09:21:13]     Đăng nhập thành công, đã vào đúng trang đăng bài.
+[09:21:13] [3] Điền 5 ô đầu...
+[09:21:14] [6] Đọc Excel và chọn Danh mục / Tác giả...
+[09:21:14] Đã mở Select2 Danh mục.
+[09:21:14] Đã chọn Danh mục: Thương hiệu
+[09:21:14] ID Danh mục từ CMS: 5
+[09:21:15] Đã tải xong ô Select2 Tác giả.
+[09:21:16] Đã random Tác giả từ CMS: Đỗ Thị Cẩm Quyên
+
+[09:21:16] Kết quả Danh mục/Tác giả:
+[09:21:16] - Trạng thái: OK
+[09:21:16] - Danh mục  : Thương hiệu
+[09:21:16] - Tác giả   : Đỗ Thị Cẩm Quyên
+[09:21:16] [4] Đưa Edge lên trước và focus CKEditor detail...
+[09:21:17] [5] Đưa HTML Word vào CKEditor detail...
+[09:21:17] Đã nạp CKEditor, độ dài HTML: 10824
+[09:21:18] [7] Tạo đủ block và dán FAQ một lượt...
+[09:21:19] Đã tạo đủ 3 block FAQ.
+[09:21:19] Đã dán một lượt 3 cặp FAQ.
+
+[09:21:19] Kết quả FAQ:
+[09:21:19] - Trạng thái: OK
+[09:21:19] - Số cặp    : 3
+[09:21:19] [3] Upload ảnh đại diện...
+[09:21:19]     OK: đã gửi ảnh đại diện
+[09:21:19] [4] Mở popup ảnh CKEditor...
+[09:21:20] [5] Click tab Tải lên...
+[09:21:20] [6] Chọn ảnh bài viết...
+[09:21:20]     D:\baivietlamviec\dangbai\congdongkinhdoanh.com\[06] 10.08.2026\thương hiệu doanh nghiệp 2.png
+[09:21:20]     OK: đã chọn file trong popup
+[09:21:20] [7] Click Tải lên máy chủ...
+[09:21:20] [8] Chờ server trả URL ảnh...
+[09:21:21]     URL: /uploads/images/editor/thuong-hieu-doanh-nghiep-2(1).png
+[09:21:21] [9] Click Đồng ý...
+[09:21:22]     OK: ảnh đã được chèn vào CKEditor
+[09:21:22] [13] Lấy và gom HTML trực tiếp trong CKEditor...
+[09:21:22]     OK: đã gom HTML bằng Python
+[09:21:22]     HTML trước : 10997 ký tự
+[09:21:22]     HTML sau   : 7379 ký tự
+[09:21:22]     Số ảnh     : 1
+[09:21:22]     Số H2/H3   : 7/10
+[09:21:22] [CONTENT CHECK] OK: 12 Word markers found in CKEditor.
+[09:21:22] [14] Kiểm tra bảo hiểm ngay trước khi Save...
+[09:21:22]     OK: Title, H1, Keyword, Danh mục, ảnh, H2 và bullet đều hợp lệ.
+[09:21:22] [14] Click nút lưu bài...
+[09:21:25]     OK: đã chuyển sang URL sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[09:21:25]     DANH_MUC_ID đã có: congdongkinhdoanh.com | Thương hiệu | ID 5
+[09:21:25]     Không thấy đúng một URL công khai chắc chắn trong hàng bài → để trống URL đã đăng.
+[09:21:25]     ID CMS vừa đăng: 4137
+
+[09:21:27] ========================================================================
+[09:21:27] ĐÃ LƯU XONG BÀI 1/1
+[09:21:27] - Dòng Excel: 203
+[09:21:27] - HTML trước/sau: 10997/7379 ký tự
+[09:21:27] - URL CMS sau khi lưu: https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[09:21:27] ========================================================================
+
+[09:21:27] ========================================================================
+[09:21:27] ĐÃ XỬ LÝ XONG 1/1 BÀI
+[09:21:27] - Bài 1: dòng 203 | https://congdongkinhdoanh.com/admin/news_tb/list/root_id=999
+[09:21:27] - Toàn bộ quá trình đã hoàn tất, không phát hiện lỗi.
+[09:21:27] ========================================================================
+[09:21:30] Thời gian kết thúc: 04/08/2026 09:21:30
+
+========================================================================
+Kết thúc: 2026-08-04 09:21:30
+Mã thoát: 0
+Thời gian: 36.28 giây

@@ -1,0 +1,641 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\02_viet_bai\V2.13_CODEX_daluong_word_queue.py
+Bắt đầu: 2026-08-02 18:22:27
+========================================================================
+[18:22:31] Chọn số Worker Edge chạy bài + Brief + Gemini (1 / 2 / 3 / 4 / 5): V2.13_CODEX_daluong_word_queue: nạp Excel một lần, khởi chạy 3 Worker Edge và 1 Worker Word + VBA chuyên dụng.
+[18:22:37] -> Đã đưa Edge Selenium ra ngoài phạm vi màn hình.-> Đã đưa Edge Selenium ra ngoài phạm vi màn hình.
+[18:22:37] [WORKER 1] Dòng Excel 1804 — hướng dẫn định vị thương hiệu — Bắt đầu xử lý
+
+[18:22:37] [WORKER 2] Dòng Excel 1862 — triển khai martech stack — Bắt đầu xử lý
+
+[18:22:37] ======================================================================
+
+[18:22:37] ======================================================================
+[18:22:37] KIỂM TRA DÒNG 1804: hướng dẫn định vị thương hiệu | CHECKPOINT=WORD
+[18:22:37] KIỂM TRA DÒNG 1862: triển khai martech stack | CHECKPOINT=WORD
+[18:22:37] BẮT ĐẦU DÒNG 1862: triển khai martech stack
+[18:22:37] BẮT ĐẦU DÒNG 1804: hướng dẫn định vị thương hiệu
+[18:22:37] [WORKER 2] Dòng Excel 1862 — triển khai martech stack — Đang viết bài và giao Worker Word
+[18:22:37] [WORKER 1] Dòng Excel 1804 — hướng dẫn định vị thương hiệu — Đang viết bài và giao Worker Word
+
+[18:22:37] [DÒNG 1862] Bắt đầu xử lý tạo Word...
+
+[18:22:37] [DÒNG 1804] Bắt đầu xử lý tạo Word...
+[18:22:37] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet/c/6a6ef018-949c-83ec-8da8-11b4365e10a9
+[18:22:37] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet/c/6a6eef1b-11c0-83ec-bf29-1fae961bcda0
+[18:22:37] -> Đã đưa Edge Selenium ra ngoài phạm vi màn hình.
+[18:22:37] [WORKER 3] Dòng Excel 1897 — khắc phục website không được Google index — Bắt đầu xử lý
+
+[18:22:37] ======================================================================
+[18:22:37] KIỂM TRA DÒNG 1897: khắc phục website không được Google index | CHECKPOINT=WORD
+[18:22:37] BẮT ĐẦU DÒNG 1897: khắc phục website không được Google index
+[18:22:37] [WORKER 3] Dòng Excel 1897 — khắc phục website không được Google index — Đang viết bài và giao Worker Word
+
+[18:22:37] [DÒNG 1897] Bắt đầu xử lý tạo Word...
+[18:22:37] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet/c/6a6ef0c5-ae20-83ec-9cda-74074b7a6198
+[18:22:44] -> Nội dung assistant đã ổn định 1s (214 từ).
+[18:22:44] -> Số từ lấy từ chat hiện tại: 214
+[18:22:44] -> Nội dung dưới 700 từ. Gửi prompt bổ sung trong chính URL hiện tại.
+[18:22:44] -> Nội dung assistant đã ổn định 1s (164 từ).
+[18:22:44] -> Số từ lấy từ chat hiện tại: 166
+[18:22:44] -> Nội dung dưới 700 từ. Gửi prompt bổ sung trong chính URL hiện tại.
+[18:22:45] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:22:45] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:22:46] -> Đã bấm gửi prompt.
+[18:22:46] -> Đã bấm gửi prompt.
+[18:22:53] -> Nội dung assistant đã ổn định 1s (296 từ).
+[18:22:53] -> Số từ sau bổ sung: 298
+[18:22:53] ⚠️ Không lưu được Word từ URL H: Bài vẫn dưới 700 từ: 298
+[18:22:53] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:22:55] -> Nội dung assistant đã ổn định 1s (185 từ).
+[18:22:55] -> Số từ sau bổ sung: 196
+[18:22:55] ⚠️ Không lưu được Word từ URL H: Bài vẫn dưới 700 từ: 196
+[18:22:55] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:22:59] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:23:00] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:23:00] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:23:01] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:23:18] -> Nội dung assistant đã ổn định 1s (1462 từ).
+[18:23:18] -> Số từ ước tính bài viết: 1462
+[18:23:18] -> Đang giao snapshot HTML cho Worker Word chuyên dụng...
+[18:23:19] -> Nội dung assistant đã ổn định 0s (1462 từ).
+[18:23:19] -> Dòng 1804: Đã giao Worker Word. Hàng chờ hiện có 1 bài.
+[18:23:19] -> Dòng 1804: Đã xếp Word từ URL mới vào hàng chờ.
+[18:23:19] [WORD] Bắt đầu dòng 1804: hướng dẫn định vị thương hiệu | còn chờ 0 bài
+
+[18:23:19] [WORKER 1] Dòng Excel 1804 — hướng dẫn định vị thương hiệu — Đang tạo brief ảnh
+
+[18:23:19] [DÒNG 1804] Bắt đầu xin Brief ảnh...
+[18:23:19] -> Nội dung assistant đã ổn định 1s (1490 từ).
+[18:23:19] -> Số từ ước tính bài viết: 1490
+[18:23:19] -> Đang giao snapshot HTML cho Worker Word chuyên dụng...
+[18:23:20] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:23:20] -> Nội dung assistant đã ổn định 0s (1490 từ).
+[18:23:20] -> Dòng 1862: Đã giao Worker Word. Hàng chờ hiện có 1 bài.
+[18:23:20] -> Dòng 1862: Đã xếp Word từ URL mới vào hàng chờ.
+[18:23:20] [WORKER 2] Dòng Excel 1862 — triển khai martech stack — Đang tạo brief ảnh
+
+[18:23:20] [DÒNG 1862] Bắt đầu xin Brief ảnh...
+[18:23:21] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:23:21] -> Đã bấm gửi prompt.
+[18:23:21] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:23:22] -> Đã bấm gửi prompt.
+[18:23:23] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:23:27] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:23:27] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:23:27] -> Nội dung assistant đã ổn định 1s (258 từ).
+[18:23:27] -> Dòng 1804: Đã lưu Brief vào O/P.
+[18:23:27] [WORKER 1] Dòng Excel 1804 — hướng dẫn định vị thương hiệu — Đang tạo ảnh 1/2 trên Gemini
+
+[18:23:27] [DÒNG 1804] Bắt đầu tạo ảnh 1 Gemini...
+[18:23:28] -> Nội dung assistant đã ổn định 1s (239 từ).
+[18:23:28] -> Dòng 1862: Đã lưu Brief vào O/P.
+[18:23:28] [WORKER 2] Dòng Excel 1862 — triển khai martech stack — Đang tạo ảnh 1/2 trên Gemini
+
+[18:23:28] [DÒNG 1862] Bắt đầu tạo ảnh 1 Gemini...
+[18:23:30] -> Gemini đã sẵn sàng sau 2.5s (kiểm tra DOM lần 1/5).
+
+[18:23:30] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:23:30] Tổng số img trên trang: 6
+[18:23:31] -> Gemini đã sẵn sàng sau 2.2s (kiểm tra DOM lần 1/5).
+
+[18:23:31] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:23:31] Tổng số img trên trang: 6
+[18:23:32] -> Đã gửi prompt sang Gemini bằng JS.
+[18:23:32] ✅ [WORD] Dòng 1804: Đã lưu Word + chạy VBA thành công.
+[18:23:32] -> Đã gửi prompt sang Gemini bằng JS.
+[18:23:33] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+
+[18:23:33] [WORD] Bắt đầu dòng 1862: triển khai martech stack | còn chờ 0 bài
+[18:23:33] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:23:45] ✅ [WORD] Dòng 1862: Đã lưu Word + chạy VBA thành công.
+[18:23:47] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/0d055008-bd11-4f36-88f3-b0efb768c64c
+
+[18:23:47] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:23:47] Tổng số img trên trang: 6
+[18:23:48] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/0d055008-bd11-4f36-88f3-b0efb768c64c
+[18:23:48] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:23:48] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:23:48] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[18:23:48] [DÒNG 1862] Bắt đầu tạo ảnh 2 Gemini...
+[18:23:49] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/ad0e0e96-cf40-4981-a313-5f41cb4af17a
+
+[18:23:49] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:23:49] Tổng số img trên trang: 6
+[18:23:49] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/ad0e0e96-cf40-4981-a313-5f41cb4af17a
+[18:23:49] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:23:50] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:23:50] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[18:23:50] [DÒNG 1804] Bắt đầu tạo ảnh 2 Gemini...
+[18:23:51] -> Gemini đã sẵn sàng sau 2.1s (kiểm tra DOM lần 1/5).
+
+[18:23:51] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:23:51] Tổng số img trên trang: 6
+[18:23:52] -> Gemini đã sẵn sàng sau 1.8s (kiểm tra DOM lần 1/5).
+
+[18:23:52] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:23:52] Tổng số img trên trang: 6
+[18:23:52] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:23:52] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:23:52] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:23:52] -> Đã gửi prompt sang Gemini bằng JS.
+[18:23:53] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:23:54] -> Đã gửi prompt sang Gemini bằng JS.
+[18:23:55] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:23:58] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:23:59] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:24:08] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/2b9fec55-0655-4743-a40c-fc62da793d4b
+
+[18:24:08] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:24:08] Tổng số img trên trang: 6
+[18:24:08] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/2b9fec55-0655-4743-a40c-fc62da793d4b
+[18:24:08] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:24:08] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/58afcfd4-abee-47d3-b1b1-af4ad70baae1
+
+[18:24:08] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:24:08] Tổng số img trên trang: 6
+[18:24:08] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/58afcfd4-abee-47d3-b1b1-af4ad70baae1
+[18:24:08] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:24:09] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:24:09] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[18:24:09] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1804 <=====
+[18:24:09] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:24:09] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[18:24:10] [WORKER 1] Dòng Excel 1804 — hướng dẫn định vị thương hiệu — Đã xong phần Edge; hệ thống tự chờ Word
+[18:24:10] [WORKER 1] Dòng Excel 1970 — đổi hướng nghề marketing — Bắt đầu xử lý
+
+[18:24:10] ======================================================================
+[18:24:10] KIỂM TRA DÒNG 1970: đổi hướng nghề marketing | CHECKPOINT=WORD
+[18:24:10] BẮT ĐẦU DÒNG 1970: đổi hướng nghề marketing
+[18:24:10] [WORKER 1] Dòng Excel 1970 — đổi hướng nghề marketing — Đang viết bài và giao Worker Word
+
+[18:24:10] [DÒNG 1970] Bắt đầu xử lý tạo Word...
+[18:24:10] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:24:10] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1862 <=====
+[18:24:10] [WORKER 2] Dòng Excel 1862 — triển khai martech stack — Đã xong phần Edge; hệ thống tự chờ Word
+[18:24:10] [WORKER 2] Dòng Excel 1980 — tiếp nhận phản hồi công việc — Bắt đầu xử lý
+
+[18:24:10] ======================================================================
+[18:24:10] KIỂM TRA DÒNG 1980: tiếp nhận phản hồi công việc | CHECKPOINT=WORD
+[18:24:10] BẮT ĐẦU DÒNG 1980: tiếp nhận phản hồi công việc
+[18:24:10] [WORKER 2] Dòng Excel 1980 — tiếp nhận phản hồi công việc — Đang viết bài và giao Worker Word
+
+[18:24:10] [DÒNG 1980] Bắt đầu xử lý tạo Word...
+[18:24:10] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:24:16] -> Nội dung assistant đã ổn định 1s (232 từ).
+[18:24:16] -> Số từ ước tính bài viết: 232
+[18:24:16] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[18:24:17] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:24:18] -> Đã bấm gửi prompt.
+[18:24:59] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:24:59] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:24:59] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:24:59] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:25:25] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:25:25] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:25:25] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:25:25] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:25:25] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:25:25] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:25:30] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:25:31] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:25:31] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:25:32] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:25:37] -> Nội dung assistant đã ổn định 1s (84 từ).
+[18:25:37] -> Số từ ước tính bài viết: 84
+[18:25:37] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[18:25:37] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:25:39] -> Đã bấm gửi prompt.
+[18:25:40] -> Nội dung assistant đã ổn định 1s (106 từ).
+[18:25:40] -> Số từ ước tính bài viết: 106
+[18:25:40] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[18:25:40] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:25:42] -> Đã bấm gửi prompt.
+[18:25:46] -> Nội dung assistant đã ổn định 1s (170 từ).
+[18:25:46] -> Số từ sau kéo dài: 172
+[18:25:46] ❌ Dòng 1970: Bài cuối cùng vẫn dưới 700 từ: Bài viết vẫn dưới 700 từ sau prompt kéo dài: 172 từ.
+[18:25:46] ⚠️ [WORKER 1] Dòng 1970 thất bại vì dưới 700 từ; bộ đếm nghỉ = 1/2.
+[18:25:46] [WORKER 1] Dòng Excel 1970 — đổi hướng nghề marketing — Đã xong phần Edge; hệ thống tự chờ Word
+[18:25:46] [WORKER 1] Dòng Excel 1984 — marketing phối hợp sản phẩm — Bắt đầu xử lý
+
+[18:25:46] ======================================================================
+[18:25:46] KIỂM TRA DÒNG 1984: marketing phối hợp sản phẩm | CHECKPOINT=WORD
+[18:25:46] BẮT ĐẦU DÒNG 1984: marketing phối hợp sản phẩm
+[18:25:46] [WORKER 1] Dòng Excel 1984 — marketing phối hợp sản phẩm — Đang viết bài và giao Worker Word
+
+[18:25:46] [DÒNG 1984] Bắt đầu xử lý tạo Word...
+[18:25:46] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet/c/6a6ef555-3af0-83ec-a670-24bd09ffca51
+[18:25:50] -> Nội dung assistant đã ổn định 1s (164 từ).
+[18:25:50] -> Số từ sau kéo dài: 167
+[18:25:50] ❌ Dòng 1980: Bài cuối cùng vẫn dưới 700 từ: Bài viết vẫn dưới 700 từ sau prompt kéo dài: 167 từ.
+[18:25:50] ⚠️ [WORKER 2] Dòng 1980 thất bại vì dưới 700 từ; bộ đếm nghỉ = 1/2.
+[18:25:50] [WORKER 2] Dòng Excel 1980 — tiếp nhận phản hồi công việc — Đã xong phần Edge; hệ thống tự chờ Word
+[18:25:50] [WORKER 2] Dòng Excel 1987 — biên bản họp marketing — Bắt đầu xử lý
+
+[18:25:50] ======================================================================
+[18:25:50] KIỂM TRA DÒNG 1987: biên bản họp marketing | CHECKPOINT=WORD
+[18:25:50] BẮT ĐẦU DÒNG 1987: biên bản họp marketing
+[18:25:50] [WORKER 2] Dòng Excel 1987 — biên bản họp marketing — Đang viết bài và giao Worker Word
+
+[18:25:50] [DÒNG 1987] Bắt đầu xử lý tạo Word...
+[18:25:50] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:25:51] -> Nội dung assistant đã ổn định 1s (219 từ).
+[18:25:51] -> Số từ lấy từ chat hiện tại: 221
+[18:25:51] -> Nội dung dưới 700 từ. Gửi prompt bổ sung trong chính URL hiện tại.
+[18:25:52] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:25:53] -> Đã bấm gửi prompt.
+[18:26:00] -> Nội dung assistant đã ổn định 1s (330 từ).
+[18:26:00] -> Số từ sau bổ sung: 330
+[18:26:00] ⚠️ Không lưu được Word từ URL H: Bài vẫn dưới 700 từ: 330
+[18:26:00] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:26:06] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:26:07] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:26:23] -> Nội dung assistant đã ổn định 1s (1469 từ).
+[18:26:23] -> Số từ ước tính bài viết: 1469
+[18:26:23] -> Đang giao snapshot HTML cho Worker Word chuyên dụng...
+[18:26:24] -> Nội dung assistant đã ổn định 0s (1469 từ).
+[18:26:24] -> Dòng 1984: Đã giao Worker Word. Hàng chờ hiện có 1 bài.
+[18:26:24] -> Dòng 1984: Đã xếp Word từ URL mới vào hàng chờ.
+
+[18:26:24] [WORD] Bắt đầu dòng 1984: marketing phối hợp sản phẩm | còn chờ 0 bài
+[18:26:24] [WORKER 1] Dòng Excel 1984 — marketing phối hợp sản phẩm — Đang tạo brief ảnh
+
+[18:26:24] [DÒNG 1984] Bắt đầu xin Brief ảnh...
+[18:26:25] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:26:27] -> Đã bấm gửi prompt.
+[18:26:27] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:26:33] -> Nội dung assistant đã ổn định 1s (301 từ).
+[18:26:33] -> Dòng 1984: Đã lưu Brief vào O/P.
+[18:26:33] [WORKER 1] Dòng Excel 1984 — marketing phối hợp sản phẩm — Đang tạo ảnh 1/2 trên Gemini
+
+[18:26:33] [DÒNG 1984] Bắt đầu tạo ảnh 1 Gemini...
+[18:26:35] -> Gemini đã sẵn sàng sau 2.3s (kiểm tra DOM lần 1/5).
+
+[18:26:35] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:26:35] Tổng số img trên trang: 6
+[18:26:37] -> Đã gửi prompt sang Gemini bằng JS.
+[18:26:38] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:26:38] ✅ [WORD] Dòng 1984: Đã lưu Word + chạy VBA thành công.
+[18:26:38] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:26:38] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:26:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/0edf0835-44b4-44da-8b45-c4085d960669
+
+[18:26:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:26:52] Tổng số img trên trang: 6
+[18:26:53] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/0edf0835-44b4-44da-8b45-c4085d960669
+[18:26:53] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:26:54] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:26:54] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[18:26:54] [DÒNG 1984] Bắt đầu tạo ảnh 2 Gemini...
+[18:26:55] -> Gemini đã sẵn sàng sau 1.7s (kiểm tra DOM lần 1/5).
+
+[18:26:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:26:55] Tổng số img trên trang: 6
+[18:26:57] -> Nội dung assistant đã ổn định 1s (4967 từ).
+[18:26:57] -> Số từ sau kéo dài: 5502
+[18:26:57] -> Đang giao snapshot HTML cho Worker Word chuyên dụng...
+[18:26:57] -> Đã gửi prompt sang Gemini bằng JS.
+[18:26:58] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:26:58] -> Nội dung assistant đã ổn định 0s (4967 từ).
+[18:26:58] -> Dòng 1897: Đã giao Worker Word. Hàng chờ hiện có 1 bài.
+[18:26:58] -> Dòng 1897: Đã xếp Word từ URL mới vào hàng chờ.
+[18:26:58] [WORD] Bắt đầu dòng 1897: khắc phục website không được Google index | còn chờ 0 bài
+
+[18:26:58] [WORKER 3] Dòng Excel 1897 — khắc phục website không được Google index — Đang tạo brief ảnh
+
+[18:26:58] [DÒNG 1897] Bắt đầu xin Brief ảnh...
+[18:27:00] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:27:02] -> Đã bấm gửi prompt.
+[18:27:03] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:27:05] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:27:05] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:27:05] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:27:10] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:27:11] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:27:11] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/60dfdb3f-e09b-40b7-ac86-f1432ea37374
+
+[18:27:11] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:27:12] Tổng số img trên trang: 6
+[18:27:12] [IMG 4] size=1024x765 rect={'height': 533, 'width': 713, 'x': 112, 'y': 286} src=blob:https://gemini.google.com/60dfdb3f-e09b-40b7-ac86-f1432ea37374
+[18:27:12] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:27:12] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:27:12] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[18:27:13] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1984 <=====
+[18:27:13] [WORKER 1] Dòng Excel 1984 — marketing phối hợp sản phẩm — Đã xong phần Edge; hệ thống tự chờ Word
+[18:27:13] [WORKER 1] Dòng Excel 1991 — lắng nghe trong marketing — Bắt đầu xử lý
+
+[18:27:13] ======================================================================
+[18:27:13] KIỂM TRA DÒNG 1991: lắng nghe trong marketing | CHECKPOINT=WORD
+[18:27:13] BẮT ĐẦU DÒNG 1991: lắng nghe trong marketing
+[18:27:13] [WORKER 1] Dòng Excel 1991 — lắng nghe trong marketing — Đang viết bài và giao Worker Word
+
+[18:27:13] [DÒNG 1991] Bắt đầu xử lý tạo Word...
+[18:27:13] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:27:14] -> Nội dung assistant đã ổn định 1s (274 từ).
+[18:27:14] -> Dòng 1897: Đã lưu Brief vào O/P.
+[18:27:14] [WORKER 3] Dòng Excel 1897 — khắc phục website không được Google index — Đang tạo ảnh 1/2 trên Gemini
+
+[18:27:14] [DÒNG 1897] Bắt đầu tạo ảnh 1 Gemini...
+[18:27:16] -> Gemini đã sẵn sàng sau 2.1s (kiểm tra DOM lần 1/5).
+
+[18:27:16] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:27:16] Tổng số img trên trang: 6
+[18:27:16] -> Nội dung assistant đã ổn định 1s (90 từ).
+[18:27:16] -> Số từ ước tính bài viết: 90
+[18:27:16] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[18:27:17] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:27:18] -> Đã gửi prompt sang Gemini bằng JS.
+[18:27:18] -> Đã bấm gửi prompt.
+[18:27:19] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:27:25] -> Nội dung assistant đã ổn định 1s (190 từ).
+[18:27:25] -> Số từ sau kéo dài: 191
+[18:27:25] ❌ Dòng 1987: Bài cuối cùng vẫn dưới 700 từ: Bài viết vẫn dưới 700 từ sau prompt kéo dài: 191 từ.
+[18:27:25] ⚠️ [WORKER 2] Dòng 1987 thất bại vì dưới 700 từ; bộ đếm nghỉ = 2/2.
+[18:27:25] ⏸ [WORKER 2] Đủ 2 lần liên tiếp: bài thành công dưới 1300 từ hoặc bài lỗi dưới 700 từ. Nghỉ 15 phút.
+[18:27:27] ✅ [WORD] Dòng 1897: Đã lưu Word + chạy VBA thành công.
+[18:27:33] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/f6a50145-5ea8-47cc-b709-7b234c3f4d83
+
+[18:27:33] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:27:33] Tổng số img trên trang: 6
+[18:27:33] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/f6a50145-5ea8-47cc-b709-7b234c3f4d83
+[18:27:33] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:27:34] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:27:34] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[18:27:34] [DÒNG 1897] Bắt đầu tạo ảnh 2 Gemini...
+[18:27:36] -> Gemini đã sẵn sàng sau 2.4s (kiểm tra DOM lần 1/5).
+
+[18:27:36] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:27:36] Tổng số img trên trang: 6
+[18:27:38] -> Đã gửi prompt sang Gemini bằng JS.
+[18:27:39] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:27:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/2b38b2ce-9138-40fc-851c-3abadf7996cc
+
+[18:27:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:27:53] Tổng số img trên trang: 6
+[18:27:53] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/2b38b2ce-9138-40fc-851c-3abadf7996cc
+[18:27:53] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:27:54] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:27:54] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[18:27:54] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1897 <=====
+[18:27:55] [WORKER 3] Dòng Excel 1897 — khắc phục website không được Google index — Đã xong phần Edge; hệ thống tự chờ Word
+[18:27:55] [WORKER 3] Dòng Excel 1998 — bí ý tưởng marketing — Bắt đầu xử lý
+
+[18:27:55] ======================================================================
+[18:27:55] KIỂM TRA DÒNG 1998: bí ý tưởng marketing | CHECKPOINT=WORD
+[18:27:55] BẮT ĐẦU DÒNG 1998: bí ý tưởng marketing
+[18:27:55] [WORKER 3] Dòng Excel 1998 — bí ý tưởng marketing — Đang viết bài và giao Worker Word
+
+[18:27:55] [DÒNG 1998] Bắt đầu xử lý tạo Word...
+[18:27:55] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet/c/6a6ef902-6794-83ec-b73c-6681fc29fc0e
+[18:28:03] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:28:03] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:28:28] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:28:28] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:28:28] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:28:33] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:28:35] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:28:41] -> Nội dung assistant đã ổn định 1s (93 từ).
+[18:28:41] -> Số từ ước tính bài viết: 93
+[18:28:41] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[18:28:42] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:28:43] -> Đã bấm gửi prompt.
+[18:28:43] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:28:43] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:28:51] -> Nội dung assistant đã ổn định 1s (221 từ).
+[18:28:51] -> Số từ sau kéo dài: 223
+[18:28:51] ❌ Dòng 1991: Bài cuối cùng vẫn dưới 700 từ: Bài viết vẫn dưới 700 từ sau prompt kéo dài: 223 từ.
+[18:28:51] ⚠️ [WORKER 1] Dòng 1991 thất bại vì dưới 700 từ; bộ đếm nghỉ = 1/2.
+[18:28:51] [WORKER 1] Dòng Excel 1991 — lắng nghe trong marketing — Đã xong phần Edge; hệ thống tự chờ Word
+[18:28:51] [WORKER 1] Dòng Excel 2003 — tính khả thi ý tưởng marketing — Bắt đầu xử lý
+
+[18:28:51] ======================================================================
+[18:28:51] KIỂM TRA DÒNG 2003: tính khả thi ý tưởng marketing | CHECKPOINT=WORD
+[18:28:51] BẮT ĐẦU DÒNG 2003: tính khả thi ý tưởng marketing
+[18:28:51] [WORKER 1] Dòng Excel 2003 — tính khả thi ý tưởng marketing — Đang viết bài và giao Worker Word
+
+[18:28:51] [DÒNG 2003] Bắt đầu xử lý tạo Word...
+[18:28:51] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:29:08] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:29:08] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:29:08] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:29:14] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:29:15] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:29:37] -> Nội dung assistant đã ổn định 1s (1415 từ).
+[18:29:37] -> Số từ ước tính bài viết: 1416
+[18:29:37] -> Đang giao snapshot HTML cho Worker Word chuyên dụng...
+[18:29:38] -> Nội dung assistant đã ổn định 0s (1415 từ).
+[18:29:38] -> Dòng 1998: Đã giao Worker Word. Hàng chờ hiện có 1 bài.
+[18:29:38] -> Dòng 1998: Đã xếp Word từ URL mới vào hàng chờ.
+
+[18:29:38] [WORD] Bắt đầu dòng 1998: bí ý tưởng marketing | còn chờ 0 bài
+[18:29:38] [WORKER 3] Dòng Excel 1998 — bí ý tưởng marketing — Đang tạo brief ảnh
+
+[18:29:38] [DÒNG 1998] Bắt đầu xin Brief ảnh...
+[18:29:39] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:29:40] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:29:40] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:29:40] -> Đã bấm gửi prompt.
+[18:29:41] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:29:48] -> Nội dung assistant đã ổn định 1s (280 từ).
+[18:29:48] -> Dòng 1998: Đã lưu Brief vào O/P.
+[18:29:48] [WORKER 3] Dòng Excel 1998 — bí ý tưởng marketing — Đang tạo ảnh 1/2 trên Gemini
+
+[18:29:48] [DÒNG 1998] Bắt đầu tạo ảnh 1 Gemini...
+[18:29:50] -> Gemini đã sẵn sàng sau 2.2s (kiểm tra DOM lần 1/5).
+
+[18:29:50] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:29:50] Tổng số img trên trang: 6
+[18:29:51] ✅ [WORD] Dòng 1998: Đã lưu Word + chạy VBA thành công.
+[18:29:52] -> Đã gửi prompt sang Gemini bằng JS.
+[18:29:53] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:30:06] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:30:06] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:30:06] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:30:07] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/a3b61b92-721d-49ca-94c9-72c570c70829
+
+[18:30:07] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:30:07] Tổng số img trên trang: 6
+[18:30:08] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/a3b61b92-721d-49ca-94c9-72c570c70829
+[18:30:08] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:30:09] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:30:09] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[18:30:09] [DÒNG 1998] Bắt đầu tạo ảnh 2 Gemini...
+[18:30:10] -> Gemini đã sẵn sàng sau 1.7s (kiểm tra DOM lần 1/5).
+
+[18:30:10] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:30:10] Tổng số img trên trang: 6
+[18:30:11] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:30:12] -> Đã gửi prompt sang Gemini bằng JS.
+[18:30:12] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:30:13] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:30:28] -> Nội dung assistant đã ổn định 1s (1450 từ).
+[18:30:28] -> Số từ ước tính bài viết: 1450
+[18:30:28] -> Đang giao snapshot HTML cho Worker Word chuyên dụng...
+[18:30:29] -> Nội dung assistant đã ổn định 0s (1450 từ).
+[18:30:29] -> Dòng 2003: Đã giao Worker Word. Hàng chờ hiện có 1 bài.
+[18:30:29] -> Dòng 2003: Đã xếp Word từ URL mới vào hàng chờ.
+
+[18:30:29] [WORD] Bắt đầu dòng 2003: tính khả thi ý tưởng marketing | còn chờ 0 bài
+[18:30:29] [WORKER 1] Dòng Excel 2003 — tính khả thi ý tưởng marketing — Đang tạo brief ảnh
+
+[18:30:29] [DÒNG 2003] Bắt đầu xin Brief ảnh...
+[18:30:30] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:30:31] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/0a3b2930-1567-4347-a9a2-f2a6580b6008
+
+[18:30:31] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:30:31] Tổng số img trên trang: 6
+[18:30:31] [IMG 4] size=1024x765 rect={'height': 531, 'width': 711, 'x': 113, 'y': 287} src=blob:https://gemini.google.com/0a3b2930-1567-4347-a9a2-f2a6580b6008
+[18:30:31] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:30:31] -> Đã bấm gửi prompt.
+[18:30:31] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:30:31] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[18:30:32] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:30:32] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1998 <=====
+[18:30:32] [WORKER 3] Dòng Excel 1998 — bí ý tưởng marketing — Đã xong phần Edge; hệ thống tự chờ Word
+[18:30:32] [WORKER 3] Dòng Excel 2006 — thói quen sáng tạo marketer — Bắt đầu xử lý
+
+[18:30:32] ======================================================================
+[18:30:32] KIỂM TRA DÒNG 2006: thói quen sáng tạo marketer | CHECKPOINT=WORD
+[18:30:32] BẮT ĐẦU DÒNG 2006: thói quen sáng tạo marketer
+[18:30:32] [WORKER 3] Dòng Excel 2006 — thói quen sáng tạo marketer — Đang viết bài và giao Worker Word
+
+[18:30:32] [DÒNG 2006] Bắt đầu xử lý tạo Word...
+[18:30:32] -> Cột H có URL. Ưu tiên mở lại chat cũ: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:30:38] -> Nội dung assistant đã ổn định 1s (252 từ).
+[18:30:38] -> Dòng 2003: Đã lưu Brief vào O/P.
+[18:30:38] [WORKER 1] Dòng Excel 2003 — tính khả thi ý tưởng marketing — Đang tạo ảnh 1/2 trên Gemini
+
+[18:30:38] [DÒNG 2003] Bắt đầu tạo ảnh 1 Gemini...
+[18:30:41] -> Gemini đã sẵn sàng sau 2.3s (kiểm tra DOM lần 1/5).
+
+[18:30:41] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:30:41] Tổng số img trên trang: 6
+[18:30:42] ✅ [WORD] Dòng 2003: Đã lưu Word + chạy VBA thành công.
+[18:30:42] -> Đã gửi prompt sang Gemini bằng JS.
+[18:30:43] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:30:56] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/9b02ed4f-6570-460d-9d42-1df9f641ccdf
+
+[18:30:56] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:30:56] Tổng số img trên trang: 6
+[18:30:56] [IMG 4] size=1024x765 rect={'height': 530, 'width': 709, 'x': 113, 'y': 288} src=blob:https://gemini.google.com/9b02ed4f-6570-460d-9d42-1df9f641ccdf
+[18:30:56] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:30:57] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:30:57] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[18:30:57] [DÒNG 2003] Bắt đầu tạo ảnh 2 Gemini...
+[18:30:59] -> Gemini đã sẵn sàng sau 2.0s (kiểm tra DOM lần 1/5).
+
+[18:30:59] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:30:59] Tổng số img trên trang: 6
+[18:31:01] -> Đã gửi prompt sang Gemini bằng JS.
+[18:31:02] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:31:17] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/12566358-fef0-446f-a535-f5f55915dc93
+
+[18:31:17] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:31:17] Tổng số img trên trang: 6
+[18:31:17] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/12566358-fef0-446f-a535-f5f55915dc93
+[18:31:17] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:31:18] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:31:18] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[18:31:18] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 2003 <=====
+[18:31:18] [WORKER 1] Dòng Excel 2003 — tính khả thi ý tưởng marketing — Đã xong phần Edge; hệ thống tự chờ Word
+[18:31:21] ⚠️ Resume từ URL H không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 45s.
+[18:31:21] -> Load lại URL hiện tại Resume URL H: https://chatgpt.com/g/g-6a27de6c03b48191abf9a9902635d9c5-article-detail-chi-tiet-bai-viet
+[18:31:47] ⚠️ Resume sau reload không lấy được nội dung GPT: Nội dung assistant chưa ổn định sau 15s.
+[18:31:47] ⚠️ Không lưu được Word từ URL H: Không lấy được nội dung từ URL hiện tại.
+[18:31:47] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[18:31:54] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[18:31:55] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:32:15] -> Nội dung assistant đã ổn định 1s (1347 từ).
+[18:32:15] -> Số từ ước tính bài viết: 1348
+[18:32:15] -> Đang giao snapshot HTML cho Worker Word chuyên dụng...
+[18:32:16] -> Nội dung assistant đã ổn định 0s (1347 từ).
+[18:32:16] -> Dòng 2006: Đã giao Worker Word. Hàng chờ hiện có 1 bài.
+[18:32:16] -> Dòng 2006: Đã xếp Word từ URL mới vào hàng chờ.
+
+[18:32:16] [WORD] Bắt đầu dòng 2006: thói quen sáng tạo marketer | còn chờ 0 bài
+[18:32:16] [WORKER 3] Dòng Excel 2006 — thói quen sáng tạo marketer — Đang tạo brief ảnh
+
+[18:32:16] [DÒNG 2006] Bắt đầu xin Brief ảnh...
+[18:32:17] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[18:32:18] -> Đã bấm gửi prompt.
+[18:32:19] -> LỚP 0: Xác nhận gửi thành công (prompt đã xuất hiện trong lịch sử chat).
+[18:32:26] -> Nội dung assistant đã ổn định 1s (301 từ).
+[18:32:26] -> Dòng 2006: Đã lưu Brief vào O/P.
+[18:32:26] [WORKER 3] Dòng Excel 2006 — thói quen sáng tạo marketer — Đang tạo ảnh 1/2 trên Gemini
+
+[18:32:26] [DÒNG 2006] Bắt đầu tạo ảnh 1 Gemini...
+[18:32:28] -> Gemini đã sẵn sàng sau 2.2s (kiểm tra DOM lần 1/5).
+
+[18:32:28] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:32:28] Tổng số img trên trang: 6
+[18:32:28] ✅ [WORD] Dòng 2006: Đã lưu Word + chạy VBA thành công.
+[18:32:30] -> Đã gửi prompt sang Gemini bằng JS.
+[18:32:31] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:32:46] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/73cb8f23-e6b6-4ac0-b4d1-022d3dcdd09f
+
+[18:32:46] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:32:46] Tổng số img trên trang: 6
+[18:32:46] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 114, 'y': 288} src=blob:https://gemini.google.com/73cb8f23-e6b6-4ac0-b4d1-022d3dcdd09f
+[18:32:46] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:32:47] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:32:47] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[18:32:47] [DÒNG 2006] Bắt đầu tạo ảnh 2 Gemini...
+[18:32:49] -> Gemini đã sẵn sàng sau 1.8s (kiểm tra DOM lần 1/5).
+
+[18:32:49] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[18:32:49] Tổng số img trên trang: 6
+[18:32:50] -> Đã gửi prompt sang Gemini bằng JS.
+[18:32:51] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[18:33:05] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/e0d04cf3-c3db-4b57-8b07-c6d5d6e7df0d
+
+[18:33:05] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[18:33:05] Tổng số img trên trang: 6
+[18:33:05] [IMG 4] size=1024x765 rect={'height': 530, 'width': 709, 'x': 113, 'y': 288} src=blob:https://gemini.google.com/e0d04cf3-c3db-4b57-8b07-c6d5d6e7df0d
+[18:33:05] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[18:33:06] -> Đã resize ảnh về tối đa 800px: 800x597
+[18:33:06] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[18:33:06] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 2006 <=====
+[18:33:06] [WORKER 3] Dòng Excel 2006 — thói quen sáng tạo marketer — Đã xong phần Edge; hệ thống tự chờ Word
+[18:34:05] [WORKER 2] Dòng Excel 1987 — biên bản họp marketing — Tiếp tục làm việc
+[18:34:05] [WORKER 2] Dòng Excel 1987 — biên bản họp marketing — Đã xong phần Edge; hệ thống tự chờ Word
+[18:34:08] V2 CODEX đã kết thúc; toàn bộ Result Queue đã được ghi xuống Excel.
+
+========================================================================
+Kết thúc: 2026-08-02 18:34:08
+Mã thoát: 0
+Thời gian: 701.20 giây

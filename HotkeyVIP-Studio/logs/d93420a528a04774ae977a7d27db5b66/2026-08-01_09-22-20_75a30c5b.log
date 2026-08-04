@@ -1,0 +1,32 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet.py
+Bắt đầu: 2026-08-01 09:22:20
+========================================================================
+[09:22:21] File log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260801_092221.log
+
+[09:22:26] [1/3] Đang xử lý congdongkinhdoanh.com.xlsx
+[09:22:30]     ĐÃ CHUYỂN: 8 | ĐÃ VIẾT CHƯA ĐĂNG: 32
+
+[09:22:30] [2/3] Đang xử lý doanhnhanduongthoi.com.xlsx
+[09:22:45]     ĐÃ CHUYỂN: 5 | ĐÃ VIẾT CHƯA ĐĂNG: 582
+
+[09:22:45] [3/3] Đang xử lý kythuatmarketing.com.xlsx
+[09:22:46]     TRÙNG ĐÍCH dòng 1419: Website trong Marketing giúp kết nối nội dung, dữ liệu và chuyển đổi
+[09:22:50]     TRÙNG ĐÍCH: 1 | ĐÃ CHUYỂN: 10 | ĐÃ VIẾT CHƯA ĐĂNG: 114
+
+[09:22:50] ========================================================================
+[09:22:50] HOÀN TẤT
+[09:22:50] Backup: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\backup_cap_nhat_url_cong_ty\20260801_092224
+[09:22:50] - CỘT ĐÃ CHUYỂN CÓ NỘI DUNG: 458
+[09:22:50] - TRÙNG ĐÍCH: 1
+[09:22:50] - URL NGUỒN TRỐNG: 800
+[09:22:50] - ĐÃ CHUYỂN: 23
+[09:22:50] - ĐÃ VIẾT CHƯA ĐĂNG: 728
+[09:22:50] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260801_092221.log
+
+[09:22:59] Nhấn Enter để đóng chương trình...
+
+========================================================================
+Kết thúc: 2026-08-01 09:22:59
+Mã thoát: 0
+Thời gian: 38.47 giây

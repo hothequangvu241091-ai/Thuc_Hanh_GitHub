@@ -1,0 +1,41 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\phu_tro\xuat_url_tu_id_cms.py
+Bắt đầu: 2026-08-04 09:25:20
+========================================================================
+[09:25:21] ✅ Đã nhận diện cột theo tên:
+[09:25:21] - dangbai: Tên miền=5, Danh mục=6, ID CMS=9, URL đã đăng=10
+[09:25:21] - ID_tacgia: Tên miền URL=1, ID=2, Danh mục=3
+[09:25:21] ✅ Đã tạo map cho 367 tên miền/danh mục.
+[09:25:21] ✅ Đã đọc 4 vùng Excel một lần, chỉ kiểm tra dòng 2–3895.
+[09:25:21] 🔄 Đang lấy URL thật cho 16 dòng...
+[09:25:22] ✅ Dòng 2012: https://tiepthisaigon.com.vn/quan-tri-doanh-nghiep-la-gi-va-bao-gom-nhung-noi-dung-nao-11-4674.html
+[09:25:22] ✅ Dòng 2013: https://tiepthisaigon.com.vn/muc-tieu-quan-tri-doanh-nghiep-duoc-xac-dinh-nhu-the-nao-11-4675.html
+[09:25:22] ✅ Dòng 2014: https://tiepthisaigon.com.vn/vai-tro-cua-quan-tri-doanh-nghiep-doi-voi-hoat-dong-to-chuc-11-4676.html
+[09:25:22] ✅ Dòng 2015: https://tiepthisaigon.com.vn/cac-chuc-nang-co-ban-trong-quan-tri-doanh-nghiep-11-4677.html
+[09:25:22] ✅ Dòng 2016: https://tiepthisaigon.com.vn/nhung-nguyen-tac-giup-quan-tri-doanh-nghiep-hieu-qua-11-4678.html
+[09:25:22] ✅ Dòng 2017: https://tiepthisaigon.com.vn/phan-biet-quan-tri-doanh-nghiep-va-quan-ly-doanh-nghiep-11-4679.html
+[09:25:22] ✅ Dòng 2018: https://tiepthisaigon.com.vn/cac-cap-quan-tri-trong-doanh-nghiep-va-pham-vi-trach-nhiem-11-4680.html
+[09:25:22] ✅ Dòng 2019: https://tiepthisaigon.com.vn/nhung-ky-nang-cot-loi-cua-nha-quan-tri-doanh-nghiep-11-4681.html
+[09:25:22] ✅ Dòng 2846: https://vinabrand.vn/doanh-nhan-viet-nam-la-ai-va-co-nhung-dac-diem-nao-93-7968.html
+[09:25:22] ✅ Dòng 2847: https://vinabrand.vn/vai-tro-cua-doanh-nhan-viet-nam-doi-voi-nen-kinh-te-93-7969.html
+[09:25:22] ✅ Dòng 2848: https://vinabrand.vn/nhung-tieu-chi-cua-mot-doanh-nhan-thanh-cong-93-7970.html
+[09:25:22] ✅ Dòng 2849: https://vinabrand.vn/nhung-pham-chat-quan-trong-cua-doanh-nhan-viet-nam-93-7971.html
+[09:25:22] ✅ Dòng 2850: https://vinabrand.vn/nhung-dac-diem-cua-tu-duy-doanh-nhan-viet-nam-hien-dai-93-7972.html
+[09:25:22] ✅ Dòng 2851: https://vinabrand.vn/lich-su-phat-trien-cua-doi-ngu-doanh-nhan-viet-nam-93-7973.html
+[09:25:22] ✅ Dòng 2852: https://vinabrand.vn/nhung-dau-an-cua-doanh-nhan-viet-nam-thoi-ky-doi-moi-93-7974.html
+[09:25:22] ✅ Dòng 2853: https://vinabrand.vn/doanh-nhan-viet-nam-trong-ky-nguyen-so-thay-doi-ra-sao-93-7975.html
+
+[09:25:23] ========== KẾT QUẢ ==========
+[09:25:23] ✅ Đã xử lý mới: 16 URL
+[09:25:23] ⏭️ Đã bỏ qua vì URL đã có dữ liệu: 548
+[09:25:23] ⏭️ Đã bỏ qua vì không có ID: 3330
+[09:25:23] ⏭️ Dòng trống: 0
+[09:25:23] ⚠️ Thiếu tên miền: 0
+[09:25:23] ⚠️ Thiếu danh mục: 0
+[09:25:23] ⚠️ Không tìm thấy ID danh mục: 0
+[09:25:23] ✅ Đã lưu kết quả vào cột URL của sheet dangbai.
+
+========================================================================
+Kết thúc: 2026-08-04 09:25:23
+Mã thoát: 0
+Thời gian: 2.47 giây

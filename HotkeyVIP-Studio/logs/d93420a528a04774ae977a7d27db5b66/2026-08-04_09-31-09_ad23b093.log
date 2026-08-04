@@ -1,0 +1,13 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet.py
+Bắt đầu: 2026-08-04 09:31:09
+========================================================================
+[09:31:09] Traceback (most recent call last):
+[09:31:09]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet.py", line 19, in <module>
+[09:31:09]     import bao_cao_cap_nhat_url_cong_ty as preview
+[09:31:09] ModuleNotFoundError: No module named 'bao_cao_cap_nhat_url_cong_ty'
+
+========================================================================
+Kết thúc: 2026-08-04 09:31:09
+Mã thoát: 1
+Thời gian: 0.17 giây

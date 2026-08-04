@@ -1,0 +1,23 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet.py
+Bắt đầu: 2026-08-02 10:28:36
+========================================================================
+[10:28:37] File log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260802_102837.log
+
+[10:28:37] DỪNG DO LỖI:
+[10:28:37] RuntimeError('File nguồn đang có thay đổi chưa Save. Hãy Save hotkeyvip_test.xlsm trước khi chạy lại.')
+[10:28:37] Traceback (most recent call last):
+[10:28:37]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet.py", line 615, in run_with_log
+[10:28:37]     exit_code = main()
+[10:28:37]                 ^^^^^^
+[10:28:37]   File "D:\CodexProjects\Hotkeyvip\03_dang_bai\cap_nhat_url_cong_ty_thuc_te_da_viet.py", line 511, in main
+[10:28:37]     raise RuntimeError(
+[10:28:37] RuntimeError: File nguồn đang có thay đổi chưa Save. Hãy Save hotkeyvip_test.xlsm trước khi chạy lại.
+[10:28:37] Log: D:\CodexProjects\Hotkeyvip\06_du_lieu_chay\log_cap_nhat_url_cong_ty\cap_nhat_url_THUC_TE_20260802_102837.log
+
+[10:28:46] Nhấn Enter để đóng chương trình...
+
+========================================================================
+Kết thúc: 2026-08-02 10:28:46
+Mã thoát: 1
+Thời gian: 9.43 giây

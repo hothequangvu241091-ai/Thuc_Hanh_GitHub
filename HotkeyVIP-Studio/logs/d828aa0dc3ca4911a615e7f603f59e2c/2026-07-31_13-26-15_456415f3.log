@@ -1,0 +1,68 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\phu_tro\Vip_baivietlienquan_3_luong.py
+Bắt đầu: 2026-07-31 13:26:15
+========================================================================
+[13:26:19] Chọn số luồng [3/5] (nhấn Enter = 3): Đã kết nối Excel đang mở: hotkeyvip_test.xlsm
+[13:26:19] ========================================================================
+[13:26:19] ĐÃ CHỐT 30 BÀI | CHẠY 5 WORKER
+[13:26:19] Profile: D:\CodexProjects\Hotkeyvip\02_viet_bai\du_lieu_3_workers\profiles
+[13:26:19] ========================================================================
+[13:26:23] Worker 1: sẵn sàng.
+[13:26:23] [GIAO] Worker 1 <- dòng 171 | ID 4111
+[13:26:23] Worker 1 | dòng 171: Đang mở ID 4111
+[13:26:23] Worker 3: sẵn sàng.
+[13:26:23] [GIAO] Worker 3 <- dòng 172 | ID 4103
+[13:26:23] Worker 3 | dòng 172: Đang mở ID 4103
+[13:26:24] Worker 4: sẵn sàng.
+[13:26:24] [GIAO] Worker 4 <- dòng 173 | ID 4102
+[13:26:24] Worker 4 | dòng 173: Đang mở ID 4102
+[13:26:25] Worker 2: sẵn sàng.
+[13:26:25] [GIAO] Worker 2 <- dòng 174 | ID 4104
+[13:26:25] Worker 2 | dòng 174: Đang mở ID 4104
+[13:26:26] Worker 5: sẵn sàng.
+[13:26:26] [GIAO] Worker 5 <- dòng 175 | ID 4105
+[13:26:26] Worker 5 | dòng 175: Đang mở ID 4105
+[13:26:29]     Đã ở đúng trang sửa bài, không cần đăng nhập.
+[13:26:29] Worker 3 | dòng 172: Đang chọn bài liên quan
+
+[13:26:29] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:29] [LỖI WORKER 3] dòng 172: RuntimeError: Dòng Excel không có "Danh mục"; không chọn bài liên quan.
+[13:26:29] Đã ngừng giao bài mới. Edge lỗi được giữ lại để kiểm tra.
+[13:26:29] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:31]     Đã ở đúng trang sửa bài, không cần đăng nhập.
+[13:26:31] Worker 2 | dòng 174: Đang chọn bài liên quan
+
+[13:26:31] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:31] [LỖI WORKER 2] dòng 174: RuntimeError: Dòng Excel không có "Danh mục"; không chọn bài liên quan.
+[13:26:31] Đã ngừng giao bài mới. Edge lỗi được giữ lại để kiểm tra.
+[13:26:31] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:31]     Đã ở đúng trang sửa bài, không cần đăng nhập.
+[13:26:31] Worker 4 | dòng 173: Đang chọn bài liên quan
+
+[13:26:31] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:31] [LỖI WORKER 4] dòng 173: RuntimeError: Dòng Excel không có "Danh mục"; không chọn bài liên quan.
+[13:26:31] Đã ngừng giao bài mới. Edge lỗi được giữ lại để kiểm tra.
+[13:26:31] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:34]     Đã ở đúng trang sửa bài, không cần đăng nhập.
+[13:26:34] Worker 1 | dòng 171: Đang chọn bài liên quan
+
+[13:26:34] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:34] [LỖI WORKER 1] dòng 171: RuntimeError: Dòng Excel không có "Danh mục"; không chọn bài liên quan.
+[13:26:34] Đã ngừng giao bài mới. Edge lỗi được giữ lại để kiểm tra.
+[13:26:34] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:35]     Đã ở đúng trang sửa bài, không cần đăng nhập.
+[13:26:35] Worker 5 | dòng 175: Đang chọn bài liên quan
+
+[13:26:35] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:35] [LỖI WORKER 5] dòng 175: RuntimeError: Dòng Excel không có "Danh mục"; không chọn bài liên quan.
+[13:26:35] Đã ngừng giao bài mới. Edge lỗi được giữ lại để kiểm tra.
+[13:26:35] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[13:26:38] ========================================================================
+[13:26:38] Hoàn thành: 0/30 bài.
+[13:26:38] Kết quả: CÓ LỖI
+[13:26:38] ========================================================================
+
+========================================================================
+Kết thúc: 2026-07-31 13:26:38
+Mã thoát: 1
+Thời gian: 22.55 giây

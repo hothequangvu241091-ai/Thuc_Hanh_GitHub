@@ -1,0 +1,11 @@
+{
+  "state": "stopped",
+  "target": "D:\\CodexProjects\\Hotkeyvip\\03_dang_bai\\V2.8_VIP_tudongdangbai_3_5_luong_kiemtra_noidung.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\dang-bai-3-5-luong\\2026-08-03_06-55-42_8aaae8cd.log",
+  "startedAt": 1785714942.218678,
+  "endedAt": 1785715270.0980253,
+  "duration": 327.88,
+  "exitCode": null,
+  "truncated": false,
+  "error": "Người dùng dừng từ Studio"
+}

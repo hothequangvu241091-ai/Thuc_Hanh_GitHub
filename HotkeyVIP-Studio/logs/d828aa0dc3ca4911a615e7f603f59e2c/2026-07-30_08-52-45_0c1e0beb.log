@@ -1,0 +1,13 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\phu_tro\Vip_baivietlienquan_3_luong.py
+Bắt đầu: 2026-07-30 08:52:45
+========================================================================
+Traceback (most recent call last):
+  File "D:\CodexProjects\Hotkeyvip\03_dang_bai\phu_tro\Vip_baivietlienquan_3_luong.py", line 33, in <module>
+    import Vip_baivietlienquan as related
+ModuleNotFoundError: No module named 'Vip_baivietlienquan'
+
+========================================================================
+Kết thúc: 2026-07-30 08:52:45
+Mã thoát: 1
+Thời gian: 0.13 giây

@@ -1,0 +1,47 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\phu_tro\xuat_url_tu_id_cms.py
+Bắt đầu: 2026-08-03 07:57:52
+========================================================================
+[07:57:53] ✅ Đã nhận diện cột theo tên:
+[07:57:53] - dangbai: Tên miền=5, Danh mục=6, ID CMS=9, URL đã đăng=10
+[07:57:53] - ID_tacgia: Tên miền URL=1, ID=2, Danh mục=3
+[07:57:53] ✅ Đã tạo map cho 367 tên miền/danh mục.
+[07:57:53] ✅ Đã đọc 4 vùng Excel một lần, chỉ kiểm tra dòng 2–2000.
+[07:57:53] 🔄 Đang lấy URL thật cho 22 dòng...
+[07:57:55] ✅ Dòng 196: https://congdongkinhdoanh.com/khi-nao-nen-dau-tu-xay-dung-thuong-hieu-5-4129.html
+[07:57:55] ✅ Dòng 197: https://congdongkinhdoanh.com/bao-lau-moi-xay-dung-duoc-thuong-hieu-manh-5-4130.html
+[07:57:55] ✅ Dòng 198: https://congdongkinhdoanh.com/co-nen-doi-logo-khi-doanh-nghiep-phat-trien-5-4131.html
+[07:57:55] ✅ Dòng 199: https://congdongkinhdoanh.com/khi-nao-can-doi-nhan-dien-thuong-hieu-5-4127.html
+[07:57:55] ✅ Dòng 200: https://congdongkinhdoanh.com/mo-rong-nganh-nghe-anh-huong-thuong-hieu-the-nao-5-4128.html
+[07:57:56] ✅ Dòng 327: https://doanhnhanduongthoi.com/cach-danh-gia-hieu-qua-su-dung-von-146-5141.html
+[07:57:56] ✅ Dòng 328: https://doanhnhanduongthoi.com/vong-quay-von-kinh-doanh-cho-biet-dieu-gi-146-5139.html
+[07:57:56] ✅ Dòng 329: https://doanhnhanduongthoi.com/roic-la-gi-va-cach-ap-dung-146-5140.html
+[07:57:56] ✅ Dòng 330: https://doanhnhanduongthoi.com/roe-va-roic-khac-nhau-the-nao-146-5142.html
+[07:57:56] ✅ Dòng 331: https://doanhnhanduongthoi.com/vi-sao-hieu-qua-su-dung-von-giam-146-5145.html
+[07:57:56] ✅ Dòng 332: https://doanhnhanduongthoi.com/khi-nao-nen-dieu-chuyen-von-trong-doanh-nghiep-146-5143.html
+[07:57:56] ✅ Dòng 333: https://doanhnhanduongthoi.com/cach-danh-gia-hieu-qua-su-dung-von-cua-don-vi-kinh-doanh-146-5144.html
+[07:57:56] ✅ Dòng 1107: https://kythuatmarketing.com/quan-tri-marketing-la-gi-va-duoc-trien-khai-ra-sao-6-3230.html
+[07:57:56] ✅ Dòng 1108: https://kythuatmarketing.com/vai-tro-quan-tri-marketing-doi-voi-hieu-qua-doanh-nghiep-6-3228.html
+[07:57:56] ✅ Dòng 1109: https://kythuatmarketing.com/cac-chuc-nang-quan-tri-marketing-trong-doanh-nghiep-6-3229.html
+[07:57:56] ✅ Dòng 1110: https://kythuatmarketing.com/quy-trinh-quan-tri-marketing-tu-phan-tich-den-danh-gia-6-3231.html
+[07:57:56] ✅ Dòng 1111: https://kythuatmarketing.com/cach-xay-dung-he-thong-quan-tri-marketing-dong-bo-6-3232.html
+[07:57:56] ✅ Dòng 1112: https://kythuatmarketing.com/nhung-ky-nang-quan-tri-marketing-can-thiet-6-3237.html
+[07:57:56] ✅ Dòng 1113: https://kythuatmarketing.com/cac-mo-hinh-co-cau-phong-marketing-pho-bien-6-3234.html
+[07:57:56] ✅ Dòng 1114: https://kythuatmarketing.com/phan-biet-quan-tri-marketing-va-quan-tri-kinh-doanh-6-3235.html
+[07:57:56] ✅ Dòng 1115: https://kythuatmarketing.com/nguyen-tac-quan-ly-ngan-sach-marketing-hieu-qua-6-3238.html
+[07:57:56] ✅ Dòng 1116: https://kythuatmarketing.com/cach-phan-bo-ngan-sach-marketing-theo-tung-muc-tieu-6-3236.html
+
+[07:57:57] ========== KẾT QUẢ ==========
+[07:57:57] ✅ Đã xử lý mới: 22 URL
+[07:57:57] ⏭️ Đã bỏ qua vì URL đã có dữ liệu: 506
+[07:57:57] ⏭️ Đã bỏ qua vì không có ID: 1471
+[07:57:57] ⏭️ Dòng trống: 0
+[07:57:57] ⚠️ Thiếu tên miền: 0
+[07:57:57] ⚠️ Thiếu danh mục: 0
+[07:57:57] ⚠️ Không tìm thấy ID danh mục: 0
+[07:57:57] ✅ Đã lưu kết quả vào cột URL của sheet dangbai.
+
+========================================================================
+Kết thúc: 2026-08-03 07:57:57
+Mã thoát: 0
+Thời gian: 4.72 giây

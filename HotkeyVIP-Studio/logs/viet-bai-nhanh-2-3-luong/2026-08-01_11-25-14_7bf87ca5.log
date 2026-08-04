@@ -1,0 +1,1393 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\GEMINI\v1.1_gpt_vietbai_tudong_1luong.py
+Bắt đầu: 2026-08-01 11:25:14
+========================================================================
+[11:25:16] FILE TỔNG đang chạy. Hãy mở sẵn file Excel dữ liệu trước.
+[11:25:16] Đã thấy mốc thủ công OK OK ở cột AA, dòng 1455.
+[11:25:16] Sẽ bắt đầu xử lý từ dòng 1456.
+[11:25:18] -> Đã đưa Edge Selenium ra ngoài phạm vi màn hình.
+[11:25:19] Dòng 1456: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:19] Dòng 1457: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:19] Dòng 1458: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:19] Dòng 1459: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:19] Dòng 1460: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:19] Dòng 1461: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:19] Dòng 1462: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:20] Dòng 1463: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:20] Dòng 1464: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:20] Dòng 1465: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:20] Dòng 1466: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:20] Dòng 1467: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:21] Dòng 1468: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:21] Dòng 1469: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:21] Dòng 1470: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:21] Dòng 1471: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:21] Dòng 1472: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:22] Dòng 1473: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:22] Dòng 1474: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:22] Dòng 1475: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:22] Dòng 1476: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:22] Dòng 1477: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:23] Dòng 1478: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:23] Dòng 1479: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:23] Dòng 1480: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:23] Dòng 1481: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:24] Dòng 1482: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:24] Dòng 1483: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:24] Dòng 1484: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:24] Dòng 1485: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:24] Dòng 1486: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:25] Dòng 1487: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:25] Dòng 1488: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:25] Dòng 1489: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:25] Dòng 1490: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:26] Dòng 1491: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:26] Dòng 1492: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:26] Dòng 1493: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:26] Dòng 1494: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:26] Dòng 1495: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:27] Dòng 1496: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:27] Dòng 1497: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:27] Dòng 1498: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:27] Dòng 1499: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:27] Dòng 1500: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:28] Dòng 1501: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:28] Dòng 1502: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:28] Dòng 1503: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:28] Dòng 1504: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:29] Dòng 1505: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:29] Dòng 1506: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:29] Dòng 1507: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:30] Dòng 1508: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:30] Dòng 1509: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:30] Dòng 1510: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:30] Dòng 1511: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:30] Dòng 1512: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:31] Dòng 1513: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:31] Dòng 1514: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:31] Dòng 1515: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1516: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1517: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1518: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1519: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1520: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1521: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1522: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:32] Dòng 1523: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:33] Dòng 1524: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:33] Dòng 1525: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:33] Dòng 1526: Trạng thái hoàn tất đã OK. Bỏ qua.
+[11:25:33] Dòng 1527: Trạng thái hoàn tất đã OK. Bỏ qua.
+
+[11:25:34] ======================================================================
+[11:25:34] KIỂM TRA DÒNG 1528: SEO content
+[11:25:34] BẮT ĐẦU DÒNG 1528: SEO content
+
+[11:25:34] [DÒNG 1528] Bắt đầu xử lý tạo Word...
+[11:25:34] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:25:43] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:26:04] -> Nội dung assistant đã ổn định 3s (1492 từ).
+[11:26:04] -> Số từ ước tính bài viết: 1492
+[11:26:04] -> Đang lưu Word giữ định dạng...
+[11:26:18] -> Dòng 1528: Đã lưu Word OK từ URL mới.
+
+[11:26:19] [DÒNG 1528] Bắt đầu xin Brief ảnh...
+[11:26:20] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:26:22] -> Đã bấm gửi prompt.
+[11:26:33] -> Nội dung assistant đã ổn định 3s (255 từ).
+[11:26:34] -> Dòng 1528: Đã lưu Brief vào O/P.
+
+[11:26:35] [DÒNG 1528] Bắt đầu tạo ảnh 1 Gemini...
+[11:26:37] -> Gemini đã sẵn sàng sau 1.8s.
+
+[11:26:37] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:26:37] Tổng số img trên trang: 5
+[11:26:39] -> Đã gửi prompt sang Gemini bằng JS.
+[11:26:42] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:26:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/1633294b-3d08-456a-8380-26516e17b5e0
+
+[11:26:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:26:52] Tổng số img trên trang: 6
+[11:26:52] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/1633294b-3d08-456a-8380-26516e17b5e0
+[11:26:52] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:26:53] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:26:53] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:26:54] [DÒNG 1528] Bắt đầu tạo ảnh 2 Gemini...
+[11:26:55] -> Gemini đã sẵn sàng sau 1.0s.
+
+[11:26:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:26:55] Tổng số img trên trang: 2
+[11:26:57] -> Đã gửi prompt sang Gemini bằng JS.
+[11:27:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:27:18] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/d2ea0f6c-b527-4942-8f40-ac01e4269422
+
+[11:27:18] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:27:18] Tổng số img trên trang: 6
+[11:27:18] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/d2ea0f6c-b527-4942-8f40-ac01e4269422
+[11:27:18] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:27:19] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:27:19] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:27:20] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1528 <=====
+
+[11:27:23] ======================================================================
+[11:27:23] KIỂM TRA DÒNG 1529: SEO audit
+[11:27:23] BẮT ĐẦU DÒNG 1529: SEO audit
+
+[11:27:23] [DÒNG 1529] Bắt đầu xử lý tạo Word...
+[11:27:24] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:27:31] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:27:53] -> Nội dung assistant đã ổn định 3s (1344 từ).
+[11:27:53] -> Số từ ước tính bài viết: 1344
+[11:27:53] -> Đang lưu Word giữ định dạng...
+[11:28:06] -> Dòng 1529: Đã lưu Word OK từ URL mới.
+
+[11:28:07] [DÒNG 1529] Bắt đầu xin Brief ảnh...
+[11:28:08] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:28:09] -> Đã bấm gửi prompt.
+[11:28:23] -> Nội dung assistant đã ổn định 3s (244 từ).
+[11:28:24] -> Dòng 1529: Đã lưu Brief vào O/P.
+
+[11:28:25] [DÒNG 1529] Bắt đầu tạo ảnh 1 Gemini...
+[11:28:26] -> Gemini đã sẵn sàng sau 1.7s.
+
+[11:28:27] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:28:27] Tổng số img trên trang: 5
+[11:28:28] -> Đã gửi prompt sang Gemini bằng JS.
+[11:28:31] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:28:42] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/f1bea875-7804-4500-80eb-27406de1bbbc
+
+[11:28:42] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:28:42] Tổng số img trên trang: 6
+[11:28:42] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/f1bea875-7804-4500-80eb-27406de1bbbc
+[11:28:42] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:28:43] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:28:43] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:28:44] [DÒNG 1529] Bắt đầu tạo ảnh 2 Gemini...
+[11:28:45] -> Gemini đã sẵn sàng sau 1.1s.
+
+[11:28:45] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:28:45] Tổng số img trên trang: 5
+[11:28:47] -> Đã gửi prompt sang Gemini bằng JS.
+[11:28:50] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:29:02] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/45d14e13-13b5-43ab-85a9-dd7af55facff
+
+[11:29:02] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:29:02] Tổng số img trên trang: 6
+[11:29:02] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/45d14e13-13b5-43ab-85a9-dd7af55facff
+[11:29:02] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:29:03] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:29:03] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:29:04] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1529 <=====
+
+[11:29:07] ======================================================================
+[11:29:07] KIỂM TRA DÒNG 1530: KPI SEO
+[11:29:07] BẮT ĐẦU DÒNG 1530: KPI SEO
+
+[11:29:09] [DÒNG 1530] Bắt đầu xin Brief ảnh...
+[11:29:09] -> Đang mở lại URL chat cũ ở cột H để xin Brief.
+[11:29:17] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:29:18] -> Đã bấm gửi prompt.
+[11:29:44] -> Nội dung assistant đã ổn định 3s (309 từ).
+[11:29:46] -> Dòng 1530: Đã lưu Brief vào O/P.
+
+[11:29:46] [DÒNG 1530] Bắt đầu tạo ảnh 1 Gemini...
+[11:29:48] -> Gemini đã sẵn sàng sau 1.9s.
+
+[11:29:49] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:29:49] Tổng số img trên trang: 5
+[11:29:50] -> Đã gửi prompt sang Gemini bằng JS.
+[11:29:53] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:30:04] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/439cdfac-cdd5-4334-9f41-a2bb37a62e9c
+
+[11:30:04] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:30:04] Tổng số img trên trang: 6
+[11:30:04] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/439cdfac-cdd5-4334-9f41-a2bb37a62e9c
+[11:30:04] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:30:05] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:30:05] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:30:05] [DÒNG 1530] Bắt đầu tạo ảnh 2 Gemini...
+[11:30:07] -> Gemini đã sẵn sàng sau 1.1s.
+
+[11:30:07] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:30:07] Tổng số img trên trang: 3
+[11:30:09] -> Đã gửi prompt sang Gemini bằng JS.
+[11:30:12] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:30:22] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/c3331742-2090-430d-a484-d609438dc455
+
+[11:30:22] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:30:22] Tổng số img trên trang: 6
+[11:30:22] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/c3331742-2090-430d-a484-d609438dc455
+[11:30:22] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:30:23] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:30:23] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:30:25] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1530 <=====
+
+[11:30:28] ======================================================================
+[11:30:28] KIỂM TRA DÒNG 1531: đo lường SEO
+[11:30:28] BẮT ĐẦU DÒNG 1531: đo lường SEO
+
+[11:30:30] [DÒNG 1531] Bắt đầu xin Brief ảnh...
+[11:30:30] -> Đang mở lại URL chat cũ ở cột H để xin Brief.
+[11:30:37] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:30:39] -> Đã bấm gửi prompt.
+[11:31:03] -> Nội dung assistant đã ổn định 3s (266 từ).
+[11:31:04] -> Dòng 1531: Đã lưu Brief vào O/P.
+
+[11:31:05] [DÒNG 1531] Bắt đầu tạo ảnh 1 Gemini...
+[11:31:06] -> Gemini đã sẵn sàng sau 1.6s.
+
+[11:31:06] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:31:07] Tổng số img trên trang: 5
+[11:31:08] -> Đã gửi prompt sang Gemini bằng JS.
+[11:31:11] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:31:22] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/15bccccf-0d4b-434a-9e8c-517b67573a2c
+
+[11:31:22] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:31:22] Tổng số img trên trang: 6
+[11:31:22] [IMG 4] size=1024x765 rect={'height': 533, 'width': 713, 'x': 292, 'y': 278} src=blob:https://gemini.google.com/15bccccf-0d4b-434a-9e8c-517b67573a2c
+[11:31:22] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:31:23] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:31:23] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:31:23] [DÒNG 1531] Bắt đầu tạo ảnh 2 Gemini...
+[11:31:25] -> Gemini đã sẵn sàng sau 1.0s.
+
+[11:31:25] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:31:25] Tổng số img trên trang: 2
+[11:31:27] -> Đã gửi prompt sang Gemini bằng JS.
+[11:31:30] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:31:39] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/79d9b340-47af-43cd-b990-4649361a7568
+
+[11:31:39] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:31:39] Tổng số img trên trang: 6
+[11:31:40] [IMG 4] size=1024x765 rect={'height': 539, 'width': 721, 'x': 288, 'y': 275} src=blob:https://gemini.google.com/79d9b340-47af-43cd-b990-4649361a7568
+[11:31:40] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:31:40] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:31:40] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:31:42] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1531 <=====
+
+[11:31:45] ======================================================================
+[11:31:45] KIỂM TRA DÒNG 1532: sai lầm SEO
+[11:31:45] BẮT ĐẦU DÒNG 1532: sai lầm SEO
+
+[11:31:45] [DÒNG 1532] Bắt đầu xử lý tạo Word...
+[11:31:45] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:31:54] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:32:17] -> Nội dung assistant đã ổn định 3s (1575 từ).
+[11:32:17] -> Số từ ước tính bài viết: 1575
+[11:32:17] -> Đang lưu Word giữ định dạng...
+[11:32:31] -> Dòng 1532: Đã lưu Word OK từ URL mới.
+
+[11:32:32] [DÒNG 1532] Bắt đầu xin Brief ảnh...
+[11:32:34] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:32:35] -> Đã bấm gửi prompt.
+[11:32:47] -> Nội dung assistant đã ổn định 3s (246 từ).
+[11:32:47] -> Dòng 1532: Đã lưu Brief vào O/P.
+
+[11:32:48] [DÒNG 1532] Bắt đầu tạo ảnh 1 Gemini...
+[11:32:50] -> Gemini đã sẵn sàng sau 1.6s.
+
+[11:32:50] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:32:50] Tổng số img trên trang: 5
+[11:32:51] -> Đã gửi prompt sang Gemini bằng JS.
+[11:32:54] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:33:04] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/65ae5199-6dfb-430a-99c3-a20b1bc58ec5
+
+[11:33:04] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:33:04] Tổng số img trên trang: 6
+[11:33:04] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/65ae5199-6dfb-430a-99c3-a20b1bc58ec5
+[11:33:04] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:33:05] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:33:05] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:33:05] [DÒNG 1532] Bắt đầu tạo ảnh 2 Gemini...
+[11:33:06] -> Gemini đã sẵn sàng sau 1.1s.
+
+[11:33:06] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:33:07] Tổng số img trên trang: 3
+[11:33:08] -> Đã gửi prompt sang Gemini bằng JS.
+[11:33:11] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:33:21] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/f865eb2e-0baa-4e58-a9aa-d920153ea2ef
+
+[11:33:21] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:33:21] Tổng số img trên trang: 6
+[11:33:21] [IMG 4] size=1024x765 rect={'height': 535, 'width': 716, 'x': 291, 'y': 277} src=blob:https://gemini.google.com/f865eb2e-0baa-4e58-a9aa-d920153ea2ef
+[11:33:21] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:33:22] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:33:22] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:33:23] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1532 <=====
+
+[11:33:26] ======================================================================
+[11:33:26] KIỂM TRA DÒNG 1533: AI trong SEO
+[11:33:27] BẮT ĐẦU DÒNG 1533: AI trong SEO
+
+[11:33:27] [DÒNG 1533] Bắt đầu xử lý tạo Word...
+[11:33:27] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:33:34] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:33:46] -> Nội dung assistant đã ổn định 3s (81 từ).
+[11:33:46] -> Số từ ước tính bài viết: 81
+[11:33:46] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[11:33:47] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:33:48] -> Đã bấm gửi prompt.
+[11:34:00] -> Nội dung assistant đã ổn định 3s (150 từ).
+[11:34:00] -> Số từ sau kéo dài: 150
+[11:34:01] ❌ Dòng 1533: Lỗi bước Word: Bài viết vẫn dưới 700 từ sau prompt kéo dài: 150 từ.
+
+[11:34:03] ======================================================================
+[11:34:03] KIỂM TRA DÒNG 1534: marketing analytics
+[11:34:04] BẮT ĐẦU DÒNG 1534: marketing analytics
+
+[11:34:04] [DÒNG 1534] Bắt đầu xử lý tạo Word...
+[11:34:04] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:34:12] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:34:37] -> Nội dung assistant đã ổn định 3s (1900 từ).
+[11:34:37] -> Số từ ước tính bài viết: 1900
+[11:34:37] -> Đang lưu Word giữ định dạng...
+[11:34:52] -> Dòng 1534: Đã lưu Word OK từ URL mới.
+
+[11:34:53] [DÒNG 1534] Bắt đầu xin Brief ảnh...
+[11:34:54] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:34:56] -> Đã bấm gửi prompt.
+[11:35:08] -> Nội dung assistant đã ổn định 3s (283 từ).
+[11:35:08] -> Dòng 1534: Đã lưu Brief vào O/P.
+
+[11:35:09] [DÒNG 1534] Bắt đầu tạo ảnh 1 Gemini...
+[11:35:10] -> Gemini đã sẵn sàng sau 1.2s.
+
+[11:35:10] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:35:10] Tổng số img trên trang: 3
+[11:35:12] -> Đã gửi prompt sang Gemini bằng JS.
+[11:35:15] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:35:27] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/d9bd335e-8e10-4b46-a357-530e80b217ec
+
+[11:35:27] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:35:27] Tổng số img trên trang: 6
+[11:35:28] [IMG 4] size=1024x765 rect={'height': 533, 'width': 713, 'x': 292, 'y': 278} src=blob:https://gemini.google.com/d9bd335e-8e10-4b46-a357-530e80b217ec
+[11:35:28] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:35:28] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:35:28] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:35:29] [DÒNG 1534] Bắt đầu tạo ảnh 2 Gemini...
+[11:35:30] -> Gemini đã sẵn sàng sau 1.1s.
+
+[11:35:30] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:35:30] Tổng số img trên trang: 2
+[11:35:32] -> Đã gửi prompt sang Gemini bằng JS.
+[11:35:35] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:35:47] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/ccd21c16-bd54-4108-be7e-2208a0a1c6f7
+
+[11:35:47] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:35:47] Tổng số img trên trang: 6
+[11:35:47] [IMG 4] size=1024x765 rect={'height': 608, 'width': 814, 'x': 242, 'y': 240} src=blob:https://gemini.google.com/ccd21c16-bd54-4108-be7e-2208a0a1c6f7
+[11:35:47] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:35:48] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:35:48] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:35:49] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1534 <=====
+
+[11:35:52] ======================================================================
+[11:35:52] KIỂM TRA DÒNG 1535: vai trò marketing analytics
+[11:35:52] BẮT ĐẦU DÒNG 1535: vai trò marketing analytics
+
+[11:35:52] [DÒNG 1535] Bắt đầu xử lý tạo Word...
+[11:35:52] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:36:00] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:36:11] -> Nội dung assistant đã ổn định 3s (90 từ).
+[11:36:11] -> Số từ ước tính bài viết: 90
+[11:36:11] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[11:36:12] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:36:13] -> Đã bấm gửi prompt.
+[11:36:25] -> Nội dung assistant đã ổn định 3s (241 từ).
+[11:36:25] -> Số từ sau kéo dài: 241
+[11:36:26] ❌ Dòng 1535: Lỗi bước Word: Bài viết vẫn dưới 700 từ sau prompt kéo dài: 241 từ.
+
+[11:36:28] ======================================================================
+[11:36:28] KIỂM TRA DÒNG 1536: marketing analytics và business analytics
+[11:36:29] BẮT ĐẦU DÒNG 1536: marketing analytics và business analytics
+
+[11:36:29] [DÒNG 1536] Bắt đầu xử lý tạo Word...
+[11:36:29] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:36:36] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:36:57] -> Nội dung assistant đã ổn định 3s (1621 từ).
+[11:36:57] -> Số từ ước tính bài viết: 1638
+[11:36:57] -> Đang lưu Word giữ định dạng...
+[11:37:11] -> Dòng 1536: Đã lưu Word OK từ URL mới.
+
+[11:37:11] [DÒNG 1536] Bắt đầu xin Brief ảnh...
+[11:37:13] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:37:14] -> Đã bấm gửi prompt.
+[11:37:26] -> Nội dung assistant đã ổn định 3s (257 từ).
+[11:37:26] -> Dòng 1536: Đã lưu Brief vào O/P.
+
+[11:37:27] [DÒNG 1536] Bắt đầu tạo ảnh 1 Gemini...
+[11:37:28] -> Gemini đã sẵn sàng sau 1.3s.
+
+[11:37:28] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:37:28] Tổng số img trên trang: 5
+[11:37:30] -> Đã gửi prompt sang Gemini bằng JS.
+[11:37:33] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:37:44] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/bdc1cc4e-05da-4cb1-a3ad-1734b2e46dbc
+
+[11:37:44] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:37:44] Tổng số img trên trang: 6
+[11:37:44] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/bdc1cc4e-05da-4cb1-a3ad-1734b2e46dbc
+[11:37:45] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:37:45] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:37:45] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:37:46] [DÒNG 1536] Bắt đầu tạo ảnh 2 Gemini...
+[11:37:47] -> Gemini đã sẵn sàng sau 1.2s.
+
+[11:37:47] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:37:47] Tổng số img trên trang: 3
+[11:37:49] -> Đã gửi prompt sang Gemini bằng JS.
+[11:37:52] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:38:05] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/d4ab13bd-524b-4a5a-b211-0293a9275756
+
+[11:38:05] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:38:05] Tổng số img trên trang: 6
+[11:38:05] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/d4ab13bd-524b-4a5a-b211-0293a9275756
+[11:38:05] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:38:06] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:38:06] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:38:07] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1536 <=====
+
+[11:38:10] ======================================================================
+[11:38:10] KIỂM TRA DÒNG 1537: quy trình marketing analytics
+[11:38:10] BẮT ĐẦU DÒNG 1537: quy trình marketing analytics
+
+[11:38:10] [DÒNG 1537] Bắt đầu xử lý tạo Word...
+[11:38:10] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:38:18] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:38:40] -> Nội dung assistant đã ổn định 3s (1749 từ).
+[11:38:40] -> Số từ ước tính bài viết: 1749
+[11:38:40] -> Đang lưu Word giữ định dạng...
+[11:38:55] -> Dòng 1537: Đã lưu Word OK từ URL mới.
+
+[11:38:56] [DÒNG 1537] Bắt đầu xin Brief ảnh...
+[11:38:57] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:38:59] -> Đã bấm gửi prompt.
+[11:39:10] -> Nội dung assistant đã ổn định 3s (293 từ).
+[11:39:11] -> Dòng 1537: Đã lưu Brief vào O/P.
+
+[11:39:11] [DÒNG 1537] Bắt đầu tạo ảnh 1 Gemini...
+[11:39:13] -> Gemini đã sẵn sàng sau 1.8s.
+
+[11:39:13] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:39:13] Tổng số img trên trang: 5
+[11:39:15] -> Đã gửi prompt sang Gemini bằng JS.
+[11:39:18] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:39:30] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/3d83e30f-c1aa-47af-a73c-5911cb491854
+
+[11:39:30] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:39:30] Tổng số img trên trang: 6
+[11:39:30] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/3d83e30f-c1aa-47af-a73c-5911cb491854
+[11:39:30] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:39:31] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:39:31] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:39:31] [DÒNG 1537] Bắt đầu tạo ảnh 2 Gemini...
+[11:39:32] -> Gemini đã sẵn sàng sau 1.0s.
+
+[11:39:32] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:39:32] Tổng số img trên trang: 2
+[11:39:34] -> Đã gửi prompt sang Gemini bằng JS.
+[11:39:37] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:39:48] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/18e1ab25-0841-4912-be7d-dc86d4192928
+
+[11:39:48] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:39:48] Tổng số img trên trang: 6
+[11:39:48] [IMG 4] size=1024x765 rect={'height': 560, 'width': 750, 'x': 274, 'y': 264} src=blob:https://gemini.google.com/18e1ab25-0841-4912-be7d-dc86d4192928
+[11:39:48] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:39:49] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:39:49] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:39:50] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1537 <=====
+
+[11:39:53] ======================================================================
+[11:39:53] KIỂM TRA DÒNG 1538: dữ liệu marketing
+[11:39:53] BẮT ĐẦU DÒNG 1538: dữ liệu marketing
+
+[11:39:53] [DÒNG 1538] Bắt đầu xử lý tạo Word...
+[11:39:53] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:40:01] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:40:22] -> Nội dung assistant đã ổn định 3s (1455 từ).
+[11:40:22] -> Số từ ước tính bài viết: 1455
+[11:40:22] -> Đang lưu Word giữ định dạng...
+[11:40:34] -> Dòng 1538: Đã lưu Word OK từ URL mới.
+
+[11:40:35] [DÒNG 1538] Bắt đầu xin Brief ảnh...
+[11:40:36] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:40:38] -> Đã bấm gửi prompt.
+[11:40:50] -> Nội dung assistant đã ổn định 3s (265 từ).
+[11:40:50] -> Dòng 1538: Đã lưu Brief vào O/P.
+
+[11:40:51] [DÒNG 1538] Bắt đầu tạo ảnh 1 Gemini...
+[11:40:52] -> Gemini đã sẵn sàng sau 1.4s.
+
+[11:40:52] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:40:52] Tổng số img trên trang: 5
+[11:40:54] -> Đã gửi prompt sang Gemini bằng JS.
+[11:40:57] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:41:07] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/6206bce8-1542-40dc-9999-fb26d0986cd2
+
+[11:41:07] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:41:07] Tổng số img trên trang: 6
+[11:41:07] [IMG 4] size=1024x765 rect={'height': 531, 'width': 711, 'x': 294, 'y': 279} src=blob:https://gemini.google.com/6206bce8-1542-40dc-9999-fb26d0986cd2
+[11:41:07] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:41:08] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:41:08] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:41:09] [DÒNG 1538] Bắt đầu tạo ảnh 2 Gemini...
+[11:41:10] -> Gemini đã sẵn sàng sau 1.1s.
+
+[11:41:10] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:41:10] Tổng số img trên trang: 3
+[11:41:12] -> Đã gửi prompt sang Gemini bằng JS.
+[11:41:15] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:41:25] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/e4c0574e-e11e-40ad-9e6c-d41935dea05c
+
+[11:41:25] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:41:25] Tổng số img trên trang: 6
+[11:41:25] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/e4c0574e-e11e-40ad-9e6c-d41935dea05c
+[11:41:26] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:41:26] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:41:26] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:41:28] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1538 <=====
+
+[11:41:30] ======================================================================
+[11:41:30] KIỂM TRA DÒNG 1539: hệ thống đo lường marketing
+[11:41:30] BẮT ĐẦU DÒNG 1539: hệ thống đo lường marketing
+
+[11:41:30] [DÒNG 1539] Bắt đầu xử lý tạo Word...
+[11:41:30] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:41:39] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:42:03] -> Nội dung assistant đã ổn định 3s (2039 từ).
+[11:42:03] -> Số từ ước tính bài viết: 2039
+[11:42:03] -> Đang lưu Word giữ định dạng...
+[11:42:18] -> Dòng 1539: Đã lưu Word OK từ URL mới.
+
+[11:42:19] [DÒNG 1539] Bắt đầu xin Brief ảnh...
+[11:42:20] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:42:22] -> Đã bấm gửi prompt.
+[11:42:34] -> Nội dung assistant đã ổn định 3s (265 từ).
+[11:42:34] -> Dòng 1539: Đã lưu Brief vào O/P.
+
+[11:42:35] [DÒNG 1539] Bắt đầu tạo ảnh 1 Gemini...
+[11:42:37] -> Gemini đã sẵn sàng sau 1.8s.
+
+[11:42:37] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:42:37] Tổng số img trên trang: 5
+[11:42:38] -> Đã gửi prompt sang Gemini bằng JS.
+[11:42:41] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:42:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/93a17609-dcd1-40b1-aeba-c1f86251a419
+
+[11:42:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:42:52] Tổng số img trên trang: 6
+[11:42:53] [IMG 4] size=1024x765 rect={'height': 535, 'width': 716, 'x': 291, 'y': 277} src=blob:https://gemini.google.com/93a17609-dcd1-40b1-aeba-c1f86251a419
+[11:42:53] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:42:53] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:42:53] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:42:54] [DÒNG 1539] Bắt đầu tạo ảnh 2 Gemini...
+[11:42:55] -> Gemini đã sẵn sàng sau 1.1s.
+
+[11:42:55] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:42:55] Tổng số img trên trang: 3
+[11:42:57] -> Đã gửi prompt sang Gemini bằng JS.
+[11:43:00] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:43:11] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/be985273-1183-478f-ada4-2d8aecc5bbd2
+
+[11:43:11] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:43:11] Tổng số img trên trang: 6
+[11:43:11] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/be985273-1183-478f-ada4-2d8aecc5bbd2
+[11:43:11] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:43:12] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:43:12] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:43:13] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1539 <=====
+
+[11:43:16] ======================================================================
+[11:43:16] KIỂM TRA DÒNG 1540: dashboard marketing
+[11:43:16] BẮT ĐẦU DÒNG 1540: dashboard marketing
+
+[11:43:16] [DÒNG 1540] Bắt đầu xử lý tạo Word...
+[11:43:16] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:43:24] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:43:46] -> Nội dung assistant đã ổn định 3s (1627 từ).
+[11:43:46] -> Số từ ước tính bài viết: 1627
+[11:43:46] -> Đang lưu Word giữ định dạng...
+[11:43:59] -> Dòng 1540: Đã lưu Word OK từ URL mới.
+
+[11:44:00] [DÒNG 1540] Bắt đầu xin Brief ảnh...
+[11:44:01] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:44:03] -> Đã bấm gửi prompt.
+[11:44:15] -> Nội dung assistant đã ổn định 3s (323 từ).
+[11:44:15] -> Dòng 1540: Đã lưu Brief vào O/P.
+
+[11:44:16] [DÒNG 1540] Bắt đầu tạo ảnh 1 Gemini...
+[11:44:17] -> Gemini đã sẵn sàng sau 1.8s.
+
+[11:44:17] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:44:17] Tổng số img trên trang: 5
+[11:44:19] -> Đã gửi prompt sang Gemini bằng JS.
+[11:44:22] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:44:34] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/780a95f5-8c20-4e96-9ea5-0db781683023
+
+[11:44:34] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:44:34] Tổng số img trên trang: 6
+[11:44:34] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/780a95f5-8c20-4e96-9ea5-0db781683023
+[11:44:34] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:44:35] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:44:35] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:44:36] [DÒNG 1540] Bắt đầu tạo ảnh 2 Gemini...
+[11:44:37] -> Gemini đã sẵn sàng sau 1.1s.
+
+[11:44:37] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:44:37] Tổng số img trên trang: 2
+[11:44:39] -> Đã gửi prompt sang Gemini bằng JS.
+[11:44:42] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:44:52] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/45e3a6e9-7d3c-4f05-8bd1-b7c90ef82d31
+
+[11:44:52] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:44:52] Tổng số img trên trang: 6
+[11:44:52] [IMG 4] size=1024x765 rect={'height': 533, 'width': 713, 'x': 292, 'y': 278} src=blob:https://gemini.google.com/45e3a6e9-7d3c-4f05-8bd1-b7c90ef82d31
+[11:44:52] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:44:53] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:44:53] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:44:54] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1540 <=====
+
+[11:44:57] ======================================================================
+[11:44:57] KIỂM TRA DÒNG 1541: xây dựng dashboard marketing
+[11:44:57] BẮT ĐẦU DÒNG 1541: xây dựng dashboard marketing
+
+[11:44:57] [DÒNG 1541] Bắt đầu xử lý tạo Word...
+[11:44:57] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:45:05] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:45:29] -> Nội dung assistant đã ổn định 3s (1837 từ).
+[11:45:29] -> Số từ ước tính bài viết: 1837
+[11:45:29] -> Đang lưu Word giữ định dạng...
+[11:45:44] -> Dòng 1541: Đã lưu Word OK từ URL mới.
+
+[11:45:45] [DÒNG 1541] Bắt đầu xin Brief ảnh...
+[11:45:46] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:45:48] -> Đã bấm gửi prompt.
+[11:46:00] -> Nội dung assistant đã ổn định 3s (226 từ).
+[11:46:00] -> Dòng 1541: Đã lưu Brief vào O/P.
+
+[11:46:01] [DÒNG 1541] Bắt đầu tạo ảnh 1 Gemini...
+[11:46:02] -> Gemini đã sẵn sàng sau 1.3s.
+
+[11:46:02] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:46:02] Tổng số img trên trang: 3
+[11:46:04] -> Đã gửi prompt sang Gemini bằng JS.
+[11:46:07] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:46:16] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/6ba335c6-e471-4236-8cd5-2cbb705ba087
+
+[11:46:16] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:46:16] Tổng số img trên trang: 6
+[11:46:17] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/6ba335c6-e471-4236-8cd5-2cbb705ba087
+[11:46:17] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:46:17] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:46:17] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:46:18] [DÒNG 1541] Bắt đầu tạo ảnh 2 Gemini...
+[11:46:19] -> Gemini đã sẵn sàng sau 1.4s.
+
+[11:46:19] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:46:20] Tổng số img trên trang: 5
+[11:46:21] -> Đã gửi prompt sang Gemini bằng JS.
+[11:46:24] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:46:35] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/216d8dbf-645d-4aa6-84d1-5c07f8e31e51
+
+[11:46:35] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:46:35] Tổng số img trên trang: 6
+[11:46:35] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/216d8dbf-645d-4aa6-84d1-5c07f8e31e51
+[11:46:35] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:46:36] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:46:36] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:46:37] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1541 <=====
+
+[11:46:40] ======================================================================
+[11:46:40] KIỂM TRA DÒNG 1542: marketing attribution
+[11:46:40] BẮT ĐẦU DÒNG 1542: marketing attribution
+
+[11:46:40] [DÒNG 1542] Bắt đầu xử lý tạo Word...
+[11:46:40] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:46:48] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:47:01] -> Nội dung assistant đã ổn định 3s (109 từ).
+[11:47:01] -> Số từ ước tính bài viết: 109
+[11:47:01] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[11:47:02] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:47:04] -> Đã bấm gửi prompt.
+[11:47:26] -> Nội dung assistant đã ổn định 3s (1714 từ).
+[11:47:26] -> Số từ sau kéo dài: 1714
+[11:47:26] -> Đang lưu Word giữ định dạng...
+[11:47:40] -> Dòng 1542: Đã lưu Word OK từ URL mới.
+
+[11:47:40] [DÒNG 1542] Bắt đầu xin Brief ảnh...
+[11:47:42] -> Đã gõ prompt bằng JS vào đúng ô nhập ChatGPT dưới cùng.
+[11:47:43] -> Đã bấm gửi prompt.
+[11:47:55] -> Nội dung assistant đã ổn định 3s (286 từ).
+[11:47:55] -> Dòng 1542: Đã lưu Brief vào O/P.
+
+[11:47:56] [DÒNG 1542] Bắt đầu tạo ảnh 1 Gemini...
+[11:47:57] -> Gemini đã sẵn sàng sau 1.3s.
+
+[11:47:57] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:47:57] Tổng số img trên trang: 2
+[11:47:59] -> Đã gửi prompt sang Gemini bằng JS.
+[11:48:02] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:48:13] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/d565afdb-17f9-491c-b125-75efc316078f
+
+[11:48:13] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:48:13] Tổng số img trên trang: 6
+[11:48:13] [IMG 4] size=1024x765 rect={'height': 530, 'width': 709, 'x': 294, 'y': 280} src=blob:https://gemini.google.com/d565afdb-17f9-491c-b125-75efc316078f
+[11:48:13] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:48:14] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:48:14] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+
+[11:48:15] [DÒNG 1542] Bắt đầu tạo ảnh 2 Gemini...
+[11:48:16] -> Gemini đã sẵn sàng sau 1.2s.
+
+[11:48:16] ===== DEBUG TRƯỚC KHI GỬI PROMPT =====
+
+[11:48:16] Tổng số img trên trang: 2
+[11:48:18] -> Đã gửi prompt sang Gemini bằng JS.
+[11:48:21] -> Đang chờ phản hồi ảnh hoàn tất (xuất hiện nút tải hình ảnh kích thước đầy đủ)...
+[11:48:29] -> Gemini đã hoàn tất phản hồi ảnh; đã tìm thấy blob mới: blob:https://gemini.google.com/83fbff8a-b118-4894-b697-5fe90f34c5e5
+
+[11:48:29] ===== PHẢN HỒI ẢNH GEMINI ĐÃ HOÀN TẤT =====
+
+[11:48:29] Tổng số img trên trang: 6
+[11:48:29] [IMG 4] size=1024x765 rect={'height': 529, 'width': 708, 'x': 295, 'y': 280} src=blob:https://gemini.google.com/83fbff8a-b118-4894-b697-5fe90f34c5e5
+[11:48:29] -> Đã ép tải ảnh Gemini thành công bằng already_complete: 1024x765
+[11:48:30] -> Đã resize ảnh về tối đa 800px: 800x597
+[11:48:30] -> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.
+[11:48:31] =====> HOÀN THÀNH HOÀN TOÀN DÒNG 1542 <=====
+
+[11:48:34] ======================================================================
+[11:48:34] KIỂM TRA DÒNG 1543: mô hình attribution
+[11:48:34] BẮT ĐẦU DÒNG 1543: mô hình attribution
+
+[11:48:34] [DÒNG 1543] Bắt đầu xử lý tạo Word...
+[11:48:34] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:48:42] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:49:08] -> Nội dung assistant đã ổn định 3s (1919 từ).
+[11:49:08] -> Số từ ước tính bài viết: 1946
+[11:49:08] -> Đang lưu Word giữ định dạng...
+[11:49:24] -> Dòng 1543: Đã lưu Word OK từ URL mới.
+
+[11:49:25] [DÒNG 1543] Bắt đầu xin Brief ảnh...
+[11:49:28] ❌ Dòng 1543: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:49:31] ======================================================================
+[11:49:31] KIỂM TRA DÒNG 1544: cohort analysis
+[11:49:31] BẮT ĐẦU DÒNG 1544: cohort analysis
+
+[11:49:31] [DÒNG 1544] Bắt đầu xử lý tạo Word...
+[11:49:31] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:49:39] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:50:00] -> Nội dung assistant đã ổn định 3s (1549 từ).
+[11:50:00] -> Số từ ước tính bài viết: 1560
+[11:50:00] -> Đang lưu Word giữ định dạng...
+[11:50:13] -> Dòng 1544: Đã lưu Word OK từ URL mới.
+
+[11:50:14] [DÒNG 1544] Bắt đầu xin Brief ảnh...
+[11:50:17] ❌ Dòng 1544: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:50:20] ======================================================================
+[11:50:20] KIỂM TRA DÒNG 1545: funnel analysis
+[11:50:20] BẮT ĐẦU DÒNG 1545: funnel analysis
+
+[11:50:20] [DÒNG 1545] Bắt đầu xử lý tạo Word...
+[11:50:20] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:50:27] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:50:51] -> Nội dung assistant đã ổn định 3s (1570 từ).
+[11:50:51] -> Số từ ước tính bài viết: 1570
+[11:50:51] -> Đang lưu Word giữ định dạng...
+[11:51:06] -> Dòng 1545: Đã lưu Word OK từ URL mới.
+
+[11:51:07] [DÒNG 1545] Bắt đầu xin Brief ảnh...
+[11:51:10] ❌ Dòng 1545: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:51:13] ======================================================================
+[11:51:13] KIỂM TRA DÒNG 1546: customer journey analytics
+[11:51:13] BẮT ĐẦU DÒNG 1546: customer journey analytics
+
+[11:51:13] [DÒNG 1546] Bắt đầu xử lý tạo Word...
+[11:51:13] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:51:21] ❌ Dòng 1546: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:51:23] ======================================================================
+[11:51:23] KIỂM TRA DÒNG 1547: phân tích chiến dịch marketing
+[11:51:23] BẮT ĐẦU DÒNG 1547: phân tích chiến dịch marketing
+
+[11:51:23] [DÒNG 1547] Bắt đầu xử lý tạo Word...
+[11:51:23] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:51:30] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:51:54] -> Nội dung assistant đã ổn định 3s (1868 từ).
+[11:51:54] -> Số từ ước tính bài viết: 1868
+[11:51:54] -> Đang lưu Word giữ định dạng...
+[11:52:08] -> Dòng 1547: Đã lưu Word OK từ URL mới.
+
+[11:52:08] [DÒNG 1547] Bắt đầu xin Brief ảnh...
+[11:52:11] ❌ Dòng 1547: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:52:14] ======================================================================
+[11:52:14] KIỂM TRA DÒNG 1548: KPI marketing analytics
+[11:52:14] BẮT ĐẦU DÒNG 1548: KPI marketing analytics
+
+[11:52:14] [DÒNG 1548] Bắt đầu xử lý tạo Word...
+[11:52:14] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:52:22] ❌ Dòng 1548: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:52:24] ======================================================================
+[11:52:24] KIỂM TRA DÒNG 1549: công cụ marketing analytics
+[11:52:24] BẮT ĐẦU DÒNG 1549: công cụ marketing analytics
+
+[11:52:24] [DÒNG 1549] Bắt đầu xử lý tạo Word...
+[11:52:24] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:52:31] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:52:55] -> Nội dung assistant đã ổn định 3s (1968 từ).
+[11:52:55] -> Số từ ước tính bài viết: 1968
+[11:52:55] -> Đang lưu Word giữ định dạng...
+[11:53:10] -> Dòng 1549: Đã lưu Word OK từ URL mới.
+
+[11:53:11] [DÒNG 1549] Bắt đầu xin Brief ảnh...
+[11:53:14] ❌ Dòng 1549: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:53:17] ======================================================================
+[11:53:17] KIỂM TRA DÒNG 1550: Google Analytics 4
+[11:53:17] BẮT ĐẦU DÒNG 1550: Google Analytics 4
+
+[11:53:17] [DÒNG 1550] Bắt đầu xử lý tạo Word...
+[11:53:17] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:53:25] ❌ Dòng 1550: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:53:27] ======================================================================
+[11:53:27] KIỂM TRA DÒNG 1551: AI trong marketing analytics
+[11:53:27] BẮT ĐẦU DÒNG 1551: AI trong marketing analytics
+
+[11:53:27] [DÒNG 1551] Bắt đầu xử lý tạo Word...
+[11:53:27] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:53:35] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:53:58] -> Nội dung assistant đã ổn định 3s (1700 từ).
+[11:53:58] -> Số từ ước tính bài viết: 1700
+[11:53:58] -> Đang lưu Word giữ định dạng...
+[11:54:11] -> Dòng 1551: Đã lưu Word OK từ URL mới.
+
+[11:54:12] [DÒNG 1551] Bắt đầu xin Brief ảnh...
+[11:54:15] ❌ Dòng 1551: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:54:18] ======================================================================
+[11:54:18] KIỂM TRA DÒNG 1552: sai lầm marketing analytics
+[11:54:18] BẮT ĐẦU DÒNG 1552: sai lầm marketing analytics
+
+[11:54:18] [DÒNG 1552] Bắt đầu xử lý tạo Word...
+[11:54:18] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:54:26] ❌ Dòng 1552: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:54:28] ======================================================================
+[11:54:28] KIỂM TRA DÒNG 1553: xu hướng marketing analytics
+[11:54:28] BẮT ĐẦU DÒNG 1553: xu hướng marketing analytics
+
+[11:54:28] [DÒNG 1553] Bắt đầu xử lý tạo Word...
+[11:54:28] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:54:35] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:54:59] -> Nội dung assistant đã ổn định 3s (1504 từ).
+[11:54:59] -> Số từ ước tính bài viết: 1511
+[11:54:59] -> Đang lưu Word giữ định dạng...
+[11:55:12] -> Dòng 1553: Đã lưu Word OK từ URL mới.
+
+[11:55:13] [DÒNG 1553] Bắt đầu xin Brief ảnh...
+[11:55:16] ❌ Dòng 1553: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:55:19] ======================================================================
+[11:55:19] KIỂM TRA DÒNG 1554: phân tích marketing
+[11:55:19] BẮT ĐẦU DÒNG 1554: phân tích marketing
+
+[11:55:19] [DÒNG 1554] Bắt đầu xử lý tạo Word...
+[11:55:19] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:55:27] ❌ Dòng 1554: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:55:29] ======================================================================
+[11:55:29] KIỂM TRA DÒNG 1555: diễn giải dữ liệu marketing
+[11:55:29] BẮT ĐẦU DÒNG 1555: diễn giải dữ liệu marketing
+
+[11:55:29] [DÒNG 1555] Bắt đầu xử lý tạo Word...
+[11:55:29] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:55:39] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:56:04] -> Nội dung assistant đã ổn định 3s (1538 từ).
+[11:56:04] -> Số từ ước tính bài viết: 1538
+[11:56:04] -> Đang lưu Word giữ định dạng...
+[11:56:17] -> Dòng 1555: Đã lưu Word OK từ URL mới.
+
+[11:56:18] [DÒNG 1555] Bắt đầu xin Brief ảnh...
+[11:56:21] ❌ Dòng 1555: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:56:24] ======================================================================
+[11:56:24] KIỂM TRA DÒNG 1556: tương quan và nhân quả marketing
+[11:56:24] BẮT ĐẦU DÒNG 1556: tương quan và nhân quả marketing
+
+[11:56:24] [DÒNG 1556] Bắt đầu xử lý tạo Word...
+[11:56:24] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:56:31] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:56:55] -> Nội dung assistant đã ổn định 3s (1836 từ).
+[11:56:55] -> Số từ ước tính bài viết: 1853
+[11:56:55] -> Đang lưu Word giữ định dạng...
+[11:57:10] -> Dòng 1556: Đã lưu Word OK từ URL mới.
+
+[11:57:10] [DÒNG 1556] Bắt đầu xin Brief ảnh...
+[11:57:13] ❌ Dòng 1556: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:57:16] ======================================================================
+[11:57:16] KIỂM TRA DÒNG 1557: kiểm tra giả định marketing
+[11:57:16] BẮT ĐẦU DÒNG 1557: kiểm tra giả định marketing
+
+[11:57:16] [DÒNG 1557] Bắt đầu xử lý tạo Word...
+[11:57:17] ❌ Dòng 1557: Lỗi bước Word: (-2146777998, 'OLE error 0x800ac472', None, None)
+
+[11:57:20] ======================================================================
+[11:57:20] KIỂM TRA DÒNG 1558: marketing automation
+[11:57:20] BẮT ĐẦU DÒNG 1558: marketing automation
+
+[11:57:20] [DÒNG 1558] Bắt đầu xử lý tạo Word...
+[11:57:20] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:57:28] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:57:51] -> Nội dung assistant đã ổn định 3s (1713 từ).
+[11:57:51] -> Số từ ước tính bài viết: 1713
+[11:57:51] -> Đang lưu Word giữ định dạng...
+[11:58:05] -> Dòng 1558: Đã lưu Word OK từ URL mới.
+
+[11:58:06] [DÒNG 1558] Bắt đầu xin Brief ảnh...
+[11:58:09] ❌ Dòng 1558: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:58:12] ======================================================================
+[11:58:12] KIỂM TRA DÒNG 1559: cách marketing automation hoạt động
+[11:58:12] BẮT ĐẦU DÒNG 1559: cách marketing automation hoạt động
+
+[11:58:12] [DÒNG 1559] Bắt đầu xử lý tạo Word...
+[11:58:12] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:58:19] ❌ Dòng 1559: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:58:22] ======================================================================
+[11:58:22] KIỂM TRA DÒNG 1560: vai trò marketing automation
+[11:58:22] BẮT ĐẦU DÒNG 1560: vai trò marketing automation
+
+[11:58:22] [DÒNG 1560] Bắt đầu xử lý tạo Word...
+[11:58:22] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:58:29] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:58:50] -> Nội dung assistant đã ổn định 3s (1688 từ).
+[11:58:50] -> Số từ ước tính bài viết: 1688
+[11:58:50] -> Đang lưu Word giữ định dạng...
+[11:59:02] -> Dòng 1560: Đã lưu Word OK từ URL mới.
+
+[11:59:03] [DÒNG 1560] Bắt đầu xin Brief ảnh...
+[11:59:06] ❌ Dòng 1560: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:59:09] ======================================================================
+[11:59:09] KIỂM TRA DÒNG 1561: marketing automation và email automation
+[11:59:09] BẮT ĐẦU DÒNG 1561: marketing automation và email automation
+
+[11:59:09] [DÒNG 1561] Bắt đầu xử lý tạo Word...
+[11:59:09] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:59:17] ❌ Dòng 1561: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:59:19] ======================================================================
+[11:59:19] KIỂM TRA DÒNG 1562: quy trình marketing automation
+[11:59:19] BẮT ĐẦU DÒNG 1562: quy trình marketing automation
+
+[11:59:19] [DÒNG 1562] Bắt đầu xử lý tạo Word...
+[11:59:19] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:59:27] ❌ Dòng 1562: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:59:29] ======================================================================
+[11:59:29] KIỂM TRA DÒNG 1563: triển khai marketing automation
+[11:59:29] BẮT ĐẦU DÒNG 1563: triển khai marketing automation
+
+[11:59:29] [DÒNG 1563] Bắt đầu xử lý tạo Word...
+[11:59:29] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[11:59:36] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[11:59:52] -> Nội dung assistant đã ổn định 3s (166 từ).
+[11:59:52] -> Số từ ước tính bài viết: 167
+[11:59:52] -> Bài dưới 700 từ. Gửi prompt kéo dài bài.
+[11:59:55] ❌ Dòng 1563: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[11:59:57] ======================================================================
+[11:59:57] KIỂM TRA DÒNG 1564: thành phần marketing automation
+[11:59:57] BẮT ĐẦU DÒNG 1564: thành phần marketing automation
+
+[11:59:57] [DÒNG 1564] Bắt đầu xử lý tạo Word...
+[11:59:57] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:00:05] ❌ Dòng 1564: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:00:08] ======================================================================
+[12:00:08] KIỂM TRA DÒNG 1565: workflow automation
+[12:00:08] BẮT ĐẦU DÒNG 1565: workflow automation
+
+[12:00:08] [DÒNG 1565] Bắt đầu xử lý tạo Word...
+[12:00:08] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:00:15] ❌ Dòng 1565: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:00:18] ======================================================================
+[12:00:18] KIỂM TRA DÒNG 1566: lead scoring
+[12:00:18] BẮT ĐẦU DÒNG 1566: lead scoring
+
+[12:00:18] [DÒNG 1566] Bắt đầu xử lý tạo Word...
+[12:00:18] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:00:25] ❌ Dòng 1566: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:00:28] ======================================================================
+[12:00:28] KIỂM TRA DÒNG 1567: lead nurturing automation
+[12:00:28] BẮT ĐẦU DÒNG 1567: lead nurturing automation
+
+[12:00:28] [DÒNG 1567] Bắt đầu xử lý tạo Word...
+[12:00:28] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:00:35] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:01:00] -> Nội dung assistant đã ổn định 3s (1714 từ).
+[12:01:00] -> Số từ ước tính bài viết: 1714
+[12:01:00] -> Đang lưu Word giữ định dạng...
+[12:01:13] -> Dòng 1567: Đã lưu Word OK từ URL mới.
+
+[12:01:14] [DÒNG 1567] Bắt đầu xin Brief ảnh...
+[12:01:17] ❌ Dòng 1567: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:01:20] ======================================================================
+[12:01:20] KIỂM TRA DÒNG 1568: trigger marketing
+[12:01:20] BẮT ĐẦU DÒNG 1568: trigger marketing
+
+[12:01:20] [DÒNG 1568] Bắt đầu xử lý tạo Word...
+[12:01:20] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:01:27] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:01:53] -> Nội dung assistant đã ổn định 3s (1590 từ).
+[12:01:53] -> Số từ ước tính bài viết: 1590
+[12:01:53] -> Đang lưu Word giữ định dạng...
+[12:02:06] -> Dòng 1568: Đã lưu Word OK từ URL mới.
+
+[12:02:07] [DÒNG 1568] Bắt đầu xin Brief ảnh...
+[12:02:10] ❌ Dòng 1568: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:02:12] ======================================================================
+[12:02:12] KIỂM TRA DÒNG 1569: customer journey automation
+[12:02:13] BẮT ĐẦU DÒNG 1569: customer journey automation
+
+[12:02:13] [DÒNG 1569] Bắt đầu xử lý tạo Word...
+[12:02:13] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:02:21] ❌ Dòng 1569: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:02:23] ======================================================================
+[12:02:23] KIỂM TRA DÒNG 1570: kịch bản marketing automation
+[12:02:23] BẮT ĐẦU DÒNG 1570: kịch bản marketing automation
+
+[12:02:23] [DÒNG 1570] Bắt đầu xử lý tạo Word...
+[12:02:23] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:02:31] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:02:57] -> Nội dung assistant đã ổn định 3s (2027 từ).
+[12:02:57] -> Số từ ước tính bài viết: 2027
+[12:02:57] -> Đang lưu Word giữ định dạng...
+[12:03:13] -> Dòng 1570: Đã lưu Word OK từ URL mới.
+
+[12:03:14] [DÒNG 1570] Bắt đầu xin Brief ảnh...
+[12:03:16] ❌ Dòng 1570: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:03:19] ======================================================================
+[12:03:19] KIỂM TRA DÒNG 1571: công cụ marketing automation
+[12:03:19] BẮT ĐẦU DÒNG 1571: công cụ marketing automation
+
+[12:03:19] [DÒNG 1571] Bắt đầu xử lý tạo Word...
+[12:03:19] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:03:28] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:03:54] -> Nội dung assistant đã ổn định 3s (1684 từ).
+[12:03:54] -> Số từ ước tính bài viết: 1684
+[12:03:54] -> Đang lưu Word giữ định dạng...
+[12:04:08] -> Dòng 1571: Đã lưu Word OK từ URL mới.
+
+[12:04:08] [DÒNG 1571] Bắt đầu xin Brief ảnh...
+[12:04:11] ❌ Dòng 1571: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:04:14] ======================================================================
+[12:04:14] KIỂM TRA DÒNG 1572: marketing automation và CRM
+[12:04:14] BẮT ĐẦU DÒNG 1572: marketing automation và CRM
+
+[12:04:14] [DÒNG 1572] Bắt đầu xử lý tạo Word...
+[12:04:14] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:04:23] ❌ Dòng 1572: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:04:25] ======================================================================
+[12:04:25] KIỂM TRA DÒNG 1573: đo lường marketing automation
+[12:04:25] BẮT ĐẦU DÒNG 1573: đo lường marketing automation
+
+[12:04:25] [DÒNG 1573] Bắt đầu xử lý tạo Word...
+[12:04:25] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:04:33] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:05:00] -> Nội dung assistant đã ổn định 3s (1735 từ).
+[12:05:00] -> Số từ ước tính bài viết: 1735
+[12:05:00] -> Đang lưu Word giữ định dạng...
+[12:05:16] -> Dòng 1573: Đã lưu Word OK từ URL mới.
+
+[12:05:16] [DÒNG 1573] Bắt đầu xin Brief ảnh...
+[12:05:19] ❌ Dòng 1573: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:05:22] ======================================================================
+[12:05:22] KIỂM TRA DÒNG 1574: KPI marketing automation
+[12:05:22] BẮT ĐẦU DÒNG 1574: KPI marketing automation
+
+[12:05:22] [DÒNG 1574] Bắt đầu xử lý tạo Word...
+[12:05:22] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:05:30] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:05:56] -> Nội dung assistant đã ổn định 3s (2011 từ).
+[12:05:56] -> Số từ ước tính bài viết: 2022
+[12:05:56] -> Đang lưu Word giữ định dạng...
+[12:06:12] -> Dòng 1574: Đã lưu Word OK từ URL mới.
+
+[12:06:12] [DÒNG 1574] Bắt đầu xin Brief ảnh...
+[12:06:15] ❌ Dòng 1574: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:06:18] ======================================================================
+[12:06:18] KIỂM TRA DÒNG 1575: sai lầm marketing automation
+[12:06:18] BẮT ĐẦU DÒNG 1575: sai lầm marketing automation
+
+[12:06:18] [DÒNG 1575] Bắt đầu xử lý tạo Word...
+[12:06:18] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:06:27] ❌ Dòng 1575: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:06:29] ======================================================================
+[12:06:29] KIỂM TRA DÒNG 1576: AI trong marketing automation
+[12:06:29] BẮT ĐẦU DÒNG 1576: AI trong marketing automation
+
+[12:06:29] [DÒNG 1576] Bắt đầu xử lý tạo Word...
+[12:06:29] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:06:37] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:06:59] -> Nội dung assistant đã ổn định 3s (1649 từ).
+[12:06:59] -> Số từ ước tính bài viết: 1649
+[12:06:59] -> Đang lưu Word giữ định dạng...
+[12:07:10] -> Dòng 1576: Đã lưu Word OK từ URL mới.
+
+[12:07:11] [DÒNG 1576] Bắt đầu xin Brief ảnh...
+[12:07:14] ❌ Dòng 1576: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:07:17] ======================================================================
+[12:07:17] KIỂM TRA DÒNG 1577: xu hướng marketing automation
+[12:07:17] BẮT ĐẦU DÒNG 1577: xu hướng marketing automation
+
+[12:07:17] [DÒNG 1577] Bắt đầu xử lý tạo Word...
+[12:07:17] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:07:25] ❌ Dòng 1577: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:07:28] ======================================================================
+[12:07:28] KIỂM TRA DÒNG 1578: AI marketing
+[12:07:28] BẮT ĐẦU DÒNG 1578: AI marketing
+
+[12:07:28] [DÒNG 1578] Bắt đầu xử lý tạo Word...
+[12:07:28] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:07:35] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:07:59] -> Nội dung assistant đã ổn định 3s (1644 từ).
+[12:07:59] -> Số từ ước tính bài viết: 1644
+[12:07:59] -> Đang lưu Word giữ định dạng...
+[12:08:11] -> Dòng 1578: Đã lưu Word OK từ URL mới.
+
+[12:08:12] [DÒNG 1578] Bắt đầu xin Brief ảnh...
+[12:08:15] ❌ Dòng 1578: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:08:18] ======================================================================
+[12:08:18] KIỂM TRA DÒNG 1579: cách AI marketing hoạt động
+[12:08:18] BẮT ĐẦU DÒNG 1579: cách AI marketing hoạt động
+
+[12:08:18] [DÒNG 1579] Bắt đầu xử lý tạo Word...
+[12:08:18] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:08:26] ❌ Dòng 1579: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:08:29] ======================================================================
+[12:08:29] KIỂM TRA DÒNG 1580: AI trong marketing
+[12:08:29] BẮT ĐẦU DÒNG 1580: AI trong marketing
+
+[12:08:29] [DÒNG 1580] Bắt đầu xử lý tạo Word...
+[12:08:29] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:08:36] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:08:58] -> Nội dung assistant đã ổn định 3s (1158 từ).
+[12:08:58] -> Số từ ước tính bài viết: 1158
+[12:08:58] -> Đang lưu Word giữ định dạng...
+[12:09:09] -> Dòng 1580: Đã lưu Word OK từ URL mới.
+
+[12:09:09] [DÒNG 1580] Bắt đầu xin Brief ảnh...
+[12:09:12] ❌ Dòng 1580: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+[12:09:15] [BÀI NGẮN] Dòng 1580: 1158 từ. Chuỗi hiện tại: 1/2.
+
+[12:09:15] ======================================================================
+[12:09:15] KIỂM TRA DÒNG 1581: AI marketing và marketing automation
+[12:09:15] BẮT ĐẦU DÒNG 1581: AI marketing và marketing automation
+
+[12:09:15] [DÒNG 1581] Bắt đầu xử lý tạo Word...
+[12:09:15] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:09:24] ❌ Dòng 1581: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:09:26] ======================================================================
+[12:09:26] KIỂM TRA DÒNG 1582: ứng dụng AI marketing
+[12:09:26] BẮT ĐẦU DÒNG 1582: ứng dụng AI marketing
+
+[12:09:26] [DÒNG 1582] Bắt đầu xử lý tạo Word...
+[12:09:26] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:09:36] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:10:00] -> Nội dung assistant đã ổn định 3s (1647 từ).
+[12:10:00] -> Số từ ước tính bài viết: 1647
+[12:10:00] -> Đang lưu Word giữ định dạng...
+[12:10:12] -> Dòng 1582: Đã lưu Word OK từ URL mới.
+
+[12:10:13] [DÒNG 1582] Bắt đầu xin Brief ảnh...
+[12:10:16] ❌ Dòng 1582: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+[12:10:18] [ĐẠT] Dòng 1582: 1647 từ. Đặt lại bộ đếm bài ngắn.
+
+[12:10:19] ======================================================================
+[12:10:19] KIỂM TRA DÒNG 1583: triển khai AI marketing
+[12:10:19] BẮT ĐẦU DÒNG 1583: triển khai AI marketing
+
+[12:10:19] [DÒNG 1583] Bắt đầu xử lý tạo Word...
+[12:10:19] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:10:27] ❌ Dòng 1583: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:10:30] ======================================================================
+[12:10:30] KIỂM TRA DÒNG 1584: AI nghiên cứu khách hàng
+[12:10:30] BẮT ĐẦU DÒNG 1584: AI nghiên cứu khách hàng
+
+[12:10:30] [DÒNG 1584] Bắt đầu xử lý tạo Word...
+[12:10:30] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:10:37] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:11:01] -> Nội dung assistant đã ổn định 3s (1559 từ).
+[12:11:01] -> Số từ ước tính bài viết: 1559
+[12:11:01] -> Đang lưu Word giữ định dạng...
+[12:11:13] -> Dòng 1584: Đã lưu Word OK từ URL mới.
+
+[12:11:14] [DÒNG 1584] Bắt đầu xin Brief ảnh...
+[12:11:17] ❌ Dòng 1584: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:11:20] ======================================================================
+[12:11:20] KIỂM TRA DÒNG 1585: AI nghiên cứu thị trường
+[12:11:20] BẮT ĐẦU DÒNG 1585: AI nghiên cứu thị trường
+
+[12:11:20] [DÒNG 1585] Bắt đầu xử lý tạo Word...
+[12:11:20] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:11:28] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:11:53] -> Nội dung assistant đã ổn định 3s (1636 từ).
+[12:11:53] -> Số từ ước tính bài viết: 1636
+[12:11:53] -> Đang lưu Word giữ định dạng...
+[12:12:06] -> Dòng 1585: Đã lưu Word OK từ URL mới.
+
+[12:12:07] [DÒNG 1585] Bắt đầu xin Brief ảnh...
+[12:12:09] ❌ Dòng 1585: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:12:12] ======================================================================
+[12:12:12] KIỂM TRA DÒNG 1586: AI phân khúc khách hàng
+[12:12:12] BẮT ĐẦU DÒNG 1586: AI phân khúc khách hàng
+
+[12:12:12] [DÒNG 1586] Bắt đầu xử lý tạo Word...
+[12:12:12] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:12:21] ❌ Dòng 1586: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:12:24] ======================================================================
+[12:12:24] KIỂM TRA DÒNG 1587: AI tạo nội dung marketing
+[12:12:24] BẮT ĐẦU DÒNG 1587: AI tạo nội dung marketing
+
+[12:12:24] [DÒNG 1587] Bắt đầu xử lý tạo Word...
+[12:12:24] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:12:32] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:12:51] -> Nội dung assistant đã ổn định 3s (1593 từ).
+[12:12:51] -> Số từ ước tính bài viết: 1593
+[12:12:51] -> Đang lưu Word giữ định dạng...
+[12:12:52] -> Đã hiện lại Edge Selenium.
+[12:12:54] -> Đã đưa Edge Selenium ra ngoài phạm vi màn hình.
+[12:13:04] -> Dòng 1587: Đã lưu Word OK từ URL mới.
+
+[12:13:05] [DÒNG 1587] Bắt đầu xin Brief ảnh...
+[12:13:09] ❌ Dòng 1587: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:13:12] ======================================================================
+[12:13:12] KIỂM TRA DÒNG 1588: AI trong SEO
+[12:13:12] BẮT ĐẦU DÒNG 1588: AI trong SEO
+
+[12:13:12] [DÒNG 1588] Bắt đầu xử lý tạo Word...
+[12:13:15] ❌ Dòng 1588: Lỗi bước Word: (-2146777998, 'OLE error 0x800ac472', None, None)
+
+[12:13:17] ======================================================================
+[12:13:17] KIỂM TRA DÒNG 1589: AI trong quảng cáo
+[12:13:17] BẮT ĐẦU DÒNG 1589: AI trong quảng cáo
+
+[12:13:17] [DÒNG 1589] Bắt đầu xử lý tạo Word...
+[12:13:18] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:13:26] ⚠️ Không ghi được retry note dòng 1589: (-2146777998, 'OLE error 0x800ac472', None, None)
+[12:13:27] ❌ Dòng 1589: Lỗi bước Word: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:13:30] ======================================================================
+[12:13:30] KIỂM TRA DÒNG 1590: AI trong email marketing
+[12:13:30] BẮT ĐẦU DÒNG 1590: AI trong email marketing
+
+[12:13:30] [DÒNG 1590] Bắt đầu xử lý tạo Word...
+[12:13:30] -> Không dùng được URL H. Bắt đầu tạo mới từ URL F...
+[12:13:37] -> Đã gửi prompt bằng JS vào đúng ô nhập ChatGPT.
+[12:13:59] -> Nội dung assistant đã ổn định 3s (1686 từ).
+[12:13:59] -> Số từ ước tính bài viết: 1686
+[12:13:59] -> Đang lưu Word giữ định dạng...
+[12:14:13] -> Dòng 1590: Đã lưu Word OK từ URL mới.
+
+[12:14:14] [DÒNG 1590] Bắt đầu xin Brief ảnh...
+[12:14:18] ❌ Dòng 1590: Lỗi bước Brief: Ô nhập chưa focus đúng prompt-textarea. Dừng để tránh dán nhầm vào Article Detail/Edit.
+
+[12:14:21] [ĐÃ DỪNG] Hoàn thành dòng 1590, không chạy dòng kế tiếp.
+
+[12:14:21] [DỪNG AN TOÀN] Đã xử lý 63 dòng.
+
+========================================================================
+Kết thúc: 2026-08-01 12:14:24
+Mã thoát: 0
+Thời gian: 2949.74 giây

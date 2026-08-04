@@ -1,0 +1,22 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\04_excel\V1_nhap_du_lieu_ke_hoach.py
+Bắt đầu: 2026-08-03 18:20:26
+========================================================================
+[18:20:27] ========================================================================
+[18:20:27] NHẬP DỮ LIỆU KE_HOACH TỪ FILE EXCEL HOẶC THƯ MỤC
+[18:20:27] ========================================================================
+[18:20:32] Phạm vi: chỉ một file nguồn: vinabrand.vn.xlsx
+[18:20:32] Traceback (most recent call last):
+[18:20:32]   File "D:\CodexProjects\Hotkeyvip\04_excel\V1_nhap_du_lieu_ke_hoach.py", line 854, in <module>
+[18:20:32]     main()
+[18:20:32]   File "D:\CodexProjects\Hotkeyvip\04_excel\V1_nhap_du_lieu_ke_hoach.py", line 639, in main
+[18:20:32]     existing_key_rows = build_existing_key_rows(ws_plan, key_col)
+[18:20:32]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[18:20:32]   File "D:\CodexProjects\Hotkeyvip\04_excel\V1_nhap_du_lieu_ke_hoach.py", line 354, in build_existing_key_rows
+[18:20:32]     raise RuntimeError(
+[18:20:32] RuntimeError: KE_HOACH có Title [SEO] bị trùng: Hiểu thất bại thị trường qua ngoại tác, độc quyền và thông tin bất cân xứng, Phân khúc thị trường theo đặc điểm, nhu cầu và hành vi khách hàng, SEO và Google Ads khác nhau về chi phí, tốc độ và tính bền vững, Thuật toán mạng xã hội phân phối nội dung dựa trên mức độ liên quan
+
+========================================================================
+Kết thúc: 2026-08-03 18:20:32
+Mã thoát: 1
+Thời gian: 5.83 giây

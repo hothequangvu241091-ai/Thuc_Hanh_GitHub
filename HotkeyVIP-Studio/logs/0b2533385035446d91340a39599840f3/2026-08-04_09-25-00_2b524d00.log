@@ -1,0 +1,25 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\03_dang_bai\phu_tro\xuat_url_tu_id_cms.py
+Bắt đầu: 2026-08-04 09:25:00
+========================================================================
+[09:25:01] ✅ Đã nhận diện cột theo tên:
+[09:25:01] - dangbai: Tên miền=5, Danh mục=6, ID CMS=9, URL đã đăng=10
+[09:25:01] - ID_tacgia: Tên miền URL=1, ID=2, Danh mục=3
+[09:25:01] ✅ Đã tạo map cho 367 tên miền/danh mục.
+[09:25:01] ✅ Đã đọc 4 vùng Excel một lần, chỉ kiểm tra dòng 2–2000.
+[09:25:01] ℹ️ Không có dòng mới nào cần lấy URL.
+
+[09:25:01] ========== KẾT QUẢ ==========
+[09:25:01] ✅ Đã xử lý mới: 0 URL
+[09:25:01] ⏭️ Đã bỏ qua vì URL đã có dữ liệu: 548
+[09:25:01] ⏭️ Đã bỏ qua vì không có ID: 1451
+[09:25:01] ⏭️ Dòng trống: 0
+[09:25:01] ⚠️ Thiếu tên miền: 0
+[09:25:01] ⚠️ Thiếu danh mục: 0
+[09:25:01] ⚠️ Không tìm thấy ID danh mục: 0
+[09:25:01] ✅ Đã lưu kết quả vào cột URL của sheet dangbai.
+
+========================================================================
+Kết thúc: 2026-08-04 09:25:01
+Mã thoát: 0
+Thời gian: 1.47 giây

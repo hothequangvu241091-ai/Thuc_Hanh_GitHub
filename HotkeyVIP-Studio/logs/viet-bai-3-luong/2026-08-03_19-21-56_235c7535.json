@@ -1,0 +1,11 @@
+{
+  "state": "stopped",
+  "target": "D:\\CodexProjects\\Hotkeyvip\\02_viet_bai\\V2.14_CODEX_daluong_word_queue_anh_khong_ghi_de.py",
+  "log": "D:\\CodexProjects\\HotkeyVIP-Studio\\logs\\viet-bai-3-luong\\2026-08-03_19-21-56_235c7535.log",
+  "startedAt": 1785759716.9624102,
+  "endedAt": 1785857796.628725,
+  "duration": 98079.67,
+  "exitCode": null,
+  "truncated": false,
+  "error": "Người dùng dừng từ Studio"
+}
