@@ -1,0 +1,21 @@
+HOTKEYVIP STUDIO - NHẬT KÝ CHẠY PYTHON
+File: D:\CodexProjects\Hotkeyvip\04_excel\02_chuan_bi_DANG_BAI_tu_KE_HOACH_va_VIET_BAI.py
+Bắt đầu: 2026-08-05 08:33:41
+========================================================================
+[08:33:41] ======================================================================
+[08:33:41] CHUẨN BỊ DỮ LIỆU ĐĂNG BÀI THEO TIÊU ĐỀ SEO
+[08:33:41] ======================================================================
+[08:33:41] Traceback (most recent call last):
+[08:33:41]   File "D:\CodexProjects\Hotkeyvip\04_excel\02_chuan_bi_DANG_BAI_tu_KE_HOACH_va_VIET_BAI.py", line 523, in <module>
+[08:33:41]     main()
+[08:33:41]   File "D:\CodexProjects\Hotkeyvip\04_excel\02_chuan_bi_DANG_BAI_tu_KE_HOACH_va_VIET_BAI.py", line 328, in main
+[08:33:41]     plan_lookup = build_unique_lookup(
+[08:33:41]                   ^^^^^^^^^^^^^^^^^^^^
+[08:33:41]   File "D:\CodexProjects\Hotkeyvip\04_excel\02_chuan_bi_DANG_BAI_tu_KE_HOACH_va_VIET_BAI.py", line 248, in build_unique_lookup
+[08:33:41]     raise RuntimeError(f"{label} có Tiêu đề SEO bị trùng: {preview}")
+[08:33:41] RuntimeError: KE_HOACH có Tiêu đề SEO bị trùng: Phân khúc thị trường theo đặc điểm, nhu cầu và hành vi khách hàng, SEO và Google Ads khác nhau về chi phí, tốc độ và tính bền vững, Các bước trong quy trình khởi nghiệp và mục tiêu từng giai đoạn, Mô hình kinh doanh B2C kết nối doanh nghiệp với người tiêu dùng, Đa dạng hóa kinh doanh giúp mở rộng nguồn thu và phân tán rủi ro, Phân loại đổi mới sáng tạo theo sản phẩm, quy trình và mô hình, Lãnh đạo đổi mới sáng tạo định hướng, trao quyền và phân bổ nguồn lực, Branding giúp doanh nghiệp tạo khác biệt, niềm tin và giá trị dài hạn, Branding và Marketing khác nhau về mục tiêu, phạm vi và thời gian, Nền tảng số và chuyển đổi số kết nối dữ liệu, quy trình và hệ sinh thái
+
+========================================================================
+Kết thúc: 2026-08-05 08:33:41
+Mã thoát: 1
+Thời gian: 0.80 giây
