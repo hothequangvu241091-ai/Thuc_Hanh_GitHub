@@ -1,0 +1,4 @@
+error_outline
+Đã vượt hạn ngạch
+Rất tiếc--chúng tôi không thể xử lý yêu cầu này vì bạn đã vượt quá hạn ngạch hàng ngày của mình. Hãy thử gửi lại yêu cầu vào ngày mai.
+Loại bỏ

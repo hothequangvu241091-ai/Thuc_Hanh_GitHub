@@ -1,0 +1,411 @@
+{
+    "version":  3,
+    "profilesRoot":  "D:\\CodexProjects\\Hotkeyvip\\06_du_lieu_chay\\submit_edge_profiles",
+    "profiles":  [
+                     {
+                         "id":  "submit_01",
+                         "email":  "tiepthisaigon.com.vn@gmail.com",
+                         "domains":  [
+                                         "bantinkhoahoc.com",
+                                         "khoahockythuat.com",
+                                         "khoahocvacongnghe.com",
+                                         "khoahocvadoisong.com"
+                                     ]
+                     },
+                     {
+                         "id":  "submit_02",
+                         "email":  "kimnhung1080@gmail.com",
+                         "domains":  [
+                                         "lamdepvasuckhoe.com",
+                                         "suckhoevagiadinh.com",
+                                         "suckhoevamoitruong.com",
+                                         "tapchikhoedep.com",
+                                         "thegioihinhanh.com"
+                                     ]
+                     },
+                     {
+                         "id":  "submit_03",
+                         "email":  "giavan1080@gmail.com",
+                         "domains":  [
+                                         "bantindoanhnhan.com",
+                                         "bantinkinhdoanh.com",
+                                         "baogiadinhxahoi.com",
+                                         "baokinhtethitruong.com",
+                                         "doanhthuong.net",
+                                         "gioinghesy.com",
+                                         "hoikhoahoc.com",
+                                         "sangtaovui.com",
+                                         "tapchidangdep.com",
+                                         "tapchidulichvietnam.com"
+                                     ]
+                     },
+                     {
+                         "id":  "submit_04",
+                         "email":  "myphammisa@gmail.com",
+                         "domains":  [
+                                         "giadinhvaxahoi.com",
+                                         "nongthonngaynay.com",
+                                         "phapluatvacuocsong.com",
+                                         "tuvangiadinh.net",
+                                         "vanhoavadulich.com"
+                                     ]
+                     },
+                     {
+                         "id":  "submit_05",
+                         "email":  "systemga4@gmail.com",
+                         "domains":  [
+                                         "cachnaumonngon.com",
+                                         "lamvan.net",
+                                         "mangphongthuy.com",
+                                         "sinhlydanong.com",
+                                         "tapchixedep.com"
+                                     ]
+                     },
+                     {
+                         "id":  "submit_06",
+                         "email":  "hoathanhxuan.ads@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_07",
+                         "email":  "seomasterclub@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_08",
+                         "email":  "thuyha.mark@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_09",
+                         "email":  "deponlinevietnam@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_10",
+                         "email":  "phucdinh1088@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_11",
+                         "email":  "hoangdungeditor@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_12",
+                         "email":  "anthien100180@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_13",
+                         "email":  "edunet.com.vn@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     },
+                     {
+                         "id":  "submit_14",
+                         "email":  "vuhtq24101991@gmail.com",
+                         "domains":  [
+
+                                     ]
+                     }
+                 ],
+    "pendingAccountGroups":  [
+                                 {
+                                     "group":  "nhom_01",
+                                     "emails":  [
+                                                    "tiepthisaigon.com.vn@gmail.com",
+                                                    "seomasterclub@gmail.com"
+                                                ],
+                                     "domains":  [
+                                                     "baothuonggia.com",
+                                                     "doanhnhanduongthoi.com",
+                                                     "kythuatmarketing.com",
+                                                     "tiepthisaigon.com.vn",
+                                                     "vinabrand.vn"
+                                                 ]
+                                 },
+                                 {
+                                     "group":  "nhom_02",
+                                     "emails":  [
+                                                    "kimnhung1080@gmail.com",
+                                                    "thuyha.mark@gmail.com"
+                                                ],
+                                     "domains":  [
+                                                     "congdongkinhdoanh.com",
+                                                     "kinhtephattrien.com",
+                                                     "taichinhvakinhdoanh.com",
+                                                     "thoibaokinhtesaigon.com",
+                                                     "xuctiendoanhnghiep.com"
+                                                 ]
+                                 },
+                                 {
+                                     "group":  "nhom_03",
+                                     "emails":  [
+                                                    "giavan1080@gmail.com",
+                                                    "phucdinh1088@gmail.com"
+                                                ],
+                                     "domains":  [
+                                                     "giadinhvaxahoi.com",
+                                                     "nongthonngaynay.com",
+                                                     "phapluatvacuocsong.com",
+                                                     "tuvangiadinh.net",
+                                                     "vanhoavadulich.com"
+                                                 ]
+                                 },
+                                 {
+                                     "group":  "nhom_04",
+                                     "emails":  [
+                                                    "hoangdungeditor@gmail.com",
+                                                    "anthien100180@gmail.com"
+                                                ],
+                                     "domains":  [
+                                                     "bantinkhoahoc.com",
+                                                     "khoahockythuat.com",
+                                                     "khoahocvacongnghe.com",
+                                                     "khoahocvadoisong.com",
+                                                     "vanhoavagiaoduc.com"
+                                                 ]
+                                 },
+                                 {
+                                     "group":  "nhom_05",
+                                     "emails":  [
+                                                    "myphammisa@gmail.com",
+                                                    "deponlinevietnam@gmail.com"
+                                                ],
+                                     "domains":  [
+                                                     "lamdepvasuckhoe.com",
+                                                     "suckhoevagiadinh.com",
+                                                     "suckhoevamoitruong.com",
+                                                     "tapchikhoedep.com",
+                                                     "thegioihinhanh.com"
+                                                 ]
+                                 },
+                                 {
+                                     "group":  "nhom_06",
+                                     "emails":  [
+                                                    "systemga4@gmail.com",
+                                                    "edunet.com.vn@gmail.com"
+                                                ],
+                                     "domains":  [
+                                                     "bantindoanhnhan.com",
+                                                     "doanhthuong.net",
+                                                     "bantinkinhdoanh.com",
+                                                     "baokinhtethitruong.com",
+                                                     "baogiadinhxahoi.com",
+                                                     "tapchidulichvietnam.com",
+                                                     "hoikhoahoc.com",
+                                                     "sangtaovui.com",
+                                                     "tapchidangdep.com",
+                                                     "gioinghesy.com"
+                                                 ]
+                                 },
+                                 {
+                                     "group":  "nhom_07",
+                                     "emails":  [
+                                                    "hoathanhxuan.ads@gmail.com",
+                                                    "famimaxvietnam@gmail.com"
+                                                ],
+                                     "domains":  [
+                                                     "cachnaumonngon.com",
+                                                     "lamvan.net",
+                                                     "mangphongthuy.com",
+                                                     "sinhlydanong.com",
+                                                     "tapchixedep.com"
+                                                 ]
+                                 }
+                             ],
+    "accounts":  [
+                     {
+                         "email":  "anthien100180@gmail.com",
+                         "domains":  [
+                                         "bantinkhoahoc.com",
+                                         "khoahockythuat.com",
+                                         "khoahocvacongnghe.com",
+                                         "khoahocvadoisong.com",
+                                         "vanhoavagiaoduc.com"
+                                     ]
+                     },
+                     {
+                         "email":  "deponlinevietnam@gmail.com",
+                         "domains":  [
+                                         "lamdepvasuckhoe.com",
+                                         "suckhoevagiadinh.com",
+                                         "suckhoevamoitruong.com",
+                                         "tapchikhoedep.com",
+                                         "thegioihinhanh.com"
+                                     ]
+                     },
+                     {
+                         "email":  "edunet.com.vn@gmail.com",
+                         "domains":  [
+                                         "bantindoanhnhan.com",
+                                         "doanhthuong.net",
+                                         "bantinkinhdoanh.com",
+                                         "baokinhtethitruong.com",
+                                         "baogiadinhxahoi.com",
+                                         "tapchidulichvietnam.com",
+                                         "hoikhoahoc.com",
+                                         "sangtaovui.com",
+                                         "tapchidangdep.com",
+                                         "gioinghesy.com"
+                                     ]
+                     },
+                     {
+                         "email":  "famimaxvietnam@gmail.com",
+                         "domains":  [
+                                         "cachnaumonngon.com",
+                                         "lamvan.net",
+                                         "mangphongthuy.com",
+                                         "sinhlydanong.com",
+                                         "tapchixedep.com"
+                                     ]
+                     },
+                     {
+                         "email":  "giavan1080@gmail.com",
+                         "domains":  [
+                                         "giadinhvaxahoi.com",
+                                         "nongthonngaynay.com",
+                                         "phapluatvacuocsong.com",
+                                         "tuvangiadinh.net",
+                                         "vanhoavadulich.com"
+                                     ]
+                     },
+                     {
+                         "email":  "hoangdungeditor@gmail.com",
+                         "domains":  [
+                                         "bantinkhoahoc.com",
+                                         "khoahockythuat.com",
+                                         "khoahocvacongnghe.com",
+                                         "khoahocvadoisong.com",
+                                         "vanhoavagiaoduc.com"
+                                     ]
+                     },
+                     {
+                         "email":  "hoathanhxuan.ads@gmail.com",
+                         "domains":  [
+                                         "cachnaumonngon.com",
+                                         "lamvan.net",
+                                         "mangphongthuy.com",
+                                         "sinhlydanong.com",
+                                         "tapchixedep.com"
+                                     ]
+                     },
+                     {
+                         "email":  "kimnhung1080@gmail.com",
+                         "domains":  [
+                                         "congdongkinhdoanh.com",
+                                         "kinhtephattrien.com",
+                                         "taichinhvakinhdoanh.com",
+                                         "thoibaokinhtesaigon.com",
+                                         "xuctiendoanhnghiep.com"
+                                     ]
+                     },
+                     {
+                         "email":  "myphammisa@gmail.com",
+                         "domains":  [
+                                         "lamdepvasuckhoe.com",
+                                         "suckhoevagiadinh.com",
+                                         "suckhoevamoitruong.com",
+                                         "tapchikhoedep.com",
+                                         "thegioihinhanh.com"
+                                     ]
+                     },
+                     {
+                         "email":  "phucdinh1088@gmail.com",
+                         "domains":  [
+                                         "giadinhvaxahoi.com",
+                                         "nongthonngaynay.com",
+                                         "phapluatvacuocsong.com",
+                                         "tuvangiadinh.net",
+                                         "vanhoavadulich.com"
+                                     ]
+                     },
+                     {
+                         "email":  "seomasterclub@gmail.com",
+                         "domains":  [
+                                         "baothuonggia.com",
+                                         "doanhnhanduongthoi.com",
+                                         "kythuatmarketing.com",
+                                         "tiepthisaigon.com.vn",
+                                         "vinabrand.vn"
+                                     ]
+                     },
+                     {
+                         "email":  "systemga4@gmail.com",
+                         "domains":  [
+                                         "bantindoanhnhan.com",
+                                         "doanhthuong.net",
+                                         "bantinkinhdoanh.com",
+                                         "baokinhtethitruong.com",
+                                         "baogiadinhxahoi.com",
+                                         "tapchidulichvietnam.com",
+                                         "hoikhoahoc.com",
+                                         "sangtaovui.com",
+                                         "tapchidangdep.com",
+                                         "gioinghesy.com"
+                                     ]
+                     },
+                     {
+                         "email":  "thuyha.mark@gmail.com",
+                         "domains":  [
+                                         "congdongkinhdoanh.com",
+                                         "kinhtephattrien.com",
+                                         "taichinhvakinhdoanh.com",
+                                         "thoibaokinhtesaigon.com",
+                                         "xuctiendoanhnghiep.com"
+                                     ]
+                     },
+                     {
+                         "email":  "tiepthisaigon.com.vn@gmail.com",
+                         "domains":  [
+                                         "baothuonggia.com",
+                                         "doanhnhanduongthoi.com",
+                                         "kythuatmarketing.com",
+                                         "tiepthisaigon.com.vn",
+                                         "vinabrand.vn"
+                                     ]
+                     },
+                     {
+                         "email":  "vuhtq24101991@gmail.com",
+                         "domains":  [
+                                         "cafedaklak.vn",
+                                         "datvang24h.com",
+                                         "g-sora.vn",
+                                         "hocnauanngon.com",
+                                         "hoikhoahoc.com",
+                                         "hoimarketing.com",
+                                         "lamvan.net",
+                                         "linki.vn",
+                                         "manglamgiau.com",
+                                         "nakofan.com",
+                                         "sgplastic.com.vn",
+                                         "sumikura.com.vn",
+                                         "tapchixedep.com",
+                                         "thanhbinh.com.vn",
+                                         "tiasangmoi.vn",
+                                         "tinnhanh12h.com",
+                                         "tuivaihanoi.com",
+                                         "vantaiduongbien.com.vn",
+                                         "vietnamrobotics.vn",
+                                         "vxanh.com",
+                                         "yensaothuanviet.com"
+                                     ]
+                     }
+                 ]
+}

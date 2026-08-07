@@ -1,0 +1,4 @@
+error_outline
+Rất tiếc! Đã xảy ra sự cố
+Chúng tôi gặp sự cố khi gửi yêu cầu lập chỉ mục của bạn. Vui lòng thử lại sau.
+Loại bỏ
