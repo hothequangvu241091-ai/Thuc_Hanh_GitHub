@@ -118,6 +118,7 @@ from html.parser import HTMLParser
 import xlwings as xw
 from PIL import Image
 from docx import Document
+from logo_cleanup import prepare_logo_cleanup, remove_logo_from_file
 
 from selenium import webdriver
 from selenium.webdriver.edge.options import Options
@@ -270,6 +271,8 @@ STATUS_SENT_IMG1 = "Đã gửi Gemini ảnh 1"
 STATUS_SAVED_IMG1 = "Đã lưu ảnh 1 Gemini"
 STATUS_SENT_IMG2 = "Đã gửi Gemini ảnh 2"
 STATUS_SAVED_IMG2 = "Đã lưu ảnh 2 Gemini"
+STATUS_SAVED_IMG1_LOGO_PENDING = "Đã lưu ảnh 1 Gemini — CHƯA XÓA LOGO"
+STATUS_SAVED_IMG2_LOGO_PENDING = "Đã lưu ảnh 2 Gemini — CHƯA XÓA LOGO"
 
 MIN_WORDS = 700
 
@@ -2407,6 +2410,13 @@ def resize_image_max_800(image_path, max_size=MAX_IMAGE_SIZE):
         return image_path
 
 
+def postprocess_gemini_image(image_path):
+    """Xóa logo trước khi resize; lỗi AI chỉ ghi cảnh báo và không dừng Flow 3."""
+    cleanup = remove_logo_from_file(image_path)
+    resize_image_max_800(image_path)
+    return cleanup
+
+
 def move_downloaded_image(downloaded_path, final_path):
     ext = os.path.splitext(downloaded_path)[1].lower()
     if ext not in [".png", ".jpg", ".jpeg", ".webp"]:
@@ -2415,7 +2425,7 @@ def move_downloaded_image(downloaded_path, final_path):
     if os.path.exists(final_path):
         os.remove(final_path)
     shutil.move(downloaded_path, final_path)
-    resize_image_max_800(final_path)
+    postprocess_gemini_image(final_path)
     return final_path
 
 
@@ -2506,9 +2516,11 @@ def save_image_directly_from_element(driver, img_element, final_path):
             pass
         raise
 
-    resize_image_max_800(final_path)
+    cleanup = postprocess_gemini_image(final_path)
+    if not cleanup.success:
+        print(f"⚠️ Ảnh đã lưu nhưng chưa xóa logo: {cleanup.error}")
     print("-> Đã lưu ảnh trực tiếp từ blob Gemini, không cần mở viewer.")
-    return final_path
+    return final_path, cleanup
 
 
 def send_prompt_to_gemini(driver, wait, text_to_send):
@@ -3172,10 +3184,14 @@ def images_if_needed(driver, wait, task):
         prompt1 = build_gemini_prompt(task["brief1"])
         write_value(row, COL_STATUS_IMG1, STATUS_SENT_IMG1, save=False)
         save_path1 = get_unique_image_path(output_folder, f"{task['name']} 1")
-        final_path1 = generate_and_download_image(driver, wait, prompt1, save_path1, row=row, step="IMG1")
+        final_path1, cleanup1 = generate_and_download_image(driver, wait, prompt1, save_path1, row=row, step="IMG1")
         wb, sh = get_sheet()
         sh.range(f"{COL_PATH_IMG1}{row}").value = final_path1
-        sh.range(f"{COL_STATUS_IMG1}{row}").value = STATUS_SAVED_IMG1
+        sh.range(f"{COL_STATUS_IMG1}{row}").value = (
+            STATUS_SAVED_IMG1 if cleanup1.success else STATUS_SAVED_IMG1_LOGO_PENDING
+        )
+        if not cleanup1.success:
+            write_retry_note(row, 0, "LOGO_IMG1", "LOGO_REMOVE_FAILED", cleanup1.error)
         sh.range(f"{COL_GEMINI_URL_IMG1}{row}").value = driver.current_url
         wb.save()
         task = read_task(row)
@@ -3190,10 +3206,14 @@ def images_if_needed(driver, wait, task):
         prompt2 = build_gemini_prompt(task["brief2"])
         write_value(row, COL_STATUS_IMG2, STATUS_SENT_IMG2, save=False)
         save_path2 = get_unique_image_path(output_folder, f"{task['name']} 2")
-        final_path2 = generate_and_download_image(driver, wait, prompt2, save_path2, row=row, step="IMG2")
+        final_path2, cleanup2 = generate_and_download_image(driver, wait, prompt2, save_path2, row=row, step="IMG2")
         wb, sh = get_sheet()
         sh.range(f"{COL_PATH_IMG2}{row}").value = final_path2
-        sh.range(f"{COL_STATUS_IMG2}{row}").value = STATUS_SAVED_IMG2
+        sh.range(f"{COL_STATUS_IMG2}{row}").value = (
+            STATUS_SAVED_IMG2 if cleanup2.success else STATUS_SAVED_IMG2_LOGO_PENDING
+        )
+        if not cleanup2.success:
+            write_retry_note(row, 0, "LOGO_IMG2", "LOGO_REMOVE_FAILED", cleanup2.error)
         sh.range(f"{COL_GEMINI_URL_IMG2}{row}").value = driver.current_url
         wb.save()
     else:
@@ -4659,6 +4679,12 @@ def main():
     if not SELECTED_WORKER_IDS:
         print("Đã hủy chạy chương trình vì chưa chọn Worker.")
         return
+    cleanup_check = prepare_logo_cleanup()
+    if not cleanup_check.success:
+        print(
+            "⚠️ Flow 3 vẫn chạy bình thường. Ảnh sẽ được lưu/resize 800px, "
+            "nhưng các ảnh chưa xóa được logo sẽ được đánh dấu trong Excel."
+        )
     NUM_WORKERS = len(SELECTED_WORKER_IDS)
     worker_text = ", ".join(map(str, SELECTED_WORKER_IDS))
     print(

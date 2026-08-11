@@ -208,6 +208,16 @@ def close_orphan_hidden_excel() -> None:
         print(f"Đã tự đóng Excel chạy nền bị sót: PID {closed_ids}")
 
 
+def is_running_inside_app() -> bool:
+    """Nhận diện cả hai kiểu app gọi flow: truyền workbook hoặc đặt biến môi trường.
+
+    Flow 8 hiện chạy in-process nên flow_host truyền APP_WORKBOOK trực tiếp nhưng
+    không đặt HOTKEYVIP_APP_RUN. Nếu chỉ kiểm tra biến môi trường, bước dọn Excel
+    ẩn sẽ đóng nhầm chính Excel nguồn do app vừa mở và gây lỗi RPC unavailable.
+    """
+    return APP_WORKBOOK is not None or os.environ.get("HOTKEYVIP_APP_RUN") == "1"
+
+
 def cleanup_old_backups() -> None:
     if not BACKUP_ROOT.is_dir():
         return
@@ -470,7 +480,8 @@ def process_domain(target_excel, site: str, items: list[dict[str, Any]], backup_
 # MAIN
 # ----------------------------------------------------------------------------
 def main() -> int:
-    if os.environ.get("HOTKEYVIP_APP_RUN") != "1":
+    running_inside_app = is_running_inside_app()
+    if not running_inside_app:
         close_orphan_hidden_excel()
 
     source_excel = None
@@ -480,7 +491,7 @@ def main() -> int:
     interactive_locked = False
     try:
         source_excel, source_workbook, owns_source = get_source_workbook()
-        if os.environ.get("HOTKEYVIP_APP_RUN") == "1":
+        if running_inside_app:
             # Workbook do flow_host mở ẩn và quản lý. Tự Save qua COM thay vì
             # yêu cầu người dùng mở Excel chỉ để bấm Save.
             source_workbook.Save()

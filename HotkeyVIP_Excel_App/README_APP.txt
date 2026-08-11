@@ -7,6 +7,7 @@ KHÔNG XÓA HOẶC TÁCH RIÊNG:
 - CHAY_APP.cmd
 - excel_audit_app\
 - app_flows\
+- _runtime\logo_cleanup\big-lama.pt (model AI xóa logo của Flow 3)
 
 CÓ THỂ DI CHUYỂN APP:
 1. Đóng app và chờ mọi flow kết thúc.
@@ -21,3 +22,4 @@ THƯ MỤC PHỤ:
 - _docs: tài liệu.
 - _tests_data và tests: dữ liệu/code kiểm tra.
 - _tools: công cụ độc lập, không phải flow của app.
+- _docs\XOA_LOGO_ANH_GEMINI.md: cách Flow 3 xóa logo ảnh Gemini và các thành phần đi kèm.

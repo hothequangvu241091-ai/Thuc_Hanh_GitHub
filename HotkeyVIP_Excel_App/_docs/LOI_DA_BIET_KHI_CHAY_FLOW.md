@@ -43,3 +43,45 @@ Chỉ coi là lỗi cần sửa nếu hộp thoại lặp lại hoặc làm Word
 ### Từ khóa tra cứu
 
 `11222.docx`, `File In Use`, `locked for editing by Admin`, `Word Worker`, `VBA`, `~$docx`
+
+## Flow 8 báo `The RPC server is unavailable`
+
+### Bối cảnh đã gặp
+
+- Flow: `8. Đồng bộ URL về file công ty` (`08_dong_bo_url.py`).
+- App mở file nguồn trong một Excel ẩn rồi truyền workbook trực tiếp vào flow.
+- Flow báo đã đóng các PID Excel chạy nền, sau đó lỗi COM `-2147023174`.
+
+### Nguyên nhân và bản sửa
+
+Flow 8 trước đây chỉ dựa vào biến môi trường `HOTKEYVIP_APP_RUN` để nhận biết
+đang chạy từ app. Với kiểu chạy in-process, app truyền `APP_WORKBOOK` nhưng
+không đặt biến này, khiến flow đóng nhầm chính Excel nguồn vừa được app mở.
+Đối tượng COM sau đó mất tiến trình Excel phía sau nên Windows báo RPC server
+không còn khả dụng.
+
+Flow 8 hiện coi là chạy trong app khi `APP_WORKBOOK` đã được truyền **hoặc**
+`HOTKEYVIP_APP_RUN=1`. Trong trường hợp đó flow không dọn Excel ẩn và tự lưu
+workbook app đang quản lý.
+
+### Từ khóa tra cứu
+
+`-2147023174`, `The RPC server is unavailable`, `APP_WORKBOOK`,
+`HOTKEYVIP_APP_RUN`, `close_orphan_hidden_excel`
+
+## Flow 1 đứng sau dòng `Workbook đích`
+
+### Nguyên nhân và bản sửa
+
+Flow 1 từng mở hộp chọn chế độ với `excel.Hwnd` làm cửa sổ cha. Khi app quản
+lý workbook bằng một Excel ẩn, hộp thoại cũng bị ẩn nên flow đứng chờ dù người
+dùng không nhìn thấy gì.
+
+Khi `APP_WORKBOOK` được app truyền vào và Excel đang ẩn, Flow 1 hiện tự chọn
+chế độ **MẶC ĐỊNH** và ghi rõ lựa chọn này vào log. Khi chạy thủ công hoặc
+Excel đang hiện, hộp Yes/No/Cancel vẫn xuất hiện như trước.
+
+### Từ khóa tra cứu
+
+`Workbook đích`, `ask_run_mode`, `should_use_default_mode_without_dialog`,
+`Excel đang chạy ẩn trong app`

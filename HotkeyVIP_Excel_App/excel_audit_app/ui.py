@@ -100,6 +100,7 @@ class ExcelAuditApp(tk.Tk):
         self.publish_review: dict[str, Any] = {"errors": [], "posted_today": [], "retry_rows": []}
         self.publish_review_items: dict[str, dict[str, Any]] = {}
         self.publish_id_updates: dict[int, str] = {}
+        self.publish_retry_rows: set[int] = set()
         self.publish_detail_vars: dict[str, tk.StringVar] = {}
         self.publish_selected_item: dict[str, Any] | None = None
 
@@ -727,6 +728,12 @@ class ExcelAuditApp(tk.Tk):
             command=self._stage_publish_id,
             style="Secondary.TButton",
         ).pack(side=LEFT, padx=(6, 0))
+        ttk.Button(
+            id_editor,
+            text="Chuyển sang LỖI KIỂM TRA & chạy lại",
+            command=self._retry_selected_publish_error,
+            style="PublishFlow.TButton",
+        ).pack(side=LEFT, padx=(6, 0))
         fields = [
             ("row", "Dòng Excel"),
             ("status", "Trạng thái"),
@@ -740,7 +747,6 @@ class ExcelAuditApp(tk.Tk):
             ("published_url", "URL đã đăng"),
             ("related", "Bài viết liên quan"),
             ("word_path_resolved", "Đường dẫn Word"),
-            ("gpt_url", "URL GPT gốc"),
             ("chat_url", "URL ChatGPT"),
         ]
         form = ttk.Frame(detail_frame)
@@ -766,13 +772,9 @@ class ExcelAuditApp(tk.Tk):
         url_buttons = ttk.Frame(form)
         url_buttons.grid(row=action_row, column=1, sticky="w", pady=(8, 3))
         ttk.Button(
-            url_buttons, text="Mở GPT gốc", command=lambda: self._open_publish_url("gpt_url"),
-            style="Secondary.TButton",
-        ).pack(side=LEFT)
-        ttk.Button(
             url_buttons, text="Mở ChatGPT", command=lambda: self._open_publish_url("chat_url"),
             style="Secondary.TButton",
-        ).pack(side=LEFT, padx=(6, 0))
+        ).pack(side=LEFT)
 
     def _render_publish_review(self) -> None:
         for tree in (self.publish_error_tree, self.publish_today_tree):
@@ -846,6 +848,48 @@ class ExcelAuditApp(tk.Tk):
         self.publish_id_updates[int(item["row"])] = cms_id
         self._render_publish_review()
         self.status_text.set(f"Đã ghi nhớ ID CMS {cms_id} cho dòng {item['row']}; chưa ghi vào Excel.")
+
+    def _retry_selected_publish_error(self) -> None:
+        if self._busy or self._flow_process is not None:
+            return
+        item = self.publish_selected_item
+        if item is None:
+            messagebox.showinfo("Chưa chọn bài", "Hãy chọn một dòng LỖI ĐĂNG trước.")
+            return
+        if "lỗi đăng" not in str(item.get("status", "")).casefold():
+            messagebox.showinfo(
+                "Không phải LỖI ĐĂNG",
+                "Nút này chỉ dùng để chuyển một dòng LỖI ĐĂNG sang LỖI KIỂM TRA rồi chạy lại.",
+            )
+            return
+        source = Path(self.selected_path.get().strip())
+        if not source.is_file():
+            messagebox.showwarning("Không tìm thấy Excel", "Hãy chọn và Phân tích đúng file Excel trước.")
+            return
+
+        retry_plan = build_retry_publish_plan(self.publish_review)
+        selected_rows = list(retry_plan["selected_rows"])
+        row = int(item["row"])
+        if not any(int(candidate["row"]) == row for candidate in selected_rows):
+            selected_rows.append(
+                {
+                    "row": row,
+                    "domain": item.get("domain", ""),
+                    "category": item.get("category", ""),
+                    "title": item.get("keyword", ""),
+                    "seo_title": item.get("seo_title", ""),
+                    "h1": item.get("h1", ""),
+                }
+            )
+        retry_plan["selected_rows"] = selected_rows
+        retry_plan["selected_total"] = len(selected_rows)
+        if not messagebox.askyesno(
+            "Chuyển và đăng lại bài lỗi",
+            f"Dòng {row} sẽ được chuyển từ LỖI ĐĂNG sang LỖI KIỂM TRA trong Excel, "
+            f"sau đó đăng lại {retry_plan['selected_total']} bài bằng 1 worker.\n\nTiếp tục?",
+        ):
+            return
+        self._launch_publish_id_update(source, [], retry_plan, retry_rows=[row])
 
     def _open_selected_excel(self) -> None:
         if self._busy or self._flow_process is not None:
@@ -935,6 +979,7 @@ class ExcelAuditApp(tk.Tk):
         source: Path,
         updates: list[dict[str, Any]],
         retry_plan: dict[str, Any],
+        retry_rows: list[int] | None = None,
     ) -> None:
         project_root = Path(__file__).resolve().parents[1]
         script_path = project_root / "app_flows" / "09_cap_nhat_id_dang_bai.py"
@@ -945,6 +990,7 @@ class ExcelAuditApp(tk.Tk):
         environment = os.environ.copy()
         environment["PYTHONIOENCODING"] = "utf-8"
         environment["HOTKEYVIP_PUBLISH_ID_UPDATES"] = json.dumps(updates, ensure_ascii=False)
+        environment["HOTKEYVIP_PUBLISH_RETRY_ROWS"] = json.dumps(retry_rows or [])
         try:
             process = subprocess.Popen(
                 command,

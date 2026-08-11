@@ -5,8 +5,8 @@ Phiên bản hiện tại: **1.5.0**.
 ## Theo dõi đăng bài
 
 Sau khi bấm **Phân tích**, tab **Theo dõi đăng bài** hiển thị các dòng lỗi trong `DANG_BAI`
-và các bài đã đăng trong ngày hiện tại. Chọn một dòng để mở Word, mở URL GPT gốc hoặc
-URL ChatGPT. Có thể nhập ID CMS còn thiếu, sau đó bấm **Cập nhật ID & đăng lại LỖI KIỂM TRA**.
+và các bài đã đăng trong ngày hiện tại. Chọn một dòng để mở Word hoặc URL ChatGPT.
+Có thể nhập ID CMS còn thiếu, sau đó bấm **Cập nhật ID & đăng lại LỖI KIỂM TRA**.
 App chỉ đăng lại đúng các dòng `LỖI KIỂM TRA` bằng một worker; các lỗi khác không được đăng lại.
 
 Tài liệu kỹ thuật dành cho bảo trì và phát triển: `TAI_LIEU_KY_THUAT_APP_DOI_SOAT_EXCEL.md`.

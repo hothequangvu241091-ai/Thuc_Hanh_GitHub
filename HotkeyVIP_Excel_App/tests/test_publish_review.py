@@ -52,7 +52,7 @@ class PublishReviewTest(unittest.TestCase):
         self.assertEqual([item["row"] for item in result["errors"]], [2, 4])
         self.assertEqual([item["row"] for item in result["retry_rows"]], [2])
         self.assertEqual([item["row"] for item in result["posted_today"]], [3])
-        self.assertEqual(result["errors"][0]["gpt_url"], "https://gpt.example/a")
+        self.assertEqual(result["errors"][0]["chat_url"], "https://chat.example/a")
         plan = build_retry_publish_plan(result)
         self.assertEqual(plan["mode"], "explicit_error_rows")
         self.assertEqual([item["row"] for item in plan["selected_rows"]], [2])

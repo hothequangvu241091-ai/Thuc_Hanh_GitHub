@@ -28,6 +28,10 @@ def main() -> int:
     updates = json.loads(raw) if raw else []
     if not isinstance(updates, list):
         raise RuntimeError("Danh sách cập nhật ID không hợp lệ.")
+    raw_retry_rows = os.environ.get("HOTKEYVIP_PUBLISH_RETRY_ROWS", "").strip()
+    retry_rows = json.loads(raw_retry_rows) if raw_retry_rows else []
+    if not isinstance(retry_rows, list):
+        raise RuntimeError("Danh sách dòng chuyển sang đăng lại không hợp lệ.")
 
     sheet = APP_WORKBOOK.Worksheets("DANG_BAI")
     status_col = _find_column(sheet, "Trạng thái đăng")
@@ -42,8 +46,20 @@ def main() -> int:
         sheet.Cells(row, status_col).Value = "ĐÃ ĐĂNG"
         sheet.Cells(row, error_col).Value = ""
         print(f"[CẬP NHẬT ID] Dòng {row} -> ID CMS {cms_id}", flush=True)
+    for raw_row in retry_rows:
+        row = int(raw_row)
+        current_status = _normalize(sheet.Cells(row, status_col).Value)
+        if "lỗi đăng" not in current_status:
+            raise RuntimeError(
+                f"Dòng {row}: chỉ có thể chuyển trạng thái LỖI ĐĂNG sang LỖI KIỂM TRA."
+            )
+        sheet.Cells(row, status_col).Value = "LỖI KIỂM TRA"
+        print(f"[ĐĂNG LẠI] Dòng {row}: LỖI ĐĂNG -> LỖI KIỂM TRA", flush=True)
     APP_WORKBOOK.Save()
-    print(f"Đã cập nhật {len(updates)} ID CMS.", flush=True)
+    print(
+        f"Đã cập nhật {len(updates)} ID CMS; chuyển {len(retry_rows)} dòng để đăng lại.",
+        flush=True,
+    )
     return 0
 
 

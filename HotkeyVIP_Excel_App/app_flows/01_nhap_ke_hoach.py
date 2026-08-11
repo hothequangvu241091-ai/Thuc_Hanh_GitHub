@@ -261,6 +261,24 @@ def ask_run_mode(excel: Any) -> str | None:
     return None
 
 
+def should_use_default_mode_without_dialog(excel: Any) -> bool:
+    """App + Excel ẩn phải chạy mặc định, không chờ hộp thoại không nhìn thấy.
+
+    Khi flow chạy in-process, flow_host truyền APP_WORKBOOK. Nếu Excel mà app
+    đang quản lý là Excel ẩn, MessageBox có owner là excel.Hwnd cũng bị ẩn và
+    làm flow đứng vô thời hạn tại bước chọn chế độ. Chạy thủ công/Excel hiện
+    vẫn giữ nguyên hộp thoại Yes/No/Cancel cũ.
+    """
+    if APP_WORKBOOK is None:
+        return False
+    try:
+        return not bool(excel.Visible)
+    except Exception:
+        # Với workbook do app truyền nhưng COM không đọc được Visible, ưu tiên
+        # không làm kẹt flow ở một hộp thoại mà người dùng không thể thấy.
+        return True
+
+
 def ask_source_mode(excel: Any) -> str | None:
     """Chọn nhập một file duy nhất hoặc quét toàn bộ thư mục."""
     result = win32api.MessageBox(
@@ -752,7 +770,11 @@ def main() -> None:
             "trước khi chạy; chương trình chưa thay đổi dữ liệu."
         )
 
-    run_mode = ask_run_mode(excel)
+    if should_use_default_mode_without_dialog(excel):
+        run_mode = "default"
+        print("Excel đang chạy ẩn trong app: tự chọn chế độ MẶC ĐỊNH.")
+    else:
+        run_mode = ask_run_mode(excel)
     if run_mode is None:
         print("Đã hủy chạy. Chưa có dữ liệu nào được thay đổi.")
         return
