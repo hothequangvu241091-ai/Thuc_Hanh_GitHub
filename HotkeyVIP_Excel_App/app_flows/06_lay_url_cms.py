@@ -21,7 +21,7 @@ EXCEL_PATH = os.path.abspath(
 )
 
 ROW_START = 2
-ROW_END = 10000
+ROW_END = 50000
 
 TIMEOUT_S = 10
 CONCURRENCY = 20

@@ -1790,6 +1790,7 @@ class ExcelAuditApp(tk.Tk):
 
         domain_counts = snapshot["domain_counts"]
         domain_error_counts = snapshot["domain_error_counts"]
+        domain_done_counts = snapshot["domain_done_counts"]
         domains = sorted(domain_counts, key=lambda value: (-domain_counts[value], value.casefold()))
 
         dialog = tk.Toplevel(self)
@@ -1817,17 +1818,21 @@ class ExcelAuditApp(tk.Tk):
             wraplength=520,
         ).grid(row=1, column=0, columnspan=2, sticky="w", pady=(0, 14))
 
-        no_priority = "— Không ưu tiên tên miền —"
+        no_priority = "— Chọn tên miền để thêm —"
         domain_labels: dict[str, str] = {no_priority: ""}
         for domain in domains:
             remaining = int(domain_counts.get(domain, 0))
             errors = int(domain_error_counts.get(domain, 0))
+            done = int(domain_done_counts.get(domain, 0))
             error_text = f", lỗi {errors}" if errors else ""
-            domain_labels[f"{domain} — còn {remaining} bài{error_text}"] = domain
+            domain_labels[
+                f"{domain} — còn {remaining} bài, đã viết {done} bài{error_text}"
+            ] = domain
         domain_var = tk.StringVar(value=no_priority)
         count_var = tk.StringVar(value="100")
         retry_var = tk.BooleanVar(value=True)
         continue_var = tk.BooleanVar(value=True)
+        priority_groups: list[dict[str, Any]] = []
 
         ttk.Label(body, text="Tên miền ưu tiên").grid(row=2, column=0, sticky="w", padx=(0, 12), pady=5)
         ttk.Combobox(
@@ -1839,19 +1844,42 @@ class ExcelAuditApp(tk.Tk):
         ).grid(row=2, column=1, sticky="ew", pady=5)
 
         ttk.Label(body, text="Số bài ưu tiên").grid(row=3, column=0, sticky="w", padx=(0, 12), pady=5)
-        ttk.Spinbox(body, from_=1, to=10000, textvariable=count_var, width=12).grid(
-            row=3, column=1, sticky="w", pady=5
+        add_controls = ttk.Frame(body)
+        add_controls.grid(row=3, column=1, sticky="w", pady=5)
+        ttk.Spinbox(add_controls, from_=1, to=50000, textvariable=count_var, width=12).pack(side=LEFT)
+
+        group_frame = ttk.Frame(body)
+        group_frame.grid(row=4, column=0, columnspan=2, sticky="ew", pady=(8, 4))
+        group_tree = ttk.Treeview(
+            group_frame,
+            columns=("order", "domain", "count", "available", "done"),
+            show="headings",
+            height=5,
+            selectmode="browse",
         )
+        group_tree.heading("order", text="Thứ tự")
+        group_tree.heading("domain", text="Tên miền ưu tiên")
+        group_tree.heading("count", text="Số bài")
+        group_tree.heading("available", text="Đang còn")
+        group_tree.heading("done", text="Đã viết")
+        group_tree.column("order", width=54, anchor="center", stretch=False)
+        group_tree.column("domain", width=245)
+        group_tree.column("count", width=72, anchor="center", stretch=False)
+        group_tree.column("available", width=78, anchor="center", stretch=False)
+        group_tree.column("done", width=72, anchor="center", stretch=False)
+        group_tree.pack(side=LEFT, fill=X, expand=True)
+        group_buttons = ttk.Frame(group_frame)
+        group_buttons.pack(side=LEFT, padx=(8, 0), anchor="n")
         ttk.Checkbutton(
             body,
             text="Ưu tiên chạy lại các bài đang lỗi trước",
             variable=retry_var,
-        ).grid(row=4, column=0, columnspan=2, sticky="w", pady=(12, 4))
+        ).grid(row=5, column=0, columnspan=2, sticky="w", pady=(12, 4))
         ttk.Checkbutton(
             body,
             text="Xong nhóm ưu tiên thì tiếp tục chạy bình thường sau OK OK",
             variable=continue_var,
-        ).grid(row=5, column=0, columnspan=2, sticky="w", pady=4)
+        ).grid(row=6, column=0, columnspan=2, sticky="w", pady=4)
 
         manual_row = snapshot.get("manual_row")
         normal_start = int(snapshot["normal_start_row"])
@@ -1868,7 +1896,7 @@ class ExcelAuditApp(tk.Tk):
             foreground=COLORS["navy"],
             wraplength=620,
             font=("Segoe UI Semibold", 9),
-        ).grid(row=6, column=0, columnspan=2, sticky="w", pady=(12, 6))
+        ).grid(row=7, column=0, columnspan=2, sticky="w", pady=(12, 6))
 
         preview_var = tk.StringVar()
         ttk.Label(
@@ -1882,18 +1910,86 @@ class ExcelAuditApp(tk.Tk):
             anchor="nw",
             wraplength=620,
             padding=10,
-        ).grid(row=7, column=0, columnspan=2, sticky="ew", pady=(4, 0))
+        ).grid(row=8, column=0, columnspan=2, sticky="ew", pady=(4, 0))
+
+        def refresh_group_tree(selected_index: int | None = None) -> None:
+            group_tree.delete(*group_tree.get_children())
+            for index, group in enumerate(priority_groups):
+                item_id = group_tree.insert(
+                    "",
+                    END,
+                    values=(
+                        index + 1,
+                        group["domain"],
+                        group["count"],
+                        domain_counts.get(group["domain"], 0),
+                        domain_done_counts.get(group["domain"], 0),
+                    ),
+                )
+                if selected_index == index:
+                    group_tree.selection_set(item_id)
+                    group_tree.focus(item_id)
+
+        def selected_group_index() -> int | None:
+            selected = group_tree.selection()
+            if not selected:
+                return None
+            return int(group_tree.item(selected[0], "values")[0]) - 1
+
+        def add_group() -> None:
+            domain = domain_labels.get(domain_var.get().strip(), "")
+            try:
+                count = int(count_var.get().strip())
+            except ValueError:
+                count = 0
+            if not domain:
+                messagebox.showwarning("Chưa chọn tên miền", "Hãy chọn tên miền cần ưu tiên.", parent=dialog)
+                return
+            if count < 1:
+                messagebox.showwarning("Số lượng không hợp lệ", "Số bài ưu tiên phải lớn hơn 0.", parent=dialog)
+                return
+            existing = next(
+                (index for index, group in enumerate(priority_groups) if group["domain"] == domain),
+                None,
+            )
+            group = {"domain": domain, "count": count}
+            if existing is None:
+                priority_groups.append(group)
+                selected_index = len(priority_groups) - 1
+            else:
+                priority_groups[existing] = group
+                selected_index = existing
+            refresh_group_tree(selected_index)
+            refresh_preview()
+
+        def remove_group() -> None:
+            index = selected_group_index()
+            if index is None:
+                return
+            priority_groups.pop(index)
+            refresh_group_tree(min(index, len(priority_groups) - 1) if priority_groups else None)
+            refresh_preview()
+
+        def move_group(offset: int) -> None:
+            index = selected_group_index()
+            if index is None:
+                return
+            target = index + offset
+            if target < 0 or target >= len(priority_groups):
+                return
+            priority_groups[index], priority_groups[target] = priority_groups[target], priority_groups[index]
+            refresh_group_tree(target)
+            refresh_preview()
+
+        ttk.Button(add_controls, text="Thêm / cập nhật", command=add_group).pack(side=LEFT, padx=(8, 0))
+        ttk.Button(group_buttons, text="Lên", command=lambda: move_group(-1), width=8).pack(pady=(0, 4))
+        ttk.Button(group_buttons, text="Xuống", command=lambda: move_group(1), width=8).pack(pady=4)
+        ttk.Button(group_buttons, text="Xóa", command=remove_group, width=8).pack(pady=4)
 
         def current_plan() -> dict[str, Any]:
-            selected_domain = domain_labels.get(domain_var.get().strip(), "")
-            try:
-                priority_count = max(0, int(count_var.get().strip()))
-            except ValueError:
-                priority_count = 0
             return {
                 "retry_errors_first": bool(retry_var.get()),
-                "priority_domain": selected_domain,
-                "priority_count": priority_count if selected_domain else 0,
+                "priority_groups": [dict(group) for group in priority_groups],
                 "continue_normal": bool(continue_var.get()),
             }
 
@@ -1901,6 +1997,11 @@ class ExcelAuditApp(tk.Tk):
             plan = current_plan()
             queue_preview = build_write_queue_preview(snapshot, plan)
             lines = [f"Tổng hàng chờ dự kiến: {len(queue_preview)} bài. Những bài chạy đầu tiên:"]
+            if priority_groups:
+                group_text = " → ".join(
+                    f"{group['domain']} × {group['count']}" for group in priority_groups
+                )
+                lines.append(f"Thứ tự ưu tiên: {group_text}")
             error_prefix = len(snapshot["error_items"]) if plan["retry_errors_first"] else 0
             if error_prefix and len(queue_preview) > error_prefix:
                 next_item = queue_preview[error_prefix]
@@ -1920,32 +2021,14 @@ class ExcelAuditApp(tk.Tk):
                 lines.append(f"… và {len(queue_preview) - 6} bài tiếp theo.")
             preview_var.set("\n".join(lines))
 
-        domain_var.trace_add("write", refresh_preview)
-        count_var.trace_add("write", refresh_preview)
         retry_var.trace_add("write", refresh_preview)
         continue_var.trace_add("write", refresh_preview)
+        refresh_group_tree()
         refresh_preview()
 
         result: dict[str, Any] = {}
 
         def accept() -> None:
-            selected_domain = domain_labels.get(domain_var.get().strip(), "")
-            try:
-                priority_count = int(count_var.get().strip())
-            except ValueError:
-                messagebox.showwarning(
-                    "Số lượng không hợp lệ",
-                    "Số bài ưu tiên phải là số nguyên.",
-                    parent=dialog,
-                )
-                return
-            if selected_domain and priority_count < 1:
-                messagebox.showwarning(
-                    "Số lượng không hợp lệ",
-                    "Số bài ưu tiên phải lớn hơn 0.",
-                    parent=dialog,
-                )
-                return
             result.update(current_plan())
             result["preview_total"] = len(build_write_queue_preview(snapshot, result))
             result["manual_mark_row"] = manual_row
@@ -1956,7 +2039,7 @@ class ExcelAuditApp(tk.Tk):
             dialog.destroy()
 
         buttons = ttk.Frame(body)
-        buttons.grid(row=8, column=0, columnspan=2, sticky="e", pady=(18, 0))
+        buttons.grid(row=9, column=0, columnspan=2, sticky="e", pady=(18, 0))
         ttk.Button(buttons, text="Hủy", command=cancel).pack(side=LEFT, padx=(0, 8))
         ttk.Button(buttons, text="Tiếp tục", command=accept, style="Primary.TButton").pack(side=LEFT)
         dialog.protocol("WM_DELETE_WINDOW", cancel)
@@ -1995,7 +2078,7 @@ class ExcelAuditApp(tk.Tk):
         body = ttk.Frame(dialog, padding=16)
         body.pack(fill=BOTH, expand=True)
         body.columnconfigure(0, weight=1)
-        body.rowconfigure(3, weight=1)
+        body.rowconfigure(4, weight=1)
         ttk.Label(
             body,
             text="ĐĂNG THEO TÊN MIỀN + MỘT DANH MỤC",
@@ -2013,8 +2096,27 @@ class ExcelAuditApp(tk.Tk):
             wraplength=730,
         ).grid(row=1, column=0, sticky="w", pady=(4, 12))
 
+        mode_var = tk.StringVar(value="all")
+        mode_frame = ttk.Frame(body)
+        mode_frame.grid(row=2, column=0, sticky="w", pady=(0, 10))
+        ttk.Label(mode_frame, text="Chế độ đăng:").pack(side=LEFT, padx=(0, 10))
+        ttk.Radiobutton(
+            mode_frame,
+            text="Đăng tất cả tên miền",
+            variable=mode_var,
+            value="all",
+            command=lambda: refresh(),
+        ).pack(side=LEFT)
+        ttk.Radiobutton(
+            mode_frame,
+            text="Chỉ đăng tên miền đã chọn",
+            variable=mode_var,
+            value="selected",
+            command=lambda: refresh(),
+        ).pack(side=LEFT, padx=(18, 0))
+
         controls = ttk.Frame(body)
-        controls.grid(row=2, column=0, sticky="ew", pady=(0, 10))
+        controls.grid(row=3, column=0, sticky="ew", pady=(0, 10))
         ttk.Label(controls, text="Số bài tối đa mỗi tên miền").pack(side=LEFT)
         limit_var = tk.StringVar(value="7")
         ttk.Spinbox(controls, from_=1, to=10000, textvariable=limit_var, width=10).pack(
@@ -2032,17 +2134,24 @@ class ExcelAuditApp(tk.Tk):
         )
         category_picker.pack(side=LEFT)
 
-        columns = ("domain", "category", "available", "selected")
+        columns = (
+            "domain", "category", "available", "published",
+            "published_domain", "selected",
+        )
         tree = ttk.Treeview(body, columns=columns, show="headings", height=8)
         tree.heading("domain", text="Tên miền")
         tree.heading("category", text="Danh mục được chọn")
         tree.heading("available", text="Có thể đăng")
+        tree.heading("published", text="Đã đăng danh mục")
+        tree.heading("published_domain", text="Đã đăng toàn miền")
         tree.heading("selected", text="Sẽ đăng")
-        tree.column("domain", width=220, anchor="w")
-        tree.column("category", width=260, anchor="w")
+        tree.column("domain", width=190, anchor="w")
+        tree.column("category", width=210, anchor="w")
         tree.column("available", width=95, anchor="center")
+        tree.column("published", width=85, anchor="center")
+        tree.column("published_domain", width=105, anchor="center")
         tree.column("selected", width=85, anchor="center")
-        tree.grid(row=3, column=0, sticky="nsew")
+        tree.grid(row=4, column=0, sticky="nsew")
 
         summary_var = tk.StringVar()
         ttk.Label(
@@ -2050,10 +2159,12 @@ class ExcelAuditApp(tk.Tk):
             textvariable=summary_var,
             foreground=COLORS["navy"],
             font=("Segoe UI Semibold", 9),
-        ).grid(row=4, column=0, sticky="w", pady=(10, 0))
+        ).grid(row=5, column=0, sticky="w", pady=(10, 0))
 
         current_plan: dict[str, Any] = {}
+        catalog_plan: dict[str, Any] = {}
         category_overrides: dict[str, str] = {}
+        domain_limits: dict[str, int] = {}
         tree_domain_keys: dict[str, str] = {}
         category_choice_keys: dict[str, str] = {}
         selected_domain_key = tk.StringVar(value="")
@@ -2067,21 +2178,40 @@ class ExcelAuditApp(tk.Tk):
             if limit < 1:
                 summary_var.set("Số bài phải lớn hơn 0.")
                 return
-            plan = build_balanced_publish_plan(snapshot, limit, category_overrides)
+            selected_only = mode_var.get() == "selected"
+            plan = build_balanced_publish_plan(
+                snapshot,
+                limit,
+                category_overrides,
+                domain_limits,
+                selected_only,
+            )
+            catalog = build_balanced_publish_plan(
+                snapshot, limit, category_overrides
+            )
             current_plan.clear()
             current_plan.update(plan)
+            catalog_plan.clear()
+            catalog_plan.update(catalog)
             tree.delete(*tree.get_children())
             tree_domain_keys.clear()
-            for group in plan["groups"]:
+            for group in catalog["groups"]:
+                selected_count = (
+                    min(group["available"], domain_limits.get(group["domain_key"], 0))
+                    if selected_only
+                    else group["selected"]
+                )
                 item_id = tree.insert(
                     "",
                     END,
-                    values=(
-                        group["domain"],
-                        group["category"],
-                        format_number(group["available"]),
-                        format_number(group["selected"]),
-                    ),
+                values=(
+                    group["domain"],
+                    group["category"],
+                    format_number(group["available"]),
+                    format_number(group["published"]),
+                    format_number(group["published_domain"]),
+                    format_number(selected_count),
+                ),
                 )
                 tree_domain_keys[item_id] = group["domain_key"]
                 if group["domain_key"] == selected_domain_key.get():
@@ -2101,7 +2231,7 @@ class ExcelAuditApp(tk.Tk):
             return next(
                 (
                     group
-                    for group in current_plan.get("groups", [])
+                    for group in catalog_plan.get("groups", [])
                     if group.get("domain_key") == domain_key
                 ),
                 None,
@@ -2119,7 +2249,10 @@ class ExcelAuditApp(tk.Tk):
             labels: list[str] = []
             selected_label = ""
             for option in group.get("category_options", []):
-                label = f"{option['label']} ({format_number(option['available'])} bài)"
+                label = (
+                    f"{option['label']} (có thể đăng {format_number(option['available'])}, "
+                    f"đã đăng {format_number(option['published'])})"
+                )
                 labels.append(label)
                 category_choice_keys[label] = option["key"]
                 if option["key"] == group.get("category_key"):
@@ -2136,9 +2269,55 @@ class ExcelAuditApp(tk.Tk):
             refresh()
             show_category_choices()
 
+        def set_selected_domain_limit() -> None:
+            group = selected_group()
+            if group is None:
+                messagebox.showwarning("Chưa chọn tên miền", "Hãy chọn tên miền trong bảng.", parent=dialog)
+                return
+            try:
+                count = int(limit_var.get().strip())
+            except ValueError:
+                count = 0
+            if count < 1:
+                messagebox.showwarning("Số lượng không hợp lệ", "Số bài phải lớn hơn 0.", parent=dialog)
+                return
+            domain_limits[group["domain_key"]] = count
+            mode_var.set("selected")
+            refresh()
+            show_category_choices()
+
+        def clear_domain_limits() -> None:
+            domain_limits.clear()
+            mode_var.set("all")
+            refresh()
+            show_category_choices()
+
+        def remove_selected_domain() -> None:
+            group = selected_group()
+            if group is None:
+                return
+            domain_limits.pop(group["domain_key"], None)
+            refresh()
+            show_category_choices()
+
         limit_var.trace_add("write", refresh)
         tree.bind("<<TreeviewSelect>>", show_category_choices)
         category_picker.bind("<<ComboboxSelected>>", change_category)
+        ttk.Button(
+            controls,
+            text="Thêm / cập nhật tên miền",
+            command=set_selected_domain_limit,
+        ).pack(side=LEFT, padx=(12, 0))
+        ttk.Button(
+            controls,
+            text="Bỏ tên miền này",
+            command=remove_selected_domain,
+        ).pack(side=LEFT, padx=(6, 0))
+        ttk.Button(
+            controls,
+            text="Bỏ chọn riêng",
+            command=clear_domain_limits,
+        ).pack(side=LEFT, padx=(6, 0))
         refresh()
         result: dict[str, Any] = {}
 
@@ -2157,7 +2336,7 @@ class ExcelAuditApp(tk.Tk):
             dialog.destroy()
 
         buttons = ttk.Frame(body)
-        buttons.grid(row=5, column=0, sticky="e", pady=(14, 0))
+        buttons.grid(row=6, column=0, sticky="e", pady=(14, 0))
         ttk.Button(buttons, text="Hủy", command=cancel).pack(side=LEFT, padx=(0, 8))
         ttk.Button(
             buttons,
@@ -2197,10 +2376,13 @@ class ExcelAuditApp(tk.Tk):
         warning = "\n\nFlow này có tác động ra hệ thống bên ngoài." if flow.external_effects else ""
         plan_text = ""
         if write_plan is not None:
-            priority_domain = str(write_plan.get("priority_domain", ""))
+            priority_groups = write_plan.get("priority_groups", [])
             priority_text = (
-                f"Ưu tiên {write_plan['priority_count']} bài của {priority_domain}."
-                if priority_domain
+                " → ".join(
+                    f"{group.get('domain')} × {group.get('count')} bài"
+                    for group in priority_groups
+                )
+                if priority_groups
                 else "Không ưu tiên tên miền."
             )
             retry_text = "Có" if write_plan.get("retry_errors_first") else "Không"
@@ -2219,8 +2401,9 @@ class ExcelAuditApp(tk.Tk):
             )
         if publish_plan is not None:
             plan_text = (
-                f"\n\nKế hoạch đăng:\n- Tối đa mỗi tên miền: "
-                f"{publish_plan['per_domain_limit']} bài"
+                f"\n\nKế hoạch đăng:\n- Cách chọn: "
+                f"{'riêng từng tên miền' if publish_plan.get('mode') == 'selected_domains' else 'đồng loạt'}"
+                f"\n- Tối đa mỗi tên miền: {publish_plan['per_domain_limit']} bài"
                 f"\n- Mỗi tên miền chỉ dùng một danh mục"
                 f"\n- Số tên miền: {len(publish_plan['groups'])}"
                 f"\n- Tổng batch sẽ đăng: {publish_plan['selected_total']} bài"
@@ -2254,6 +2437,7 @@ class ExcelAuditApp(tk.Tk):
                     "mode": publish_plan["mode"],
                     "per_domain_limit": publish_plan["per_domain_limit"],
                     "category_overrides": publish_plan.get("category_overrides", {}),
+                    "domain_limits": publish_plan.get("domain_limits", {}),
                 },
                 ensure_ascii=False,
             )

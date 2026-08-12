@@ -1674,10 +1674,43 @@ def select_category_author(
 # ============================================================
 
 def read_first_five_word_lines() -> dict[str, str]:
-    data, _content_start = read_word_metadata(
-        get_hidden_word_document()
-    )
-    return data
+    doc = get_hidden_word_document()
+
+    lines: list[str] = []
+
+    for index in range(1, doc.Paragraphs.Count + 1):
+        raw = str(
+            doc.Paragraphs(index).Range.Text or ""
+        )
+
+        raw = (
+            raw.replace("\r", "")
+            .replace("\x07", "")
+            .strip()
+        )
+
+        if not raw:
+            continue
+
+        lines.append(
+            process_f5_line(raw)
+        )
+
+        if len(lines) == 5:
+            break
+
+    if len(lines) < 5:
+        raise RuntimeError(
+            "Word không đủ 5 dòng dữ liệu đầu."
+        )
+
+    return {
+        "title": lines[0],         # Title SEO
+        "description": lines[1],   # Description SEO
+        "keyword": lines[2],       # Keyword
+        "name": lines[3],          # H1 / tiêu đề hiển thị, nguồn tạo slug
+        "desc_short": lines[4],    # Mô tả ngắn [H1]
+    }
 
 
 # ============================================================
@@ -1717,128 +1750,6 @@ def clean_word_paragraph_text(
     ).strip()
 
     return value
-
-
-_WORD_METADATA_ORDER = (
-    "title",
-    "description",
-    "keyword",
-    "name",
-    "desc_short",
-)
-
-_WORD_METADATA_LABELS = {
-    "title": "title",
-    "title seo": "title",
-    "tiêu đề": "title",
-    "tiêu đề seo": "title",
-    "description": "description",
-    "description seo": "description",
-    "meta description": "description",
-    "mô tả": "description",
-    "mô tả seo": "description",
-    "keyword": "keyword",
-    "keywords": "keyword",
-    "từ khóa": "keyword",
-}
-
-
-def _clean_word_metadata_text(raw: Any) -> str:
-    value = str(raw or "")
-    value = value.replace("\r", "").replace("\x07", " ")
-    value = re.sub(r"\s+", " ", value).strip()
-    if value.startswith("# "):
-        return value[2:].strip()
-    if value.startswith("#") and not value.startswith("##"):
-        return value[1:].strip()
-    return value
-
-
-def _word_metadata_label(value: Any) -> str | None:
-    key = unicodedata.normalize("NFC", str(value or ""))
-    key = key.strip().rstrip(":").casefold()
-    key = re.sub(r"\s+", " ", key)
-    return _WORD_METADATA_LABELS.get(key)
-
-
-def _split_word_metadata_label(text: str) -> tuple[str | None, str]:
-    """Return a known label and its inline value, if this paragraph has one."""
-    value = _clean_word_metadata_text(text)
-    before, separator, after = value.partition(":")
-    if separator:
-        label = _word_metadata_label(before)
-        if label:
-            return label, after.strip()
-    # A bare word such as "keyword" may be actual data.  Only the explicit
-    # ``Label:`` form activates the "take the next paragraph" behavior.
-    return None, ""
-
-
-def read_word_metadata(doc: Any) -> tuple[dict[str, str], int]:
-    """Read Word metadata while accepting labels on their own paragraph.
-
-    Legacy documents contain five unlabeled values. Some documents insert
-    ``Title:``, ``Description:``, or ``Keyword:`` before the value; those
-    labels are metadata markers, not content values.
-    """
-    data: dict[str, str] = {}
-    pending_label: str | None = None
-    saw_label = False
-    content_start: int | None = None
-
-    for index in range(1, doc.Paragraphs.Count + 1):
-        paragraph = doc.Paragraphs(index)
-        raw = str(paragraph.Range.Text or "")
-        text = _clean_word_metadata_text(raw)
-        if not text:
-            continue
-
-        label, inline_value = _split_word_metadata_label(text)
-        if label:
-            if pending_label is not None:
-                raise RuntimeError(
-                    f"Word thiếu giá trị cho {pending_label} trước nhãn {label}."
-                )
-            saw_label = True
-            content_start = int(paragraph.Range.End)
-            if inline_value:
-                data[label] = process_f5_line(inline_value)
-                pending_label = None
-            else:
-                pending_label = label
-            continue
-
-        value = process_f5_line(text)
-        if pending_label is not None:
-            data[pending_label] = value
-            pending_label = None
-            content_start = int(paragraph.Range.End)
-            continue
-
-        next_key = next(
-            (key for key in _WORD_METADATA_ORDER if key not in data),
-            None,
-        )
-        if next_key is None:
-            break
-
-        data[next_key] = value
-        content_start = int(paragraph.Range.End)
-
-    if pending_label is not None:
-        raise RuntimeError(f"Word thiếu giá trị cho nhãn {pending_label}.")
-
-    required = _WORD_METADATA_ORDER
-    missing = [key for key in required if not clean_text(data.get(key, ""))]
-    if missing:
-        raise RuntimeError(
-            "Word thiếu metadata bắt buộc: " + ", ".join(missing)
-        )
-
-    if content_start is None:
-        raise RuntimeError("Không xác định được điểm bắt đầu nội dung Word.")
-
-    return data, content_start
 
 
 def is_faq_heading(text: str) -> bool:
@@ -1917,7 +1828,8 @@ def get_word_content_range(
     Trả về:
     (content_start, content_end, found_faq)
     """
-    _metadata, content_start = read_word_metadata(doc)
+    non_empty_count = 0
+    content_start = None
     faq_heading_index = find_faq_heading_from_bottom(doc)
     found_faq = faq_heading_index is not None
 
@@ -1927,6 +1839,32 @@ def get_word_content_range(
         )
     else:
         content_end = int(doc.Content.End)
+
+    for index in range(
+        1,
+        doc.Paragraphs.Count + 1,
+    ):
+        para = doc.Paragraphs(index)
+
+        clean = clean_word_paragraph_text(
+            para.Range.Text
+        )
+
+        if not clean:
+            continue
+
+        non_empty_count += 1
+
+        if non_empty_count == 5:
+            content_start = int(
+                para.Range.End
+            )
+            continue
+
+    if content_start is None:
+        raise RuntimeError(
+            "Word không đủ 5 dòng dữ liệu đầu."
+        )
 
     return (
         content_start,
@@ -2477,6 +2415,7 @@ def read_faq_pairs_from_word() -> list[dict[str, str]]:
 
     faq_heading_index = find_faq_heading_from_bottom(doc)
     if faq_heading_index is None:
+        set_faq_run_note("Không tìm thấy phần FAQ trong 50 đoạn cuối Word.")
         print(
             "Không có FAQ trong 50 đoạn cuối Word → bỏ qua bước FAQ."
         )
@@ -5520,7 +5459,7 @@ def load_app_publish_plan() -> dict[str, Any] | None:
                 "groups": [],
                 "per_domain_limit": 0,
             }
-        if request.get("mode") not in {"balanced_one_category", "selected_domains"}:
+        if request.get("mode") != "balanced_one_category":
             raise ValueError("Chế độ batch không được hỗ trợ")
         per_domain_limit = max(1, int(request["per_domain_limit"]))
         from excel_audit_app.publish_plan import (
@@ -5532,8 +5471,6 @@ def load_app_publish_plan() -> dict[str, Any] | None:
             inspect_publish_queue(EXCEL_PATH),
             per_domain_limit,
             request.get("category_overrides") or {},
-            request.get("domain_limits") or {},
-            request.get("mode") == "selected_domains",
         )
     except Exception as exc:
         raise RuntimeError(f"Không thể tạo batch đăng bài từ app: {exc}") from exc

@@ -8,7 +8,7 @@ from .excel_io import OpenXmlWorkbook, normalize_spaces, normalize_text
 
 
 START_ROW = 2
-END_ROW = 10000
+END_ROW = 50000
 MANUAL_MARK_TEXT = "OK OK"
 
 ALIASES = {
@@ -92,6 +92,12 @@ def inspect_write_queue(path: str | Path) -> dict[str, Any]:
     domain_error_counts: Counter[str] = Counter(
         str(item["domain"] or "(Không có tên miền)") for item in error_items
     )
+    domain_done_counts: Counter[str] = Counter(
+        str(item["domain"] or "(Không có tên miền)")
+        for item in items
+        if normalize_spaces(item.get("keyword"))
+        and normalize_text(item.get("done")) == "ok"
+    )
     normal_items = [
         item for item in open_items if int(item["row"]) >= normal_start_row
     ]
@@ -104,11 +110,12 @@ def inspect_write_queue(path: str | Path) -> dict[str, Any]:
         "normal_start_row": normal_start_row,
         "domain_counts": dict(domain_counts),
         "domain_error_counts": dict(domain_error_counts),
+        "domain_done_counts": dict(domain_done_counts),
     }
 
 
 def build_write_queue_preview(snapshot: dict[str, Any], plan: dict[str, Any]) -> list[dict[str, Any]]:
-    """Dựng đúng thứ tự preview: lỗi -> domain ưu tiên -> bình thường."""
+    """Dựng đúng thứ tự preview: lỗi -> các nhóm domain ưu tiên -> bình thường."""
     selected_rows: set[int] = set()
     result: list[dict[str, Any]] = []
 
@@ -123,12 +130,22 @@ def build_write_queue_preview(snapshot: dict[str, Any], plan: dict[str, Any]) ->
     if plan.get("retry_errors_first", True):
         add(list(snapshot["error_items"]))
 
-    priority_domain = normalize_text(plan.get("priority_domain"))
-    try:
-        priority_count = max(0, int(plan.get("priority_count", 0)))
-    except (TypeError, ValueError):
-        priority_count = 0
-    if priority_domain and priority_count:
+    groups = plan.get("priority_groups")
+    if not isinstance(groups, list):
+        groups = [{
+            "domain": plan.get("priority_domain"),
+            "count": plan.get("priority_count", 0),
+        }]
+    for group in groups:
+        if not isinstance(group, dict):
+            continue
+        priority_domain = normalize_text(group.get("domain"))
+        try:
+            priority_count = max(0, int(group.get("count", 0)))
+        except (TypeError, ValueError):
+            priority_count = 0
+        if not priority_domain or not priority_count:
+            continue
         candidates = [
             item
             for item in snapshot["open_items"]

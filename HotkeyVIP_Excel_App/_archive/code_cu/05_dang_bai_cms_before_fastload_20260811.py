@@ -921,37 +921,18 @@ def upsert_category_id_mapping(
     )
     category_key = normalized_category.casefold()
 
-    map_first_col = min(map_domain_col, map_id_col, map_category_col)
-    map_last_col = max(map_domain_col, map_id_col, map_category_col)
-    map_values = None
-    if last_row >= 2:
-        map_values = map_sheet.Range(
-            map_sheet.Cells(2, map_first_col),
-            map_sheet.Cells(last_row, map_last_col),
-        ).Value2
-
-    def map_value(map_row: int, map_col: int) -> Any:
-        row_offset = map_row - 2
-        col_offset = map_col - map_first_col
-        if isinstance(map_values, tuple):
-            row_values = map_values[row_offset]
-            if isinstance(row_values, tuple):
-                return row_values[col_offset]
-            return row_values if col_offset == 0 else None
-        return map_values if row_offset == 0 and col_offset == 0 else None
-
     for map_row in range(2, max(last_row, 1) + 1):
         existing_domain = normalize_domain(
-            map_value(map_row, map_domain_col)
+            map_sheet.Cells(map_row, map_domain_col).Value
         )
         existing_category = clean_text(
-            map_value(map_row, map_category_col)
+            map_sheet.Cells(map_row, map_category_col).Value
         ).casefold()
         if existing_domain != domain or existing_category != category_key:
             continue
 
         existing_id = clean_text(
-            map_value(map_row, map_id_col)
+            map_sheet.Cells(map_row, map_id_col).Value
         )
         try:
             same_id = int(float(existing_id)) == int(float(normalized_id))
@@ -1674,10 +1655,43 @@ def select_category_author(
 # ============================================================
 
 def read_first_five_word_lines() -> dict[str, str]:
-    data, _content_start = read_word_metadata(
-        get_hidden_word_document()
-    )
-    return data
+    doc = get_hidden_word_document()
+
+    lines: list[str] = []
+
+    for index in range(1, doc.Paragraphs.Count + 1):
+        raw = str(
+            doc.Paragraphs(index).Range.Text or ""
+        )
+
+        raw = (
+            raw.replace("\r", "")
+            .replace("\x07", "")
+            .strip()
+        )
+
+        if not raw:
+            continue
+
+        lines.append(
+            process_f5_line(raw)
+        )
+
+        if len(lines) == 5:
+            break
+
+    if len(lines) < 5:
+        raise RuntimeError(
+            "Word không đủ 5 dòng dữ liệu đầu."
+        )
+
+    return {
+        "title": lines[0],         # Title SEO
+        "description": lines[1],   # Description SEO
+        "keyword": lines[2],       # Keyword
+        "name": lines[3],          # H1 / tiêu đề hiển thị, nguồn tạo slug
+        "desc_short": lines[4],    # Mô tả ngắn [H1]
+    }
 
 
 # ============================================================
@@ -1717,128 +1731,6 @@ def clean_word_paragraph_text(
     ).strip()
 
     return value
-
-
-_WORD_METADATA_ORDER = (
-    "title",
-    "description",
-    "keyword",
-    "name",
-    "desc_short",
-)
-
-_WORD_METADATA_LABELS = {
-    "title": "title",
-    "title seo": "title",
-    "tiêu đề": "title",
-    "tiêu đề seo": "title",
-    "description": "description",
-    "description seo": "description",
-    "meta description": "description",
-    "mô tả": "description",
-    "mô tả seo": "description",
-    "keyword": "keyword",
-    "keywords": "keyword",
-    "từ khóa": "keyword",
-}
-
-
-def _clean_word_metadata_text(raw: Any) -> str:
-    value = str(raw or "")
-    value = value.replace("\r", "").replace("\x07", " ")
-    value = re.sub(r"\s+", " ", value).strip()
-    if value.startswith("# "):
-        return value[2:].strip()
-    if value.startswith("#") and not value.startswith("##"):
-        return value[1:].strip()
-    return value
-
-
-def _word_metadata_label(value: Any) -> str | None:
-    key = unicodedata.normalize("NFC", str(value or ""))
-    key = key.strip().rstrip(":").casefold()
-    key = re.sub(r"\s+", " ", key)
-    return _WORD_METADATA_LABELS.get(key)
-
-
-def _split_word_metadata_label(text: str) -> tuple[str | None, str]:
-    """Return a known label and its inline value, if this paragraph has one."""
-    value = _clean_word_metadata_text(text)
-    before, separator, after = value.partition(":")
-    if separator:
-        label = _word_metadata_label(before)
-        if label:
-            return label, after.strip()
-    # A bare word such as "keyword" may be actual data.  Only the explicit
-    # ``Label:`` form activates the "take the next paragraph" behavior.
-    return None, ""
-
-
-def read_word_metadata(doc: Any) -> tuple[dict[str, str], int]:
-    """Read Word metadata while accepting labels on their own paragraph.
-
-    Legacy documents contain five unlabeled values. Some documents insert
-    ``Title:``, ``Description:``, or ``Keyword:`` before the value; those
-    labels are metadata markers, not content values.
-    """
-    data: dict[str, str] = {}
-    pending_label: str | None = None
-    saw_label = False
-    content_start: int | None = None
-
-    for index in range(1, doc.Paragraphs.Count + 1):
-        paragraph = doc.Paragraphs(index)
-        raw = str(paragraph.Range.Text or "")
-        text = _clean_word_metadata_text(raw)
-        if not text:
-            continue
-
-        label, inline_value = _split_word_metadata_label(text)
-        if label:
-            if pending_label is not None:
-                raise RuntimeError(
-                    f"Word thiếu giá trị cho {pending_label} trước nhãn {label}."
-                )
-            saw_label = True
-            content_start = int(paragraph.Range.End)
-            if inline_value:
-                data[label] = process_f5_line(inline_value)
-                pending_label = None
-            else:
-                pending_label = label
-            continue
-
-        value = process_f5_line(text)
-        if pending_label is not None:
-            data[pending_label] = value
-            pending_label = None
-            content_start = int(paragraph.Range.End)
-            continue
-
-        next_key = next(
-            (key for key in _WORD_METADATA_ORDER if key not in data),
-            None,
-        )
-        if next_key is None:
-            break
-
-        data[next_key] = value
-        content_start = int(paragraph.Range.End)
-
-    if pending_label is not None:
-        raise RuntimeError(f"Word thiếu giá trị cho nhãn {pending_label}.")
-
-    required = _WORD_METADATA_ORDER
-    missing = [key for key in required if not clean_text(data.get(key, ""))]
-    if missing:
-        raise RuntimeError(
-            "Word thiếu metadata bắt buộc: " + ", ".join(missing)
-        )
-
-    if content_start is None:
-        raise RuntimeError("Không xác định được điểm bắt đầu nội dung Word.")
-
-    return data, content_start
 
 
 def is_faq_heading(text: str) -> bool:
@@ -1917,7 +1809,8 @@ def get_word_content_range(
     Trả về:
     (content_start, content_end, found_faq)
     """
-    _metadata, content_start = read_word_metadata(doc)
+    non_empty_count = 0
+    content_start = None
     faq_heading_index = find_faq_heading_from_bottom(doc)
     found_faq = faq_heading_index is not None
 
@@ -1927,6 +1820,32 @@ def get_word_content_range(
         )
     else:
         content_end = int(doc.Content.End)
+
+    for index in range(
+        1,
+        doc.Paragraphs.Count + 1,
+    ):
+        para = doc.Paragraphs(index)
+
+        clean = clean_word_paragraph_text(
+            para.Range.Text
+        )
+
+        if not clean:
+            continue
+
+        non_empty_count += 1
+
+        if non_empty_count == 5:
+            content_start = int(
+                para.Range.End
+            )
+            continue
+
+    if content_start is None:
+        raise RuntimeError(
+            "Word không đủ 5 dòng dữ liệu đầu."
+        )
 
     return (
         content_start,
@@ -2477,6 +2396,7 @@ def read_faq_pairs_from_word() -> list[dict[str, str]]:
 
     faq_heading_index = find_faq_heading_from_bottom(doc)
     if faq_heading_index is None:
+        set_faq_run_note("Không tìm thấy phần FAQ trong 50 đoạn cuối Word.")
         print(
             "Không có FAQ trong 50 đoạn cuối Word → bỏ qua bước FAQ."
         )
@@ -5333,7 +5253,7 @@ WORKER_LOG_ROOT = (
     / "log_dang_bai"
 )
 
-VERSION = "05_dang_bai_cms (engine V2.11 fast-load)"
+VERSION = "05_dang_bai_cms (engine V2.10)"
 EXCEL_BUSY_HRESULT = -2146777998  # 0x800AC472: Excel temporarily rejects COM calls.
 
 
@@ -5520,7 +5440,7 @@ def load_app_publish_plan() -> dict[str, Any] | None:
                 "groups": [],
                 "per_domain_limit": 0,
             }
-        if request.get("mode") not in {"balanced_one_category", "selected_domains"}:
+        if request.get("mode") != "balanced_one_category":
             raise ValueError("Chế độ batch không được hỗ trợ")
         per_domain_limit = max(1, int(request["per_domain_limit"]))
         from excel_audit_app.publish_plan import (
@@ -5532,8 +5452,6 @@ def load_app_publish_plan() -> dict[str, Any] | None:
             inspect_publish_queue(EXCEL_PATH),
             per_domain_limit,
             request.get("category_overrides") or {},
-            request.get("domain_limits") or {},
-            request.get("mode") == "selected_domains",
         )
     except Exception as exc:
         raise RuntimeError(f"Không thể tạo batch đăng bài từ app: {exc}") from exc
@@ -5687,191 +5605,6 @@ def load_target_tasks(
             task["_expected_identity"] = actual_identity
         tasks.append(task)
 
-    return tasks
-
-
-def load_target_tasks_fast(
-    limit: int | None,
-    app_plan: dict[str, Any] | None = None,
-) -> list[dict[str, Any]]:
-    """Load the publish snapshot with two bulk Excel reads."""
-    _excel, workbook = publish.get_target_excel_workbook()
-    sheet = workbook.Worksheets(publish.SHEET_POST)
-    website_sheet = workbook.Worksheets(publish.SHEET_DOMAIN)
-
-    title_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["keyword"]
-    )
-    seo_title_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["title"]
-    )
-    h1_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["h1"]
-    )
-    status_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["status"]
-    )
-    domain_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["domain"]
-    )
-    category_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["category"]
-    )
-    word_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["word_path"]
-    )
-    image1_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["image1_path"]
-    )
-    image2_col = publish.find_column_by_header(
-        sheet, publish.PUBLISH_HEADERS["image2_path"]
-    )
-
-    def matrix_value(matrix: Any, row: int, col: int) -> Any:
-        if isinstance(matrix, tuple):
-            row_values = matrix[row - 1]
-            if isinstance(row_values, tuple):
-                return row_values[col - 1]
-            return row_values if col == 1 else None
-        return matrix if row == 1 and col == 1 else None
-
-    last_website_row = max(
-        1,
-        int(website_sheet.Cells(website_sheet.Rows.Count, 1).End(-4162).Row),
-    )
-    website_matrix = website_sheet.Range(
-        website_sheet.Cells(1, 1),
-        website_sheet.Cells(last_website_row, 2),
-    ).Value2
-    website_urls: dict[str, str] = {}
-    for row in range(2, last_website_row + 1):
-        domain = publish.normalize_domain(matrix_value(website_matrix, row, 1))
-        url = clean_cell(matrix_value(website_matrix, row, 2))
-        if domain and url:
-            website_urls[domain] = url
-
-    expected_by_row: dict[int, dict[str, Any]] = {}
-    if app_plan is not None:
-        expected_by_row = {
-            int(item["row"]): dict(item)
-            for item in app_plan.get("selected_rows", [])
-        }
-
-    last_post_row = max(
-        1,
-        int(sheet.Cells(sheet.Rows.Count, title_col).End(-4162).Row),
-        max(expected_by_row, default=1),
-    )
-    max_col = max(
-        title_col,
-        seo_title_col,
-        h1_col,
-        status_col,
-        domain_col,
-        category_col,
-        word_col,
-        image1_col,
-        image2_col,
-    )
-    post_matrix = sheet.Range(
-        sheet.Cells(1, 1),
-        sheet.Cells(last_post_row, max_col),
-    ).Value2
-
-    if expected_by_row:
-        selected_rows = list(expected_by_row)
-    else:
-        need_open: list[int] = []
-        blank_status: list[int] = []
-        for row in range(2, last_post_row + 1):
-            title = clean_cell(matrix_value(post_matrix, row, title_col))
-            if not title:
-                break
-            status = clean_cell(matrix_value(post_matrix, row, status_col))
-            status_key = status.casefold()
-            if (
-                "cần mở" in status_key
-                or status_key == "ok"
-                or "lỗi kiểm tra" in status_key
-                or "lỗi đăng" in status_key
-            ):
-                need_open.append(row)
-            elif not status:
-                blank_status.append(row)
-        selected_rows = (need_open + blank_status)[: int(limit or 0)]
-
-    if not selected_rows:
-        raise RuntimeError(
-            'Không còn bài có trạng thái "Cần mở", "Ok" hoặc trạng thái trống.'
-        )
-
-    tasks: list[dict[str, Any]] = []
-    for row in selected_rows:
-        title = clean_cell(matrix_value(post_matrix, row, title_col))
-        domain = publish.normalize_domain(
-            matrix_value(post_matrix, row, domain_col)
-        )
-        post_url = website_urls.get(domain, "")
-        if not post_url:
-            raise RuntimeError(
-                f"Dòng {row}: không tìm thấy URL CMS cho domain {domain!r}."
-            )
-
-        word_path = resolve_existing_path(
-            matrix_value(post_matrix, row, word_col)
-        )
-        if not word_path or not Path(word_path).is_file():
-            raise RuntimeError(
-                f"Dòng {row}: đường dẫn Word không tồn tại: {word_path!r}."
-            )
-
-        task = {
-            "row": row,
-            "title": title,
-            "seo_title": clean_cell(
-                matrix_value(post_matrix, row, seo_title_col)
-            ),
-            "h1": clean_cell(matrix_value(post_matrix, row, h1_col)),
-            "domain": domain,
-            "post_url": post_url,
-            "category": clean_cell(
-                matrix_value(post_matrix, row, category_col)
-            ),
-            "word_path": word_path,
-            "image1_path": resolve_existing_path(
-                matrix_value(post_matrix, row, image1_col)
-            ),
-            "image2_path": resolve_existing_path(
-                matrix_value(post_matrix, row, image2_col)
-            ),
-        }
-        expected = expected_by_row.get(row)
-        if expected is not None:
-            actual_identity = {
-                "domain": task["domain"],
-                "category": task["category"],
-                "title": task["title"],
-                "seo_title": task["seo_title"],
-                "h1": task["h1"],
-            }
-            mismatches = [
-                key
-                for key, actual in actual_identity.items()
-                if publish.clean_text(actual).casefold()
-                != publish.clean_text(expected.get(key, "")).casefold()
-            ]
-            if mismatches:
-                raise RuntimeError(
-                    f"Dòng {row} đã thay đổi sau preview ({', '.join(mismatches)}). "
-                    "Đã dừng trước khi đăng để tránh nhầm bài."
-                )
-            task["_expected_identity"] = actual_identity
-        tasks.append(task)
-
-    print(
-        f"[FAST LOAD] Đã nạp {len(tasks)} bài bằng 2 lần đọc vùng Excel "
-        f"(DANG_BAI đến dòng {last_post_row})."
-    )
     return tasks
 
 
@@ -6808,7 +6541,7 @@ def run_multi() -> int:
     worker_count = ask_worker_count()
     app_plan = load_app_publish_plan()
     if app_plan is not None:
-        tasks = load_target_tasks_fast(None, app_plan)
+        tasks = load_target_tasks(None, app_plan)
         if app_plan.get("mode") == "explicit_error_rows":
             print(f"[APP ĐĂNG LẠI] {len(tasks)} bài LỖI KIỂM TRA | 1 worker.")
         else:
@@ -6819,7 +6552,7 @@ def run_multi() -> int:
             )
     else:
         requested_total = publish.ask_article_count()
-        tasks = load_target_tasks_fast(requested_total)
+        tasks = load_target_tasks(requested_total)
     total_articles = len(tasks)
     progress = MultiProgressWindow(
         worker_count,

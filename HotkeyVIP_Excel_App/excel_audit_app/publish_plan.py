@@ -51,6 +51,8 @@ def inspect_publish_queue(path: str | Path) -> dict[str, Any]:
 
     eligible: list[dict[str, Any]] = []
     skipped: list[dict[str, Any]] = []
+    published_counts: dict[tuple[str, str], int] = defaultdict(int)
+    published_domain_counts: dict[str, int] = defaultdict(int)
     for row_number, row in table.rows:
         title = normalize_spaces(table.value(row, columns["title"]))
         if not title:
@@ -62,6 +64,11 @@ def inspect_publish_queue(path: str | Path) -> dict[str, Any]:
                 for name, column in columns.items()
             },
         }
+        domain_key = normalize_text(item["domain"])
+        category_key = normalize_text(item["category"])
+        if normalize_text(item["status"]) == "đã đăng" and domain_key and category_key:
+            published_counts[(domain_key, category_key)] += 1
+            published_domain_counts[domain_key] += 1
         priority = _status_priority(item["status"])
         if priority is None:
             continue
@@ -80,13 +87,20 @@ def inspect_publish_queue(path: str | Path) -> dict[str, Any]:
         eligible.append(item)
 
     eligible.sort(key=lambda item: (int(item["status_priority"]), int(item["row"])))
-    return {"eligible": eligible, "skipped": skipped}
+    return {
+        "eligible": eligible,
+        "skipped": skipped,
+        "published_counts": published_counts,
+        "published_domain_counts": published_domain_counts,
+    }
 
 
 def build_balanced_publish_plan(
     snapshot: dict[str, Any],
     per_domain_limit: int,
     category_overrides: dict[str, str] | None = None,
+    domain_limits: dict[str, int] | None = None,
+    selected_domains_only: bool = False,
 ) -> dict[str, Any]:
     """Mỗi domain chọn một danh mục; mặc định lớn nhất, có thể ghi đè từ app."""
     limit = max(1, int(per_domain_limit))
@@ -94,6 +108,11 @@ def build_balanced_publish_plan(
         normalize_text(domain): normalize_text(category)
         for domain, category in (category_overrides or {}).items()
         if normalize_text(domain) and normalize_text(category)
+    }
+    requested_limits = {
+        normalize_text(domain): max(1, int(limit))
+        for domain, limit in (domain_limits or {}).items()
+        if normalize_text(domain) and int(limit) > 0
     }
     grouped: dict[str, dict[str, list[dict[str, Any]]]] = defaultdict(lambda: defaultdict(list))
     displays: dict[tuple[str, str], tuple[str, str]] = {}
@@ -114,7 +133,11 @@ def build_balanced_publish_plan(
             first_rows[(key, category_key)] for category_key in grouped[key]
         ),
     )
+    published_counts = snapshot.get("published_counts", {})
+    published_domain_counts = snapshot.get("published_domain_counts", {})
     for domain_key in domain_order:
+        if selected_domains_only and domain_key not in requested_limits:
+            continue
         categories = grouped[domain_key]
         ordered_categories = sorted(
             categories,
@@ -130,13 +153,14 @@ def build_balanced_publish_plan(
             else ordered_categories[0]
         )
         candidates = categories[selected_category]
-        chosen = candidates[:limit]
+        chosen = candidates[: requested_limits.get(domain_key, limit)]
         domain, category = displays[(domain_key, selected_category)]
         category_options = [
             {
                 "key": category_key,
                 "label": displays[(domain_key, category_key)][1],
                 "available": len(categories[category_key]),
+                "published": int(published_counts.get((domain_key, category_key), 0)),
             }
             for category_key in ordered_categories
         ]
@@ -148,6 +172,8 @@ def build_balanced_publish_plan(
                 "category_key": selected_category,
                 "category_options": category_options,
                 "available": len(candidates),
+                "published": int(published_counts.get((domain_key, selected_category), 0)),
+                "published_domain": int(published_domain_counts.get(domain_key, 0)),
                 "selected": len(chosen),
                 "first_row": first_rows[(domain_key, selected_category)],
             }
@@ -165,7 +191,7 @@ def build_balanced_publish_plan(
             )
 
     return {
-        "mode": "balanced_one_category",
+        "mode": "selected_domains" if selected_domains_only else "balanced_one_category",
         "per_domain_limit": limit,
         "groups": groups,
         "selected_rows": selected_rows,
@@ -175,4 +201,5 @@ def build_balanced_publish_plan(
         "category_overrides": {
             group["domain_key"]: group["category_key"] for group in groups
         },
+        "domain_limits": requested_limits,
     }

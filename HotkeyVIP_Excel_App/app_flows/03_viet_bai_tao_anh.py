@@ -143,7 +143,7 @@ _WORKER_CURRENT_NAMES = {}
 WORD_MACRO = "FullProcess_AllSteps"
 SHEET_NAME = "VIET_BAI"
 START_ROW = 2
-END_ROW = 10000
+END_ROW = 50000
 PROJECT_ROOT = os.environ.get(
     "HOTKEYVIP_RUNTIME_ROOT",
     r"D:\CodexProjects\Hotkeyvip",
@@ -3979,7 +3979,7 @@ def _row_has_retryable_error(data):
 
 
 def _build_task_rows(rows, plan):
-    """Xếp lỗi -> domain ưu tiên -> luồng thường, không di chuyển dòng Excel."""
+    """Xếp lỗi -> các nhóm domain ưu tiên -> luồng thường, không di chuyển dòng Excel."""
     manual_rows = [
         row for row, data in rows.items()
         if str(data.get(COL_MANUAL_MARK) or "").strip() == MANUAL_MARK_TEXT
@@ -4020,22 +4020,43 @@ def _build_task_rows(rows, plan):
             if _row_has_retryable_error(rows[row])
         )
 
-    priority_domain = _queue_text(plan.get("priority_domain"))
-    try:
-        requested_count = max(0, int(plan.get("priority_count", 0)))
-    except (TypeError, ValueError):
-        requested_count = 0
-    priority_candidates = []
-    if priority_domain and requested_count:
+    groups = plan.get("priority_groups")
+    if not isinstance(groups, list):
+        groups = [{
+            "domain": plan.get("priority_domain"),
+            "count": plan.get("priority_count", 0),
+        }]
+    priority_groups = []
+    priority_count = 0
+    requested_count = 0
+    for group in groups:
+        if not isinstance(group, dict):
+            continue
+        domain_label = str(group.get("domain") or "").strip()
+        priority_domain = _queue_text(domain_label)
+        try:
+            group_requested = max(0, int(group.get("count", 0)))
+        except (TypeError, ValueError):
+            group_requested = 0
+        if not priority_domain or not group_requested:
+            continue
+        requested_count += group_requested
+        priority_candidates = []
         for row in range(START_ROW, END_ROW + 1):
             data = rows[row]
             if row in selected or not _row_is_open(data):
                 continue
             if _queue_text(data.get(COL_WEB)) == priority_domain:
                 priority_candidates.append(row)
-                if len(priority_candidates) >= requested_count:
+                if len(priority_candidates) >= group_requested:
                     break
-    priority_count = add_rows(priority_candidates)
+        group_added = add_rows(priority_candidates)
+        priority_count += group_added
+        priority_groups.append({
+            "domain": domain_label,
+            "requested": group_requested,
+            "added": group_added,
+        })
 
     normal_count = 0
     if bool(plan.get("continue_normal", True)):
@@ -4049,14 +4070,14 @@ def _build_task_rows(rows, plan):
         "error_count": error_count,
         "priority_count": priority_count,
         "priority_requested": requested_count,
-        "priority_domain": str(plan.get("priority_domain") or "").strip(),
+        "priority_groups": priority_groups,
         "normal_count": normal_count,
         "legacy": False,
     }
 
 
 def load_excel_tasks_once():
-    """Đọc B2:AE10000 một lần, rồi tạo hàng chờ an toàn trong RAM."""
+    """Đọc B2:AE50000 một lần, rồi tạo hàng chờ an toàn trong RAM."""
     _wb, sh = get_real_sheet()
     values = sh.range(f"B{START_ROW}:AE{END_ROW}").value
     columns = [column_letter(number) for number in range(2, 32)]
@@ -4071,10 +4092,14 @@ def load_excel_tasks_once():
             f"[HÀNG CHỜ] Chế độ cũ: {len(tasks)} bài từ dòng {summary['start_row']} sau OK OK."
         )
     else:
-        domain = summary.get("priority_domain") or "không chọn"
+        groups = summary.get("priority_groups") or []
+        priority_text = ", ".join(
+            f"{group['domain']}: {group['added']}/{group['requested']}"
+            for group in groups
+        ) or "không chọn"
         print(
             f"[HÀNG CHỜ] Lỗi: {summary['error_count']} | "
-            f"Ưu tiên {domain}: {summary['priority_count']}/{summary['priority_requested']} | "
+            f"Ưu tiên {priority_text} | "
             f"Bình thường sau OK OK (dòng {summary['start_row']}): {summary['normal_count']} | "
             f"Tổng không trùng: {len(tasks)}"
         )
