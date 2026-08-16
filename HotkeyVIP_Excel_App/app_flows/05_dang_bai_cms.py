@@ -1802,7 +1802,11 @@ def read_word_metadata(doc: Any) -> tuple[dict[str, str], int]:
             saw_label = True
             content_start = int(paragraph.Range.End)
             if inline_value:
-                data[label] = process_f5_line(inline_value)
+                # Nhãn (Title:/Description:/Keyword:) đã được tách ở trên.
+                # Không chạy process_f5_line() lần hai vì dấu ':' còn lại có
+                # thể là một phần hợp lệ của giá trị, ví dụ:
+                # "Title: Dòng tiền gia đình: cách theo dõi...".
+                data[label] = _clean_word_metadata_text(inline_value)
                 pending_label = None
             else:
                 pending_label = label

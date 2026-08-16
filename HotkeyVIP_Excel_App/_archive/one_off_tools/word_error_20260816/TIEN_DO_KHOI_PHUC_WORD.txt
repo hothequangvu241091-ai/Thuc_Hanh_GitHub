@@ -1,0 +1,7 @@
+TRẠNG THÁI: ĐANG CHẠY
+Thành công mới: 24
+Đã có sẵn, bỏ qua: 44
+Lỗi: 0
+Tổng danh sách: 230
+Cập nhật: 2026-08-16T09:45:51
+Chi tiết: worker_1 68/157 | vừa xong: thiết kế nghiên cứu

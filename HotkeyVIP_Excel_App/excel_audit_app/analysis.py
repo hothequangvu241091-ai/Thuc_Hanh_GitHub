@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+import re
 from typing import Any, Callable, Iterable
 
 from .excel_io import (
@@ -48,6 +49,8 @@ ALIASES = {
         "domain": ["Tên Miền", "Tên miền"],
         "h1": ["H1"],
         "url": ["URL đã đăng", "URL"],
+        "related": ["Bài viết liên quan"],
+        "cms_id": ["ID CMS"],
         "word": ["Đường dẫn Word"],
         "image1": ["Đường dẫn ảnh 1"],
         "image2": ["Đường dẫn ảnh 2"],
@@ -59,7 +62,7 @@ ALIASES = {
 OPTIONAL_COLUMNS = {
     "ke_hoach": {"source_status", "category"},
     "viet_bai": set(),
-    "dang_bai": {"category"},
+    "dang_bai": {"category", "related", "cms_id"},
 }
 
 
@@ -156,6 +159,9 @@ def _new_dang_metrics() -> dict[str, int]:
         "combo4_complete": 0,
         "combo4_missing": 0,
         "posted": 0,
+        "posted_url_valid": 0,
+        "related_url_valid": 0,
+        "related_id_match": 0,
         "url_not_posted_full_assets": 0,
         "dang_missing_viet": 0,
         "viet_missing_dang": 0,
@@ -164,6 +170,18 @@ def _new_dang_metrics() -> dict[str, int]:
         "classified_total": 0,
         "classification_difference": 0,
     }
+
+
+def _related_url_matches_cms_id(related_url: Any, cms_id: Any) -> bool:
+    """True khi URL bài liên quan chứa id= trùng ID CMS của chính dòng."""
+    url_text = normalize_spaces(related_url)
+    id_text = normalize_spaces(cms_id)
+    if id_text.endswith(".0"):
+        id_text = id_text[:-2]
+    if not is_valid_url(url_text) or not id_text.isdigit():
+        return False
+    match = re.search(r"(?:^|[/?&])id=(\d+)(?=$|[/?&#])", url_text, flags=re.IGNORECASE)
+    return bool(match and match.group(1) == id_text)
 
 
 def _issue(
@@ -434,6 +452,9 @@ def analyze_workbook(path: str | Path) -> dict[str, Any]:
         combo4 = _combo((domain, title, h1, keyword)) if domain_key else None
         posted = normalize_text(dang_table.value(row, dang_cols["post_status"])) == "đã đăng"
         url = dang_table.value(row, dang_cols["url"])
+        related_url = dang_table.value(row, dang_cols["related"])
+        cms_id = dang_table.value(row, dang_cols["cms_id"])
+        related_id_match = _related_url_matches_cms_id(related_url, cms_id)
         full_assets = all(
             not is_blank(dang_table.value(row, dang_cols[key])) for key in ("word", "image1", "image2")
         )
@@ -454,6 +475,9 @@ def analyze_workbook(path: str | Path) -> dict[str, Any]:
         metric["total_rows"] += 1
         metric["combo4_complete" if combo4 else "combo4_missing"] += 1
         metric["posted"] += int(posted)
+        metric["posted_url_valid"] += int(is_valid_url(url))
+        metric["related_url_valid"] += int(is_valid_url(related_url))
+        metric["related_id_match"] += int(related_id_match)
         metric["url_not_posted_full_assets"] += int(url_not_posted_full)
 
         if combo4 is None:
@@ -802,11 +826,6 @@ def analyze_workbook(path: str | Path) -> dict[str, Any]:
         comparison_details.append(
             f"URL hợp lệ {ke_url_valid} ↔ Đã đăng {dang_posted}: "
             f"ĐĂNG_BÀI thiếu {url_posted_difference} bài đã đăng"
-        )
-    elif url_posted_difference < 0:
-        comparison_details.append(
-            f"URL hợp lệ {ke_url_valid} ↔ Đã đăng {dang_posted}: "
-            f"ĐĂNG_BÀI dư {abs(url_posted_difference)} bài đã đăng"
         )
     if comparison_details:
         if write_dang_difference and url_posted_difference:

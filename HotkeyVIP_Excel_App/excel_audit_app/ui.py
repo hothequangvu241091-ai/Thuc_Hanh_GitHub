@@ -81,13 +81,11 @@ class ExcelAuditApp(tk.Tk):
         self.filter_category = tk.StringVar(value="Tất cả")
         self.filter_level = tk.StringVar(value="Tất cả")
         self.filter_text = tk.StringVar()
+        self.summary_filters: dict[str, tk.StringVar] = {}
+        self.summary_views: dict[str, dict[str, Any]] = {}
         self.card_vars: dict[str, tk.StringVar] = {}
-        self.write_dang_value_label: tk.Label | None = None
-        self.write_dang_eyebrow_label: tk.Label | None = None
-        self.write_dang_detail_label: tk.Label | None = None
-        self.url_posted_value_label: tk.Label | None = None
-        self.url_posted_eyebrow_label: tk.Label | None = None
-        self.url_posted_detail_label: tk.Label | None = None
+        self.card_value_labels: dict[str, tk.Label] = {}
+        self.card_eyebrow_labels: dict[str, tk.Label] = {}
         self.health_title = tk.StringVar(value="CHƯA PHÂN TÍCH")
         self.health_detail = tk.StringVar(value="Chọn file Excel và bấm Phân tích")
         self.pipeline_text = tk.StringVar(value="—")
@@ -281,18 +279,22 @@ class ExcelAuditApp(tk.Tk):
         self.ke_tab = ttk.Frame(self.notebook)
         self.viet_tab = ttk.Frame(self.notebook)
         self.dang_tab = ttk.Frame(self.notebook)
-        self.issues_tab = ttk.Frame(self.notebook)
-        self.recovery_tab = ttk.Frame(self.notebook)
         self.publish_review_tab = ttk.Frame(self.notebook)
         self.flows_tab = ttk.Frame(self.notebook)
+        self.advanced_tab = ttk.Frame(self.notebook)
+        self.advanced_notebook = ttk.Notebook(self.advanced_tab)
+        self.advanced_notebook.pack(fill=BOTH, expand=True, padx=4, pady=6)
+        self.issues_tab = ttk.Frame(self.advanced_notebook)
+        self.recovery_tab = ttk.Frame(self.advanced_notebook)
         self.notebook.add(self.overview_tab, text="Tổng quan")
         self.notebook.add(self.ke_tab, text="Kế hoạch")
         self.notebook.add(self.viet_tab, text="Viết bài")
         self.notebook.add(self.dang_tab, text="Đăng bài")
-        self.notebook.add(self.issues_tab, text="Chi tiết đối soát")
-        self.notebook.add(self.recovery_tab, text="Khôi phục DANG_BAI")
         self.notebook.add(self.publish_review_tab, text="Theo dõi đăng bài")
         self.notebook.add(self.flows_tab, text="Công việc")
+        self.notebook.add(self.advanced_tab, text="Kiểm tra nâng cao")
+        self.advanced_notebook.add(self.issues_tab, text="Chi tiết cảnh báo")
+        self.advanced_notebook.add(self.recovery_tab, text="Khôi phục DANG_BAI")
 
         self._build_overview()
         self.ke_tree = self._build_summary_tree(
@@ -300,47 +302,45 @@ class ExcelAuditApp(tk.Tk):
             [
                 ("domain", "Tên miền", 180, "w"),
                 ("total_rows", "Tổng bài", 90, "e"),
-                ("combo4_complete", "Combo 4 đủ", 100, "e"),
-                ("combo4_missing", "Combo 4 thiếu", 110, "e"),
-                ("url_valid", "URL hợp lệ", 100, "e"),
                 ("url_written", "Đã viết", 90, "e"),
+                ("url_valid", "URL hợp lệ", 100, "e"),
                 ("url_blank", "URL trống", 90, "e"),
+                ("combo4_missing", "Combo 4 thiếu", 110, "e"),
                 ("url_other", "URL sai/khác", 110, "e"),
                 ("problem_rows", "Dữ liệu lỗi", 100, "e"),
-                ("duplicate_groups", "Nhóm trùng", 100, "e"),
-                ("duplicate_rows", "Dòng Combo 4 trùng", 135, "e"),
-                ("missing_in_viet", "Thiếu trong VIET", 120, "e"),
+                ("duplicate_rows", "Dòng trùng", 105, "e"),
             ],
+            "ke_hoach",
         )
         self.viet_tree = self._build_summary_tree(
             self.viet_tab,
             [
                 ("domain", "Tên miền", 180, "w"),
                 ("total_rows", "Tổng dòng", 90, "e"),
-                ("combo4_complete", "Combo 4 đủ", 100, "e"),
-                ("combo4_missing", "Combo 4 thiếu", 110, "e"),
                 ("completed_ok", "Hoàn tất OK", 105, "e"),
+                ("not_completed", "Chưa hoàn tất", 110, "e"),
                 ("completed_with_assets", "OK + đủ tài nguyên", 140, "e"),
                 ("archived_posted_no_assets", "Đã đăng, đã xóa tài nguyên", 175, "e"),
                 ("recovery_no_assets", "Cần khôi phục DANG", 145, "e"),
                 ("unexplained_no_assets", "Thiếu tài nguyên bất thường", 175, "e"),
-                ("not_completed", "Chưa hoàn tất", 110, "e"),
-                ("duplicate_rows", "Dòng Combo 4 trùng", 135, "e"),
+                ("combo4_missing", "Combo 4 thiếu", 110, "e"),
+                ("duplicate_rows", "Dòng trùng", 105, "e"),
             ],
+            "viet_bai",
         )
         self.dang_tree = self._build_summary_tree(
             self.dang_tab,
             [
                 ("domain", "Tên miền", 180, "w"),
-                ("total_rows", "Tổng dòng", 90, "e"),
-                ("combo4_complete", "Combo 4 đủ", 100, "e"),
-                ("combo4_missing", "Combo 4 thiếu", 110, "e"),
-                ("in_viet", "Có trong VIET", 110, "e"),
+                ("total_rows", "Tổng trong DANG", 110, "e"),
                 ("posted", "Đã đăng", 90, "e"),
-                ("url_not_posted_full_assets", "Có URL, chưa đăng, đủ tài nguyên", 210, "e"),
+                ("related_id_match", "Bài liên quan khớp ID", 155, "e"),
+                ("url_not_posted_full_assets", "Chờ đăng", 100, "e"),
+                ("in_viet", "Có trong VIET", 110, "e"),
                 ("dang_missing_viet", "DANG có - VIET thiếu", 160, "e"),
                 ("classification_difference", "Chênh lệch", 100, "e"),
             ],
+            "dang_bai",
         )
         self._build_issues()
         self._build_recovery()
@@ -391,15 +391,16 @@ class ExcelAuditApp(tk.Tk):
         cards = ttk.Frame(container)
         cards.pack(fill=X)
         definitions = [
-            ("errors", "Lỗi dữ liệu", "Cần xử lý", COLORS["red"], "Lỗi dữ liệu"),
-            ("recovery", "Khôi phục", "Cần thêm vào DANG_BAI", COLORS["amber"], "Cần khôi phục"),
-            ("pending", "Tiến độ", "Chưa chuyển sang DANG_BAI", COLORS["blue"], "Chưa chuyển"),
-            ("assets", "Viết bài", "OK + đủ Word và 2 ảnh", COLORS["green"], ""),
-            ("url_posted_match", "URL HỢP LỆ ↔ ĐÃ ĐĂNG", "Đang đối chiếu", COLORS["teal"], ""),
-            ("write_dang_match", "VIẾT OK ↔ ĐĂNG_BÀI", "Đang đối chiếu", COLORS["teal"], ""),
+            ("ke_total", "Kế hoạch", "Tổng số bài đầu vào", COLORS["blue"], ""),
+            ("write_ok", "Viết hoàn tất", "Đã đánh dấu OK", COLORS["green"], ""),
+            ("in_dang", "Đã chuyển DANG", "Đã có trong DANG_BAI", COLORS["teal"], ""),
+            ("posted", "Đã đăng", "Đã hoàn tất đăng", COLORS["green"], ""),
+            ("not_completed", "Còn phải viết", "Chưa hoàn tất", COLORS["blue"], ""),
+            ("need_attention", "Cần xử lý", "Lỗi hoặc chênh lệch cần xem", COLORS["red"], "Tất cả"),
         ]
+        card_columns = 3
         for index, (key, eyebrow, label, color, detail_level) in enumerate(definitions):
-            row, column = divmod(index, 3)
+            row, column = divmod(index, card_columns)
             cards.columnconfigure(column, weight=1, uniform="cards")
             frame = tk.Frame(
                 cards,
@@ -426,6 +427,8 @@ class ExcelAuditApp(tk.Tk):
                 font=("Segoe UI Semibold", 22),
             )
             value_label.pack(anchor="w", padx=14)
+            self.card_value_labels[key] = value_label
+            self.card_eyebrow_labels[key] = eyebrow_label
             detail_label = tk.Label(
                 frame,
                 text=label,
@@ -434,14 +437,6 @@ class ExcelAuditApp(tk.Tk):
                 font=("Segoe UI", 9),
             )
             detail_label.pack(anchor="w", padx=14, pady=(0, 12))
-            if key == "write_dang_match":
-                self.write_dang_value_label = value_label
-                self.write_dang_eyebrow_label = eyebrow_label
-                self.write_dang_detail_label = detail_label
-            elif key == "url_posted_match":
-                self.url_posted_value_label = value_label
-                self.url_posted_eyebrow_label = eyebrow_label
-                self.url_posted_detail_label = detail_label
             if detail_level:
                 for widget in (frame, eyebrow_label, value_label, detail_label):
                     widget.configure(cursor="hand2")
@@ -454,7 +449,7 @@ class ExcelAuditApp(tk.Tk):
         pipeline.pack(fill=X, padx=5, pady=(7, 4))
         tk.Label(
             pipeline,
-            text="PHÉP KIỂM TRA VIET_BAI",
+            text="TIẾN ĐỘ TOÀN BỘ QUY TRÌNH",
             bg="#EAF2F8",
             fg=COLORS["blue"],
             font=("Segoe UI Semibold", 8),
@@ -469,7 +464,7 @@ class ExcelAuditApp(tk.Tk):
 
         title = tk.Label(
             container,
-            text="Đối soát theo tên miền",
+            text="Tiến độ theo tên miền",
             bg=COLORS["bg"],
             fg=COLORS["navy"],
             font=("Segoe UI Semibold", 12),
@@ -479,27 +474,116 @@ class ExcelAuditApp(tk.Tk):
             container,
             [
                 ("domain", "Tên miền", 210, "w"),
-                ("ke_total", "Tổng KE", 90, "e"),
-                ("viet_total", "Tổng VIET", 95, "e"),
-                ("ke_missing_viet", "KE có - VIET thiếu", 145, "e"),
-                ("viet_missing_ke", "VIET có - KE thiếu", 145, "e"),
+                ("ke_total", "Kế hoạch", 100, "e"),
+                ("viet_total", "Viết bài", 100, "e"),
                 ("in_dang", "Đã có trong DANG", 135, "e"),
-                ("recovery_dang", "Cần khôi phục DANG", 155, "e"),
                 ("pending_dang", "Chưa chuyển DANG", 135, "e"),
-                ("dang_missing_viet", "DANG có - VIET thiếu", 155, "e"),
-                ("viet_combo4_missing", "VIET thiếu Combo 4", 145, "e"),
-                ("difference", "Chênh lệch", 105, "e"),
+                ("recovery_dang", "Cần khôi phục", 125, "e"),
                 ("status", "Trạng thái", 110, "center"),
             ],
         )
         self.reconciliation_tree.bind("<Double-1>", self._open_reconciliation_detail)
 
     def _build_summary_tree(
-        self, parent: ttk.Frame, columns: list[tuple[str, str, int, str]]
+        self,
+        parent: ttk.Frame,
+        columns: list[tuple[str, str, int, str]],
+        summary_key: str | None = None,
     ) -> ttk.Treeview:
         wrapper = ttk.Frame(parent)
         wrapper.pack(fill=BOTH, expand=True, padx=8, pady=10)
-        return self._build_tree(wrapper, columns)
+        if summary_key is None:
+            return self._build_tree(wrapper, columns)
+
+        toolbar = ttk.Frame(wrapper)
+        toolbar.pack(fill=X, pady=(0, 7))
+        ttk.Label(toolbar, text="Lọc tên miền:").pack(side=LEFT, padx=(0, 6))
+        filter_var = tk.StringVar()
+        self.summary_filters[summary_key] = filter_var
+        filter_entry = ttk.Entry(toolbar, textvariable=filter_var, width=34)
+        filter_entry.pack(side=LEFT)
+        ttk.Button(
+            toolbar,
+            text="Xóa lọc",
+            command=lambda key=summary_key: self.summary_filters[key].set(""),
+            style="Secondary.TButton",
+        ).pack(side=LEFT, padx=6)
+        ttk.Label(toolbar, text="Bấm tiêu đề cột để sắp xếp ▲/▼").pack(side=RIGHT)
+
+        tree = self._build_tree(wrapper, columns)
+        self.summary_views[summary_key] = {
+            "tree": tree,
+            "columns": columns,
+            "sort_column": "domain",
+            "descending": False,
+        }
+        for identifier, heading, _width, _anchor in columns:
+            tree.heading(
+                identifier,
+                text=heading,
+                command=lambda key=summary_key, column=identifier: self._sort_summary(key, column),
+            )
+        filter_var.trace_add("write", lambda *_args, key=summary_key: self._render_summary(key))
+        return tree
+
+    def _sort_summary(self, summary_key: str, column: str) -> None:
+        view = self.summary_views[summary_key]
+        if view["sort_column"] == column:
+            view["descending"] = not view["descending"]
+        else:
+            view["sort_column"] = column
+            # Số lượng thường cần xem từ nhiều xuống ít; tên miền từ A đến Z.
+            view["descending"] = column != "domain"
+        self._render_summary(summary_key)
+
+    def _render_summary(self, summary_key: str) -> None:
+        view = self.summary_views.get(summary_key)
+        if not view:
+            return
+        tree: ttk.Treeview = view["tree"]
+        columns = view["columns"]
+        headings = {identifier: heading for identifier, heading, _width, _anchor in columns}
+        sort_column = view["sort_column"]
+        descending = view["descending"]
+        for identifier, heading in headings.items():
+            arrow = (" ▼" if descending else " ▲") if identifier == sort_column else ""
+            tree.heading(identifier, text=heading + arrow)
+
+        tree.delete(*tree.get_children())
+        if not self.result:
+            return
+        summary = self.result.get("summaries", {}).get(summary_key, {})
+        query = self.summary_filters[summary_key].get().strip().casefold()
+        rows = [
+            row for row in summary.get("rows", [])
+            if not query or query in str(row.get("domain", "")).casefold()
+        ]
+        rows.sort(
+            key=lambda row: self._summary_sort_value(row.get(sort_column, "")),
+            reverse=descending,
+        )
+        keys = [identifier for identifier, _heading, _width, _anchor in columns]
+        for row in rows:
+            tree.insert("", END, values=[format_number(row.get(key, "")) for key in keys])
+        total = summary.get("total")
+        if total:
+            tree.insert(
+                "", END,
+                values=[format_number(total.get(key, "")) for key in keys],
+                tags=("total",),
+            )
+
+    @staticmethod
+    def _summary_sort_value(value: Any) -> tuple[int, Any]:
+        if isinstance(value, bool):
+            return (0, int(value))
+        if isinstance(value, (int, float)):
+            return (0, value)
+        text = str(value).strip()
+        try:
+            return (0, float(text.replace(".", "").replace(",", ".")))
+        except ValueError:
+            return (1, text.casefold())
 
     def _build_tree(
         self, parent: tk.Misc, columns: list[tuple[str, str, int, str]]
@@ -669,14 +753,30 @@ class ExcelAuditApp(tk.Tk):
             fg=COLORS["navy"],
             font=("Segoe UI Semibold", 10),
         ).pack(side=LEFT)
-        self.publish_review_action_button = ttk.Button(
+        self.publish_retry_button = ttk.Button(
             toolbar,
-            text="Cập nhật ID & đăng lại LỖI KIỂM TRA",
-            command=self._start_publish_review_action,
+            text="3. Chạy lại LỖI KIỂM TRA",
+            command=self._start_publish_retry_action,
             style="PublishFlow.TButton",
             state="disabled",
         )
-        self.publish_review_action_button.pack(side=RIGHT)
+        self.publish_retry_button.pack(side=RIGHT)
+        self.publish_convert_button = ttk.Button(
+            toolbar,
+            text="2. Chuyển sang LỖI KIỂM TRA",
+            command=self._retry_selected_publish_error,
+            style="PublishFlow.TButton",
+            state="disabled",
+        )
+        self.publish_convert_button.pack(side=RIGHT, padx=(0, 8))
+        self.publish_id_update_button = ttk.Button(
+            toolbar,
+            text="1. Cập nhật ID",
+            command=self._start_publish_review_action,
+            style="Primary.TButton",
+            state="disabled",
+        )
+        self.publish_id_update_button.pack(side=RIGHT, padx=(0, 8))
 
         content = ttk.Panedwindow(outer, orient="horizontal")
         content.pack(fill=BOTH, expand=True)
@@ -730,9 +830,15 @@ class ExcelAuditApp(tk.Tk):
         ).pack(side=LEFT, padx=(6, 0))
         ttk.Button(
             id_editor,
-            text="Chuyển sang LỖI KIỂM TRA & chạy lại",
-            command=self._retry_selected_publish_error,
-            style="PublishFlow.TButton",
+            text="Mở Word",
+            command=self._open_publish_word,
+            style="Secondary.TButton",
+        ).pack(side=LEFT, padx=(6, 0))
+        ttk.Button(
+            id_editor,
+            text="Mở ChatGPT",
+            command=lambda: self._open_publish_url("chat_url"),
+            style="Secondary.TButton",
         ).pack(side=LEFT, padx=(6, 0))
         fields = [
             ("row", "Dòng Excel"),
@@ -764,17 +870,6 @@ class ExcelAuditApp(tk.Tk):
             ).grid(row=index, column=0, sticky="w", padx=(0, 8), pady=2)
             entry = ttk.Entry(form, textvariable=variable, state="readonly")
             entry.grid(row=index, column=1, sticky="ew", pady=2)
-
-        action_row = len(fields)
-        ttk.Button(
-            form, text="Mở Word", command=self._open_publish_word, style="Secondary.TButton"
-        ).grid(row=action_row, column=0, sticky="ew", pady=(8, 3))
-        url_buttons = ttk.Frame(form)
-        url_buttons.grid(row=action_row, column=1, sticky="w", pady=(8, 3))
-        ttk.Button(
-            url_buttons, text="Mở ChatGPT", command=lambda: self._open_publish_url("chat_url"),
-            style="Secondary.TButton",
-        ).pack(side=LEFT)
 
     def _render_publish_review(self) -> None:
         for tree in (self.publish_error_tree, self.publish_today_tree):
@@ -829,6 +924,7 @@ class ExcelAuditApp(tk.Tk):
             )
             variable.set(str(value))
         self.publish_new_id.set(self.publish_id_updates.get(int(item["row"]), ""))
+        self._update_publish_review_button()
 
     def _stage_publish_id(self) -> None:
         item = self.publish_selected_item
@@ -859,7 +955,7 @@ class ExcelAuditApp(tk.Tk):
         if "lỗi đăng" not in str(item.get("status", "")).casefold():
             messagebox.showinfo(
                 "Không phải LỖI ĐĂNG",
-                "Nút này chỉ dùng để chuyển một dòng LỖI ĐĂNG sang LỖI KIỂM TRA rồi chạy lại.",
+                "Nút này chỉ dùng để chuyển một dòng LỖI ĐĂNG sang LỖI KIỂM TRA.",
             )
             return
         source = Path(self.selected_path.get().strip())
@@ -867,29 +963,14 @@ class ExcelAuditApp(tk.Tk):
             messagebox.showwarning("Không tìm thấy Excel", "Hãy chọn và Phân tích đúng file Excel trước.")
             return
 
-        retry_plan = build_retry_publish_plan(self.publish_review)
-        selected_rows = list(retry_plan["selected_rows"])
         row = int(item["row"])
-        if not any(int(candidate["row"]) == row for candidate in selected_rows):
-            selected_rows.append(
-                {
-                    "row": row,
-                    "domain": item.get("domain", ""),
-                    "category": item.get("category", ""),
-                    "title": item.get("keyword", ""),
-                    "seo_title": item.get("seo_title", ""),
-                    "h1": item.get("h1", ""),
-                }
-            )
-        retry_plan["selected_rows"] = selected_rows
-        retry_plan["selected_total"] = len(selected_rows)
         if not messagebox.askyesno(
-            "Chuyển và đăng lại bài lỗi",
-            f"Dòng {row} sẽ được chuyển từ LỖI ĐĂNG sang LỖI KIỂM TRA trong Excel, "
-            f"sau đó đăng lại {retry_plan['selected_total']} bài bằng 1 worker.\n\nTiếp tục?",
+            "Chuyển trạng thái bài lỗi",
+            f"Dòng {row} sẽ được chuyển từ LỖI ĐĂNG sang LỖI KIỂM TRA trong Excel.\n\n"
+            "Thao tác này chưa chạy đăng lại. Tiếp tục?",
         ):
             return
-        self._launch_publish_id_update(source, [], retry_plan, retry_rows=[row])
+        self._launch_publish_id_update(source, [], retry_rows=[row])
 
     def _open_selected_excel(self) -> None:
         if self._busy or self._flow_process is not None:
@@ -924,14 +1005,26 @@ class ExcelAuditApp(tk.Tk):
         webbrowser.open(url)
 
     def _update_publish_review_button(self) -> None:
-        can_run = bool(
-            (self.publish_id_updates or self.publish_review.get("retry_rows"))
-            and not self._busy
+        available = bool(
+            not self._busy
             and self._flow_process is None
             and Path(self.selected_path.get().strip()).is_file()
         )
-        if hasattr(self, "publish_review_action_button"):
-            self.publish_review_action_button.configure(state="normal" if can_run else "disabled")
+        if hasattr(self, "publish_id_update_button"):
+            self.publish_id_update_button.configure(
+                state="normal" if available and self.publish_id_updates else "disabled"
+            )
+        if hasattr(self, "publish_retry_button"):
+            self.publish_retry_button.configure(
+                state="normal"
+                if available and self.publish_review.get("retry_rows")
+                else "disabled"
+            )
+        if hasattr(self, "publish_convert_button"):
+            selected_status = str((self.publish_selected_item or {}).get("status", "")).casefold()
+            self.publish_convert_button.configure(
+                state="normal" if available and "lỗi đăng" in selected_status else "disabled"
+            )
 
     def _start_publish_review_action(self) -> None:
         if self._busy or self._flow_process is not None:
@@ -958,27 +1051,41 @@ class ExcelAuditApp(tk.Tk):
             {"row": row, "cms_id": cms_id}
             for row, cms_id in sorted(self.publish_id_updates.items())
         ]
-        retry_plan = build_retry_publish_plan(self.publish_review)
-        retry_count = int(retry_plan.get("selected_total", 0))
-        if not updates and not retry_count:
-            messagebox.showinfo("Không có việc cần làm", "Không có ID mới hoặc bài LỖI KIỂM TRA.")
+        if not updates:
+            messagebox.showinfo("Không có ID cần cập nhật", "Hãy nhập và ghi nhớ ít nhất một ID CMS.")
             return
         if not messagebox.askyesno(
-            "Xác nhận cập nhật đăng bài",
-            f"Sẽ ghi {len(updates)} ID CMS vào Excel và đăng lại {retry_count} bài "
-            "LỖI KIỂM TRA bằng 1 worker.\n\nTiếp tục?",
+            "Xác nhận cập nhật ID",
+            f"Sẽ ghi {len(updates)} ID CMS vào Excel, đổi các dòng đó thành ĐÃ ĐĂNG "
+            "và xóa nội dung Lỗi đăng.\n\nKhông chạy lại bài lỗi nào. Tiếp tục?",
         ):
             return
-        if updates:
-            self._launch_publish_id_update(source, updates, retry_plan)
-        else:
-            self._launch_review_publish(source, retry_plan)
+        self._launch_publish_id_update(source, updates)
+
+    def _start_publish_retry_action(self) -> None:
+        if self._busy or self._flow_process is not None:
+            return
+        source = Path(self.selected_path.get().strip())
+        if not source.is_file():
+            messagebox.showwarning("Không tìm thấy Excel", "Hãy chọn và Phân tích đúng file Excel trước.")
+            return
+        retry_plan = build_retry_publish_plan(self.publish_review)
+        retry_count = int(retry_plan.get("selected_total", 0))
+        if not retry_count:
+            messagebox.showinfo("Không có bài chạy lại", "Không có dòng nào đang ở trạng thái LỖI KIỂM TRA.")
+            return
+        if not messagebox.askyesno(
+            "Xác nhận chạy lại",
+            f"Sẽ đăng lại {retry_count} bài đang ở trạng thái LỖI KIỂM TRA bằng 1 worker.\n\n"
+            "Hãy chắc chắn các bài cần sửa đã được kiểm tra xong. Tiếp tục?",
+        ):
+            return
+        self._launch_review_publish(source, retry_plan)
 
     def _launch_publish_id_update(
         self,
         source: Path,
         updates: list[dict[str, Any]],
-        retry_plan: dict[str, Any],
         retry_rows: list[int] | None = None,
     ) -> None:
         project_root = Path(__file__).resolve().parents[1]
@@ -1009,13 +1116,19 @@ class ExcelAuditApp(tk.Tk):
             return
         self._flow_process = process
         self._flow_running_key = "publish_articles"
-        self._set_busy(True, "Đang cập nhật ID CMS vào Excel...")
-        self.flow_status_text.set("Đang cập nhật ID CMS")
+        converting = bool(retry_rows)
+        action_text = "Đang chuyển sang LỖI KIỂM TRA" if converting else "Đang cập nhật ID CMS"
+        self._set_busy(True, action_text + "...")
+        self.flow_status_text.set(action_text)
         self.notebook.select(self.flows_tab)
-        self._append_flow_log("\n=== CẬP NHẬT ID CMS ===\n")
+        self._append_flow_log(
+            "\n=== CHUYỂN SANG LỖI KIỂM TRA ===\n"
+            if converting
+            else "\n=== CẬP NHẬT ID CMS ===\n"
+        )
         threading.Thread(
             target=self._publish_id_update_worker,
-            args=(process, source, retry_plan),
+            args=(process, source),
             daemon=True,
         ).start()
 
@@ -1023,16 +1136,15 @@ class ExcelAuditApp(tk.Tk):
         self,
         process: subprocess.Popen[str],
         source: Path,
-        retry_plan: dict[str, Any],
     ) -> None:
         if process.stdout is not None:
             for line in process.stdout:
                 self.after(0, lambda text=line: self._append_flow_log(text))
         return_code = process.wait()
-        self.after(0, lambda: self._publish_id_update_finished(return_code, source, retry_plan))
+        self.after(0, lambda: self._publish_id_update_finished(return_code, source))
 
     def _publish_id_update_finished(
-        self, return_code: int, source: Path, retry_plan: dict[str, Any]
+        self, return_code: int, source: Path
     ) -> None:
         self._flow_process = None
         self._flow_running_key = None
@@ -1044,9 +1156,6 @@ class ExcelAuditApp(tk.Tk):
             )
             return
         self.publish_id_updates.clear()
-        if int(retry_plan.get("selected_total", 0)):
-            self._launch_review_publish(source, retry_plan)
-            return
         self._busy = False
         self._start_analysis()
 
@@ -1398,120 +1507,42 @@ class ExcelAuditApp(tk.Tk):
         viet_total = summaries["viet_bai"]["total"]
         rec_total = summaries["reconciliation"]["total"]
         overall = self.result.get("overall", {})
+        dang_total = summaries["dang_bai"]["total"]
+        error_count = int(overall.get("error_count", 0))
+        recovery_count = int(overall.get("recovery_count", 0))
         values = {
-            "errors": overall.get("error_count", 0),
-            "recovery": overall.get("recovery_count", 0),
-            "pending": overall.get("pending_count", 0),
-            "assets": viet_total.get("completed_with_assets", 0),
+            "ke_total": ke_total.get("total_rows", 0),
+            "write_ok": viet_total.get("completed_ok", 0),
+            "in_dang": rec_total.get("in_dang", 0),
+            "posted": dang_total.get("posted", 0),
+            "not_completed": viet_total.get("not_completed", 0),
+            "need_attention": error_count + recovery_count,
         }
         for key, value in values.items():
             self.card_vars[key].set(format_number(value))
-
-        dang_total = summaries["dang_bai"]["total"]
-        write_ok = int(viet_total.get("completed_ok", 0))
-        dang_rows = int(dang_total.get("total_rows", 0))
-        write_dang_difference = write_ok - dang_rows
-        comparison_symbol = "=" if write_dang_difference == 0 else "≠"
-        self.card_vars["write_dang_match"].set(
-            f"{format_number(write_ok)} {comparison_symbol} {format_number(dang_rows)}"
-        )
-        if write_dang_difference == 0:
-            comparison_color = COLORS["green"]
-            comparison_detail = "KHỚP • Chênh lệch 0"
-        elif write_dang_difference > 0:
-            comparison_color = COLORS["red"]
-            comparison_detail = (
-                f"LỆCH • ĐĂNG_BÀI thiếu {format_number(write_dang_difference)} dòng"
-            )
-        else:
-            comparison_color = COLORS["red"]
-            comparison_detail = (
-                f"LỆCH • ĐĂNG_BÀI dư {format_number(abs(write_dang_difference))} dòng"
-            )
-        if self.write_dang_value_label is not None:
-            self.write_dang_value_label.configure(fg=comparison_color)
-        if self.write_dang_eyebrow_label is not None:
-            self.write_dang_eyebrow_label.configure(fg=comparison_color)
-        if self.write_dang_detail_label is not None:
-            self.write_dang_detail_label.configure(
-                text=comparison_detail,
-                fg=comparison_color,
-            )
-
-        ke_url_valid = int(ke_total.get("url_valid", 0))
-        dang_posted = int(dang_total.get("posted", 0))
-        url_posted_difference = ke_url_valid - dang_posted
-        url_comparison_symbol = "=" if url_posted_difference == 0 else "≠"
-        self.card_vars["url_posted_match"].set(
-            f"{format_number(ke_url_valid)} {url_comparison_symbol} {format_number(dang_posted)}"
-        )
-        if url_posted_difference == 0:
-            url_comparison_color = COLORS["green"]
-            url_comparison_detail = "KHỚP • Chênh lệch 0"
-        elif url_posted_difference > 0:
-            url_comparison_color = COLORS["red"]
-            url_comparison_detail = (
-                f"LỆCH • ĐÃ ĐĂNG thiếu {format_number(url_posted_difference)} bài"
-            )
-        else:
-            url_comparison_color = COLORS["red"]
-            url_comparison_detail = (
-                f"LỆCH • ĐÃ ĐĂNG dư {format_number(abs(url_posted_difference))} bài"
-            )
-        if self.url_posted_value_label is not None:
-            self.url_posted_value_label.configure(fg=url_comparison_color)
-        if self.url_posted_eyebrow_label is not None:
-            self.url_posted_eyebrow_label.configure(fg=url_comparison_color)
-        if self.url_posted_detail_label is not None:
-            self.url_posted_detail_label.configure(
-                text=url_comparison_detail,
-                fg=url_comparison_color,
-            )
+        attention_color = COLORS["green"] if values["need_attention"] == 0 else COLORS["red"]
+        self.card_value_labels["need_attention"].configure(fg=attention_color)
+        self.card_eyebrow_labels["need_attention"].configure(fg=attention_color)
 
         self._render_health(overall)
         self.pipeline_text.set(
-            f"{format_number(viet_total['total_rows'])} tổng = "
-            f"{format_number(rec_total['in_dang'])} đã có trong DANG + "
-            f"{format_number(rec_total['recovery_dang'])} cần khôi phục + "
-            f"{format_number(rec_total['pending_dang'])} chưa chuyển + "
-            f"{format_number(rec_total['viet_combo4_missing'])} thiếu Combo 4  •  "
-            f"Chênh lệch: {format_number(rec_total['difference'])}"
+            f"Kế hoạch {format_number(ke_total['total_rows'])}  →  "
+            f"Viết OK {format_number(viet_total['completed_ok'])} "
+            f"(còn {format_number(viet_total['not_completed'])})  →  "
+            f"DANG {format_number(dang_total['total_rows'])} "
+            f"(chưa chuyển {format_number(rec_total['pending_dang'])})  →  "
+            f"Đã đăng {format_number(dang_total['posted'])}"
         )
 
-        self._fill_tree(
-            self.ke_tree,
-            summaries["ke_hoach"],
-            [
-                "domain", "total_rows", "combo4_complete", "combo4_missing", "url_valid",
-                "url_written", "url_blank", "url_other", "problem_rows",
-                "duplicate_groups", "duplicate_rows", "missing_in_viet",
-            ],
-        )
-        self._fill_tree(
-            self.viet_tree,
-            summaries["viet_bai"],
-            [
-                "domain", "total_rows", "combo4_complete", "combo4_missing", "completed_ok",
-                "completed_with_assets", "archived_posted_no_assets", "recovery_no_assets",
-                "unexplained_no_assets", "not_completed", "duplicate_rows",
-            ],
-        )
-        self._fill_tree(
-            self.dang_tree,
-            summaries["dang_bai"],
-            [
-                "domain", "total_rows", "combo4_complete", "combo4_missing", "in_viet",
-                "posted", "url_not_posted_full_assets", "dang_missing_viet",
-                "classification_difference",
-            ],
-        )
+        self._render_summary("ke_hoach")
+        self._render_summary("viet_bai")
+        self._render_summary("dang_bai")
         self._fill_tree(
             self.reconciliation_tree,
             summaries["reconciliation"],
             [
-                "domain", "ke_total", "viet_total", "ke_missing_viet", "viet_missing_ke",
-                "in_dang", "recovery_dang", "pending_dang", "dang_missing_viet",
-                "viet_combo4_missing", "difference", "status",
+                "domain", "ke_total", "viet_total", "in_dang", "pending_dang",
+                "recovery_dang", "status",
             ],
             warning_key="status",
         )
@@ -1545,7 +1576,8 @@ class ExcelAuditApp(tk.Tk):
         self.filter_level.set(level_label)
         self.filter_category.set("Tất cả")
         self.filter_text.set("")
-        self.notebook.select(self.issues_tab)
+        self.notebook.select(self.advanced_tab)
+        self.advanced_notebook.select(self.issues_tab)
         self._render_issues()
 
     def _open_reconciliation_detail(self, event: tk.Event) -> None:
@@ -1574,7 +1606,8 @@ class ExcelAuditApp(tk.Tk):
         self.filter_level.set("Tất cả")
         self.filter_category.set(category)
         self.filter_text.set(domain)
-        self.notebook.select(self.issues_tab)
+        self.notebook.select(self.advanced_tab)
+        self.advanced_notebook.select(self.issues_tab)
         self._render_issues()
 
     def _render_recovery(self) -> None:

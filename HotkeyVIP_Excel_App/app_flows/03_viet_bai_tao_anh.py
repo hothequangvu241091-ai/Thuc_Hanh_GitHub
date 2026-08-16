@@ -40,7 +40,7 @@ AE = Retry Time / thời điểm ghi lỗi
 # - Truyền Edge driver mới về process_row và main sau khi Lớp 2 reset Edge.
 # - Giữ tham chiếu driver đang hoạt động kể cả khi lỗi phát sinh giữa chừng.
 # =====================================================
-VERSION = "03_viet_bai_tao_anh (engine V2.22)"
+VERSION = "03_viet_bai_tao_anh (engine V2.23)"
 
 # =====================================================
 # NHẬT KÝ GIẢM DELAY V2.10 (để có lỗi thì trả về đúng mức V2.9)
@@ -98,6 +98,10 @@ class WorkbookIdentityChangedError(ExcelWriterUnavailableError):
 
 class RowIdentityChangedError(Exception):
     """Dòng Excel đã đổi sau khi nạp RAM; không được ghi vào dòng đó."""
+
+
+class WordSystemError(RuntimeError):
+    """Microsoft Word/COM hỏng ở cấp hệ thống, không phải lỗi riêng một bài."""
 
 
 import os
@@ -314,6 +318,15 @@ _WORD_PENDING_LOCK = threading.RLock()
 _WORD_PENDING_ROWS = set()
 _WORD_CURRENT_ROW = None
 _WORD_CURRENT_STATUS = "Đang chờ bài"
+_WORD_SYSTEM_FAILED = threading.Event()
+_WORD_SYSTEM_ERROR = ""
+_WORD_RECOVERY_LOCK = threading.Lock()
+_WORD_RECOVERY_USED = threading.Event()
+_WORD_PID_LOCK = threading.RLock()
+_FLOW_WORD_PIDS = set()
+_FLOW_WORD_OBJECT_PIDS = {}
+_GENCACHE_FALLBACK_LOCK = threading.Lock()
+_GENCACHE_FALLBACK_INSTALLED = False
 _EXCEL_WRITER_STATUS = "Đang chờ lệnh"
 _EXCEL_WRITER_RETRY_COUNT = 0
 _EXCEL_WRITER_LAST_ERROR = ""
@@ -862,6 +875,156 @@ def is_word_ok(path, min_words=80):
         return count_words(text) >= min_words
     except Exception:
         return False
+
+
+_WORD_SYSTEM_ERROR_MARKERS = (
+    "clsidtopackagemap", "clsidtoclassmap", "server execution failed",
+    "rpc server is unavailable", "remote procedure call failed",
+    "object invoked has disconnected", "word.application",
+    "cannot run the macro", "can't run the macro",
+    "-2146959355", "-2147023174", "-2147417848",
+)
+
+
+def is_word_system_error(exc):
+    """Phân biệt lỗi Word/COM toàn hệ thống với lỗi nội dung của một bài."""
+    message = str(exc).casefold()
+    return any(marker in message for marker in _WORD_SYSTEM_ERROR_MARKERS)
+
+
+def _running_word_pids():
+    pids = set()
+    for process in psutil.process_iter(["pid", "name"]):
+        try:
+            if str(process.info.get("name") or "").casefold() == "winword.exe":
+                pids.add(int(process.info["pid"]))
+        except (psutil.Error, OSError, ValueError):
+            pass
+    return pids
+
+
+def _word_pid_from_hwnd(hwnd):
+    pid = wintypes.DWORD()
+    ctypes.windll.user32.GetWindowThreadProcessId(int(hwnd), ctypes.byref(pid))
+    return int(pid.value) if pid.value else None
+
+
+def _terminate_owned_word_pid(pid, timeout=3):
+    if not pid:
+        return
+    with _WORD_PID_LOCK:
+        owned = pid in _FLOW_WORD_PIDS
+    if not owned:
+        return
+    try:
+        process = psutil.Process(pid)
+        process.terminate()
+        try:
+            process.wait(timeout=timeout)
+        except psutil.TimeoutExpired:
+            process.kill()
+            process.wait(timeout=timeout)
+    except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.Error):
+        pass
+    finally:
+        with _WORD_PID_LOCK:
+            _FLOW_WORD_PIDS.discard(pid)
+
+
+def install_safe_genpy_fallback():
+    """Nếu cache sinh sẵn bị cụt, để pywin32 tự rơi về late-bound dynamic."""
+    global _GENCACHE_FALLBACK_INSTALLED
+    with _GENCACHE_FALLBACK_LOCK:
+        if _GENCACHE_FALLBACK_INSTALLED:
+            return
+        import win32com.client.gencache as gencache
+
+        original = gencache.GetClassForCLSID
+
+        def safe_get_class_for_clsid(clsid):
+            try:
+                return original(clsid)
+            except AttributeError as exc:
+                message = str(exc).casefold()
+                if "clsidtoclassmap" in message or "clsidtopackagemap" in message:
+                    return None
+                raise
+
+        gencache.GetClassForCLSID = safe_get_class_for_clsid
+        _GENCACHE_FALLBACK_INSTALLED = True
+
+
+def create_word_app():
+    """Tạo Word late-bound, không đọc cache win32com.gen_py."""
+    import pythoncom
+    from win32com.client import dynamic
+
+    install_safe_genpy_fallback()
+
+    before = _running_word_pids()
+    started_at = time.time() - 1
+    word_app = None
+    try:
+        raw_dispatch = pythoncom.CoCreateInstance(
+            "Word.Application", None, pythoncom.CLSCTX_LOCAL_SERVER,
+            pythoncom.IID_IDispatch,
+        )
+        word_app = dynamic.Dispatch(raw_dispatch, "Word.Application")
+        new_pids = _running_word_pids() - before
+        if not new_pids:
+            time.sleep(0.25)
+            new_pids = _running_word_pids() - before
+        if not new_pids:
+            raise WordSystemError("Không xác định được PID Word vừa tạo.")
+        pid = max(new_pids, key=lambda item: psutil.Process(item).create_time())
+        with _WORD_PID_LOCK:
+            _FLOW_WORD_PIDS.add(pid)
+            _FLOW_WORD_OBJECT_PIDS[id(word_app)] = pid
+        word_app.Visible = False
+        word_app.DisplayAlerts = 0
+        return word_app
+    except Exception as exc:
+        # CoCreateInstance có thể đã sinh WINWORD trước khi Python nhận được object.
+        for pid in _running_word_pids() - before:
+            try:
+                if psutil.Process(pid).create_time() >= started_at:
+                    with _WORD_PID_LOCK:
+                        _FLOW_WORD_PIDS.add(pid)
+                    _terminate_owned_word_pid(pid)
+            except (psutil.Error, OSError):
+                pass
+        if isinstance(exc, WordSystemError):
+            raise
+        raise WordSystemError(f"Không khởi tạo được Word COM động: {exc}") from exc
+
+
+def close_word_app(word_app):
+    """Quit Word rồi cưỡng chế đúng PID do flow sở hữu nếu Word không tự thoát."""
+    if word_app is None:
+        return
+    with _WORD_PID_LOCK:
+        pid = _FLOW_WORD_OBJECT_PIDS.pop(id(word_app), None)
+    try:
+        word_app.Quit()
+    except Exception:
+        pass
+    if pid:
+        try:
+            psutil.Process(pid).wait(timeout=5)
+        except psutil.TimeoutExpired:
+            _terminate_owned_word_pid(pid)
+        except (psutil.NoSuchProcess, psutil.Error):
+            pass
+        finally:
+            with _WORD_PID_LOCK:
+                _FLOW_WORD_PIDS.discard(pid)
+
+
+def cleanup_all_owned_word_processes():
+    with _WORD_PID_LOCK:
+        pids = list(_FLOW_WORD_PIDS)
+    for pid in pids:
+        _terminate_owned_word_pid(pid)
 
 
 def check_keyword_exists(text_content, keyword):
@@ -1830,8 +1993,6 @@ def extract_content_by_js(driver):
 
 def copy_and_save_snapshot(article, file_path):
     """Worker Word dùng snapshot HTML riêng; tuyệt đối không truy cập Selenium."""
-    import win32com.client as win32
-
     word_app = None
     doc = None
     html_path = None
@@ -1864,10 +2025,8 @@ th, td {{ border: 1px solid #999; padding: 5px; }}
         if os.path.exists(temp_docx):
             os.remove(temp_docx)
 
-        # Chỉ thread Word gọi COM. DispatchEx tạo một Word instance riêng cho hàng chờ.
-        word_app = win32.DispatchEx("Word.Application")
-        word_app.Visible = False
-        word_app.DisplayAlerts = 0
+        # Late-bound COM không phụ thuộc cache gen_py có thể bị dọn trong Temp.
+        word_app = create_word_app()
         doc = word_app.Documents.Open(
             html_path, ConfirmConversions=False, ReadOnly=False,
             AddToRecentFiles=False, Encoding=65001
@@ -1890,11 +2049,7 @@ th, td {{ border: 1px solid #999; padding: 5px; }}
                 doc.Close(False)
             except Exception:
                 pass
-        if word_app is not None:
-            try:
-                word_app.Quit()
-            except Exception:
-                pass
+        close_word_app(word_app)
         for temp_path in (html_path, temp_docx):
             if temp_path and os.path.exists(temp_path):
                 try:
@@ -1903,9 +2058,67 @@ th, td {{ border: 1px solid #999; padding: 5px; }}
                     pass
 
 
+def run_word_preflight(label="đầu phiên"):
+    """Chạy đúng chuỗi HTML -> macro -> DOCX -> Quit một lần trước/giữa phiên."""
+    import pythoncom
+
+    sample_text = " ".join(["kiểm tra an toàn Microsoft Word"] * 35)
+    article = {
+        "html": f"<h1>Kiểm tra Word</h1><p>{sample_text}</p>",
+        "text": f"Kiểm tra Word {sample_text}",
+    }
+    pythoncom.CoInitialize()
+    try:
+        with tempfile.TemporaryDirectory(prefix="hotkeyvip_word_preflight_") as folder:
+            output = os.path.join(folder, "word_preflight.docx")
+            copy_and_save_snapshot(article, output)
+            if not is_word_ok(output):
+                raise WordSystemError("Word tạo file test nhưng DOCX không đạt kiểm tra.")
+    except Exception as exc:
+        cleanup_all_owned_word_processes()
+        if isinstance(exc, WordSystemError) or is_word_system_error(exc):
+            raise WordSystemError(f"Preflight Word {label} thất bại: {exc}") from exc
+        raise WordSystemError(f"Preflight Word {label} thất bại: {exc}") from exc
+    finally:
+        pythoncom.CoUninitialize()
+    print(f"✅ Preflight Word {label}: COM, macro, lưu DOCX và Quit đều đạt.")
+
+
+def trip_word_circuit(exc):
+    """Ngừng nhận bài mới nhưng vẫn để Excel Writer lưu sạch hàng đợi."""
+    global _WORD_SYSTEM_ERROR, _WORD_CURRENT_STATUS
+    _WORD_SYSTEM_ERROR = str(exc)[:500]
+    _WORD_SYSTEM_FAILED.set()
+    SOFT_STOP_EVENT.set()
+    RUN_EVENT.set()
+    cleanup_all_owned_word_processes()
+    _WORD_CURRENT_STATUS = "DỪNG: lỗi hệ thống Word"
+    print(f"🛑 [WORD CIRCUIT] {_WORD_SYSTEM_ERROR}")
+
+
+def recover_word_runtime_once():
+    """Chỉ phục hồi/test lại đúng một lần trong cả phiên."""
+    with _WORD_RECOVERY_LOCK:
+        if _WORD_RECOVERY_USED.is_set():
+            return False
+        _WORD_RECOVERY_USED.set()
+        cleanup_all_owned_word_processes()
+        try:
+            run_word_preflight("phục hồi giữa phiên")
+            return True
+        except Exception as exc:
+            trip_word_circuit(exc)
+            return False
+
+
 def enqueue_word_job(driver, task, word_path, word_count):
     """Chụp HTML đúng từ Edge hiện tại và giao cho Worker Word."""
     row = task["row"]
+    if _WORD_SYSTEM_FAILED.is_set():
+        raise WordSystemError(
+            f"Word đã dừng ở cấp hệ thống; không giao thêm dòng {row}: "
+            f"{_WORD_SYSTEM_ERROR}"
+        )
     with _WORD_PENDING_LOCK:
         if row in _WORD_PENDING_ROWS:
             print(f"-> Dòng {row}: Word đã có trong hàng chờ, không giao trùng.")
@@ -1921,6 +2134,10 @@ def enqueue_word_job(driver, task, word_path, word_count):
         if not snapshot or count_words(snapshot.get("text")) < 80:
             raise Exception("Không chụp được snapshot HTML hợp lệ để giao Worker Word.")
         chat_url = driver.current_url
+        if _WORD_SYSTEM_FAILED.is_set():
+            raise WordSystemError(
+                f"Word lỗi hệ thống trước khi giao dòng {row}: {_WORD_SYSTEM_ERROR}"
+            )
         write_article_queued(row, word_path, chat_url, word_count)
         WORD_QUEUE.put({
             "row": row,
@@ -1939,8 +2156,6 @@ def enqueue_word_job(driver, task, word_path, word_count):
 
 
 def copy_and_save_perfect(driver, file_path):
-    import win32com.client as win32
-
     def copy_save_once(article_snapshot):
         word_app = None
         doc = None
@@ -1972,9 +2187,7 @@ th, td {{ border: 1px solid #999; padding: 5px; }}
                 temp_html.write(html_document)
                 html_path = temp_html.name
 
-            word_app = win32.gencache.EnsureDispatch('Word.Application')
-            word_app.Visible = False
-            word_app.DisplayAlerts = 0
+            word_app = create_word_app()
 
             doc = word_app.Documents.Open(
                 html_path, ConfirmConversions=False, ReadOnly=False,
@@ -2001,11 +2214,7 @@ th, td {{ border: 1px solid #999; padding: 5px; }}
                 except Exception:
                     pass
 
-            if word_app is not None:
-                try:
-                    word_app.Quit()
-                except Exception:
-                    pass
+            close_word_app(word_app)
 
             if html_path and os.path.exists(html_path):
                 try:
@@ -3908,27 +4117,31 @@ class MultiWorkerMonitor:
                 ),
                 fg=excel_color,
             )
-            try:
-                while True:
+            # Không vét UI_QUEUE vô hạn trong một callback Tkinter. Khi Worker
+            # phát trạng thái nhanh hơn tốc độ vẽ, vòng `while True` cũ có thể
+            # giữ callback mãi và làm cửa sổ đứng ở nội dung cũ dù flow vẫn chạy.
+            # Xử lý theo lô rồi nhường lại event loop để Tkinter repaint.
+            for _ in range(100):
+                try:
                     kind, worker_id, row, step, _completed = UI_QUEUE.get_nowait()
-                    color = "#d06b00" if kind == "PAUSE" else "#1464a0"
-                    labels[worker_id].config(text=step, fg=color)
-                    if kind == "PAUSE" and not RUN_EVENT.is_set():
-                        paused_workers.add(worker_id)
-                        if len(paused_workers) >= self.worker_count:
-                            overall_status.config(
-                                text="■ ĐÃ TẠM DỪNG TẤT CẢ — có thể đăng nhập/chỉnh tài khoản",
-                                fg="#a61b1b",
-                                bg="#ffd8d8",
-                            )
-                            pause_button.config(
-                                text="Đã tạm dừng tất cả",
-                                bg="#c0392b",
-                            )
-                    elif RUN_EVENT.is_set():
-                        paused_workers.discard(worker_id)
-            except queue.Empty:
-                pass
+                except queue.Empty:
+                    break
+                color = "#d06b00" if kind == "PAUSE" else "#1464a0"
+                labels[worker_id].config(text=step, fg=color)
+                if kind == "PAUSE" and not RUN_EVENT.is_set():
+                    paused_workers.add(worker_id)
+                    if len(paused_workers) >= self.worker_count:
+                        overall_status.config(
+                            text="■ ĐÃ TẠM DỪNG TẤT CẢ — có thể đăng nhập/chỉnh tài khoản",
+                            fg="#a61b1b",
+                            bg="#ffd8d8",
+                        )
+                        pause_button.config(
+                            text="Đã tạm dừng tất cả",
+                            bg="#c0392b",
+                        )
+                elif RUN_EVENT.is_set():
+                    paused_workers.discard(worker_id)
             root.after(200, poll)
 
         poll()
@@ -4348,6 +4561,14 @@ def word_worker_thread(rows):
                 if job is None:
                     break
 
+                if _WORD_SYSTEM_FAILED.is_set():
+                    row = job["row"]
+                    error_text = f"WORD_SYSTEM_STOPPED: {_WORD_SYSTEM_ERROR}"
+                    write_word_worker_error(row, error_text)
+                    write_retry_note(row, 9, "WORD_SYSTEM", "WORD_SYSTEM_STOPPED", error_text)
+                    _WORD_CURRENT_STATUS = f"Bỏ dòng {row}: Word lỗi hệ thống"
+                    continue
+
                 if STOP_EVENT.is_set():
                     _WORD_CURRENT_STATUS = "Đã bỏ hàng chờ vì Excel Writer dừng"
                     continue
@@ -4369,6 +4590,7 @@ def word_worker_thread(rows):
                 )
                 errors = []
                 saved = False
+                system_failure = None
                 for attempt in (1, 2):
                     try:
                         copy_and_save_snapshot(job["article"], job["word_path"])
@@ -4377,6 +4599,14 @@ def word_worker_thread(rows):
                     except Exception as exc:
                         errors.append(f"Lần {attempt}: {exc}")
                         print(f"⚠️ [WORD] Dòng {row} lỗi lần {attempt}: {exc}")
+                        if is_word_system_error(exc) or isinstance(exc, WordSystemError):
+                            if attempt == 1 and recover_word_runtime_once():
+                                print("▶ [WORD] Phục hồi đạt; thử lại đúng bài hiện tại một lần.")
+                                continue
+                            system_failure = exc
+                            if not _WORD_SYSTEM_FAILED.is_set():
+                                trip_word_circuit(exc)
+                            break
                         time.sleep(1)
 
                 if saved:
@@ -4387,10 +4617,17 @@ def word_worker_thread(rows):
                     _WORD_CURRENT_STATUS = f"Đã xong dòng {row}"
                 else:
                     error_text = " | ".join(errors)
+                    if system_failure is not None:
+                        error_text = f"WORD_SYSTEM_ERROR: {error_text}"
                     write_word_worker_error(row, error_text)
-                    write_retry_note(row, 9, "WORD_WORKER", "WORD_QUEUE_ERROR", error_text)
-                    print(f"❌ [WORD] Dòng {row}: Thất bại sau 2 lần, chuyển bài kế tiếp.")
-                    _WORD_CURRENT_STATUS = f"Lỗi dòng {row}; đã chuyển tiếp"
+                    code = "WORD_SYSTEM_ERROR" if system_failure is not None else "WORD_QUEUE_ERROR"
+                    write_retry_note(row, 9, "WORD_WORKER", code, error_text)
+                    if system_failure is not None:
+                        print(f"🛑 [WORD] Dòng {row}: lỗi hệ thống; đã ngắt cầu dao.")
+                        _WORD_CURRENT_STATUS = f"Dừng hệ thống tại dòng {row}"
+                    else:
+                        print(f"❌ [WORD] Dòng {row}: Thất bại sau 2 lần, chuyển bài kế tiếp.")
+                        _WORD_CURRENT_STATUS = f"Lỗi dòng {row}; đã chuyển tiếp"
             except Exception as exc:
                 row = job.get("row") if isinstance(job, dict) else None
                 if row is not None:
@@ -4406,6 +4643,7 @@ def word_worker_thread(rows):
     finally:
         _WORD_CURRENT_ROW = None
         _WORD_CURRENT_STATUS = "Đã dừng"
+        cleanup_all_owned_word_processes()
         pythoncom.CoUninitialize()
 
 
@@ -4704,6 +4942,8 @@ def main():
     if not SELECTED_WORKER_IDS:
         print("Đã hủy chạy chương trình vì chưa chọn Worker.")
         return
+    print("[WORD PREFLIGHT] Kiểm tra COM động, macro, lưu DOCX và đóng tiến trình...")
+    run_word_preflight("đầu phiên")
     cleanup_check = prepare_logo_cleanup()
     if not cleanup_check.success:
         print(
@@ -4764,6 +5004,11 @@ def main():
         raise ExcelWriterUnavailableError(
             "Flow đã dừng vì Excel Writer không phục hồi trong 30 giây; "
             "không tiếp tục ghi để tránh nhầm workbook."
+        )
+    if _WORD_SYSTEM_FAILED.is_set():
+        raise WordSystemError(
+            "Flow đã dừng an toàn vì Word lỗi hệ thống; Excel đã lưu xong. "
+            f"Chi tiết: {_WORD_SYSTEM_ERROR}"
         )
     print("V2 CODEX đã kết thúc; toàn bộ Result Queue đã được ghi xuống Excel.")
 

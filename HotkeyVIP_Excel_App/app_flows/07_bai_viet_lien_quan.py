@@ -1533,11 +1533,16 @@ def save_worker_error_log(worker_id: int, row: int, content: str) -> str:
 class ExcelWriterQueue:
     """Đơn luồng sở hữu COM Excel; tự động Retry Exponential Backoff khi Excel bận."""
 
+    SAVE_BATCH_SIZE = 10
+
     def __init__(self) -> None:
         self.commands: queue.Queue[tuple[str, Callable[[], None] | None]] = queue.Queue()
         self.ready = threading.Event()
         self.failed = threading.Event()
         self.error: BaseException | None = None
+        self._sheet: Any = None
+        self._workbook: Any = None
+        self._dirty_count = 0
         self.thread = threading.Thread(target=self._run, name="RelatedExcelWriter", daemon=True)
 
     @staticmethod
@@ -1564,6 +1569,21 @@ class ExcelWriterQueue:
     def submit(self, label: str, operation: Callable[[], None]) -> None:
         self.raise_if_failed()
         self.commands.put((label, operation))
+
+    def submit_related_result(self, row: int, column: int, edit_url: str) -> None:
+        """Xếp một kết quả vào luồng Excel, không chặn luồng điều phối."""
+        def write_result() -> None:
+            cell = self._sheet.Cells(row, column)
+            if hasattr(cell, "setValue"):
+                cell.setValue(edit_url)
+            else:
+                cell.Value = edit_url
+            self._dirty_count += 1
+            if self._dirty_count >= self.SAVE_BATCH_SIZE:
+                self._workbook.Save()
+                self._dirty_count = 0
+
+        self.submit(f"ghi bài liên quan dòng {row}", write_result)
 
     def raise_if_failed(self) -> None:
         if self.failed.is_set():
@@ -1606,11 +1626,16 @@ class ExcelWriterQueue:
                 pass
             _app, workbook, _opened = connect_excel()
             sheet = workbook.Worksheets(SHEET_NAME)
+            self._workbook = workbook
+            self._sheet = sheet
             self.ready.set()
             while True:
                 label, operation = self.commands.get()
                 try:
                     if operation is None:
+                        if self._dirty_count:
+                            self._run_operation("lưu Excel lần cuối", workbook.Save)
+                            self._dirty_count = 0
                         return
                     self._run_operation(label, operation)
                 finally:
@@ -1621,6 +1646,8 @@ class ExcelWriterQueue:
             self.ready.set()
             print(f"[EXCEL FATAL] {exc!r}")
         finally:
+            self._sheet = None
+            self._workbook = None
             if pythoncom is not None:
                 pythoncom.CoUninitialize()
 
@@ -1673,12 +1700,32 @@ def create_worker_driver(worker_id: int):
     options.add_argument("--disable-notifications")
     options.add_argument("--window-position=-32000,-32000")
     options.add_argument("--window-size=1400,1000")
-    options.add_experimental_option("detach", True)
 
     driver = webdriver.Edge(options=options)
     driver.get("about:blank")
     wait_document_ready(driver)
     return driver
+
+
+def create_worker_driver_with_retry(worker_id: int, max_attempts: int = 3):
+    """Khởi động lại Edge khi lỗi tạm thời thay vì loại worker ngay."""
+    last_error: BaseException | None = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            return create_worker_driver(worker_id)
+        except Exception as exc:
+            last_error = exc
+            if attempt >= max_attempts:
+                break
+            delay = float(attempt * 2)
+            print(
+                f"Worker {worker_id}: Edge khởi động lỗi lần {attempt}/{max_attempts}; "
+                f"thử lại sau {delay:.0f}s: {type(exc).__name__}: {exc}"
+            )
+            time.sleep(delay)
+    raise RuntimeError(
+        f"Worker {worker_id} không khởi động được Edge sau {max_attempts} lần."
+    ) from last_error
 
 
 # ============================================================
@@ -1715,7 +1762,7 @@ def ensure_post_page_ready_with_lock(driver, edit_url: str, login_lock: Any) -> 
 
 def pop_next_domain_safe_task(
     pending_targets: list[dict[str, Any]],
-    active_domains: set[str],
+    active_domains: dict[str, int],
     deferred_406_domains: set[str],
     deferred_until: dict[str, float],
 ) -> dict[str, Any] | None:
@@ -1746,6 +1793,21 @@ def pop_next_domain_safe_task(
     return None
 
 
+def mark_domain_active(active_domains: dict[str, int], domain: str) -> None:
+    if domain:
+        active_domains[domain] = active_domains.get(domain, 0) + 1
+
+
+def mark_domain_finished(active_domains: dict[str, int], domain: str) -> None:
+    if not domain:
+        return
+    remaining = active_domains.get(domain, 0) - 1
+    if remaining > 0:
+        active_domains[domain] = remaining
+    else:
+        active_domains.pop(domain, None)
+
+
 # ============================================================
 # WORKER PROCESS MAIN
 # ============================================================
@@ -1768,9 +1830,10 @@ def worker_main(
     driver = None
     had_error = False
     current_row = 0
+    retry_counts: dict[int, int] = {}
 
     try:
-        driver = create_worker_driver(worker_id)
+        driver = create_worker_driver_with_retry(worker_id)
 
         # Thread ngầm theo dõi sự kiện Bật/Tắt ẩn hiện Edge từ GUI
         def watch_browser_visibility() -> None:
@@ -1844,6 +1907,7 @@ def worker_main(
                     "selected_count": selected_count,
                     "elapsed": round(time.time() - started, 1),
                 })
+                retry_counts.pop(current_row, None)
 
             except Exception as exc:
                 exc_text = str(exc).casefold()
@@ -1864,13 +1928,42 @@ def worker_main(
                         driver.quit()
                     except Exception:
                         pass
-                    driver = create_worker_driver(worker_id)
+                    driver = create_worker_driver_with_retry(worker_id)
                     result_queue.put({"type": "ready", "worker_id": worker_id})
                     continue
 
+                attempt = retry_counts.get(current_row, 0) + 1
+                retry_counts[current_row] = attempt
+                if attempt < 3:
+                    result_queue.put({
+                        "type": "progress",
+                        "worker_id": worker_id,
+                        "row": current_row,
+                        "message": (
+                            f"Lỗi tạm thời; đang mở lại Edge và thử bài lần "
+                            f"{attempt + 1}/3"
+                        ),
+                    })
+                    try:
+                        driver.quit()
+                    except Exception:
+                        pass
+                    driver = None
+                    time.sleep(float(attempt * 2))
+                    driver = create_worker_driver_with_retry(worker_id)
+                    # Queue của worker đang trống vì bài hiện tại đã được lấy ra.
+                    # Đưa lại đúng bài để thử trong cùng phiên chạy.
+                    command_queue.put(command)
+                    continue
+
                 had_error = True
+                retry_counts.pop(current_row, None)
                 trace_text = traceback.format_exc()
-                log_path = save_worker_error_log(worker_id, current_row, memory_log.getvalue())
+                log_path = save_worker_error_log(
+                    worker_id,
+                    current_row,
+                    memory_log.getvalue() + "\n" + trace_text,
+                )
                 result_queue.put({
                     "type": "error",
                     "worker_id": worker_id,
@@ -1890,17 +1983,25 @@ def worker_main(
 
     except Exception as exc:
         had_error = True
-        log_path = save_worker_error_log(worker_id, current_row, memory_log.getvalue())
+        trace_text = traceback.format_exc()
+        log_path = save_worker_error_log(
+            worker_id,
+            current_row,
+            memory_log.getvalue() + "\n" + trace_text,
+        )
         result_queue.put({
             "type": "fatal",
             "worker_id": worker_id,
             "row": current_row,
             "error": f"{type(exc).__name__}: {exc}",
-            "traceback": traceback.format_exc(),
+            "traceback": trace_text,
             "log_path": log_path,
         })
     finally:
-        if driver is not None and not had_error:
+        # Luôn đóng Edge, kể cả khi worker lỗi. Giữ Edge lỗi sống cùng với
+        # detach=True sẽ khóa user-data-dir và làm lần chạy sau không thể tạo
+        # session (DevToolsActivePort file doesn't exist).
+        if driver is not None:
             try:
                 driver.quit()
             except Exception:
@@ -2016,6 +2117,10 @@ class MultiProgressWindow:
                     elif kind == "finished":
                         total_label.config(text=str(msg.get("message")))
                         stop_btn.config(state="disabled")
+                        # Flow đã dọn xong worker/Excel: đóng luôn cửa sổ tiến độ
+                        # để người dùng thấy rõ lệnh dừng đã hoàn tất.
+                        root.after(800, root.destroy)
+                        return
 
                     elif worker_id in worker_labels:
                         row_lbl, step_lbl = worker_labels[worker_id]
@@ -2059,6 +2164,9 @@ def main() -> int:
         print("Không có bài viết liên quan nào cần chạy.")
         return 0
 
+    excel_writer = ExcelWriterQueue()
+    excel_writer.start()
+
     # Rút danh sách unique domains để khởi tạo Locks
     unique_domains = {str(item.get("domain", "")) for item in targets if item.get("domain")}
 
@@ -2100,7 +2208,7 @@ def main() -> int:
     free_workers: set[int] = set()
     active_rows: dict[int, int] = {}
     active_tasks: dict[int, dict[str, Any]] = {}
-    active_domains: set[str] = set()
+    active_domains: dict[str, int] = {}
 
     pending_targets = list(targets)
     deferred_406_domains: set[str] = set()
@@ -2113,6 +2221,7 @@ def main() -> int:
 
     try:
         while True:
+            excel_writer.raise_if_failed()
             # Đồng bộ ẩn/hiện trình duyệt từ nút bấm GUI
             if progress.browser_visible_requested.is_set():
                 browser_visible_event.set()
@@ -2150,18 +2259,20 @@ def main() -> int:
                     active_rows.pop(worker_id, None)
                     task = active_tasks.pop(worker_id, None)
                     if task:
-                        active_domains.discard(str(task.get("domain", "")))
+                        mark_domain_finished(
+                            active_domains,
+                            str(task.get("domain", "")),
+                        )
 
                     target = next(item for item in targets if int(item["row"]) == row)
 
-                    # Ghi Excel ngay trên luồng chính, cùng luồng đã kết nối COM Excel.
-                    # Không truyền đối tượng sheet/workbook sang luồng phụ.
-                    cell = sheet.Cells(row, int(target["col_bvlq"]))
-                    if hasattr(cell, "setValue"):
-                        cell.setValue(str(message["edit_url"]))
-                    else:
-                        cell.Value = str(message["edit_url"])
-                    workbook.Save()
+                    # Không chặn bộ điều phối bằng workbook.Save(). Luồng Excel
+                    # riêng ghi tuần tự, lưu theo lô và lưu lần cuối khi kết thúc.
+                    excel_writer.submit_related_result(
+                        row,
+                        int(target["col_bvlq"]),
+                        str(message["edit_url"]),
+                    )
 
                     completed += 1
                     free_workers.add(worker_id)
@@ -2177,7 +2288,7 @@ def main() -> int:
                     domain = str(message["domain"])
                     active_rows.pop(worker_id, None)
                     active_tasks.pop(worker_id, None)
-                    active_domains.discard(domain)
+                    mark_domain_finished(active_domains, domain)
                     deferred_406_domains.add(domain)
                     deferred_until[domain] = time.time() + 60.0  # Tạm hoãn domain 60s
                     print(f"\n[HTTP 406] Worker {worker_id} bị WAF chặn ở domain {domain}. Tạm hoãn domain 60s.")
@@ -2187,7 +2298,10 @@ def main() -> int:
                     failed_row = active_rows.pop(worker_id, None)
                     failed_task = active_tasks.pop(worker_id, None)
                     if failed_task:
-                        active_domains.discard(str(failed_task.get("domain", "")))
+                        mark_domain_finished(
+                            active_domains,
+                            str(failed_task.get("domain", "")),
+                        )
                     had_error = True
                     print("\n" + "!" * 72)
                     error_row = message.get("row") or failed_row or "?"
@@ -2214,7 +2328,7 @@ def main() -> int:
                     active_rows[worker_id] = row
                     active_tasks[worker_id] = target
                     if domain:
-                        active_domains.add(domain)
+                        mark_domain_active(active_domains, domain)
 
                     command_queues[worker_id].put({
                         "row": row,
@@ -2226,6 +2340,43 @@ def main() -> int:
 
                     print(f"[GIAO] Worker {worker_id} <- dòng {row} | ID {target['post_id']} | Domain: {domain}")
                     progress.update_worker(worker_id, row, f"Đã nhận ID {target['post_id']}")
+
+            # Worker có thể bị Windows/Edge kết thúc trước khi kịp gửi error.
+            # Thu hồi trạng thái để điều phối không chờ active_rows vô hạn và
+            # giao lại bài cho worker khác một lần.
+            dead_active_workers = [
+                worker_id
+                for worker_id in list(active_rows)
+                if not workers[worker_id].is_alive()
+            ]
+            for worker_id in dead_active_workers:
+                row = active_rows.pop(worker_id, None)
+                failed_task = active_tasks.pop(worker_id, None)
+                free_workers.discard(worker_id)
+                if failed_task:
+                    domain = str(failed_task.get("domain", ""))
+                    mark_domain_finished(active_domains, domain)
+                    crash_attempt = int(failed_task.get("_worker_crash_attempt", 0)) + 1
+                    failed_task["_worker_crash_attempt"] = crash_attempt
+                    if crash_attempt <= 1 and not stopping:
+                        pending_targets.insert(0, failed_task)
+                        print(
+                            f"[THU HỒI] Worker {worker_id} tắt bất thường tại dòng {row}; "
+                            "giao lại bài cho worker khác."
+                        )
+                    else:
+                        had_error = True
+                        print(
+                            f"[LỖI] Worker {worker_id} tắt bất thường tại dòng {row}; "
+                            "bài đã thất bại sau lần giao lại."
+                        )
+                else:
+                    had_error = True
+                progress.update_worker(
+                    worker_id,
+                    row,
+                    "Worker đã tắt — điều phối đã thu hồi bài",
+                )
 
             all_dispatched = not pending_targets
             if (all_dispatched or stopping) and not active_rows:
@@ -2251,6 +2402,34 @@ def main() -> int:
             if process.is_alive():
                 process.terminate()
                 process.join(timeout=3)
+
+        # multiprocessing.Queue có feeder thread riêng. Nếu không đóng các
+        # queue này, flow có thể đã in "Kết thúc" nhưng tiến trình Python vẫn
+        # còn sống, khiến app tiếp tục báo đang chạy.
+        for command_queue in command_queues.values():
+            try:
+                command_queue.cancel_join_thread()
+            except Exception:
+                pass
+            try:
+                command_queue.close()
+            except Exception:
+                pass
+
+        try:
+            result_queue.cancel_join_thread()
+        except Exception:
+            pass
+        try:
+            result_queue.close()
+        except Exception:
+            pass
+
+        try:
+            excel_writer.drain_and_stop()
+        except Exception as exc:
+            had_error = True
+            print(f"[EXCEL FATAL] Không hoàn tất hàng đợi ghi Excel: {exc!r}")
 
         final_msg = f"Hoàn thành: {completed}/{len(targets)} bài."
         if had_error:
