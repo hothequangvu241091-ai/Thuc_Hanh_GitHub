@@ -1,0 +1,139 @@
+NHẬT KÝ SỬA CODE - HOTKEYVIP EXCEL APP
+=====================================
+
+Quy ước từ nay:
+- Mỗi lần sửa code trong repo phải ghi lại vào file này.
+- Ghi rõ: ngày sửa, mục đích, file đã sửa, nội dung sửa, file thêm mới, file không đụng tới, commit code.
+- File này là nhật ký tổng để người dùng mở ra là biết lần gần nhất đã làm gì.
+
+
+======================================================================
+NGÀY 18/08/2026 - RÀ SOÁT EXCEL ẨN / PID / AUTO SAVE
+======================================================================
+
+MỤC ĐÍCH
+- Kiểm tra nguyên nhân lâu lâu app bị Excel ẩn giữ khóa.
+- Kiểm tra Python/CMD/worker còn sống sau lần chạy trước.
+- Kiểm tra Flow nào tự Save.
+- Kiểm tra "Excel gốc" lấy từ app hay đường dẫn mặc định.
+
+KẾT QUẢ RÀ SOÁT
+- Flow 5 - Đăng bài CMS: có nguy cơ Python worker còn sống sau join(timeout=8).
+- Flow 6 - Lấy URL CMS: có nguy cơ APP_WORKBOOK và EXCEL_PATH không cùng file nếu biến môi trường chưa được set cho flow in-process.
+- Flow 8 - Đồng bộ URL về file công ty: có nhánh standalone tự dọn Excel ẩn; khi chạy từ app cần nhận đúng HOTKEYVIP_APP_RUN=1 để không đi nhầm nhánh này.
+- Flow 3 - Viết bài + tạo ảnh: còn các join() không timeout, có thể giữ flow/Excel lâu nếu worker treo. Chưa sửa trong đợt này.
+- App hiện có cơ chế tracking Excel do app sở hữu bằng PID + create_time.
+- App và các flow có nhiều điểm tự Save; hiện thiên về checkpoint, chưa thay đổi policy Save/rollback.
+
+FILE NOTE ĐÃ THÊM
+1. HotkeyVIP_Excel_App/_docs/01_AUDIT_EXCEL_AN_PID_VA_TU_DONG_LUU.md
+   - Ghi toàn bộ kết quả audit chi tiết.
+   - Commit: da4b7a8455cffef3fc0c5cebadcfaf0a468872e0
+
+
+======================================================================
+NGÀY 18/08/2026 - SỬA FLOW 5 + FLOW 6 Ở TẦNG FLOW HOST
+======================================================================
+
+FILE CODE ĐÃ SỬA
+HotkeyVIP_Excel_App/excel_audit_app/flow_host.py
+
+COMMIT CODE
+7c909ab0752831f429c869f2cb030b7f9dec2cdb
+
+NỘI DUNG SỬA 1 - FLOW 6: LẤY URL CMS
+Vấn đề cũ:
+- Flow 6 chạy in-process và nhận APP_WORKBOOK từ app.
+- Nhưng EXCEL_PATH của Flow 6 được tính từ HOTKEYVIP_SELECTED_EXCEL ngay lúc import.
+- Trước đây flow_host chỉ set HOTKEYVIP_SELECTED_EXCEL cho flow subprocess.
+- Có thể xảy ra:
+  APP_WORKBOOK = file người dùng đang chọn trong app
+  EXCEL_PATH    = file mặc định khác
+- Khi đó Flow 6 có thể báo app truyền sai workbook.
+
+Cách sửa:
+- Ngay đầu run_flow() của flow_host, trước khi import/chạy bất kỳ Flow nào, luôn set:
+
+  HOTKEYVIP_SELECTED_EXCEL = workbook_path đang được app chọn
+  HOTKEYVIP_APP_RUN = 1
+
+- Áp dụng cho cả flow in-process và subprocess.
+
+Kết quả mong muốn:
+- --workbook
+- APP_WORKBOOK.FullName
+- HOTKEYVIP_SELECTED_EXCEL
+
+luôn chỉ cùng một file Excel người dùng đang chọn trong app.
+
+
+NỘI DUNG SỬA 2 - FLOW 5: ĐĂNG BÀI CMS
+Vấn đề cũ:
+- Flow 5 dùng nhiều multiprocessing worker.
+- stop_workers() của Flow 5 gửi STOP rồi chỉ join(timeout=8).
+- Worker nào kẹt vẫn có thể còn sống.
+- Parent Flow 5 có thể chưa thoát sạch, kéo theo flow_host vẫn giữ Excel/workbook.
+
+Cách sửa tại flow_host:
+- Thêm hàm _cleanup_flow_python_children(parent_pid).
+- Khi Flow 5 đã chạy hết phần điều phối và in dòng "Thời gian kết thúc:", flow_host kiểm tra các Python child process thuộc đúng cây process Flow 5.
+- Chỉ dọn Python con của Flow 5, không quét toàn bộ Python trên máy.
+- Quy trình dọn:
+  terminate()
+  -> chờ 3 giây
+  -> process nào vẫn sống thì kill()
+  -> chờ thêm.
+
+Kết quả mong muốn:
+Flow 5 kết thúc/lỗi
+-> worker bình thường tự thoát
+-> worker bị kẹt được dọn
+-> parent Flow 5 thoát
+-> flow_host Save/Close/Quit Excel theo cơ chế chung.
+
+
+ẢNH HƯỞNG PHỤ TỚI FLOW 8 - ĐỒNG BỘ URL
+- KHÔNG sửa trực tiếp file app_flows/08_dong_bo_url.py.
+- Do flow_host bây giờ luôn set HOTKEYVIP_APP_RUN=1 khi chạy từ app, Flow 8 sẽ nhận đúng ngữ cảnh chạy từ app.
+- Vì vậy nhánh standalone close_orphan_hidden_excel() sẽ không chạy khi Flow 8 được gọi từ app.
+- Đây là hiệu ứng phụ của việc chuẩn hóa runtime context, không thay đổi nghiệp vụ Flow 8.
+
+
+FILE NOTE ĐÃ THÊM
+2. HotkeyVIP_Excel_App/_docs/02_FIX_FLOW5_FLOW6_EXCEL_PID_2026-08-18.md
+   - Ghi riêng chi tiết bản sửa Flow 5 + Flow 6.
+   - Commit: 0b7481e86c34b46941545c18a7039ceb25794f7c
+
+
+CÁC FILE KHÔNG SỬA TRỰC TIẾP TRONG ĐỢT NÀY
+- HotkeyVIP_Excel_App/app_flows/05_dang_bai_cms.py
+- HotkeyVIP_Excel_App/app_flows/06_lay_url_cms.py
+- HotkeyVIP_Excel_App/app_flows/08_dong_bo_url.py
+- Các Flow 1, 2, 3, 4, 7 không thay đổi logic nghiệp vụ.
+
+
+CHƯA SỬA / ĐỂ SAU
+- Watchdog/timeout cho Flow 3 - Viết bài + tạo ảnh.
+- Registry lâu dài cho toàn bộ PID Python/flow qua trường hợp app crash.
+- Chính sách Save khi flow lỗi: checkpoint hay rollback.
+- Cleanup riêng cho Excel phụ do Flow 8 mở khi xử lý file đích.
+
+
+======================================================================
+QUY TẮC CHO CÁC LẦN SỬA SAU
+======================================================================
+
+Mỗi lần sửa tiếp sẽ APPEND thêm một mục mới vào cuối file này theo mẫu:
+
+NGÀY / GIỜ:
+MỤC ĐÍCH:
+FLOW LIÊN QUAN:
+FILE CODE ĐÃ SỬA:
+ĐÃ THÊM GÌ:
+ĐÃ XÓA GÌ:
+KHÔNG ĐỤNG TỚI GÌ:
+COMMIT:
+CÁCH TEST:
+KẾT QUẢ / GHI CHÚ:
+
+Không chỉ nói trong chat. Phải để lại dấu vết trong file NHAT_KY_SUA_CODE.txt này.
