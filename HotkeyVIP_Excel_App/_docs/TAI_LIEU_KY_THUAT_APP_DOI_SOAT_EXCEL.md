@@ -1,7 +1,7 @@
 # Tài liệu kỹ thuật app đối soát Excel
 
 Phiên bản tài liệu: **1.0**  
-Phiên bản app đang mô tả: **1.5.0**
+Phiên bản app đang mô tả: **1.5.1**
 
 Tài liệu này dùng cho việc bảo trì và phát triển app về sau. File hướng dẫn sử dụng nhanh cho người dùng là `HUONG_DAN_APP_DOI_SOAT_EXCEL.md`.
 

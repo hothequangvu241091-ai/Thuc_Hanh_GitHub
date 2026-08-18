@@ -1,7 +1,12 @@
 # Nhật ký tích hợp flow vào app đối soát Excel
 
-Ngày cập nhật: **2026-08-09**  
-Phiên bản app: **1.5.0**
+Ngày cập nhật: **2026-08-16**  
+Phiên bản app: **1.5.1**
+
+- Phiên bản 1.5.1 nâng Flow 07 lên engine V2.4: tự phục hồi Edge/bài lỗi,
+  ghi Excel qua hàng đợi riêng, lưu theo lô, đếm worker theo domain và thu hồi
+  bài khi worker tắt bất thường. Thiết lập Git cục bộ và `CHANGELOG.md` để tạo
+  mốc phục hồi rõ ràng cho các lần sửa sau.
 
 - Phiên bản 1.5.0 thêm tab `Theo dõi đăng bài`: xem lỗi, mở Word/URL ChatGPT, nhập ID CMS,
   đăng lại đúng các dòng `LỖI KIỂM TRA` bằng 1 worker và xem các bài đã đăng hôm nay.

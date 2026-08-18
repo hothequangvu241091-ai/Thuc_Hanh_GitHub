@@ -1,6 +1,6 @@
 # App đối soát nội dung Excel
 
-Phiên bản hiện tại: **1.5.0**.
+Phiên bản hiện tại: **1.5.1**.
 
 ## Theo dõi đăng bài
 

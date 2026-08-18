@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Runtime state, locks and generated logs
+_runtime/
+outputs/
+*.log
+
+# Local Excel/Office temporary files and backups
+~$*
+*.tmp
+*.bak
+
+# IDE / OS noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+

@@ -40,7 +40,7 @@ AE = Retry Time / thời điểm ghi lỗi
 # - Truyền Edge driver mới về process_row và main sau khi Lớp 2 reset Edge.
 # - Giữ tham chiếu driver đang hoạt động kể cả khi lỗi phát sinh giữa chừng.
 # =====================================================
-VERSION = "03_viet_bai_tao_anh (engine V2.23)"
+VERSION = "03_viet_bai_tao_anh (engine V2.24)"
 
 # =====================================================
 # NHẬT KÝ GIẢM DELAY V2.10 (để có lỗi thì trả về đúng mức V2.9)
@@ -305,6 +305,8 @@ TASK_QUEUE = queue.Queue()
 RESULT_QUEUE = queue.Queue()
 WORD_QUEUE = queue.Queue()
 UI_QUEUE = queue.Queue()
+_WORKER_UI_STATE = {}
+_WORKER_UI_STATE_LOCK = threading.RLock()
 STOP_EVENT = threading.Event()
 # Dừng mềm: Worker không lấy thêm dòng mới, nhưng Word/Excel phải xử lý hết
 # những việc đã được giao rồi lưu workbook trước khi kết thúc.
@@ -2494,7 +2496,7 @@ BRIEF ẢNH CHI TIẾT
 CÁCH TRÌNH BÀY HÌNH ẢNH
 =========================
 
-Thể hiện Brief bằng ngôn ngữ editorial tối giản dành cho website cao cấp.
+Thể hiện Brief bằng phong cách hình ảnh chân thực, trực quan và chuyên nghiệp; phù hợp với ngữ cảnh nội dung.
 
 Brief là nguồn nội dung chính. Cách trình bày hình ảnh chỉ điều chỉnh cách tổ chức, nhấn mạnh và thể hiện Brief; không được làm sai thông điệp hoặc bản chất sự việc trong Brief.
 
@@ -3903,6 +3905,8 @@ class WorkerProgress:
         full_step = f"{row_text}{name_text} — {step}"
         message = f"[WORKER {self.worker_id}] {full_step}"
         print(message)
+        with _WORKER_UI_STATE_LOCK:
+            _WORKER_UI_STATE[self.worker_id] = (full_step, "#1464a0")
         UI_QUEUE.put(("STATUS", self.worker_id, row, full_step, completed))
 
     def should_stop(self):
@@ -3916,9 +3920,14 @@ def wait_until_system_resumed(worker_id, row=None):
         if not announced:
             name = _WORKER_CURRENT_NAMES.get(worker_id, "")
             detail = f" — {name}" if name else ""
+            pause_text = (
+                f"Dòng Excel {row or '-'}{detail} — ĐÃ TẠM DỪNG, chờ đăng nhập"
+            )
+            with _WORKER_UI_STATE_LOCK:
+                _WORKER_UI_STATE[worker_id] = (pause_text, "#d06b00")
             UI_QUEUE.put((
                 "PAUSE", worker_id, row,
-                f"Dòng Excel {row or '-'}{detail} — ĐÃ TẠM DỪNG, chờ đăng nhập",
+                pause_text,
                 0,
             ))
             announced = True
@@ -3968,7 +3977,12 @@ class MultiWorkerMonitor:
             frame.pack(fill="x", padx=8, pady=3)
             name = tk.Label(frame, text=f"WORKER {worker_id}", width=12, anchor="w")
             name.pack(side="left")
-            status = tk.Label(frame, text="Đang chờ", anchor="w", fg="#1464a0")
+            status = tk.Label(
+                frame,
+                text="Đang chuẩn bị Worker...",
+                anchor="w",
+                fg="#1464a0",
+            )
             status.pack(side="left", fill="x", expand=True)
             tk.Button(
                 frame,
@@ -4142,6 +4156,15 @@ class MultiWorkerMonitor:
                         )
                 elif RUN_EVENT.is_set():
                     paused_workers.discard(worker_id)
+            # Trạng thái mới nhất là nguồn sự thật của giao diện. UI_QUEUE vẫn
+            # giữ các sự kiện tuần tự (đặc biệt PAUSE), còn snapshot này bảo đảm
+            # nhãn không đứng ở nội dung cũ khi callback Tkinter bị chậm một nhịp.
+            with _WORKER_UI_STATE_LOCK:
+                latest_worker_states = dict(_WORKER_UI_STATE)
+            for worker_id, (step, color) in latest_worker_states.items():
+                label = labels.get(worker_id)
+                if label is not None:
+                    label.config(text=step, fg=color)
             root.after(200, poll)
 
         poll()
@@ -4663,9 +4686,14 @@ def wait_worker_pause(worker_id, progress, row):
         and not skip_event.is_set()
     ):
         minutes, seconds = divmod(remaining, 60)
+        pause_text = (
+            f"Đang nghỉ do 2 bài ngắn/lỗi <700: {minutes:02d}:{seconds:02d}"
+        )
+        with _WORKER_UI_STATE_LOCK:
+            _WORKER_UI_STATE[worker_id] = (pause_text, "#d06b00")
         UI_QUEUE.put((
             "PAUSE", worker_id, row,
-            f"Đang nghỉ do 2 bài ngắn/lỗi <700: {minutes:02d}:{seconds:02d}",
+            pause_text,
             0,
         ))
         skip_event.wait(timeout=1)
@@ -4688,6 +4716,7 @@ def worker_loop(worker_id, rows):
     completed = 0
     recycled = 0
     try:
+        progress.update(None, "Đang mở Edge và chuẩn bị phiên làm việc")
         driver, wait = create_shared_driver()
         while not STOP_EVENT.is_set():
             wait_until_system_resumed(worker_id)
@@ -4816,6 +4845,8 @@ def worker_loop(worker_id, rows):
                 driver.quit()
             except Exception:
                 pass
+        with _WORKER_UI_STATE_LOCK:
+            _WORKER_UI_STATE[worker_id] = ("Đã dừng", "#1464a0")
         UI_QUEUE.put(("STATUS", worker_id, None, "Đã dừng", completed))
         pythoncom.CoUninitialize()
 

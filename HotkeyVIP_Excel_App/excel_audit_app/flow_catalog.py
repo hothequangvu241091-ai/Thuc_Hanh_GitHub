@@ -36,7 +36,10 @@ ACTIVE_FLOWS: tuple[FlowDefinition, ...] = (
     FlowDefinition(
         key="write_articles",
         name="3. Viết bài + tạo ảnh",
-        description="Chạy bản V2.22 với ChatGPT, Word và Gemini; ghi kết quả vào VIET_BAI.",
+        description=(
+            "Chạy engine V2.24 với trạng thái Worker bám tiến độ ChatGPT, Word và Gemini; "
+            "ghi kết quả vào VIET_BAI."
+        ),
         script="app_flows/03_viet_bai_tao_anh.py",
         confirmation=(
             "Flow sẽ mở trình duyệt, sử dụng tài khoản ChatGPT/Gemini, tạo file Word/ảnh "
@@ -64,7 +67,10 @@ ACTIVE_FLOWS: tuple[FlowDefinition, ...] = (
     FlowDefinition(
         key="export_urls",
         name="6. Lấy URL từ ID CMS",
-        description="Tạo URL tạm từ ID CMS, kiểm tra chuyển hướng và ghi URL thật vào DANG_BAI.",
+        description=(
+            "Chạy engine V1.7: nếu HEAD không chuyển được thì tạo URL từ H1; "
+            "ô URL tự tạo được tô vàng và thêm Note để kiểm tra."
+        ),
         script="app_flows/06_lay_url_cms.py",
         confirmation="Flow sẽ gửi yêu cầu mạng tới website và cập nhật URL trong DANG_BAI.",
         external_effects=True,
@@ -72,7 +78,10 @@ ACTIVE_FLOWS: tuple[FlowDefinition, ...] = (
     FlowDefinition(
         key="related_articles",
         name="7. Bài viết liên quan",
-        description="Chạy bản V2.3 với 3 worker và lưu bài viết liên quan trên CMS.",
+        description=(
+            "Chạy engine V2.5 với 5 worker, khóa đăng nhập/lưu riêng theo tên miền, "
+            "tự retry và ghi Excel qua hàng đợi riêng."
+        ),
         script="app_flows/07_bai_viet_lien_quan.py",
         confirmation=(
             "Flow sẽ chỉnh sửa các bài đã đăng trên website CMS và ghi trạng thái về DANG_BAI."

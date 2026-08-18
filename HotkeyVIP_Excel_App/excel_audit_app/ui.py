@@ -763,8 +763,8 @@ class ExcelAuditApp(tk.Tk):
         self.publish_retry_button.pack(side=RIGHT)
         self.publish_convert_button = ttk.Button(
             toolbar,
-            text="2. Chuyển sang LỖI KIỂM TRA",
-            command=self._retry_selected_publish_error,
+            text="2. Chuyển tất cả sang LỖI KIỂM TRA",
+            command=self._retry_all_publish_errors,
             style="PublishFlow.TButton",
             state="disabled",
         )
@@ -945,32 +945,29 @@ class ExcelAuditApp(tk.Tk):
         self._render_publish_review()
         self.status_text.set(f"Đã ghi nhớ ID CMS {cms_id} cho dòng {item['row']}; chưa ghi vào Excel.")
 
-    def _retry_selected_publish_error(self) -> None:
+    def _retry_all_publish_errors(self) -> None:
         if self._busy or self._flow_process is not None:
-            return
-        item = self.publish_selected_item
-        if item is None:
-            messagebox.showinfo("Chưa chọn bài", "Hãy chọn một dòng LỖI ĐĂNG trước.")
-            return
-        if "lỗi đăng" not in str(item.get("status", "")).casefold():
-            messagebox.showinfo(
-                "Không phải LỖI ĐĂNG",
-                "Nút này chỉ dùng để chuyển một dòng LỖI ĐĂNG sang LỖI KIỂM TRA.",
-            )
             return
         source = Path(self.selected_path.get().strip())
         if not source.is_file():
             messagebox.showwarning("Không tìm thấy Excel", "Hãy chọn và Phân tích đúng file Excel trước.")
             return
 
-        row = int(item["row"])
+        retry_rows = sorted(
+            int(item["row"])
+            for item in self.publish_review.get("errors", [])
+            if "lỗi đăng" in str(item.get("status", "")).casefold()
+        )
+        if not retry_rows:
+            messagebox.showinfo("Không có LỖI ĐĂNG", "Không có dòng LỖI ĐĂNG nào cần chuyển.")
+            return
         if not messagebox.askyesno(
-            "Chuyển trạng thái bài lỗi",
-            f"Dòng {row} sẽ được chuyển từ LỖI ĐĂNG sang LỖI KIỂM TRA trong Excel.\n\n"
-            "Thao tác này chưa chạy đăng lại. Tiếp tục?",
+            "Chuyển toàn bộ bài lỗi",
+            f"Sẽ chuyển toàn bộ {len(retry_rows)} dòng từ LỖI ĐĂNG sang "
+            "LỖI KIỂM TRA trong Excel.\n\nThao tác này chưa chạy đăng lại. Tiếp tục?",
         ):
             return
-        self._launch_publish_id_update(source, [], retry_rows=[row])
+        self._launch_publish_id_update(source, [], retry_rows=retry_rows)
 
     def _open_selected_excel(self) -> None:
         if self._busy or self._flow_process is not None:
@@ -1021,9 +1018,12 @@ class ExcelAuditApp(tk.Tk):
                 else "disabled"
             )
         if hasattr(self, "publish_convert_button"):
-            selected_status = str((self.publish_selected_item or {}).get("status", "")).casefold()
+            has_publish_errors = any(
+                "lỗi đăng" in str(item.get("status", "")).casefold()
+                for item in self.publish_review.get("errors", [])
+            )
             self.publish_convert_button.configure(
-                state="normal" if available and "lỗi đăng" in selected_status else "disabled"
+                state="normal" if available and has_publish_errors else "disabled"
             )
 
     def _start_publish_review_action(self) -> None:
@@ -2523,48 +2523,26 @@ class ExcelAuditApp(tk.Tk):
             for line in process.stdout:
                 self.after(0, lambda text=line: self._append_flow_log(text))
         return_code = process.wait()
-        refreshed: dict[str, Any] | None = None
-        analysis_error: Exception | None = None
-        try:
-            refreshed = analyze_workbook(source)
-            self.store.save(refreshed)
-        except Exception as exc:  # noqa: BLE001 - hiển thị lỗi làm mới sau flow
-            analysis_error = exc
         self.after(
             0,
-            lambda: self._flow_finished(
-                flow_key,
-                return_code,
-                refreshed,
-                analysis_error,
-            ),
+            lambda: self._flow_finished(flow_key, return_code),
         )
 
     def _flow_finished(
         self,
         flow_key: str,
         return_code: int,
-        refreshed: dict[str, Any] | None,
-        analysis_error: Exception | None,
     ) -> None:
         flow = flow_by_key(flow_key)
         self._flow_process = None
         self._flow_running_key = None
         self._busy = False
-        if refreshed is not None:
-            self.result = refreshed
-            self.publish_review = refreshed.get(
-                "publish_review", {"errors": [], "posted_today": [], "retry_rows": []}
-            )
-            self.publish_id_updates.clear()
-            self.selected_path.set(refreshed.get("source_path", ""))
-            self._render_result()
         self.choose_button.configure(state="normal")
         self.analyze_button.configure(state="normal")
         self.clear_button.configure(state="normal")
         self._set_busy(False)
         self._update_flow_buttons()
-        if self.result is not None and refreshed is None:
+        if self.result is not None:
             self.health_title.set("TỔNG QUAN CHƯA CẬP NHẬT")
             self.health_detail.set(
                 "Flow vừa thay đổi Excel. Vẫn có thể chạy flow tiếp; bấm Phân tích khi cần xem số liệu mới."
@@ -2576,17 +2554,18 @@ class ExcelAuditApp(tk.Tk):
                     "level": "pending",
                 }
             )
-        if return_code == 0 and analysis_error is None:
+        if return_code == 0:
             self.flow_status_text.set(f"Hoàn thành: {flow.name}")
-            self.status_text.set(f"Flow hoàn thành: {flow.name} • Danh sách lỗi đã cập nhật")
+            self.status_text.set(
+                f"Flow hoàn thành: {flow.name} • Bấm Phân tích khi cần cập nhật báo cáo"
+            )
             messagebox.showinfo(
                 "Flow đã hoàn thành",
-                f"{flow.name}\n\nFile Excel đã được lưu và task Theo dõi đăng bài đã được cập nhật.",
+                f"{flow.name}\n\nFile Excel đã được lưu. App không quét lại toàn bộ file; "
+                "bấm Phân tích khi cần cập nhật báo cáo.",
             )
         else:
             detail = f"Mã thoát: {return_code}"
-            if analysis_error is not None:
-                detail += f"\nKhông thể phân tích lại: {analysis_error}"
             self.flow_status_text.set(f"Có lỗi: {flow.name}")
             self.status_text.set(f"Flow kết thúc có lỗi: {flow.name}")
             messagebox.showerror(

@@ -18,7 +18,7 @@ from .excel_io import (
 from .publish_review import build_publish_review_from_tables
 
 
-APP_VERSION = "1.5.0"
+APP_VERSION = "1.5.12"
 EMPTY_DOMAIN = "(Không có tên miền)"
 
 

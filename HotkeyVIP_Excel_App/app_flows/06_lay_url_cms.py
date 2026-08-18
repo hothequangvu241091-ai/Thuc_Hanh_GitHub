@@ -4,6 +4,7 @@ import ssl
 import re
 import os
 import sys
+import unicodedata
 import win32com.client as win32
 
 APP_WORKBOOK = None
@@ -25,6 +26,14 @@ ROW_END = 50000
 
 TIMEOUT_S = 10
 CONCURRENCY = 20
+GENERATED_URL_FILL_COLOR = 10284031  # RGB(255, 235, 156): vàng nhạt
+GENERATED_URL_NOTE = "URL tự tạo từ H1 do HEAD không chuyển hướng; cần kiểm tra lại."
+VERSION = "06_lay_url_cms (engine V1.7)"
+
+TEMP_URL_PATTERN = re.compile(
+    r"^https?://[^/]+/linkrutgon-\d+-\d+\.html(?:[?#].*)?$",
+    re.IGNORECASE,
+)
 
 
 def clean_text(value):
@@ -135,27 +144,59 @@ def build_fake_url(domain, cat_id, post_id):
     return f"https://{domain}/linkrutgon-{cat_id}-{post_id}.html"
 
 
-async def fetch_final(session, url):
+def slugify_h1(value):
+    text = clean_text(value).casefold().replace("đ", "d")
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(char for char in text if unicodedata.category(char) != "Mn")
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", text)).strip("-")
+
+
+def build_real_url(domain, h1, cat_id, post_id):
+    slug = slugify_h1(h1)
+    if not slug:
+        return ""
+    return f"https://{normalize_domain(domain)}/{slug}-{cat_id}-{post_id}.html"
+
+
+def mark_generated_url_cell(cell):
+    """Chỉ đánh dấu trực quan; không thay đổi giá trị dùng bởi các flow khác."""
+    cell.Interior.Color = GENERATED_URL_FILL_COLOR
+    try:
+        comment = cell.Comment
+        if comment is None:
+            cell.AddComment(GENERATED_URL_NOTE)
+            return
+        current_note = clean_text(comment.Text())
+        if GENERATED_URL_NOTE not in current_note:
+            comment.Text(
+                f"{current_note}\n{GENERATED_URL_NOTE}".strip()
+            )
+    except Exception as exc:
+        print(f"⚠️ Không thêm được Note vào ô URL: {exc}")
+
+
+def is_temporary_url(value):
+    return bool(TEMP_URL_PATTERN.match(clean_text(value)))
+
+
+async def fetch_final(session, url, fallback_url):
     try:
         async with session.head(
             url,
             allow_redirects=True
         ) as resp:
-            return str(resp.url)
-
+            final_url = str(resp.url)
+            if final_url != url:
+                return final_url, False
     except Exception:
-        try:
-            async with session.get(
-                url,
-                allow_redirects=True
-            ) as resp:
-                return str(resp.url)
+        pass
 
-        except Exception:
-            return url
+    # HEAD không chuyển được thì tạo URL theo quy luật slug H1-cat_id-post_id.
+    # Nếu thiếu H1 thì giữ URL tạm để lần chạy sau xử lý lại.
+    return fallback_url or url, bool(fallback_url)
 
 
-async def resolve_all(urls):
+async def resolve_all(urls, fallback_urls):
     ssl_ctx = ssl.create_default_context()
     ssl_ctx.check_hostname = False
     ssl_ctx.verify_mode = ssl.CERT_NONE
@@ -176,14 +217,15 @@ async def resolve_all(urls):
         connector=connector
     ) as session:
         tasks = [
-            fetch_final(session, url)
-            for url in urls
+            fetch_final(session, url, fallback_url)
+            for url, fallback_url in zip(urls, fallback_urls)
         ]
 
         return await asyncio.gather(*tasks)
 
 
 def main():
+    print(f"PHIÊN BẢN: {VERSION}")
     # ================== KẾT NỐI EXCEL ĐANG MỞ ==================
     try:
         excel, wb = get_target_excel_workbook()
@@ -209,6 +251,7 @@ def main():
         # Sheet dangbai
         COL_DOMAIN = find_col(ws, PUBLISH_HEADERS["domain"])
         COL_CATEGORY = find_col(ws, PUBLISH_HEADERS["category"])
+        COL_H1 = find_col(ws, "H1")
         COL_POST_ID = find_col(ws, PUBLISH_HEADERS["cms_id"])
         COL_OUTPUT_URL = find_col(ws, PUBLISH_HEADERS["published_url"])
 
@@ -226,6 +269,7 @@ def main():
         f"- dangbai: "
         f"Tên miền={COL_DOMAIN}, "
         f"Danh mục={COL_CATEGORY}, "
+            f"H1={COL_H1}, "
             f"ID CMS={COL_POST_ID}, "
             f"URL đã đăng={COL_OUTPUT_URL}"
     )
@@ -282,21 +326,24 @@ def main():
     # ================== XỬ LÝ SHEET DANGBAI ==================
     rows = []
     fake_urls = []
+    fallback_urls = []
 
     skipped_no_id = 0
     skipped_has_url = 0
+    retried_temporary_url = 0
     skipped_empty = 0
     no_domain = 0
     no_category = 0
     no_category_id = 0
 
-    # Chỉ đọc Excel theo 4 vùng lớn, không gọi COM riêng cho từng ô/dòng.
-    # Dòng cuối được xác định từ bốn cột liên quan và vẫn giới hạn bởi ROW_END.
+    # Chỉ đọc Excel theo 5 vùng lớn, không gọi COM riêng cho từng ô/dòng.
+    # Dòng cuối được xác định từ năm cột liên quan và vẫn giới hạn bởi ROW_END.
     last_data_row = max(
         int(ws.Cells(ws.Rows.Count, col).End(-4162).Row)
         for col in (
             COL_DOMAIN,
             COL_CATEGORY,
+            COL_H1,
             COL_POST_ID,
             COL_OUTPUT_URL,
         )
@@ -322,18 +369,20 @@ def main():
 
     domain_values = read_column_values(COL_DOMAIN)
     category_values = read_column_values(COL_CATEGORY)
+    h1_values = read_column_values(COL_H1)
     post_id_values = read_column_values(COL_POST_ID)
     output_url_values = read_column_values(COL_OUTPUT_URL)
 
     print(
-        f"✅ Đã đọc 4 vùng Excel một lần, "
+        f"✅ Đã đọc 5 vùng Excel một lần, "
         f"chỉ kiểm tra dòng {ROW_START}–{last_data_row}."
     )
 
-    for row, domain_raw, category_raw, post_id_raw, output_url_raw in zip(
+    for row, domain_raw, category_raw, h1_raw, post_id_raw, output_url_raw in zip(
         range(ROW_START, last_data_row + 1),
         domain_values,
         category_values,
+        h1_values,
         post_id_values,
         output_url_values,
     ):
@@ -353,10 +402,12 @@ def main():
             skipped_no_id += 1
             continue
 
-        # Cột URL đã có dữ liệu thì không chạy lại
-        if current_url:
+        # URL thật đã có thì bỏ qua. URL linkrutgon là URL tạm nên phải thử lại.
+        if current_url and not is_temporary_url(current_url):
             skipped_has_url += 1
             continue
+        if is_temporary_url(current_url):
+            retried_temporary_url += 1
 
         if not domain:
             ws.Cells(row, COL_OUTPUT_URL).Value = "NO_DOMAIN"
@@ -394,6 +445,7 @@ def main():
 
         rows.append(row)
         fake_urls.append(fake_url)
+        fallback_urls.append(build_real_url(domain, h1_raw, cat_id, post_id))
 
     # ================== LẤY URL THẬT ==================
     if fake_urls:
@@ -403,19 +455,34 @@ def main():
         )
 
         final_urls = asyncio.run(
-            resolve_all(fake_urls)
+            resolve_all(fake_urls, fallback_urls)
         )
 
-        for row, final_url in zip(rows, final_urls):
+        resolved_urls = 0
+        unresolved_urls = 0
+        generated_from_h1 = 0
+        for row, result in zip(rows, final_urls):
+            final_url, used_h1_fallback = result
             ws.Cells(
                 row,
                 COL_OUTPUT_URL
             ).Value = final_url
 
-            print(
-                f"✅ Dòng {row}: {final_url}"
-            )
+            if is_temporary_url(final_url):
+                unresolved_urls += 1
+                print(f"⚠️ Dòng {row}: vẫn là URL tạm: {final_url}")
+            else:
+                resolved_urls += 1
+                if used_h1_fallback:
+                    generated_from_h1 += 1
+                    mark_generated_url_cell(ws.Cells(row, COL_OUTPUT_URL))
+                    print(f"🧩 Dòng {row}: URL tạo từ H1: {final_url}")
+                else:
+                    print(f"✅ Dòng {row}: {final_url}")
     else:
+        resolved_urls = 0
+        unresolved_urls = 0
+        generated_from_h1 = 0
         print("ℹ️ Không có dòng mới nào cần lấy URL.")
 
     # ================== LƯU FILE ==================
@@ -428,7 +495,11 @@ def main():
     # ================== KẾT QUẢ ==================
     print("")
     print("========== KẾT QUẢ ==========")
-    print(f"✅ Đã xử lý mới: {len(fake_urls)} URL")
+    print(f"🔎 Tổng URL đã thử: {len(fake_urls)}")
+    print(f"✅ Lấy được URL thật: {resolved_urls}")
+    print(f"🧩 URL được tự tạo từ H1, cần kiểm tra lại: {generated_from_h1}")
+    print(f"⚠️ Vẫn còn URL tạm: {unresolved_urls}")
+    print(f"🔁 URL tạm được xử lý lại: {retried_temporary_url}")
     print(f"⏭️ Đã bỏ qua vì URL đã có dữ liệu: {skipped_has_url}")
     print(f"⏭️ Đã bỏ qua vì không có ID: {skipped_no_id}")
     print(f"⏭️ Dòng trống: {skipped_empty}")

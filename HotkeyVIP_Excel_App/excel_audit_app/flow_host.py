@@ -528,20 +528,43 @@ def run_flow(workbook_path: Path, script_path: Path, script_args: list[str]) -> 
                 excel.Quit()
             except Exception:
                 pass
-            # Chỉ xóa khỏi sổ theo dõi khi Excel thực sự đã thoát. Nếu Excel bị
-            # kẹt bởi hộp thoại Save As, lần chạy sau vẫn nhận diện và dọn được.
+            # Excel đã được lưu và đóng. Chờ ngắn cho Quit tự hoàn tất; nếu
+            # tiến trình ẩn do app sở hữu vẫn còn thì dọn ngay, không đẩy chi
+            # phí sang lần chạy flow kế tiếp.
             if identity is not None:
                 try:
                     import psutil
 
                     process = psutil.Process(int(identity["pid"]))
-                    process.wait(timeout=3)
+                    process.wait(timeout=1)
                     _remove_owned_excel(identity)
                 except psutil.NoSuchProcess:
                     _remove_owned_excel(identity)
-                except Exception:
+                except psutil.TimeoutExpired:
+                    pid = int(identity["pid"])
+                    if _process_has_visible_window(pid):
+                        print(
+                            "[APP] Excel do app mở đã hiện cửa sổ; không tự dọn tiến trình.",
+                            flush=True,
+                        )
+                    else:
+                        print(
+                            f"[APP] Excel ẩn chưa thoát sau Quit; đang dọn ngay PID {pid}...",
+                            flush=True,
+                        )
+                        try:
+                            process.terminate()
+                            process.wait(timeout=2)
+                        except psutil.TimeoutExpired:
+                            process.kill()
+                            process.wait(timeout=1)
+                        except psutil.NoSuchProcess:
+                            pass
+                        _remove_owned_excel(identity)
+                        print("[APP] Đã dọn Excel ẩn của phiên hiện tại.", flush=True)
+                except Exception as exc:
                     print(
-                        "[APP] Excel ẩn chưa thoát hoàn toàn; giữ dấu vết để lần chạy sau dọn an toàn.",
+                        f"[APP] Chưa xác nhận được trạng thái Excel ẩn: {exc}",
                         flush=True,
                     )
         _release(excel)

@@ -1470,7 +1470,7 @@ WORKER_LOG_ROOT = (
     / "log_lien_quan"
 )
 
-VERSION = "07_bai_viet_lien_quan (engine V2.3)"
+VERSION = "07_bai_viet_lien_quan (engine V2.5)"
 EXCEL_BUSY_HRESULT = -2146777998  # 0x800AC472: Excel temporarily rejects COM calls.
 
 
@@ -1729,11 +1729,16 @@ def create_worker_driver_with_retry(worker_id: int, max_attempts: int = 3):
 
 
 # ============================================================
-# CỔNG KIỂM TRA & ĐĂNG NHẬP ĐỒNG BỘ (LOGIN_LOCK)
+# CỔNG KIỂM TRA & ĐĂNG NHẬP ĐỒNG BỘ THEO TÊN MIỀN
 # ============================================================
 
-def ensure_post_page_ready_with_lock(driver, edit_url: str, login_lock: Any) -> None:
-    """Đăng nhập đồng bộ: chỉ 1 worker thực hiện UI đăng nhập tại một thời điểm khi gặp form login."""
+def ensure_post_page_ready_with_lock(
+    driver,
+    edit_url: str,
+    login_lock: Any,
+    domain: str,
+) -> None:
+    """Chỉ tuần tự hóa đăng nhập giữa các worker đang dùng cùng tên miền."""
     driver.switch_to.default_content()
     wait_document_ready(driver)
 
@@ -1743,9 +1748,12 @@ def ensure_post_page_ready_with_lock(driver, edit_url: str, login_lock: Any) -> 
     if is_post_edit_page(driver):
         return
 
-    # Nếu phát hiện trang đăng nhập, dùng LOGIN_LOCK để xếp hàng
+    # Khác tên miền dùng khóa khác nhau nên vẫn có thể đăng nhập song song.
     if is_login_page(driver):
-        print("    [LOGIN LOCK] Phát hiện trang đăng nhập → chờ khóa Đăng nhập...")
+        print(
+            f"    [LOGIN LOCK {domain}] Phát hiện trang đăng nhập "
+            "→ chờ khóa riêng của tên miền..."
+        )
         with login_lock:
             if is_post_edit_page(driver):
                 return
@@ -1816,7 +1824,7 @@ def worker_main(
     worker_id: int,
     command_queue: mp.Queue,
     result_queue: mp.Queue,
-    login_lock: Any,
+    domain_login_locks: dict[str, Any],
     domain_save_locks: dict[str, Any],
     browser_visible_event: Any,
 ) -> None:
@@ -1875,8 +1883,17 @@ def worker_main(
                 driver.get(edit_url)
                 wait_document_ready(driver)
 
-                # 1. Đăng nhập tập trung dùng LOGIN_LOCK
-                ensure_post_page_ready_with_lock(driver, edit_url, login_lock)
+                # 1. Chỉ khóa đăng nhập giữa các worker cùng tên miền.
+                login_lock = domain_login_locks.get(domain)
+                if login_lock is None:
+                    ensure_post_page_ready(driver, edit_url)
+                else:
+                    ensure_post_page_ready_with_lock(
+                        driver,
+                        edit_url,
+                        login_lock,
+                        domain,
+                    )
 
                 result_queue.put({
                     "type": "progress",
@@ -2180,8 +2197,8 @@ def main() -> int:
 
     context = mp.get_context("spawn")
     result_queue = context.Queue()
-    login_lock = context.Lock()
     browser_visible_event = context.Event()
+    domain_login_locks = {domain: context.Lock() for domain in unique_domains}
     domain_save_locks = {domain: context.Lock() for domain in unique_domains}
 
     command_queues: dict[int, mp.Queue] = {}
@@ -2195,7 +2212,7 @@ def main() -> int:
                 worker_id,
                 command_queue,
                 result_queue,
-                login_lock,
+                domain_login_locks,
                 domain_save_locks,
                 browser_visible_event,
             ),
