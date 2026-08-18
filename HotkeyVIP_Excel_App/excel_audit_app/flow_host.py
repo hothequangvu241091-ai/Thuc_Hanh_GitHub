@@ -58,6 +58,66 @@ def _run_flow_in_process(script_path: Path, workbook: Any) -> int:
     return return_code
 
 
+def _cleanup_flow_python_children(parent_pid: int) -> int:
+    """Dọn Python worker còn sống của một flow mà không đụng Python ngoài cây process đó."""
+    try:
+        import psutil
+    except Exception:
+        return 0
+
+    try:
+        parent = psutil.Process(parent_pid)
+        children = parent.children(recursive=True)
+    except (psutil.NoSuchProcess, psutil.AccessDenied):
+        return 0
+
+    targets = []
+    for child in children:
+        try:
+            name = child.name().casefold()
+            if name.startswith("python") or name in {"py.exe", "pyw.exe"}:
+                targets.append(child)
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+
+    if not targets:
+        return 0
+
+    identities = []
+    for child in targets:
+        try:
+            identities.append((child.pid, child.create_time()))
+            child.terminate()
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+
+    _gone, alive = psutil.wait_procs(targets, timeout=3)
+    for child in alive:
+        try:
+            child.kill()
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            pass
+    if alive:
+        psutil.wait_procs(alive, timeout=2)
+
+    cleaned = 0
+    for pid, create_time in identities:
+        try:
+            process = psutil.Process(pid)
+            if abs(process.create_time() - create_time) < 0.01 and process.is_running():
+                continue
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            pass
+        cleaned += 1
+
+    if cleaned:
+        print(
+            f"[APP] Đã dọn {cleaned} Python worker còn sót của flow đăng bài.",
+            flush=True,
+        )
+    return cleaned
+
+
 def _run_flow_subprocess(
     workbook_path: Path, script_path: Path, script_args: list[str]
 ) -> int:
@@ -89,6 +149,14 @@ def _run_flow_subprocess(
     if process.stdout is not None:
         for line in process.stdout:
             print(line, end="", flush=True)
+            if (
+                script_path.name == "05_dang_bai_cms.py"
+                and line.strip().startswith("Thời gian kết thúc:")
+            ):
+                # Flow 5 đã chạy hết khối finally của coordinator. Nếu worker
+                # multiprocessing nào còn sống sau join(timeout=8), dọn đúng
+                # Python con của process Flow 5 để parent không bị kẹt lúc thoát.
+                _cleanup_flow_python_children(process.pid)
     return_code = int(process.wait())
     print(f"[APP] Flow kết thúc với mã {return_code}.", flush=True)
     return return_code
@@ -395,6 +463,11 @@ def run_flow(workbook_path: Path, script_path: Path, script_args: list[str]) -> 
         raise RuntimeError(f"Không tìm thấy file Excel: {workbook_path}")
     if not script_path.is_file():
         raise RuntimeError(f"Không tìm thấy file flow: {script_path}")
+
+    # Một nguồn sự thật cho mọi flow, kể cả flow chạy in-process. Các module
+    # đọc biến môi trường ngay lúc import sẽ luôn nhận đúng file app đang chọn.
+    os.environ["HOTKEYVIP_SELECTED_EXCEL"] = str(workbook_path)
+    os.environ["HOTKEYVIP_APP_RUN"] = "1"
 
     excel = None
     workbook = None
